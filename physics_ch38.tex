@@ -1,0 +1,202 @@
+\section{電磁誘導}
+
+\subsection{ファラデーの電磁誘導の法則}
+ \begin{wrapfigure}[8]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p70_fig1.png}
+\end{wrapfigure}
+図のように，導線で作ったループに磁石の磁極を近づけてこれを上下させると，磁極の上下に対応してループに電流が流れる．
+このように磁場の変化によって導体に起電力が生じる現象を{\bf 電磁誘導}，生じた起電力を{\bf 誘導起電力}，誘導起電力によって流れる電流を{\bf 誘導電流}と呼ぶ．
+
+誘導起電力や誘導電流が生じるのは，直感的には次のように理解すればよい．
+磁石が上下することによりコイルを貫く磁束が変化するが，自然界は変化を嫌うため，磁束の変化を緩和させようとする．誘導電流が発生するとその電流により磁場を生じることができるので，誘導電流による磁場によって外部磁場の変化を緩和しようとするのである．
+このとき，{\bf 誘導起電力は，誘導電流が作る磁束が，外から加えられた磁束の変化を打ち消すような向きに生じ}ており，これを{\bf レンツの法則}という．
+
+ \begin{wrapfigure}[6]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=70mm]
+  {text2_p70_fig2.png}
+\end{wrapfigure}
+例えば，図のような一巻きコイルに上向きに外部磁場をかけ，これを増加させる場合について考える．
+このとき生じる誘導起電力は次のようにして決める．
+\begin{description}
+\item[\MARU{1}] 外部磁場の増加を打ち消すような磁場を考える．
+\item[\MARU{2}] $\MARU{1}$の磁場を作るために必要な誘導電流の向きを決める．
+\item[\MARU{3}] この誘導電流を流そうとする向きに，誘導起電力が発生する．
+\end{description}
+
+発生する誘導起電力は，ループを貫く外部磁束$\Phi$[Wb]の変化に比例し，ループひと巻あたり$\dfrac{d \Phi}{dt}$[V]である．
+$N$回巻きループの場合は$N$個の直列接続になるといえるので，$N$倍すればよい．
+また，外部磁束に対して右ねじの法則を正とすると，誘導起電力は向きを含めた表記として
+\[V=-N\dfrac{d\Phi}{dt} \]
+と書ける．
+このマイナス符号は{\bf 磁束の変化を打ち消す向きに誘導起電力が発生する}ことを意味する．
+
+\begin{matome}{ファラデーの電磁誘導の法則}
+ \hspace{3mm} $N$回巻きの閉ループを貫く磁束$\Phi$[Wb]が変化するときに，ループに発生する誘導起電力$V$[V]は，元ある磁束の向きに磁束を作る電流の向きを正として，
+ \[V=-N\dfrac{d\Phi}{dt} \hspace{2mm} [{\rm V}]\]
+ \end{matome}
+
+なお，発生する誘導起電力はあたかも電池のように振る舞うので，誘導起電力の大きさ分の電池を回路に置いて考えると通常の直流回路と同様に扱うことができる．
+そこで，誘導起電力を考える際には，まず{\bf 向きをレンツの法則から決め，その向きに}\mbox{\boldmath$N\left| \dfrac{d\Phi}{dt} \right|$} {\bf [V]の電池を置いて考えてもよい．}
+
+
+\subsection{磁場を横切る導体棒に発生する誘導起電力の一般的な求め方}
+ファラデーの電磁誘導の法則では，閉ループを作っている回路を貫く磁束の単位時間あたりの変化量を考えることによって生じる誘導起電力を求めるが，実際には回路が閉ループを作っていなくても{\bf 導体棒が磁場を横切って運動するだけで，その導体棒には誘導起電力が発生する．}
+
+回路が閉ループを作っていない場合は，ループを貫く磁束$\Phi$[Wb]を元にして$V=-\dfrac{d\Phi}{dt}$と計算することはできないが，次のように考えて誘導起電力を求めることができる．
+
+\begin{matome}{誘導起電力の求め方}
+\begin{description}
+\item[\MARU{1}] 導体棒が微小時間$dt$[s]の間に掃く面積$dS[{\rm m^2}]$を計算する．
+\item[\MARU{2}] 磁束$=磁束密度\times 面積$の関係から，この$dt$[s]の間に掃く磁束$d\Phi =b\cdot dS$[Wb]を求める．
+\item[\MARU{3}] $\MARU{2}$の両辺を$dt$で割り算して，発生する誘導起電力の大きさ$\left| \dfrac{d\Phi}{dt} \right|$を求める．
+\end{description}
+ \end{matome}
+ 
+  \begin{wrapfigure}[10]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p71_fig1.png}
+\end{wrapfigure}
+ 例として，磁束密度$B$[T]の一様な磁場中を速さ$v$[m/s]で横切る長さ$l$[m]の導体棒について考えてみる．
+ この導体棒は$dt$[s]の間に距離$v \cdot dt$[m]だけ進むので，右図より
+ \[ dS=l\cdot v\cdot dt \hspace{2mm} [{\rm m^2}] \]
+ の面積を掃く．
+ よって，$dt$[s]の間に$d\Phi =B\cdot dS=vBl\cdot dt$[Wb]の磁束を掃くので，発生する誘導起電力の大きさは，
+ \[ \left| \dfrac{d\Phi}{dt} \right| =vBl \hspace{2mm} [{\rm V}] \]
+ と求められる．
+ 
+  \begin{wrapfigure}[6]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p71_fig2.png}
+\end{wrapfigure}
+ 磁場中を導体棒が横切って運動する場合に誘導起電力が発生するのは，導体中の荷電粒子に対してローレンツ力が作用することが原因である．
+ よって，{\bf 導体棒の上に正電荷を仮定し，これが導体棒と共に動く場合に受けるローレンツ力の向きが誘導起電力の向きとなる．}
+ 右の図の場合，導体棒上の荷電粒子は導体棒と共に右へ動くので，ローレンツ力をQ$\rightarrow$P向きに受ける．
+ よって，この導体棒の上にはQ$\rightarrow$P向きに大きさ$vBl$[V]の電池が発生したとみなせることになる．
+ 
+ \begin{matome}{発生する誘導起電力の向き}
+導体棒上に正電荷を置き，これが導体棒と共に動くときに受けるローレンツ力の向きを考える．
+ローレンツ力の向きに誘導起電力の大きさ分の電池が発生すると考える．
+ \end{matome}
+ 
+ \newpage
+ （参考）誘導起電力について\hrulefill 
+
+
+一般に，誘導起電力が発生するのには2つの場合があり，それぞれについてその発生原因が異なる．
+ \begin{wrapfigure}[12]{r}[5mm]{45mm}
+  \centering
+ % \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=45mm]
+  {text2_p72_fig1.png}
+\end{wrapfigure}
+\begin{description}
+\item[\MARU{1}] {\bf 磁束もしくは磁束密度が時間変化する場合}
+
+例えば，右図のような半径$r$[m]の円形ループを貫く磁束$\Phi$[Wb]が時間変化する場合，このループに沿って誘導電場と呼ばれる電場$E$[V/m]が発生する（半径$r$[m]のところに導線がなくても空間中に発生する）．
+この誘導電場の大きさは，マクスウェルの方程式と呼ばれる法則の式変形に基づき，$E=\dfrac{1}{2\pi r} \dfrac{d\Phi}{dt}$[V/m]で与えられる．
+そのため，このループ上に一巻きの導線ループを置いた場合，一周分で生じる誘導起電力の大きさは，$V=E\cdot 2\pi r=\dfrac{d\Phi}{dt}$となる．\\[1mm]
+
+\item[\MARU{2}] {\bf 導体棒が磁場を横切って運動していく場合}
+
+導体棒中の荷電粒子は導体とともに運動することによってローレンツ力を受ける．
+そのため，荷電粒子は導体棒中のある一方向に押し流される．
+荷電粒子がある一方向に押し流されるという現象は，そこに電池が置かれたのと同じ効果を持つとみなせるため，受けるローレンツ力による仕事を，電池がなした仕事に解釈しなおして，これを誘導起電力だとする．
+例えば，前の例の場合，導体棒中の$+q$[C]の正電荷は導体棒とともに速さ$v$[m/s]で運動することにより$qvB$[N]のローレンツ力をQ$\rightarrow$P向きに受け，Q$\rightarrow$Pに移動するまでに$qvBl$[J]の仕事をされる．
+このことを，導体棒上に起電力$vBl$[V]の電池がQ$\rightarrow$P向きに発生したのだと解釈すると，$+q$[C]の正電荷がQ$\rightarrow$Pに移動するまでにこの電池から$qvBl$[J]の仕事をされるのでうまくつじつまが合うことになる．
+\end{description}
+
+\hrulefill
+
+\subsection{導体棒の終端速度}
+一定の大きさの外力を受けて磁場中を運動する導体棒について運動方程式を立てると，その加速度は速度の増加に伴って減少していき，最終的には一定値となるとみなせる．
+これを{\bf 終端速度}という．
+終端速度を求めるためには，加速度を$0[{\rm m/s^2}]$とみなして良いので，{\bf 導体棒に関する力のつり合いを立てればよい．}
+
+   \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p42.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p43.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p44.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p142.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p143.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p144.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p145.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p146.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p147.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

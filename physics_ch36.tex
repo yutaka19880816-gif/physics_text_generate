@@ -1,0 +1,225 @@
+\section{電流と磁場・電磁力}
+
+\subsection{磁極と磁場}
+ \begin{wrapfigure}[10]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p60_fig1.png}
+\end{wrapfigure}
+磁石の両端付近の，磁性の最も強い部分を{\bf 磁極}と呼ぶ．
+磁極には地球の北極の方へ引かれる{\bf N極（正極）}と，南極の方へ引かれる{\bf S極（負極）}とがあり，同種の極同士は反発しあい，異種の極同士は互いに引き合う．
+磁極の大きさは{\bf [Wb]（ウェーバー）}という単位を用いて表す．
+
+強さ$m_1$[Wb]の磁極と強さ$m_2$[Wb]の磁極が距離$r$[m]だけ隔てて置かれているとき，2つの磁極が同符号の場合は斥力を，異符号の場合は引力を及ぼしあう．
+その力の大きさ$f$[N]は
+\[ f=k_m\dfrac{|m_1m_2|}{r^2} \hspace{2mm} [{\rm N}] \]
+で表され，これを{\bf 磁気力}と呼ぶ．
+比例定数$k_m [{\rm N\cdot m^2/Wb^2}]$を磁気力に関するクーロンの法則の比例定数といい，真空中での値は$k_m \fallingdotseq 6.33 \times 10^4 [{\rm N\cdot m^2/Wb^2}]$である．
+また，この値は，後で述べる{\bf 真空の透磁率} $\mu_0$を用いて，
+\[k_m=\dfrac{1}{4\pi \mu_0} \]
+と表される．
+真空の透磁率の値は$\mu_0=4\pi \times 10^{-7} [{\rm Wb^2/N\cdot m^2}]$と定義されている．
+
+クーロン力に対する電場と同様に，磁気力についても，ある磁極が他の磁極に直接力を及ぼすのではなく，磁極によってその周辺の空間に{\bf 磁場}というものが生じ，他の磁極はこの磁場から力を受けると考えると便利なことが多い．
+電場と同様に，磁場を{\bf その地点に+1[Wb]の磁極を置いたときに受ける力（ベクトル）}として定義し，これを$\overrightarrow{H}$[N/Wb]と書く．
+磁場が$\overrightarrow{H}$[N/Wb]である地点に$+m$[Wb]の磁極を置いたときに受ける力は，その定義より
+\[\overrightarrow{F}=m\overrightarrow{H}\]
+で与えられる．
+
+なお，磁極は電荷と異なり，{\bf 必ず大きさが等しい正極と負極とが対になって存在する．}単磁極は発見されていない．
+
+\subsection{磁束密度・磁束・磁力線・磁束線}
+後に述べるが，導線を流れる電流などはこの磁場から力を受けたり，磁場が変化するとそれに伴って起電力などが生じたりする．
+これらを考える際には磁場$\overrightarrow{H}$[N/Wb]で考えるよりも，次に述べる磁束密度や磁束といったものを考えた方が便利であるので，ここでまとめて定義しておく．
+
+磁場$\overrightarrow{H}$[N/Wb]にその空間の透磁率$\mu [Wb^2/N\cdot m^2]$をかけた値のことを{\bf 磁束密度} \mbox{\boldmath$\overrightarrow{B}$}{$ [\rm \bf Wb/m^2 ]$} という．
+\[ \mbox{\boldmath$\overrightarrow{B}=\mu \overrightarrow{H} $}\hspace{2mm} [\rm \bf Wb/m^2 ]\]
+
+磁束密度の単位は[$\rm Wb/m^2$]であり，これを{\bf [T]（テスラ）}と書く．
+
+ \begin{wrapfigure}[6]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=65mm]
+  {text2_p61_fig1.png}
+\end{wrapfigure}
+電場$\overrightarrow{E}$[N/C]に対して電気力線を考えたのと全く同様にして，磁場$\overrightarrow{H}$[N/Wb]に対して{\bf 磁力線}を，磁束密度$\overrightarrow{B}$[T]に対して{\bf 磁束線}を考える．
+いずれも曲線の接線の向きがベクトルの向きに一致するように，そして曲線の密度がベクトルの大きさ（強さ）に対応するように描いた曲線群である．
+例えば磁束線であれば，磁束密度の大きさが$B$[T]であるとき，磁束密度の方向に垂直な断面の単位面積1[m$^2$]を貫く磁束線の本数が$B$本になるように磁束線の本数を定義する．
+
+ \begin{wrapfigure}[10]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p61_fig2.png}
+\end{wrapfigure}
+上の定義より，磁束密度の大きさが$B$[T]の地点において，磁束に垂直な面積$S[{\rm m^2}]$の面を貫く磁束線の本数は，
+\[ \mbox{\boldmath$ \Phi =BS \hspace{2mm} [{\rm Wb}] $}\]
+で与えられ，このような磁束線の集まりのことを{\bf 磁束}と呼ぶ．
+また，もし磁束密度が面の法線と角度$\theta$をなすのであれば，面を貫く磁束$\Phi$[Wb]は
+\[ \mbox{\boldmath$ \Phi =BS \cos \theta \hspace{2mm} [{\rm Wb}] $}\]
+で与えられる．
+
+\begin{matome}{磁束密度・磁束}
+ \hspace{3mm} 磁束密度　$\overrightarrow{B}=\mu \overrightarrow{H} $\hspace{2mm}[T]\\
+\hspace{3mm} 磁束　$\Phi =BS \cos \theta \hspace{2mm} [{\rm Wb}] $
+ \end{matome}
+ 
+ 
+\subsection{電流が作る磁場}
+磁場は磁極によって作られる他に，電流が流れることによっても発生する．
+どのような形状の導線に電流が流れるかによって作られる磁場の形，強さも変わり，それらはビオ・サバールの法則と呼ばれる式$dH=\dfrac{1}{4\pi} \dfrac{I\sin \theta}{r^2} dx$によって求められるが，この式に従って実際に電流の作る磁場を求めるのは容易ではない．
+高校範囲では，以下の3つの場合において作られた磁場のみ，その磁場の形と強さを公式・法則として覚えておけば良い．\\[5mm]
+
+ \begin{wrapfigure}[6]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p62_fig1.png}
+\end{wrapfigure}
+$\MARU{1}$\hspace{2mm} {\bf 直線電流の作る磁場}
+
+無限に長い直線導線に図のように$I$[A]の電流が流れているときには図のような同心円状の磁場が発生し，図の円の接線方向に磁場が向く．
+中心から距離$r$[m]の位置では，大きさ
+\[ \mbox{\boldmath$ H=\dfrac{I}{2\pi r} \hspace{2mm} {\rm [A/m]}  $}\]
+の磁場が{\bf 右ねじを回す向き}に発生する．\\[5mm]
+
+ \begin{wrapfigure}[8]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p62_fig2.png}
+\end{wrapfigure}
+$\MARU{2}$\hspace{2mm} {\bf 円形電流の作る磁場}
+
+半径$r$[m]の円形ループの導線に図の向きに電流$I$[A]が流れているときにはループ付近に図のような磁場が発生する．
+特に，ループと同一面の{\bf 円の中央位置}における磁場の強さは，
+\[ \mbox{\boldmath$ H=\dfrac{I}{2r } \hspace{2mm} {\rm [A/m]}  $}\]
+であるが，これ以外の点の磁場は簡単には求められない．
+なお，ループが$N$枚重なっているときは，$H=\dfrac{I}{2r}\times N$\hspace{2mm}[A/m]となる．\\[5mm]
+
+ \begin{wrapfigure}[6]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p62_fig3.png}
+\end{wrapfigure}
+$\MARU{3}$\hspace{2mm} {\bf ソレノイド・コイル磁場}
+
+密に巻いた無限に長いコイルのことを{\bf ソレノイド・コイル}という．
+ソレノイド・コイルに図の向きに電流$I$[Aが流れているとき，コイルの{\bf 内部全体に中心軸に平行に一様な磁場が発生する．}
+コイルの中心軸に平行な{\bf 単位長さ1[m]あたりの巻き数}を$n_0$[/m]とするとき，発生する磁場の強さは，
+\[ \mbox{\boldmath$ H=n_0I \hspace{2mm} {\rm [A/m]}  $}\]
+であり，向きは{\bf 右ねじの法則}から求められる．
+また，ソレノイド・コイルの{\bf 外部には磁場は発生しない．}
+
+\begin{matome}{電流の作る磁場}
+ \hspace{3mm} 直線電流の作る磁場 \hspace{19mm} $H=\dfrac{I}{2\pi r}$ \hspace{2mm} [A/m]\\
+ \hspace{3mm} 円形電流の作る磁場 \hspace{19mm} 中心位置において$H=\dfrac{I}{2 r}$ \hspace{2mm} [A/m]\\
+ \hspace{3mm} ソレノイドコイルの作る磁場 \hspace{5mm} コイル内部にのみ$H=n_0I$ \hspace{2mm} [A/m]
+ \end{matome}
+ 
+\subsection{電磁力}
+ \begin{wrapfigure}[10]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p64_fig1.png}
+\end{wrapfigure}
+電流の流れている導線は，周りの磁場から力を受ける．
+この力のことを電磁力という．
+強さ$H$[A/m]の磁場中を，磁場と角$\theta$をなす方向に電流$I$[A]が流れる導線の，$l$[m]の部分が磁場から受ける力$F$は，その空間の透磁率が$\mu [{\rm Wb^2/N\cdot m^2}]$であるとき，
+\[ F=\mu IHl\sin \theta \hspace{2mm} [{\rm N}] \]
+である．
+磁束密度$B=\mu H$[T]を用いれば，
+\[  \mbox{\boldmath$ F=IBl\sin \theta \hspace{2mm} {\rm [N]}  $}\]
+で与えられる．
+
+ \begin{wrapfigure}[12]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p64_fig2.png}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p64_fig3.png}
+\end{wrapfigure}
+これらの式において，$H\sin \theta$や$B\sin \theta$は，電流ベクトルと磁場ベクトルとが作る平面において，磁場ベクトルや磁束密度ベクトルの，電流ベクトルに対して垂直な成分を表す．
+すなわち，導線は，磁場のうち，流れる電流と垂直な成分から電磁力を受ける．
+よって，これらを$H_\perp ,B_\perp$とすれば，電磁力の大きさは
+\[  \mbox{\boldmath$ F=\mu IH_\perp l \hspace{2mm} {\rm [N]} \hspace{15mm} F= IB_\perp l \hspace{2mm} {\rm [N]}$}\]
+となる．
+
+また，電磁力の向きは{\bf フレミング左手の法則}より決める．
+左手において，{\bf 中指を電流の向き，人差し指を磁場の向き}に取ったとき，{\bf 親指の向きが電磁力の作用する向き}となる．
+
+   \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p36.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p37.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p38.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p133_2.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p134.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p135.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p136.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p137.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

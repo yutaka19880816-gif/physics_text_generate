@@ -1,0 +1,989 @@
+\section{波の重ね合わせ・干渉・定常波と反射}
+
+% ===========================================================================
+%  再編（2026-09-04）：第2章 波動 の第15回．
+%  原本の 第20回「波動の干渉」の 20.2〜20.4（干渉・定在波・うなり）と，
+%  第21回「固定端反射と自由端反射」の全体（21.1〜21.3）を1回に統合した．
+%  ・20.1「縦波」は第14回へ移したので，この回には入れない．
+%  ・練習は 原本 第20回［9］［11］［12］［13］［15］と 第21回［16］〜［21］の
+%    計11題を，A問題の「基本事項の確認」2題（⑳［9］と㉑［16］）を1題に統合して10題にした．
+%    `saihen/再編案.md` の「新15 ＝ ⑳[9][11][12][13][15] ＋ ㉑[16]〜[21]（A2→1）」の通り．
+%  ・⑳［9］の(1)(2)（縦波の横波表示）は第14回の［1］へ移してあるので，ここでは
+%    (3)(4)(5)（水面波の干渉・定常波の用語・うなり）だけを使う（2026-09-04 ユーザー指示）。
+%    ㉑［16］の(1)(2)（反射のされ方・反射壁に最も近い節）を(4)(5)として続けた．
+%  ・問題番号は第14回の［1］〜［10］に続けて［11］〜［20］（\setcounter{qno}{10}）．
+%    新旧対応：［11］＝⑳[9](3)(4)(5)＋㉑[16]／［12］＝⑳[11]／［13］＝⑳[12]／
+%    ［14］＝⑳[13]／［15］＝㉑[17]／［16］＝㉑[18]／［17］＝㉑[19]／
+%    ［18］＝⑳[15]／［19］＝㉑[20]／［20］＝㉑[21]．
+%    C問題は 干渉（⑳[15]）→ 定在波（㉑[20][21]）の順に並べ，講義の流れに合わせた．
+%  ・指針の中の「前回」「§19」「前問」は，新しい回・問題番号（第14回／［17］／［19］）に
+%    読み替えて書き換えた．
+%  ・15.1 と 15.4 の図は wrapfigure ではなく zuright（minipage）で右に置いた．
+%    wrapfigure だと本文中の description の箇条書きと衝突して「forced to float」になり，
+%    折り返しが数ページ先まで持ち越されて例題ユニットの全幅罫が 203pt はみ出した．
+%  ・原本 p94 の［参考］の合成変位の式は $\cos\frac{r_1-r_2}{\lambda}$ と印刷されているが，
+%    これでは結論（$r_1-r_2=m\lambda$ で強め合い）と合わない．$\cos\frac{\pi(r_1-r_2)}{\lambda}$，
+%    $t-\frac{r_1+r_2}{2v}$ が正しいので訂正した（原本の誤植）．
+%  ・旧 physics_ch20.tex の本文にあった誤植も直した（「節線，・腹線」→「節線・腹線」，
+%    「それらの点がそれらの点が」の重複，「波の伝搬方向」→「波の伝播方向」，
+%    まとめ枠の見出し「正弦波」→「横波と縦波」相当の箇所）．
+%  ・旧レイアウト用の \vspace{15mm} \vspace{50mm} や \newpage は全て取り除き，
+%    wrapfigure の [N] は図の実高（.xbb から算出）に合わせて付け直して \bsNeed を入れた．
+%
+%  ・原本の例題4題をそのまま採用した（削除なし）。挿入位置も原本と同じ．
+%      例題6〈水面波の干渉〉                                  … 15.1 のまとめ枠の後（原本 p94）
+%      例題7〈定在波〉                                        … 15.2 のまとめ枠の後（原本 p95）
+%      例題8〈作図によって求める自由端反射と固定端反射〉        … 15.4 のまとめ枠の後（原本 p98）
+%      例題9〈固定端反射・自由端反射によって作られる定在波の方程式〉… 15.5 の後（原本 p99）
+%    原本は「問題枠 →（指針）＝空欄 →【KEY】」で解答が載っていないため，
+%    【指針】と【解答】は書き起こした（KEY と問題文・図は原本からの転写）。
+%    解答の図3枚（例題6の腹線・節線，例題8の自由端・固定端の合成波）は
+%    texify_draft/mkfig_new15ans.py（TikZ）で自作した。
+%  ・図は texify_draft/mkfig_new15.py（問題編・原本からの切り出し）と
+%    mkfig_new15ans.py（TikZ）で再生成できる．
+% ===========================================================================
+
+% 例題番号：波動（原本 第3章）の例題は章の先頭から通し番号．第14回で1〜5を使った．
+\setcounter{nombre}{5}
+
+\bsNeed{50mm}
+\subsection{波の独立性と干渉による強め合い・弱め合い}
+% 図は wrapfigure ではなく zuright（minipage）で右に置く。
+% この節は図が3枚続き，しかも本文中に description の箇条書きが入るため，
+% wrapfigure だと「Collision between wrapping environments」「forced to float」が出て，
+% 折り返しが後ろのページへ持ち越されて例題の全幅罫が 203pt はみ出した（2026-09-04）。
+\begin{zuright}{30mm}
+\hspace{1zw}1つの媒質上のある1点に2つの波が同時に伝わってきたときには，その点の変位は各々が単独で届いたときの変位$y_1$，$y_2$の代数和$y_1+y_2$となることが知られている．
+これを波の{\gtfamily 重ね合わせの原理}という．
+
+\hspace{1zw}このように，2つの波が1つの媒質中で重なるときには各々の波が同時に1つの媒質中を進むだけで，互いの波の進行を妨げたり，影響を及ぼしたりすることがない．
+この性質を{\gtfamily 波の独立性}という．
+\zusep
+\includegraphics[keepaspectratio,width=30mm]{text_p92_fig1.png}
+\end{zuright}
+
+\bsNeed{55mm}
+\begin{zuright}{75mm}
+\hspace{1zw}さて，水面上の2点$\mathrm{A}$，$\mathrm{B}$を同周期，同振幅，同変位（＝同位相）で連続的に振動させると，水面には$\mathrm{A}$，$\mathrm{B}$点から円形に波が伝わっていき，水面上でそれらが重ね合わせの原理に従って重なり合う．
+各波源で発生した波は山と谷とが交互に送り出され，重なり合った結果として水面上にできる合成波では，
+\begin{description}
+\item[・] $\mathrm{A}$からの波の振動と$\mathrm{B}$からの波の振動が同位相で重なるために2つの波が強め合って大きく振動する点（腹）
+\item[・] $\mathrm{A}$からの波の振動と$\mathrm{B}$からの波の振動が逆位相で重なるために2つの波が弱め合って全く振動しない点（節）
+\end{description}
+が作られる．
+これらの点は連続的に連なって分布しているために曲線となり，前者を{\gtfamily 腹線}，後者を{\gtfamily 節線}という．
+\zusep
+\includegraphics[keepaspectratio,width=75mm]{text_p92_fig2.png}
+\end{zuright}
+
+\bsNeed{35mm}
+\begin{zuright}{35mm}
+\hspace{1zw}平面上のある点で2つの異なる波源からやってきた波が強め合うか弱め合うかは，
+\begin{description}
+\item[\MARU{1}] 2つの波源の振動の位相差
+\item[\MARU{2}] 2つの波源からの距離の差
+\end{description}
+の2つによって決定される．
+まず簡単のため，2つの波源の振動が全く同じ（＝位相差がない）場合について考える．
+\zusep
+\includegraphics[keepaspectratio,width=35mm]{text_p93_fig1.png}
+\end{zuright}
+
+\bsNeed{58mm}
+$\mathrm{A}$点と$\mathrm{B}$点からの距離の差がちょうど1波長$\lambda\U{m}$の整数倍になっているような点$\mathrm{P}$の場合，2つの波源から点$\mathrm{P}$に向かってやってくる波を横に並べて描いてみると，$\mathrm{P}$点には常に同一の変位が届いていることがわかる．
+よって，2つの変位を足し合わせたものは1つの変位の倍になる．
+これを互いに{\gtfamily 強め合っている}といい，このとき$\mathrm{P}$点は大きく振動することになる．
+\begin{center}
+\includegraphics[keepaspectratio,width=115mm]{text_p93_fig2.png}
+\end{center}
+
+\bsNeed{63mm}
+また，$\mathrm{A}$点と$\mathrm{B}$点からの距離の差がちょうど1波長$\lambda\U{m}$の$m-\dfrac{1}{2}$倍（$m$は整数）になっているような点$\mathrm{P}$の場合，2つの波源からやってくる変位は点$\mathrm{P}$において必ず正負逆の変位をもつ．
+よって，2つの変位を足し合わせたものは常に0となり，全く振動しなくなる．
+これを互いに{\gtfamily 弱め合っている}といい，このとき$\mathrm{P}$点は全く振動しないことになる．
+\begin{center}
+\includegraphics[keepaspectratio,width=115mm]{text_p93_fig3.png}
+\end{center}
+
+以上より，$\mathrm{A}$，$\mathrm{B}$からの距離がそれぞれ$r_1$, $r_2$である点$\mathrm{P}$が，
+\[\text{強め合いとなる条件：}r_1-r_2=m\lambda\hspace{5mm}\text{（ただし$m$は整数）}\hspace{13mm}\]
+\[\text{弱め合いとなる条件：}r_1-r_2=\left(m-\dfrac{1}{2}\right)\lambda\hspace{5mm}\text{（ただし$m$は整数）}\]
+であり，これらはそれぞれ水面上で波源の位置を焦点とする双曲線となる．
+
+\begin{matome}{水面波の干渉}
+\hspace{3mm} 波源$\mathrm{A}$, $\mathrm{B}$が同位相で振動しているとき，2点からの距離がそれぞれ$r_1$, $r_2$である点$\mathrm{P}$は
+\[r_1-r_2=m\lambda\hspace{18mm}\text{のとき強め合い}\]
+\[r_1-r_2=\left(m-\dfrac{1}{2}\right)\lambda\hspace{5mm}\text{のとき弱め合い}\]
+\end{matome}
+波源$\mathrm{A}$, $\mathrm{B}$の振動に位相差がある場合はこれも考慮して強め合い，弱め合いを決定する必要がある．
+
+%%%%%% 1.2pt罫＋見出し（約12mm）と問題枠がページで分かれないよう，ユニットごと送る
+\bsNeed{100mm}
+%%%%%  例題6（15.1 のまとめ枠の直後）＝ 原本【例題6】〈水面波の干渉〉（p94）  %%%%%%
+% 問題文・図・（指針）・KEY は原本からの転写。原本には解答が載っていないので【解答】は書き起こした。
+\begin{reidaiunit}
+\begin{reidai}{水面波の干渉}
+\hspace{1zw}同一振幅，同一波長の波を同周期で出す2つの波源$\mathrm{S_1}$, $\mathrm{S_2}$がある．2つの波源はちょうど2.5波長分だけ離れており，互いに逆位相の波を送り出している．図はある瞬間における水面波の様子で，実線が水面の山，点線が水面の谷を表している．波の減衰はないものとして，この水面に出来る腹線，節線を作図せよ．
+\begin{center}\includegraphics[keepaspectratio,width=75mm]{fig/n15_ex6_wave.png}\end{center}
+\end{reidai}
+
+\begin{sisinE}
+波源が逆位相のときは，同位相のときと強め合い・弱め合いの条件が入れ替わる．図から判断するときは，「山と山（谷と谷）が重なる点」と「山と谷が重なる点」のどちらが強め合いになるのかを，波源そのものの変位で確かめてから作図するとよい．
+\end{sisinE}
+\Key{水面波の強め合い・弱め合い\quad $\Rightarrow$\quad 図を見て判断する}
+
+\begin{kaitou}
+\hspace{1zw}2つの波源は逆位相であるから，$\mathrm{S_1}$, $\mathrm{S_2}$からの距離をそれぞれ$r_1$, $r_2$として，
+\Ana{|r_1-r_2|=\left(m+\frac{1}{2}\right)\lambda\ \text{のとき強め合い（腹）},\hspace{4mm}|r_1-r_2|=m\lambda\ \text{のとき弱め合い（節）}}
+となる（$m$は整数）．
+
+\hspace{1zw}逆位相の波源では，一方が山を送り出しているときに他方は谷を送り出している．したがって図の上では，{\gtfamily 実線と実線（山と山），点線と点線（谷と谷）が重なる点が強め合いの点（腹）}であり，{\gtfamily 実線と点線（山と谷）が重なる点が弱め合いの点（節）}である．
+
+\hspace{1zw}$\overline{\mathrm{S_1S_2}}=2.5\lambda$であるから，線分$\mathrm{S_1S_2}$上で$\mathrm{S_1}$から距離$x$の点では$r_1-r_2=2x-2.5\lambda$となり，
+\[\text{腹：}x=0,\ \frac{1}{2}\lambda,\ \lambda,\ \frac{3}{2}\lambda,\ 2\lambda,\ \frac{5}{2}\lambda\hspace{6mm}\text{節：}x=\frac{1}{4}\lambda,\ \frac{3}{4}\lambda,\ \frac{5}{4}\lambda,\ \frac{7}{4}\lambda,\ \frac{9}{4}\lambda\]
+となる（波源そのものが腹になっていることに注意）．これらの点を通る双曲線を描けばよく，腹線・節線は次図のようになる．
+\begin{center}\AnaFig{105mm}{fig/n15_ex6_ans.png}{fig/n15_ex6_ans_blank.png}\end{center}
+\hspace{1zw}（太実線が腹線，太破線が節線．腹線は4本の双曲線と，線分$\mathrm{S_1S_2}$の外側にのびる直線部分からなり，節線は$\mathrm{S_1S_2}$の垂直二等分線と4本の双曲線の計5本である．）\hspace*{\fill}\Ans
+\end{kaitou}
+\end{reidaiunit}
+
+\begin{bsHosoku}{参考（水面波の数式的取り扱いについて）}
+$\mathrm{A}$, $\mathrm{B}$点が同変位で$y=A\sin 2\pi\dfrac{t}{T}$で与えられるとき，$\mathrm{A}$, $\mathrm{B}$からの距離がそれぞれ$r_1$, $r_2\U{m}$である点$\mathrm{P}$におけるそれぞれの波の変位は
+\[y_1=A\sin\frac{2\pi}{T}\left(t-\frac{r_1}{v}\right),\hspace{5mm}y_2=A\sin\frac{2\pi}{T}\left(t-\frac{r_2}{v}\right)\]
+であり，点$\mathrm{P}$の合成変位は
+\[y_1+y_2=2A\cos\left(\frac{\pi(r_1-r_2)}{\lambda}\right)\cdot\sin\frac{2\pi}{T}\left(t-\frac{r_1+r_2}{2v}\right)\]
+となる．よってこの点$\mathrm{P}$の合成変位の振幅は$2A\left|\cos\left(\dfrac{\pi(r_1-r_2)}{\lambda}\right)\right|$となり，$r_1-r_2=m\lambda$のとき強め合い（合成振幅が最大）となることが分かる．
+\end{bsHosoku}
+
+\bsNeed{60mm}   %% 図61.9mm − 16mm ＋ 見出し14mm
+\subsection{定在波}
+\begin{wrapfigure}[12]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p95_fig1.png}
+\end{wrapfigure}
+先の水面波の干渉では，水面上に節線・腹線が出来たが，特に2つの波源を結ぶ線分上では波形がどちら方向にも進行しない波が観察される．
+一般に，{\gtfamily 一直線上で，互いに逆向きに伝播する，波長・振幅・振動数の等しい2つの波が重なった場合，大きく振動する点と，全く振動しない点とが交互に並び，それらの点が左右のどちらにも動かない波が観察される．}
+このような波を{\gtfamily 定在波（または定常波）}と呼ぶ．
+
+右図は合成波の様子を表したものであるが，場所により最大の変位（振幅）は異なり，最も大きく振動する点を{\gtfamily 腹}，全く振動しない点を{\gtfamily 節}という．
+右図のもとの波長と比較すれば，{\gtfamily 腹と腹の間隔，節と節の間隔は波長の半分の長さであり，腹と節の間隔は波長の$\dfrac{1}{4}$}となることがわかる．
+また，定在波の周期はもとの波の周期と一致している．
+
+\begin{matome}{定在波}
+\hspace{3mm} 互いに逆方向に進む同一振幅・波長・周期の2つの波が重なるとき，合成波は進行しない定在波となる．
+振幅は媒質各点ごとに違い，各点で上下に単振動を行うが，波形は左右には動いていかない．
+\[\text{定在波の腹−腹間隔}=\text{節−節間隔}=\dfrac{\lambda}{2}\hspace{10mm}\text{腹−節間隔}=\dfrac{\lambda}{4}\]
+\end{matome}
+
+\bsNeed{80mm}
+%%%%%  例題7（15.2 のまとめ枠の直後）＝ 原本【例題7】〈定在波〉（p95）  %%%%%%%%%%
+\begin{reidaiunit}
+\begin{reidai}{定在波}
+\begin{zuright}{62mm}
+\hspace{1zw}図は波長$\lambda\U{m}$，周期$T\U{s}$の縦波が右と左から伝播してきて得られた縦波の定在波の波形を，右方向の変位を縦軸上向きにして示している．波形は\MARU{1}$\to$\MARU{2}$\to$\MARU{3}$\to$\MARU{2}$\to$\MARU{1}$\to$\MARU{2}$\to\cdots$のように時間変化している．このとき，以下の設問に答えよ．
+\begin{komon}
+\ko{1} \MARU{1}の波形から\MARU{2}の波形になるまでの時間はいくらか．
+\ko{2} 点$\mathrm{a}$と点$\mathrm{b}$の距離はどれだけか．
+\ko{3} 波形\MARU{1}のとき，媒質の密度が最大と最小の点はそれぞれどこか．
+\ko{4} 波形\MARU{3}のとき，媒質の密度が最大と最小の点はそれぞれどこか．
+\ko{5} (3)(4)の結果を参考にすると，密度変動が最も大きい点と最も小さい点はどこか．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=62mm]{fig/n15_ex7_std.png}
+\end{zuright}
+\end{reidai}
+
+\begin{sisinE}
+定在波では，どの点も同時に最大変位に達し，同時に変位0になる（進行波と違い，位相の遅れが場所によって生じない）．ただし{\gtfamily 節をはさんだ隣り合う区間どうしは，変位の向きが互いに逆になる}．\MARU{1}と\MARU{3}は互いに正負が逆の波形であり，\MARU{2}はすべての点の変位が0になった瞬間である．縦波の疎密は横波表示のグラフの傾きで判断できる．$x$の増加につれて変位が正から負へ変わる点は媒質が両側から集まるので密，負から正へ変わる点は媒質が両側へ遠ざかるので疎である．
+\end{sisinE}
+\Key{定在波の腹−腹間隔＝節−節間隔$=\dfrac{\lambda}{2}$\quad 腹−節間隔$=\dfrac{\lambda}{4}$}
+
+\begin{kaitou}
+\hspace{1zw}図で$\mathrm{a}$, $\mathrm{c}$, $\mathrm{e}$は3つの波形がすべて$y=0$となる点であるから節，$\mathrm{b}$, $\mathrm{d}$は変位が最大となる点であるから腹である．
+\begin{komon}
+\ko{1} \MARU{1}は各媒質が単振動の端にいる瞬間，\MARU{2}は各媒質が振動中心を通る瞬間であるから，求める時間は単振動の$\dfrac{1}{4}$周期にあたる．
+       \Ana{\frac{T}{4}\Ans}
+\ko{2} $\mathrm{a}$は節，$\mathrm{b}$は腹であるから，腹−節間隔で
+       \Ana{\frac{\lambda}{4}\Ans}
+\ko{3} \MARU{1}（実線）では，$x$の増加につれて変位が正から負に変わるのは$\mathrm{c}$，負から正に変わるのは$\mathrm{a}$と$\mathrm{e}$である．よって
+       \Ana{\text{密度最大：}\mathrm{c}\hspace{6mm}\text{密度最小：}\mathrm{a},\ \mathrm{e}\Ans}
+\ko{4} \MARU{3}（破線）は\MARU{1}と正負が逆の波形であるから，(3)と逆になり
+       \Ana{\text{密度最大：}\mathrm{a},\ \mathrm{e}\hspace{6mm}\text{密度最小：}\mathrm{c}\Ans}
+\ko{5} (3)(4)より，節$\mathrm{a}$, $\mathrm{c}$, $\mathrm{e}$では密と疎とが交互に現れる．一方，腹$\mathrm{b}$, $\mathrm{d}$では隣り合う媒質が同じ向きに同じだけ変位するので密度は変化しない．よって
+       \Ana{\text{密度変動が最大：}\mathrm{a},\ \mathrm{c},\ \mathrm{e}\hspace{6mm}\text{密度変動が最小：}\mathrm{b},\ \mathrm{d}\Ans}
+\end{komon}
+\end{kaitou}
+\begin{chuu}
+縦波では{\gtfamily 節が密度変動の腹}，{\gtfamily 腹が密度変動の節}になっている．変位の腹と密度変動の腹とは$\dfrac{\lambda}{4}$だけずれていることに注意せよ．
+\end{chuu}
+\end{reidaiunit}
+
+\bsNeed{49mm}   %% 図51.3mm − 16mm ＋ 見出し14mm
+\subsection{うなり}
+\begin{wrapfigure}[10]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text_p96_fig1.png}
+\end{wrapfigure}
+定在波では同一振動数をもつ2つの波の干渉を考えたが，振動数がわずかに異なる2つの波の干渉では，合成波は図のように振幅の大きい部分と小さい部分をもつ波群となって伝播していく．
+特に干渉する波が音波の場合は振幅が大きいほど音が強く聞こえるため，観測者は位置に関係なく，音が周期的に大きくなったり小さくなったりする現象を観測する．
+この現象を{\gtfamily うなり}という．
+
+うなりの振動数（1秒間あたりのうなりの回数）$N\U{Hz}$は，二つの波の振動数をそれぞれ$f_1$, $f_2\U{Hz}$として，
+\[\mbox{\boldmath $N=|f_1-f_2|$}\U{Hz}\]
+で与えられる．
+
+\begin{matome}{うなり}
+\hspace{3mm} 振動数がそれぞれ$f_1$, $f_2\U{Hz}$の音波が干渉するとき，観測されるうなりの振動数$N\U{Hz}$は
+\[N=|f_1-f_2|\U{Hz}\]
+\end{matome}
+
+\bsNeed{20mm}
+\subsection{固定端と自由端}
+糸を張り，この左端を上下に振って波を送る場合，壁面に達した波は反射されて逆方向に戻ってくる．
+この際，糸が壁面に固定されているか，それとも壁面に対して自由に動けるかで反射のされ方が異なる．
+媒質が反射点に固定されていて動けない反射点を{\gtfamily 固定端}といい，媒質が反射点に固定されておらず，自由に動ける反射点を{\gtfamily 自由端}という．
+
+一次元的に伝播する波で，入射した波が反射点ですべて反射される場合について考えてみよう．
+
+\bsNeed{75mm}
+\Kou{1}{自由端反射}
+% 15.1 と同じ理由でここも zuright にした（wrapfigure だと折り返しが後ろへ持ち越される）
+\begin{zuright}{70mm}
+\hspace{1zw}{\gtfamily 反射点にある媒質が自由に動ける場合，自由端反射となる．}
+反射点において入射波と反射波の変位は同じになり，{\gtfamily 反射波の波形は入射波を反射点で折り返した波形となる．}
+
+\hspace{1zw}図のように$x=l\U{m}$の位置に自由端反射する反射壁が置かれている場合，反射波の変位$y^\prime(x,t)\U{m}$を考えてみよう．
+波の伝播する速さを$v\U{m/s}$とし，原点での時刻$t\U{s}$での変位を$y(0,t)\U{m}$とすると，位置$x\U{m}$における反射波は原点から$2l-x\U{m}$だけ伝播してきたことになるので，この位置まで伝播するのに$\dfrac{2l-x}{v}\U{s}$だけ時間がかかるから
+\[y^\prime(x,t)=y\left(0,\,t-\frac{2l-x}{v}\right)=y(2l-x,\,t)\]
+\zusep
+\includegraphics[keepaspectratio,width=70mm]{text_p97_fig1.png}
+\end{zuright}
+\hspace{1zw}と計算できる．
+この変位は，入射波が反射壁で反射されずに$2l-x\U{m}$直進した場合の変位と等しく，このことは任意の位置，時刻で成立するから，{\gtfamily 反射波の波形は入射波がそのまま直進した場合の波形を反射壁で折り返した波形と同じになる．}
+
+\bsNeed{75mm}
+\Kou{2}{固定端反射}
+\begin{zuright}{70mm}
+\hspace{1zw}{\gtfamily 反射点にある媒質が固定されている場合，固定端反射となる．}
+反射点が固定されているため，{\gtfamily 入射波と反射波の合成波の変位は$0\U{m}$でなければならない．}
+そのため，反射点における反射波の変位は，入射波と変位が同じ大きさで逆向きとなり，{\gtfamily 反射波の波形は入射波を反射点で折り返した波形をさらに正負を逆にした波形となる．}
+
+\hspace{1zw}自由端反射の場合と同様に固定端反射された反射波の変位$y^\prime(x,t)\U{m}$を考えてみよう．
+位置$x\U{m}$における反射波は原点から$2l-x\U{m}$だけ伝播してきたことは同じであるが，反射点において正負を逆にされているので，
+\[y^\prime(x,t)=-y\left(0,\,t-\frac{2l-x}{v}\right)=-y(2l-x,\,t)\]
+\zusep
+\includegraphics[keepaspectratio,width=70mm]{text_p97_fig2.png}
+\end{zuright}
+\hspace{1zw}とマイナスをつけることで変位の一般式を求めることができる．
+{\gtfamily 反射波の波形は入射波がそのまま直進した場合の波形を反射壁で折り返し，さらに正負を逆にした波形と同じになる．}
+
+いずれの反射の場合でも，反射波は透過波を用いて議論するとよい．
+
+\begin{matome}{反射波の方程式の考え方}
+\hspace{3mm} \MARU{1}\hspace{2mm} 反射壁を突き抜ける透過波を考える．\\
+\hspace{3mm} \MARU{2}\hspace{2mm} 時刻$t\U{s}$，位置$x\U{m}$にいる反射波は，壁面を透過していたらその時刻にどこにいるかを考える．\\
+\hspace{3mm} \MARU{3}\hspace{2mm} 反射壁で反射される際に，そのまま反射されるのか，上下反転されるのかを把握する．\\
+\hspace{3mm} \MARU{4}\hspace{2mm} 方程式を立てる．
+\end{matome}
+
+\bsNeed{78mm}
+%%%%%  例題8（15.4 のまとめ枠の直後）＝ 原本【例題8】〈作図によって求める自由端反射と固定端反射〉（p98）
+\begin{reidaiunit}
+\begin{reidai}{作図によって求める自由端反射と固定端反射}
+\begin{zuright}{62mm}
+\hspace{1zw}$x$軸の正の向きに速さ$2\U{m/s}$で進む正弦波が，位置$x=9\U{m}$のところにある反射壁によって完全に反射している．右図は時刻$t=0\U{s}$における入射波を示している．
+\begin{komon}
+\ko{1} この反射壁が自由端であるときの反射波の波形を作図せよ．
+\ko{2} この反射壁が固定端であるときの反射波の波形を作図せよ．
+\ko{3} (1), (2)それぞれの場合について，合成波の波形を作図せよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=62mm]{fig/n15_ex8_grid.png}
+\end{zuright}
+\end{reidai}
+
+\begin{sisinE}
+反射波は，反射壁を突き抜けて進む透過波をまず描き，それを反射壁で折り返して求める．自由端ならそのまま折り返し，固定端なら折り返した上で上下を反転させる．合成波は入射波と反射波を各点で足し合わせればよい．入射波の振幅と波長は与えられたグラフの目盛から読み取る．
+\end{sisinE}
+\Key{反射波\quad $\Rightarrow$\quad 透過波を考える}
+
+\begin{kaitou}
+\hspace{1zw}グラフより入射波は振幅$2\U{m}$，波長$8\U{m}$の正弦波であり，時刻$t=0\U{s}$では
+\[y(x,0)=2\sin\frac{2\pi x}{8}=2\sin\frac{\pi x}{4}\U{m}\]
+と表される．
+\begin{komon}
+\ko{1} 透過波（$x>9\U{m}$へ延長した波形）を$x=9\U{m}$についてそのまま折り返せばよいので，自由端反射の反射波は
+       \[y^\prime(x,0)=y(18-x,0)=2\sin\frac{\pi(18-x)}{4}\U{m}\]
+       であり，次図の破線のようになる．\hspace*{\fill}\Ans
+\ko{2} 固定端反射の場合は折り返したうえで正負を逆にするので
+       \[y^\prime(x,0)=-y(18-x,0)=-2\sin\frac{\pi(18-x)}{4}\U{m}\]
+       であり，次図の破線のようになる．\hspace*{\fill}\Ans
+\ko{3} 各点で入射波と反射波の変位を足し合わせればよい．自由端の場合は
+       \[y+y^\prime=2\sqrt{2}\cos\frac{\pi(x-9)}{4}\U{m}\]
+       となり，反射点$x=9\U{m}$が定在波の\AnaU{腹（変位$2\sqrt{2}\U{m}$）}になる．固定端の場合は
+       \[y+y^\prime=2\sqrt{2}\sin\frac{\pi(x-9)}{4}\U{m}\]
+       となり，反射点$x=9\U{m}$が定在波の\AnaU{節（変位$0\U{m}$）}になる．合成波は次図の太実線である．\hspace*{\fill}\Ans
+\end{komon}
+\begin{center}
+\begin{minipage}{74mm}\centering
+\MARU{1}自由端反射\\[1mm]
+\AnaFig{72mm}{fig/n15_ex8_ans1.png}{fig/n15_ex8_ans1_blank.png}
+\end{minipage}\hfill
+\begin{minipage}{74mm}\centering
+\MARU{2}固定端反射\\[1mm]
+\AnaFig{72mm}{fig/n15_ex8_ans2.png}{fig/n15_ex8_ans2_blank.png}
+\end{minipage}
+\end{center}
+\hspace{1zw}（細実線が入射波，破線が反射波，太実線が合成波）
+\end{kaitou}
+\end{reidaiunit}
+
+\bsNeed{20mm}
+\subsection{入射波と反射波によって作られる定在波}
+一直線上を進む正弦波が反射壁によって完全に反射する（＝減衰せずに反射する）場合，入射波と反射波は同一振幅・波長・振動数で互いに逆向きに進むから，この2つが重なって出来る合成波は定在波となる．
+定在波は，腹・腹間隔＝節・節間隔$=\dfrac{\lambda}{2}$，腹・節間隔$=\dfrac{\lambda}{4}$なる間隔で，節と腹とが交互に並ぶものであるが，
+\begin{description}
+\item[・] {\gtfamily 自由端反射の反射点}\\
+{\gtfamily 入射波がそのまま反射}\hspace{2mm}$\Leftrightarrow$\hspace{2mm}{\gtfamily 合成波の変位は常に入射波の変位の2倍}\hspace{2mm}$\Leftrightarrow$\hspace{2mm}{\gtfamily 定在波の腹}
+\item[・] {\gtfamily 固定端反射の反射点}\\
+{\gtfamily 媒質は動けない}\hspace{2mm}$\Leftrightarrow$\hspace{2mm}{\gtfamily 合成波の変位は常に0}\hspace{2mm}$\Leftrightarrow$\hspace{2mm}{\gtfamily 定在波の節}
+\end{description}
+となっている．
+そのため，自由端反射，固定端反射によって出来る定在波の波形は下の図のようになる．
+
+\bsNeed{87mm}
+\begin{center}
+\includegraphics[keepaspectratio,width=120mm]{text_p99_fig1.png}
+\end{center}
+定性的に考えると上記のようになるが，次の例題ではこれを数式を用いて解析してみよう．
+
+\bsNeed{118mm}
+%%%%%  例題9（15.5 の直後）＝ 原本【例題9】〈固定端反射・自由端反射によって作られる定在波の方程式〉（p99）
+\begin{reidaiunit}
+\begin{reidai}{固定端反射・自由端反射によって作られる定在波の方程式}
+\begin{zuright}{58mm}
+\hspace{1zw}固定端から距離$l\U{m}$の位置にある波源$\mathrm{O}$から，固定端に向かって波長$\lambda\U{m}$の正弦波が送り出されている．波源$\mathrm{O}$の時刻$t\U{s}$に対する振動は
+\[y_1(0,t)=A\sin 2\pi\frac{t}{T}\U{m}\]
+で与えられる．図のように$x$座標を取るとき，以下の問に答えよ．
+\zusep
+\includegraphics[keepaspectratio,width=58mm]{fig/n15_ex9_wave.png}
+\end{zuright}
+\begin{komon}
+\ko{1} 時刻$t\U{s}$，位置$x\U{m}$（ただし$0<x<l$）における入射波の方程式$y_1(x,t)\U{m}$を求めよ．
+\ko{2} 時刻$t\U{s}$，位置$x\U{m}$（ただし$0<x<l$）における反射波の方程式$y_2(x,t)\U{m}$を求めよ．
+\ko{3} 以上より，入射波と反射波の合成波の変位$y(x,t)\U{m}$を求めよ．ただし，三角関数の和積変換公式$\sin\alpha-\sin\beta=2\cos\left(\dfrac{\alpha+\beta}{2}\right)\sin\left(\dfrac{\alpha-\beta}{2}\right)$を用いてよい．
+\ko{4} (3)の結果より，位置$x\U{m}$（ただし$0<x<l$）における合成波の振幅$A(x)\U{m}$を求めよ．
+\ko{5} (4)の結果より，定在波の節となる点，および腹となる点の座標を負でない整数値$n$を用いて表せ．
+\ko{6} 自由端反射の場合には，(2)〜(5)の結果はどのようになるかを求めよ．ただし，三角関数の和積変換公式$\sin\alpha+\sin\beta=2\sin\left(\dfrac{\alpha+\beta}{2}\right)\cos\left(\dfrac{\alpha-\beta}{2}\right)$を用いてよい．
+\end{komon}
+\end{reidai}
+
+\begin{sisinE}
+反射波は透過波を折り返して求める．要は「時刻$t$，位置$x$にやってくる反射波は，壁を透過していたらどこにいるか」を考えるだけである．固定端では反射のときに変位の正負が逆転し，自由端では逆転しない．合成波は必ず（位置だけで決まる振幅）$\times$（時刻だけで変動する部分）の形になり，前者から節・腹の位置が読み取れる．
+\end{sisinE}
+\Key{反射波\quad $\Rightarrow$\quad 透過波を考える\hspace{6mm}合成波＝入射波＋反射波＝定在波}
+
+\begin{kaitou}
+\begin{komon}
+\ko{1} 波の速さは$v=\dfrac{\lambda}{T}\U{m/s}$である．時刻$t$に位置$x$にいる波は，原点を時刻$t-\dfrac{x}{v}$に出た波であるから
+       \Ana{y_1(x,t)=y_1\left(0,\,t-\frac{x}{v}\right)=A\sin 2\pi\left(\frac{t}{T}-\frac{x}{\lambda}\right)\U{m}\Ans}
+\ko{2} 時刻$t$に位置$x$にいる反射波は，壁を透過していたとすれば位置$2l-x$にいる波である．固定端では反射の際に変位の正負が逆転するから
+       \Ana{y_2(x,t)=-y_1(2l-x,\,t)=-A\sin 2\pi\left(\frac{t}{T}-\frac{2l-x}{\lambda}\right)\U{m}\Ans}
+\ko{3} $\alpha=2\pi\left(\dfrac{t}{T}-\dfrac{x}{\lambda}\right)$, $\beta=2\pi\left(\dfrac{t}{T}-\dfrac{2l-x}{\lambda}\right)$とおくと
+       \[\frac{\alpha+\beta}{2}=2\pi\left(\frac{t}{T}-\frac{l}{\lambda}\right),\hspace{5mm}\frac{\alpha-\beta}{2}=2\pi\cdot\frac{l-x}{\lambda}\]
+       であるから，和積変換公式より
+       \Ana{y(x,t)=y_1+y_2=A(\sin\alpha-\sin\beta)=2A\cos 2\pi\left(\frac{t}{T}-\frac{l}{\lambda}\right)\sin\left(2\pi\frac{l-x}{\lambda}\right)\U{m}\Ans}
+\ko{4} (3)の式のうち$\cos$の部分は時刻$t$の進行につれて$-1\sim+1$の範囲で振動するから，位置$x$における振幅は
+       \Ana{A(x)=2A\left|\sin\left(2\pi\frac{l-x}{\lambda}\right)\right|\U{m}\Ans}
+\ko{5} 節は$A(x)=0$となる点であるから，$2\pi\dfrac{l-x}{\lambda}=n\pi$より
+       \[x=l-\frac{n}{2}\lambda\U{m}\Ans\]
+       腹は$A(x)=2A$となる点であるから，$2\pi\dfrac{l-x}{\lambda}=\dfrac{\pi}{2}+n\pi$より
+       \Ana{x=l-\frac{2n+1}{4}\lambda\U{m}\Ans}
+       （固定端$x=l$そのものが節になっていることが確かめられる．）
+\ko{6} 自由端では反射の際に変位の正負が逆転しないから
+       \[y_2(x,t)=y_1(2l-x,\,t)=A\sin 2\pi\left(\frac{t}{T}-\frac{2l-x}{\lambda}\right)\U{m}\Ans\]
+       であり，$\sin\alpha+\sin\beta$の和積変換公式より
+       \[y(x,t)=2A\sin 2\pi\left(\frac{t}{T}-\frac{l}{\lambda}\right)\cos\left(2\pi\frac{l-x}{\lambda}\right)\U{m}\Ans\]
+       となる．よって振幅は
+       \[A(x)=2A\left|\cos\left(2\pi\frac{l-x}{\lambda}\right)\right|\U{m}\Ans\]
+       であり，節と腹は固定端の場合と入れ替わって
+       \Ana{\text{節：}x=l-\frac{2n+1}{4}\lambda\U{m},\hspace{6mm}\text{腹：}x=l-\frac{n}{2}\lambda\U{m}\Ans}
+       （自由端$x=l$そのものが腹になっている．）
+\end{komon}
+\end{kaitou}
+\end{reidaiunit}
+
+\bsNeed{20mm}
+\subsection{定在波の表式}
+以上では反射によって作られる定在波の表式を得たが，互いに逆向きに進む振幅$A\U{m}$，波長$\lambda\U{m}$，周期$T\U{s}$の正弦波が重なって作られる定在波は，より一般的には必ず
+\[y(x,t)=2A\sin\left(2\pi\frac{x}{\lambda}+\varphi_1\right)\sin\left(2\pi\frac{t}{T}+\varphi_2\right)\]
+の形に表すことができる．（ただし$\varphi_1$, $\varphi_2$は条件を満たすように取る定数）
+
+この式の第2項の$\sin$部分である$\sin\left(2\pi\dfrac{t}{T}+\varphi_2\right)$は時刻$t\U{s}$の進行につれて$-1\sim+1$の範囲で振動する．
+よって，位置$x\U{m}$におけるこの定在波の振幅$A(x)\U{m}$は
+\[A(x)=2A\left|\sin\left(2\pi\frac{x}{\lambda}+\varphi_1\right)\right|\]
+で与えられ，この位置では定在波は$-A(x)\sim+A(x)$の範囲を振動する．
+また，時間変動をもたらす第2項の$\sin\left(2\pi\dfrac{t}{T}+\varphi_2\right)$はすべての$x$に対して同等にかかるから，{\gtfamily 定在波ではどの点も同時に最大変位に達し，同時に変位0になる}（進行波のように位相が場所によって遅れることがない）ことがこの式から分かる．
+ただし，位置による振幅を表す第1項の$\sin\left(2\pi\dfrac{x}{\lambda}+\varphi_1\right)$は節をはさんで符号が変わるから，{\gtfamily 節をはさんだ隣り合う区間どうしは変位の向きが逆になる}ことにも注意せよ．
+
+\begin{matome}{定在波の表式}
+\hspace{3mm} 互いに逆向きに進む振幅$A\U{m}$，波長$\lambda\U{m}$，周期$T\U{s}$の正弦波が重なって作られる定在波は，
+\[y(x,t)=2A\sin\left(2\pi\frac{x}{\lambda}+\varphi_1\right)\sin\left(2\pi\frac{t}{T}+\varphi_2\right)\]
+の形に必ず表せ，位置による振幅を表す部分と，時間変動して$-1\sim+1$の範囲で振動する部分とに分けることができる．
+\end{matome}
+
+\begin{bsHosoku}{参考（波のエネルギーと強さ）}
+正弦波が伝わるとき，媒質そのものは進行せず，その波形（＝位相）のみが進行していく．このとき，波を伝える媒質はその点において上下に単振動しており，力学的エネルギーをもっている．この正弦波がもつエネルギーとは，振動する媒質各点のもつ力学的エネルギーであるから，この単振動のエネルギーを計算することにより，波のエネルギーを求めることができる．
+
+媒質のある微小部分に着目する．この微小部分の質量を$m\U{kg}$とし，波の振幅を$A\U{m}$，波の振動数を$f\U{Hz}$とすると，この媒質の微小部分の単振動の力学的エネルギー$E\U{J}$は
+\[E=\frac{1}{2}m\omega^2A^2=\frac{1}{2}m(2\pi f)^2A^2=2\pi^2mf^2A^2\U{J}\]
+であり，これが正弦波のエネルギーである．正弦波が媒質を伝わっていくとき，媒質は上下するのみだが単振動が次々と伝わっていくということは，媒質そのものは移動していないのにもかかわらず，波動によってエネルギーが移動していくということを意味する．
+
+次に，波の強さを定義する．波の進行方向と垂直な単位面積（$1\U{m^2}$）を，$1\U{s}$あたりに通過していく波のエネルギーのことを波の強さという．今，波の進行速度が$v\U{m/s}$だとすると，$1\U{s}$あたりに波が通過していく媒質は$v\U{m}$である．媒質の線密度（$1\U{m}$あたりの質量）を$\rho\,[\mathrm{kg/m}]$とすると，$1\U{s}$あたりに波が通過していく媒質の質量は$\rho v\U{kg}$であり，この部分がもつ単振動のエネルギーは，
+\[E=2\pi^2(\rho v)f^2A^2=2\pi^2\rho f^2A^2v\U{J}\]
+である．波の強さはこのエネルギーを，この波の通過していく断面積$S\U{m^2}$で割ったものであるから，
+\[(\text{波の強さ})=\frac{2\pi^2\rho}{S}f^2A^2v\]
+となる．すなわち，{\gtfamily 波の強さは振幅の2乗，振動数の2乗，波の速さに比例する．}
+\end{bsHosoku}
+
+
+\newpage
+
+% 練習番号：第14回で［1］〜［10］を使ったのでこの回は［11］から
+\setcounter{qno}{10}
+
+\filbreak
+\Rank{A問題}
+
+\Mon{基本事項の確認}
+
+% 原本 第20回［9］の(3)(4)(5) に，原本 第21回［16］の(1)(2) を (4)(5) として統合した
+% （再編案「A2→1」）。⑳［9］の(1)(2)（縦波の横波表示）は第14回の［1］へ移してある。
+\hspace{1zw}以下の設問に答えよ．
+\begin{komon}
+% 誤植訂正（2026-09-10）：原本は「球面波」だが，水面上を伝わる二次元の波なので「円形波」。
+% 同種の波を扱う［15］（C問題「水面波の干渉」）では原本も「円形波」と書いており不統一だった。
+\ko{1} 水面上の2点$\mathrm{A}$, $\mathrm{B}$を波源として，同位相で波長$2.0\U{cm}$の円形波がでている．水面上の$\overline{\mathrm{AP}}=5.0\U{cm}$, $\overline{\mathrm{BP}}=2.0\U{cm}$であるような点$\mathrm{P}$では，波は強め合うか，弱め合うか．
+\ko{2} 以下の括弧を適当な語句で埋めよ．\fbox{ア}・\fbox{イ}・\fbox{ウ}が等しい二つの波が互いに逆向きに進んできて，それらが重なり合うと，進まない波ができる．この波を\fbox{エ}という．このとき，振動のもっとも激しいところを\fbox{オ}といい，またまったく振動しないところを\fbox{カ}という．隣り合う節と節および腹と腹との間隔は波長の\fbox{キ}倍である．
+\ko{3} 振動数$468\U{Hz}$の音叉と振動数$464\U{Hz}$の音叉を同時に鳴らすとき，$1\U{s}$間あたりに聞こえるうなりは何回か．
+\ko{4} 横波が固定端で反射される場合，入射した山は\fbox{ク}として反射される．また，自由端で反射される場合，入射した山は\fbox{ケ}として反射される．\fbox{ク}\fbox{ケ}に「山」または「谷」を入れよ．
+\ko{5} 波長が$40\U{cm}$の波が反射壁に対して垂直に進み，その反射波と入射波によって定在波が生じた．このとき，反射壁に最も近い（反射点は含まないものとする）節の位置を，\MARU{1}自由端反射のとき，および，\MARU{2}固定端反射のとき，のそれぞれについて求めよ．
+\end{komon}
+
+\filbreak
+\Rank{B問題}
+
+\Mon[\Sitei]{水面波の干渉}
+
+\begin{zuright}{55mm}
+\hspace{1zw}同一振幅，同一波長$\lambda\U{m}$の波を同周期で出す二つの波源$\mathrm{S_1}$, $\mathrm{S_2}$がある．二つの波源はちょうど2波長分だけ離れており，互いに同位相の波を送り出している．図はある瞬間における水面波の様子で，実線が水面の山，点線が水面の谷を表している．波の減衰はないものとして，以下の設問に答えよ．
+\begin{komon}
+\ko{1} 線分$\mathrm{S_1S_2}$上に生じる節および腹の位置を図示せよ．節を$\bigcirc$，腹を$\bullet$で表せ．
+\ko{2} 線分$\mathrm{S_1S_2}$の延長線ではどのような波が観察されるか．簡単に説明せよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=55mm]{fig/n15_p12_wave.png}
+\end{zuright}
+
+\Mon{水面波の節線・腹線の導出}
+
+\begin{zuright}{58mm}
+\hspace{1zw}右図のように水面上の二つの波源$\mathrm{A}$, $\mathrm{B}$から，速さ$v\U{m/s}$の正弦波が送り出されている．波源$\mathrm{A}$, $\mathrm{B}$の時刻$t\U{s}$における振動は，$y_\mathrm{A}(0,t)=y_\mathrm{B}(0,t)=A\sin\dfrac{2\pi}{T}t\U{m}$で表される．これについて以下の設問に答えよ．
+\begin{komon}
+\ko{1} 時刻$t\U{s}$に，点$\mathrm{A}$から$r_1\U{m}$だけ離れた位置$\mathrm{P}$に波源$\mathrm{A}$からやってくる波$\mathrm{A}$の変位$y_\mathrm{A}(r_1,t)$を求めよ．
+\ko{2} 時刻$t\U{s}$に，点$\mathrm{B}$から$r_2\U{m}$だけ離れた位置$\mathrm{P}$に波源$\mathrm{B}$からやってくる波$\mathrm{B}$の変位$y_\mathrm{B}(r_2,t)$を求めよ．
+\ko{3} $\mathrm{A}$, $\mathrm{B}$から$r_1$, $r_2\U{m}$だけ離れた位置$\mathrm{P}$における時刻$t\U{s}$の合成変位$y(t)$を求めよ．ただし，三角関数の和積変換公式$\sin\alpha+\sin\beta=2\sin\left(\dfrac{\alpha+\beta}{2}\right)\cdot\cos\left(\dfrac{\alpha-\beta}{2}\right)$を用いてよい．
+\ko{4} (3)で得られた式は，時刻$t\U{s}$の変化により$+1\sim-1$の間で変化する部分と，$r_1$, $r_2\U{m}$によって決まる定数部分とに分けることができる．$+1\sim-1$の間で変化する部分を取り除いた式$A^\prime(r_1,r_2)$を求めよ．
+\ko{5} $\mathrm{A}$, $\mathrm{B}$から$r_1$, $r_2\U{m}$だけ離れた位置$\mathrm{P}$の変位は，時刻$t\U{s}$の変化により$+A^\prime(r_1,r_2)\sim-A^\prime(r_1,r_2)$の範囲で変化する．よって，$A^\prime(r_1,r_2)=0$であればその点は時刻$t\U{s}$が変化しても全く変動しない弱め合いの点であるということが言える．このことから，点$\mathrm{P}$で弱め合うための条件を，整数値$m$を用いて表せ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=58mm]{fig/n15_p13_AB.png}
+\end{zuright}
+
+\Mon{うなり}
+
+\hspace{1zw}振動数$400\U{Hz}$の音叉$\mathrm{A}$と，振動数が未知の音叉$\mathrm{B}$がある．はじめ音叉$\mathrm{A}$と$\mathrm{B}$とを同時にならすと，$3\U{s}$間に15回の割合でうなりが聞こえた．次に音叉$\mathrm{B}$に針金を巻つけて，$\mathrm{A}$と$\mathrm{B}$とを同時にならすと，$8\U{s}$間に20回の割合でうなりが聞こえるようになった．針金を巻つけることにより音叉の振動数は小さくなることに注意して，音叉$\mathrm{B}$の振動数を求めよ．
+
+\Mon{波の重ね合わせ}
+
+\begin{zuright}{62mm}
+\hspace{1zw}図のような二つの三角波$\mathrm{A}$, $\mathrm{B}$が，左右から速さ$1\U{cm/s}$で進んできて重なり合い，通り抜けていった．この様子を，1秒ごとの間隔で3秒後まで順に作図せよ．
+\zusep
+\includegraphics[keepaspectratio,width=62mm]{fig/n15_p15_tri.png}
+\end{zuright}
+
+\Mon[\Sitei]{作図によって求める自由端反射と固定端反射}
+
+\begin{zuright}{58mm}
+\hspace{1zw}$x$軸の正の向きに速さ$v=4\U{m/s}$で進む振幅$A=2\U{m}$，波長$\lambda=8\U{m}$の正弦波が，位置$x=10\U{m}$のところにある反射壁によって完全に反射している．右図は時刻$t=0\U{s}$における入射波を示している．
+\begin{komon}
+\ko{1} この反射壁が自由端であるときについて，この瞬間の反射波の波形を作図し，合成波を示せ．
+\ko{2} この反射壁が固定端であるときについて，この瞬間の反射波の波形を作図し，合成波を示せ．
+\ko{3} (2)の場合について，この状態から$0.75\U{s}$後のときの合成波を示せ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=58mm]{fig/n15_p16_refl.png}
+\end{zuright}
+
+\Mon[\Sitei]{固定端反射の場合の反射波方程式の導出}
+
+\begin{zuright}{55mm}
+\hspace{1zw}右図にあるように，$x<0$の領域から$x=l\U{m}$の位置にある固定端の反射壁に向かって，波長$\lambda\U{m}$，周期$T\U{s}$の正弦波が送り込まれている．このとき，$x=l\U{m}$の位置の反射壁によって反射された反射波の方程式は，時刻$t\U{s}$の瞬間における透過波の折り返しによって考えることができるが，これを以下のような手順に従って導出してみよう．以下の空欄に適切な文字を当てはめよ．
+\zusep
+\includegraphics[keepaspectratio,width=55mm]{fig/n15_p17_kotei.png}
+\end{zuright}
+
+\hspace{1zw}今，時刻$t\U{s}$における，入射波の原点における変位が$y(0,t)=A\sin 2\pi\dfrac{t}{T}\U{m}$であった．このとき時刻$t\U{s}$における座標$x\U{m}$の入射波の変位は$y(x,t)=$\fbox{(1)}で与えられる．よって，時刻$t\U{s}$に反射点に入射する入射波の変位は$y(l,t)=$\fbox{(2)}である．この時刻における，反射波の反射点での変位を$y^\prime(l,t)$とすると，固定端は動けないため，任意の時刻$t\U{s}$において必ず$y(l,t)+y^\prime(l,t)=$\fbox{(3)}が成立している．よって，これより時刻$t\U{s}$における，反射波の反射点での変位は$y^\prime(l,t)=$\fbox{(4)}となる．
+
+\hspace{1zw}反射点で反射した波動は，今度は$-x$の向きに向かって，入射波と同じ速さで進行していく．ゆえに時刻$t\U{s}$に座標$x\U{m}$の位置にやってくる反射波は，反射点$x=l\U{m}$を時刻\fbox{(5)}に出た波である．よって，時刻$t\U{s}$，座標$x\U{m}$における反射波の変位$y^\prime(x,t)=$\fbox{(6)}であると求められる．
+
+\hspace{1zw}以上より，$x$軸上に出来る合成波の方程式は$y(x,t)+y^\prime(x,t)=$\fbox{(7)}となり，これより定在波の節となる点の座標を，負でない整数値$m$を用いて表すと，$x=$\fbox{(8)}となることが分かる．
+
+\filbreak
+\Rank{C問題}
+
+\Mon{水面波の干渉}
+
+\begin{zuright}{55mm}
+\hspace{1zw}水面上の2点$\mathrm{S_1}$, $\mathrm{S_2}$から同波長$\lambda\U{m}$の波（円形波）が同振幅$A\U{m}$で送り出されている．右図はある時刻における水面波の様子で，$\mathrm{S_1}$, $\mathrm{S_2}$から出た波の山の波面を実線で，谷の波面を点線で示したものである．以下の設問に答えよ．
+\begin{komon}
+\ko{1} 波源$\mathrm{S_1}$, $\mathrm{S_2}$の振動の位相差はいくらか．
+\ko{2} 線分$\mathrm{S_1S_2}$上にできる腹および節の個数を求めよ．（ただし波源$\mathrm{S_1}$, $\mathrm{S_2}$は数えないものとする）
+\ko{3} 図中の点$\mathrm{A}$, $\mathrm{B}$における振幅をそれぞれ求めよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=55mm]{fig/n15_p18_wave.png}
+\end{zuright}
+
+\Mon{定在波の数学的解析}
+
+\hspace{1zw}$x$軸上の原点$\mathrm{O}$から$y_1(0,t)=A\sin\left(2\pi\dfrac{t}{T}\right)\U{m}$で表される波長$\lambda\U{m}$の正弦波が$x$軸正の向きに送り出され，また$x=2L\U{m}$の地点から$y_2(2L,t)=A\sin\left\{2\pi\left(\dfrac{t}{T}-\dfrac{2L}{\lambda}\right)\right\}\U{m}$で表される波長$\lambda\U{m}$の正弦波が$x$軸負の向きに送り出されている．これについて，以下の設問に答えよ．
+\begin{komon}
+\ko{1} $x$軸上の$0\leqq x\leqq 2L$の部分には，定在波が発生する．この定在波の変位の式$y(x,t)$を求めよ．
+\ko{2} (1)で求めた定在波について，以下の時刻$t\U{s}$のときの$y-x$グラフ（$0\leqq x\leqq 2L\U{m}$）を作図せよ．ただし，簡単のため$L=\lambda\U{m}$であるとし，また$m$は2以上の整数であるとする．\\[1mm]
+       \hspace*{2zw}\MARU{1} $t=mT\U{s}$\hspace{10mm}\MARU{2} $t=mT+\dfrac{1}{8}T\U{s}$\hspace{10mm}\MARU{3} $t=mT+\dfrac{2}{8}T\U{s}$\\[2mm]
+       \hspace*{2zw}\MARU{4} $t=mT+\dfrac{3}{8}T\U{s}$\hspace{6mm}\MARU{5} $t=mT+\dfrac{4}{8}T\U{s}$
+\ko{3} $x=L\U{m}$($=\lambda$)の位置での変位の時間変化を表す$y-t$グラフを，$2T\leqq t\leqq 3T\U{s}$の範囲について求めよ．
+\end{komon}
+
+\Mon{定在波の特徴}
+
+\begin{zuright}{62mm}
+\hspace{1zw}$x$軸の正の向きと負の向きへ，振幅，周期の等しい波$\mathrm{a}$, $\mathrm{b}$が，等しい速さ$0.20\U{m/s}$で進んでいる．右図は時刻$t=0\U{s}$におけるそれぞれの波を示している．これについて以下の設問に答えよ．
+\begin{komon}
+\ko{1} 合成波について，時刻に関係なく変位が$0\U{m}$となる節の位置の座標を，$0\leqq x\leqq 32\U{m}$の範囲で求めよ．
+\ko{2} $x=18\U{m}$の点における合成波の振幅を求めよ．
+\ko{3} 合成波について，時刻$t=0\U{s}$の状態から，初めてすべての座標の変位が同時に$0\U{m}$となる時刻はいつか．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=62mm]{fig/n15_p20_ab.png}
+\end{zuright}
+
+
+\newpage
+
+\KaiTitle{第15回　波の重ね合わせ・干渉・定常波と反射}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+\raggedcolumns
+
+\Rank{A問題}
+\MonN{11}{基本事項の確認}\par\nopagebreak
+\begin{sisin}
+水面波の干渉，定在波，うなりの式などの基本事項を再確認しておこう．
+
+また，固定端反射・自由端反射で作られる定在波の特徴を覚えておくこと．固定端は動けないので定在波の節，自由端は動けるので定在波の腹．節−節，腹−腹間隔が$\dfrac{\lambda}{2}$になることを間違えないように．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} $\left|\overline{\mathrm{AP}}-\overline{\mathrm{BP}}\right|=3.0=2.0\times\left(1+\dfrac{1}{2}\right)$，すなわち半波長分のずれがあるので，{\gtfamily 弱め合う}\hspace*{\fill}\Ans
+\ko{2} ア，イ，ウ＝振幅，波長，振動数（または周期），エ＝定在波（定常波），オ＝腹，カ＝節，キ$=\dfrac{1}{2}$\hspace*{\fill}\Ans
+\ko{3} うなりの振動数は二つの振動数の差の絶対値であるから，
+       \[N=|f_1-f_2|=|468-464|=4\U{Hz}\Ans\]
+\ko{4} 固定端では入射波を折り返した上で正負を逆にするから山は谷として，自由端ではそのまま折り返すから山は山として反射される．よって，ク＝谷，ケ＝山\hspace*{\fill}\Ans
+\ko{5} \MARU{1} 自由端反射のとき，反射点は腹となるので，これに最も近い節は
+       \[\frac{\lambda}{4}=10\U{cm}\Ans\]
+       だけ離れている．
+
+       \MARU{2} 固定端反射のとき，反射点は節となるので，これに最も近い節は
+       \[\frac{\lambda}{2}=20\U{cm}\Ans\]
+       だけ離れている．
+\end{komon}
+
+\Rank{B問題}
+\MonN{12}{水面波の干渉}\par\nopagebreak
+\begin{sisin}
+平面上には双曲線の節線・腹線が作られるが，平面上の各点については，干渉の強め合い・弱め合いの条件を決める式である，
+
+波源$\mathrm{S_1}$, $\mathrm{S_2}$が同位相で振動しているとき，$\mathrm{S_1}$, $\mathrm{S_2}$からの距離がそれぞれ$r_1$, $r_2\U{m}$である点は，
+\[|r_1-r_2|=m\lambda\hspace{4mm}\Rightarrow\hspace{4mm}\text{強め合う}\]
+\[|r_1-r_2|=m\lambda+\frac{1}{2}\lambda\hspace{4mm}\Rightarrow\hspace{4mm}\text{弱め合う}\]
+を用いると厳密な強め合い・弱め合いの位置が決められる．特に線分$\mathrm{S_1S_2}$上ではこの式を利用すれば精密な節・腹の位置が決められる．
+
+水面波干渉において，線分$\mathrm{S_1S_2}$上では左右から同振幅・同波長・同周期の波がやってきて重なりあうので定常波が作られている．また，線分$\mathrm{S_1S_2}$の延長線上の，$\mathrm{S_1}$より左側および$\mathrm{S_2}$より右側では，同方向へ進行する波が重なり合うので，進行波が観察される．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} 波源$\mathrm{S_1}$, $\mathrm{S_2}$が同位相で振動しているので，$\mathrm{S_1}$, $\mathrm{S_2}$からの距離の差が波長の整数倍のとき強め合い，$\mathrm{S_1}$, $\mathrm{S_2}$からの距離の差が波長の整数倍＋半波長のときに弱め合う．次図のように，線分$\mathrm{S_1S_2}$上に$\overline{\mathrm{S_1P}}=x\U{m}$となる点$\mathrm{P}$について考える．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a12_seg.png}\end{center}
+       このとき，$\overline{\mathrm{S_2P}}=2\lambda-x$であるから，
+       \[\overline{\mathrm{S_1P}}-\overline{\mathrm{S_2P}}=x-(2\lambda-x)=2x-2\lambda\]
+       ここで線分$\mathrm{S_1S_2}$上の点は$0\leqq x\leqq 2\lambda$であることに注意すると，点$\mathrm{P}$が強め合って腹となるためには，
+       \[2x-2\lambda=m\lambda\hspace{3mm}(\text{$m$は整数値})\]
+       \[\Leftrightarrow\ x=0,\ \frac{1}{2}\lambda,\ \lambda,\ \frac{3}{2}\lambda,\ 2\lambda\U{m}\]
+       また，点$\mathrm{P}$が弱め合って節となるためには，
+       \[2x-2\lambda=m\lambda+\frac{1}{2}\lambda\hspace{3mm}(\text{$m$は整数値})\]
+       \[\Leftrightarrow\ x=\frac{1}{4}\lambda,\ \frac{3}{4}\lambda,\ \frac{5}{4}\lambda,\ \frac{7}{4}\lambda\U{m}\]
+       となる．以上より，線分$\mathrm{S_1S_2}$上にできる腹および節の位置は次図の通りである．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a12_fushi.png}\end{center}
+       （$\bigcirc$：節，$\bullet$：腹が$\dfrac{1}{4}\lambda\U{m}$等間隔で並ぶ）\hspace*{\fill}\Ans
+\end{komon}
+\begin{chuu}
+水面波干渉では，山・山および谷・谷の重なりが強め合いとなるので$\bullet$を，また山・谷の重なりが弱め合いとなるので$\bigcirc$を記入するが，この方法で考えると線分$\mathrm{S_1S_2}$には次図のように強め合いの点しかなくなってしまう．
+\begin{center}\includegraphics[keepaspectratio,width=52mm]{fig/n15_a12_chu.png}\end{center}
+ところが実際には，上述の解答にあるように線分$\mathrm{S_1S_2}$には弱め合う点も存在する．これは，山と谷の重なりに着目する方法では，すべての強め合い点，弱め合い点が尽くされないためである．節線・腹線を考えれば分かるように，節の点，腹の点は節線・腹線の双曲線上のすべての点であるから，$\bigcirc$や$\bullet$を記入しなかった点にも節や腹の点は存在する．よって，もし$\bigcirc$や$\bullet$を記入する方法で，節・腹の位置を決めたい場合には，まず$\bigcirc$や$\bullet$を記入し，それを元に節線・腹線を作図し，線分$\mathrm{S_1S_2}$上の節・腹の位置を決定しなければならない．
+
+ただし，この方法では節・腹の厳密な位置は決定できない．このような場合には以下のように考えればよい．先に述べたように，線分$\mathrm{S_1S_2}$上では，波源$\mathrm{S_1}$からは右向きの波が，また波源$\mathrm{S_2}$からは左向きの波がやってきて重なり合うので，線分$\mathrm{S_1S_2}$上では定常波が観察される．定常波では$\dfrac{1}{4}\lambda\U{m}$の等間隔で強め合い・弱め合いの点が並ぶので，$\mathrm{S_1S_2}$上に上の図に示したような強め合いの点があるのなら，強め合い点同士の真ん中の位置に弱め合いの点があるはずである．よって，強め合い・弱め合いの点は解答のようになる．
+\end{chuu}
+\begin{komon}
+\ko{2} 線分$\mathrm{S_1S_2}$の延長上の，例えば$\mathrm{S_2}$より右側に図のような任意の点$\mathrm{P^\prime}$を取る．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a12_ext.png}\end{center}
+       このとき，$\mathrm{P^\prime}$の位置によらず（$x$の値によらず）$\overline{\mathrm{S_1P^\prime}}-\overline{\mathrm{S_2P^\prime}}=2\lambda$となるので，点$\mathrm{P^\prime}$は必ず強め合いとなる．また，$\mathrm{S_2}$から$\mathrm{P^\prime}$に来る波は右向きの進行波，$\mathrm{S_1}$から$\mathrm{P^\prime}$に来る波も右向きの進行波であるから，$\mathrm{P^\prime}$で観察される波は右向きの進行波になる．以上より，線分$\mathrm{S_1S_2}$の延長線上の$\mathrm{S_2}$よりも右側については，振幅が，波源1個から出される波の振幅の2倍で，進行速度が波源1個から出される波と同じの，右向きの進行波が観察される．
+
+       また，線分$\mathrm{S_1S_2}$の延長線上の$\mathrm{S_1}$よりも左側については対称性を考えれば，振幅が，波源1個から出される波の振幅の2倍で，進行速度が波源1個から出される波と同じの，左向きの進行波が観察される．\hspace*{\fill}\Ans
+\end{komon}
+
+\MonN{13}{水面波の節線・腹線の導出}\par\nopagebreak
+\begin{sisin}
+水面波干渉の節線・腹線は本問のように波動の式を具体的に持ち出すことによって厳密に求めることができる．誘導に従って考えていこう．
+
+(1)・(2)は，第14回で学んだ考え方で処理できる．時刻$t\U{s}$にその点にやってくる波は，波源$\mathrm{A}$（波源$\mathrm{B}$）をいつの時刻に出発したものなのかを考えよ．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} $\mathrm{A}$点から$\mathrm{P}$点まで波が伝わるのには時間$\dfrac{r_1}{v}\U{s}$を要するので，時刻$t\U{s}$に点$\mathrm{P}$にやってくる波は，波源$\mathrm{A}$を時刻$t-\dfrac{r_1}{v}\U{s}$に出た波である．よって，
+       \[y_\mathrm{A}(r_1,t)=y_\mathrm{A}\left(0,\,t-\frac{r_1}{v}\right)\]
+       が成り立つ．よって，
+       \[y_\mathrm{A}(r_1,t)=A\sin\frac{2\pi}{T}\left(t-\frac{r_1}{v}\right)\U{m}\Ans\]
+\ko{2} $\mathrm{B}$点から$\mathrm{P}$点まで波が伝わるのには時間$\dfrac{r_2}{v}\U{s}$を要するので，時刻$t\U{s}$に点$\mathrm{P}$にやってくる波は，波源$\mathrm{B}$を時刻$t-\dfrac{r_2}{v}\U{s}$に出た波である．よって，
+       \[\begin{aligned}y_\mathrm{B}(r_2,t)&=y_\mathrm{B}\left(0,\,t-\frac{r_2}{v}\right)\\&=A\sin\frac{2\pi}{T}\left(t-\frac{r_2}{v}\right)\U{m}\Ans\end{aligned}\]
+\ko{3} $\mathrm{P}$点では(1)・(2)の波が重なり合うので，
+       \[y(t)=y_\mathrm{A}(r_1,t)+y_\mathrm{B}(r_2,t)\]
+       よって，
+       \[y(t)=A\sin\frac{2\pi}{T}\left(t-\frac{r_1}{v}\right)+A\sin\frac{2\pi}{T}\left(t-\frac{r_2}{v}\right)\]
+       \[\begin{aligned}&=2A\sin\frac{2\pi}{T}\left(t-\frac{r_1+r_2}{2v}\right)\\&\hspace{8mm}\times\cos\frac{2\pi}{T}\left(\frac{r_2-r_1}{2v}\right)\U{m}\Ans\end{aligned}\]
+\ko{4} (3)で得られた式のうち，$\sin\dfrac{2\pi}{T}\left(t-\dfrac{r_1+r_2}{2v}\right)$の部分は（$r_1$, $r_2\U{m}$は定数であるから）時刻$t\U{s}$の変化により$+1\sim-1$の間で変化する．よって，これを取り除くと，
+       \[A^\prime(r_1,r_2)=2A\cos\frac{2\pi}{T}\left(\frac{r_2-r_1}{2v}\right)\U{m}\Ans\]
+\ko{5} (4)で求めた$A^\prime(r_1,r_2)$を使うと(3)は
+       \[y(t)=A^\prime(r_1,r_2)\times\sin\frac{2\pi}{T}\left(t-\frac{r_1+r_2}{2v}\right)\]
+       と書かれるが，もし$A^\prime(r_1,r_2)=0$であれば常に
+       \[y(t)=0\]
+       となり，これは振動の弱め合い（節）の点である．$A^\prime(r_1,r_2)=0$となるためには，$m$を整数として，
+       \[\cos\frac{2\pi}{T}\left(\frac{r_2-r_1}{2v}\right)=0\]
+       \[\Leftrightarrow\ \frac{2\pi}{T}\left(\frac{r_2-r_1}{2v}\right)=\frac{\pi}{2}+m\pi\]
+       であればよい．よって，これを整理すると，
+       \[r_2-r_1=\left(\frac{1}{2}+m\right)vT\U{m}\Ans\]
+       であればこの点は振動の弱め合い（節）の点となる．
+\end{komon}
+\begin{chuu}
+(5)の答えは，
+\[r_1-r_2=\left(\frac{1}{2}+m\right)vT\U{m}\]
+\[r_2-r_1=\left(m-\frac{1}{2}\right)vT\U{m}\]
+\[r_2-r_1=\left(m-\frac{3}{2}\right)vT\U{m}\]
+などでもよい（$m$が取る値を考えればいずれも同値である）．
+
+また得られた答えは，$\lambda=vT$であるから
+\[r_2-r_1=\left(\frac{1}{2}+m\right)\lambda\U{m}\]
+であり，これより波源$\mathrm{A}$, $\mathrm{B}$が同位相で振動する場合の節線の方程式が計算により導けたことになる．
+\end{chuu}
+\begin{bsHosoku}{参考}
+尚，腹線については，振動の振幅が最大になればよいので，
+\[|A^\prime(r_1,r_2)|=2A\]
+となることが条件であり，これを解くと
+\[r_2-r_1=m\lambda\U{m}\]
+が得られる．余力のある者はやってみよ．
+\end{bsHosoku}
+
+\MonN{14}{うなり}\par\nopagebreak
+\begin{sisin}
+観測されるうなりの1秒間あたりの回数$N$は，$N=|f_1-f_2|\U{Hz}$という絶対値つきの式であることに注意．音叉$\mathrm{A}$, $\mathrm{B}$の振動数の大小関係が未知であることに注意して問題を解こう．
+\end{sisin}
+\KaiHead
+\hspace{1zw}音叉$\mathrm{B}$の振動数を$f\U{Hz}$，針金を巻つけた音叉$\mathrm{B}$の振動数を$f^\prime\U{Hz}$とする．はじめ$3\U{s}$間に15回の割合でうなりが聞こえたことより，
+\[|f-400|=\frac{15}{3}\]
+が成立するので，$f=405\U{Hz}$または$395\U{Hz}$である．
+
+\hspace{1zw}また音叉$\mathrm{B}$に針金を巻つけたら$8\U{s}$間に20回の割合でうなりが聞こえるようになったので，
+\[|f^\prime-400|=\frac{20}{8}\]
+が成立し，これより$f^\prime=402.5\U{Hz}$または$397.5\U{Hz}$である．
+
+\hspace{1zw}針金を用いて質量を大きくすると音叉の振動数は小さくなるので，$f>f^\prime$である．$f^\prime$は$402.5\U{Hz}$もしくは$397.5\U{Hz}$であるが，もし$f=395\U{Hz}$であるとすると$f^\prime$がどちらであっても$f>f^\prime$の関係式が満たせない．よって，
+\[f=405\U{Hz}\Ans\]
+\begin{chuu}
+以上の条件だけでは，針金を巻つけた音叉$\mathrm{B}$の振動数$f^\prime$が$402.5\U{Hz}$と$397.5\U{Hz}$のいずれであるかは判定できない．
+\end{chuu}
+
+\MonN{15}{波の重ね合わせ}\par\nopagebreak
+\begin{sisin}
+二つの波の干渉・重なり合いを考えるには，各々の波をまず個別に進行させておき，それを図上で足し合わせればよい．波がぶつかったとしても互いに打ち消し合って消滅するのではない（波の独立性より）ことに注意せよ．
+\end{sisin}
+\KaiHead
+\hspace{1zw}一秒ごとに『二つの三角波$\mathrm{A}$, $\mathrm{B}$を描いて，それらの和をとる』という操作を繰り返す．進行した三角波$\mathrm{A}$, $\mathrm{B}$を破線で示し，その和を実線で表すと，二つの波が互いに通り抜ける様子は次図の通りとなる．
+\begin{center}
+\MARU{1}\hspace{2mm}1秒後\\[1mm]
+\includegraphics[keepaspectratio,width=62mm]{fig/n15_a15_1.png}\\[2mm]
+\MARU{2}\hspace{2mm}2秒後\\[1mm]
+\includegraphics[keepaspectratio,width=62mm]{fig/n15_a15_2.png}\\[2mm]
+\MARU{3}\hspace{2mm}3秒後\\[1mm]
+\includegraphics[keepaspectratio,width=62mm]{fig/n15_a15_3.png}
+\end{center}
+\hspace*{\fill}\Ans
+
+\MonN{16}{作図によって求める自由端反射と固定端反射}\par\nopagebreak
+\begin{sisin}
+自由端反射・固定端反射の場合の反射波の作図方法を再確認せよ．自由端反射の場合の反射波は，透過波を考え，これを単純に反射壁に対して折り返せばよい．固定端反射の場合の反射波は，透過波を考え，これを固定端について点対称に折り返す．
+
+上述の方法では，{\gtfamily ある瞬間における反射波の波形が得られるだけである}．(3)で問われている$0.75\U{s}$後のときの様子を考えるには，\MARU{1}$0.75\U{s}$後の入射波の様子を考え，これに対して上述の方法を改めて使う方法と，\MARU{2}前問(2)で得られた波形について，入射波を右方向へ，反射波を左方向へずらしてこれを足し合わせる，といういずれかの方法で考えよ．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} この瞬間における透過波の波形は$\sin$カーブを延長することにより次図の破線のように得られる．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a16_1a.png}\end{center}
+       自由端反射の場合の反射波の波形は，これを反射壁に対して単純に折り返せばよい．よって，反射波の波形は次図の破線であり，合成波の波形は入射波・反射波の足し合わせより次図の太線となる．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a16_1b.png}\end{center}
+       \hspace*{\fill}\Ans
+\ko{2} この瞬間における透過波の波形は$\sin$カーブを延長することにより，(1)の場合と同じ破線となる．
+
+       固定端反射の場合の反射波の波形は，これを固定端に対して点対称に折り返せばよい．よって，反射波の波形は次図の破線であり，合成波の波形は入射波・反射波の足し合わせより次図の太線となる．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a16_2.png}\end{center}
+       \hspace*{\fill}\Ans
+\ko{3} $0.75\U{s}$の間に波は
+       \[v\times 0.75=3\U{m}\]
+       だけ進行しているので，入射波は右方向へ$3\U{m}$だけ進み，反射波は左方向へ$3\U{m}$だけ進む．よって，このときの入射波・反射波の波形は，(2)の答えの入射波・反射波をずらすことにより，次図のように得られる．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a16_3a.png}\end{center}
+       よって，この二つの波を足し合わせることにより次図のような合成波を得る．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a16_3b.png}\end{center}
+       \hspace*{\fill}\Ans
+\end{komon}
+\begin{chuu}
+合成波は$\sin$カーブになるので，滑らかな曲線になることに注意．同一周期をもつ$\sin$関数同士を足し合わせた場合は，それと同じ周期をもつ$\sin$関数になる（数学の三角関数の和を考えよ）．
+\end{chuu}
+\begin{bsHosoku}{参考}
+(3)の合成波の極大値・極小値の絶対値は$2\sqrt{2}\fallingdotseq 2.83\U{m}$である．(3)の合成波が極大となるのは$x=4\U{m}$のところであり，この点の入射波・反射波の変位はそれぞれ$2\cdot\dfrac{1}{\sqrt{2}}\U{m}$であるから，和を取ると$2\sqrt{2}\fallingdotseq 2.83\U{m}$となる．作図の際，3より大きい値を取らないよう注意．
+\end{bsHosoku}
+
+\MonN{17}{固定端反射の場合の反射波方程式の導出}\par\nopagebreak
+\begin{sisin}
+反射波の方程式は，透過波を考えてそれを折り返せば得られる，というのが簡単な考え方ではある．より数学的に厳密な反射波の方程式を得るには，本問のように，反射点について，入射してくる波の変位を求め，固定端・自由端の定義を元に，反射点が送り返す波の変位を求め，そしてその反射波の進行を考えることで反射波の方程式を得ればよい．厄介な問題ではあるが，必要な知識は第14回で学んだ，「着目している時刻，位置にやってくる波は，既知の点をいつの時刻に出た波であるかを考える」ということのみである．誘導にうまく従って考えていこう．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} この波の進行する速さは，
+       \[v=\frac{\lambda}{T}\U{m/s}\]
+       である．時刻$t$において座標$x$にいる波は，原点から時間$\dfrac{x}{v}$を要してこの点に達するので，原点を時刻$t-\dfrac{x}{v}$に出た波であると考えられる．よって，
+       \[\begin{aligned}y(x,t)&=y\left(0,\,t-\frac{x}{v}\right)\\&=A\sin 2\pi\left(\frac{t}{T}-\frac{x}{\lambda}\right)\U{m}\Ans\end{aligned}\]
+\ko{2} (1)の方程式に$x=l$を代入すればよいので，
+       \[y(l,t)=A\sin 2\pi\left(\frac{t}{T}-\frac{l}{\lambda}\right)\U{m}\Ans\]
+\ko{3} 固定端$x=l$の媒質の実際の変位は，入射波の変位と反射波の変位とを足し合わせた$y(l,t)+y^\prime(l,t)$になるが，固定端は動けないので，固定端の実際の変位は常に必ず0になる．よって，
+       \[y(l,t)+y^\prime(l,t)=0\Ans\]
+       が任意の時刻$t\U{s}$に対して成立する．
+\ko{4} よって，(3)より，
+       \[\begin{aligned}y^\prime(l,t)&=-y(l,t)\\&=-A\sin 2\pi\left(\frac{t}{T}-\frac{l}{\lambda}\right)\U{m}\Ans\end{aligned}\]
+\ko{5} 反射点$x=l$の位置から座標$x$に反射波がやってくるには，反射波が反射点から左方向へ距離$l-x$を進まなければならないので，$\dfrac{l-x}{v}$の時間を要する．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a17_5.png}\end{center}
+       よって，時刻$t$に座標$x$の位置にやってくる反射波は，反射点$x=l$を，時間$\dfrac{l-x}{v}$だけ前の時刻である
+       \[t-\frac{l-x}{v}=t-\frac{T(l-x)}{\lambda}\U{s}\Ans\]
+       に出た波である．
+\ko{6} 以上より，時刻$t$における座標$x$の反射波の変位は，反射点$x=l$における時刻$t-\dfrac{l-x}{v}$の変位と同じであるから，
+       \[\begin{aligned}&y^\prime(x,t)=y^\prime\left(l,\,t-\frac{l-x}{v}\right)\\&=-A\sin 2\pi\left(\frac{t}{T}-\frac{l-x}{\lambda}-\frac{l}{\lambda}\right)\\&=-A\sin 2\pi\left(\frac{t}{T}-\frac{2l-x}{\lambda}\right)\U{m}\Ans\end{aligned}\]
+\ko{7} (1), (6)より，
+       \[\begin{aligned}&y(x,t)+y^\prime(x,t)\\&=A\sin 2\pi\left(\frac{t}{T}-\frac{x}{\lambda}\right)\\&\hspace{6mm}-A\sin 2\pi\left(\frac{t}{T}-\frac{2l-x}{\lambda}\right)\\&=2A\cos 2\pi\left(\frac{t}{T}-\frac{l}{\lambda}\right)\\&\hspace{8mm}\times\sin 2\pi\left(\frac{l-x}{\lambda}\right)\U{m}\Ans\end{aligned}\]
+\ko{8} (7)の答えのうち，$\cos 2\pi\left(\dfrac{t}{T}-\dfrac{l}{\lambda}\right)$の項は時刻$t$の進行と共に$+1\sim-1$の範囲で振動する項であるから，座標$x$における合成波（定在波となる）の振幅は，
+       \[A^\prime(x)=2A\left|\sin 2\pi\left(\frac{l-x}{\lambda}\right)\right|\U{m}\]
+       である．定在波の節となる点とは，この振幅が0となる点のことであるから，
+       \[2\pi\left(\frac{l-x}{\lambda}\right)=m\pi\]
+       を満たす．これを解くと，
+       \[x=l-\frac{m}{2}\lambda\U{m}\Ans\]
+\end{komon}
+\begin{bsHosoku}{参考}
+(3)や(6)を変形して，反射波の方程式を入射波の方程式$y(x,t)$を用いて表してみることを考える．(3)や(6)で得られた式を変形すると，
+\[y^\prime(x,t)=y^\prime\left(l,\,t-\frac{l-x}{v}\right)=-y\left(l,\,t-\frac{l-x}{v}\right)\]
+とすることができる．ここで，時刻$t-\dfrac{l-x}{v}$に反射点に入射する入射波は，もしそのまま壁面を通過して進行する（透過波）とすると，時刻$t$には反射壁からさらに先へ距離$v\cdot\dfrac{l-x}{v}=l-x$だけ進んでいるはずであるから，
+\[y\left(l,\,t-\frac{l-x}{v}\right)=y\left(l+v\times\frac{l-x}{v},\,t\right)\]
+が成立する．これを利用すると，
+\[y^\prime(x,t)=-y(2l-x,\,t)\]
+となり，このことから，固定端反射の場合は透過波を反射点に対して点対称に折り返せばよいことが数学的に厳密に示される．
+
+また，自由端反射の場合には，「反射点は自由に動けるため，入射した変位がそのまま反射する変位となる」と考えられ，(3)の条件式が
+\[y^\prime(l,t)=y(l,t)\]
+になる．これを利用すれば，自由端反射の場合の反射波の方程式が導出できる．
+\end{bsHosoku}
+
+\Rank{C問題}
+\MonN{18}{水面波の干渉}\par\nopagebreak
+\begin{sisin}
+B問題で学習した水面波干渉のまとめの問題である．難しい問題ではないので素早く解答できるようにしよう．
+
+節および腹での振幅は，それぞれ$0$, $2A\U{m}$である．波面の重なり方を見れば，$\mathrm{A}$, $\mathrm{B}$が腹・節のいずれであるかはすぐに判定がつくだろう．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} この時刻において波源$\mathrm{S_1}$, $\mathrm{S_2}$上の変位は図よりそれぞれ谷，山となっているので，$\mathrm{S_1}$, $\mathrm{S_2}$の振動はちょうど正負逆になっていることが分かる．よって，波源の振動はちょうど逆位相であり，位相差は$\pi$\hspace*{\fill}\Ans
+\ko{2} 波源$\mathrm{S_1}$, $\mathrm{S_2}$が逆位相で振動しているので，$\mathrm{S_1}$, $\mathrm{S_2}$からの距離の差が1波長の整数倍＋半波長のとき強め合い，$\mathrm{S_1}$, $\mathrm{S_2}$からの距離の差が1波長の整数倍のとき弱め合う．
+
+       線分$\mathrm{S_1S_2}$上の強め合い・弱め合いの点を判定するために線分上に$\overline{\mathrm{S_1P}}=x\U{m}$ $(0<x<2\lambda)$となる点$\mathrm{P}$を取る．図より$\overline{\mathrm{S_1S_2}}=2\lambda\U{m}$であるから，
+       \[\overline{\mathrm{S_1P}}-\overline{\mathrm{S_2P}}=x-(2\lambda-x)=2x-2\lambda\]
+       であり，点$\mathrm{P}$が腹となる条件は，$m$を整数として，
+       \[2x-2\lambda=m\lambda+\frac{1}{2}\lambda\]
+       \[\Leftrightarrow\ x=\frac{1}{4}\lambda,\ \frac{3}{4}\lambda,\ \frac{5}{4}\lambda,\ \frac{7}{4}\lambda\U{m}\]
+       よって線分$\mathrm{S_1S_2}$上に生じる腹の数は{\gtfamily 4個}である．\hspace*{\fill}\Ans
+
+       また，点$\mathrm{P}$が節となる条件は，$m$を整数として
+       \[2x-2\lambda=m\lambda\ \Leftrightarrow\ x=\frac{1}{2}\lambda,\ \lambda,\ \frac{3}{2}\lambda\U{m}\]
+       よって線分$\mathrm{S_1S_2}$上に生じる節の数は{\gtfamily 3個}である．\hspace*{\fill}\Ans
+\end{komon}
+\begin{bekkai}
+本問のように，$\mathrm{S_1S_2}$間の距離が1波長の整数倍もしくは1波長の整数倍＋半波長になっているような場合には，もっと簡単に節・腹の個数を判定することができる．例えば本問の場合，$\overline{\mathrm{S_1S_2}}=2\lambda\U{m}$であり，波源$\mathrm{S_1}$, $\mathrm{S_2}$は逆位相で振動しているので，波源$\mathrm{S_1}$そのもの，および波源$\mathrm{S_2}$そのものは弱め合いの条件を満たす．よって，線分$\mathrm{S_1S_2}$上の$\mathrm{S_1}$, $\mathrm{S_2}$は弱め合い（定常波の節）となる．
+
+線分$\mathrm{S_1S_2}$上には波長$\lambda\U{m}$の進行波の重なり合いによる定常波が発生するので，線分$\mathrm{S_1S_2}$上には節と腹が互い違いに間隔$\dfrac{\lambda}{4}\U{m}$で並ぶ．これより，線分$\mathrm{S_1S_2}$上の腹・節の点は，波源$\mathrm{S_1}$から$\mathrm{S_2}$に向かって
+\[\text{腹：}x=\frac{1}{4}\lambda,\ \frac{3}{4}\lambda,\ \frac{5}{4}\lambda,\ \frac{7}{4}\lambda\U{m}\]
+\[\text{節：}x=\frac{1}{2}\lambda,\ \lambda,\ \frac{3}{2}\lambda\U{m}\]
+の位置になる．以上より，腹の個数は4個，節の個数は3個となる．
+\end{bekkai}
+\begin{komon}
+\ko{3} 点$\mathrm{A}$はこの瞬間において波面の山と谷とが重なり合っており，節点である．その振幅は$0\U{m}$\hspace*{\fill}\Ans
+
+       また，点$\mathrm{B}$はこの瞬間において波面の山と山とが重なり合っている点であり，腹点である．その振幅は$2A\U{m}$\hspace*{\fill}\Ans
+\end{komon}
+\begin{bekkai}
+きちんと干渉条件を考えて強め合うか弱め合うかを判定してもよい．与えられた図より，$\overline{\mathrm{S_1A}}=2\lambda\U{m}$, $\overline{\mathrm{S_2A}}=2\lambda\U{m}$であるから，
+\[\overline{\mathrm{S_1A}}-\overline{\mathrm{S_2A}}=0\]
+であり，二つの波源$\mathrm{S_1}$, $\mathrm{S_2}$の振動の位相差は$\pi$であることから，点$\mathrm{A}$では弱め合う．よって，その振幅は$0\U{m}$．
+
+また，同様にして図より，$\overline{\mathrm{S_1B}}=2.5\lambda\U{m}$, $\overline{\mathrm{S_2B}}=\lambda\U{m}$であるから，
+\[\overline{\mathrm{S_1B}}-\overline{\mathrm{S_2B}}=1.5\lambda\]
+であり，二つの波源$\mathrm{S_1}$, $\mathrm{S_2}$の振動の位相差は$\pi$であることから，点$\mathrm{B}$では強め合う．よって，その振幅は$2A\U{m}$．
+\end{bekkai}
+
+\MonN{19}{定在波の数学的解析}\par\nopagebreak
+\begin{sisin}
+重なり合う二つの波は，同一周期，同一振幅，同一波長をもち，かつ互いに逆向きに進む波であるから定在波ができる．この定在波の数式的な解析の仕方は，固定端反射・自由端反射で作られる定在波と全く同様である．［17］と同様なやり方で考えよう．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} この二つの波の周期は，与えられた式からいずれの波についても$T\U{s}$であると分かる（原点および$x=2L\U{m}$について$y-t$グラフを描いてみれば周期が$T\U{s}$であることがすぐに分かる）ので，これらの波の速さは
+       \[v=\frac{\lambda}{T}\U{m/s}\]
+       で与えられる．
+
+       さて，時刻$t\U{s}$に座標$x\U{m}$にやってくる波は，原点を時刻$t-\dfrac{x}{v}\U{s}$に出た波と，$x=2L\U{m}$の地点を時刻$t-\dfrac{2L-x}{v}\U{s}$に出た波の二つである．よって，
+
+       ・原点から出る波：
+       \[\begin{aligned}y_1(x,t)&=y_1\left(0,\,t-\frac{x}{v}\right)\\&=A\sin 2\pi\left(\frac{t}{T}-\frac{x}{\lambda}\right)\U{m}\end{aligned}\]
+
+       ・$x=2L\U{m}$の地点から出る波：
+       \[\begin{aligned}y_2(x,t)&=y_2\left(2L,\,t-\frac{2L-x}{v}\right)\\&=A\sin 2\pi\left(\frac{t}{T}-\frac{4L-x}{\lambda}\right)\U{m}\end{aligned}\]
+       であり，合成変位は
+       \[\begin{aligned}y(x,t)&=y_1(x,t)+y_2(x,t)\\&=2A\sin 2\pi\left(\frac{t}{T}-\frac{2L}{\lambda}\right)\\&\hspace{8mm}\times\cos 2\pi\left(\frac{x-2L}{\lambda}\right)\U{m}\end{aligned}\]
+       \hspace*{\fill}\Ans
+\ko{2} (1)で得られた答えにまず$L=\lambda\U{m}$を代入すると，
+       \[\begin{aligned}y(x,t)&=2A\sin 2\pi\left(\frac{t}{T}-\frac{2\lambda}{\lambda}\right)\\&\hspace{8mm}\times\cos 2\pi\left(\frac{x-2\lambda}{\lambda}\right)\\&=2A\sin 2\pi\frac{t}{T}\cos 2\pi\frac{x}{\lambda}\U{m}\end{aligned}\]
+       となっている．この式に\MARU{1}$\sim$\MARU{5}の各値を代入すると，
+       \[\MARU{1}\hspace{2mm}y(x,\,mT)=0\U{m}\]
+       \[\MARU{2}\hspace{2mm}y\left(x,\,mT+\frac{1}{8}T\right)=2A\cdot\frac{1}{\sqrt{2}}\cos 2\pi\frac{x}{\lambda}\U{m}\]
+       \[\MARU{3}\hspace{2mm}y\left(x,\,mT+\frac{2}{8}T\right)=2A\cos 2\pi\frac{x}{\lambda}\U{m}\]
+       \[\MARU{4}\hspace{2mm}y\left(x,\,mT+\frac{3}{8}T\right)=2A\cdot\frac{1}{\sqrt{2}}\cos 2\pi\frac{x}{\lambda}\U{m}\]
+       \[\MARU{5}\hspace{2mm}y\left(x,\,mT+\frac{4}{8}T\right)=0\U{m}\]
+       となる．以上をグラフ化して，次図を得る．
+       \begin{center}
+       \MARU{1}\\[1mm]\includegraphics[keepaspectratio,width=62mm]{fig/n15_a19_g1.png}\\[2mm]
+       \MARU{2}\\[1mm]\includegraphics[keepaspectratio,width=62mm]{fig/n15_a19_g2.png}\\[2mm]
+       \MARU{3}\\[1mm]\includegraphics[keepaspectratio,width=62mm]{fig/n15_a19_g3.png}\\[2mm]
+       \MARU{4}\\[1mm]\includegraphics[keepaspectratio,width=62mm]{fig/n15_a19_g4.png}\\[2mm]
+       \MARU{5}\\[1mm]\includegraphics[keepaspectratio,width=62mm]{fig/n15_a19_g5.png}
+       \end{center}
+       \hspace*{\fill}\Ans
+\ko{3} (1)の式に$x=L\U{m}$($=\lambda$)を代入すると，
+       \[\begin{aligned}y(\lambda,t)&=2A\sin 2\pi\left(\frac{t}{T}-\frac{2\lambda}{\lambda}\right)\\&\hspace{8mm}\times\cos 2\pi\left(\frac{\lambda-2\lambda}{\lambda}\right)\\&=2A\sin 2\pi\frac{t}{T}\U{m}\end{aligned}\]
+       となるので，これをグラフ化して次図のようになる．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a19_yt.png}\end{center}
+       \hspace*{\fill}\Ans
+\end{komon}
+\begin{bsHosoku}{参考}
+(2)で作図した\MARU{1}$\sim$\MARU{5}のグラフを元に，定在波の腹（振幅が最大の点）である位置$x=L\U{m}$ $(=\lambda)$での$y-t$グラフを描いてもよい．
+\end{bsHosoku}
+
+\MonN{20}{定在波の特徴}\par\nopagebreak
+\begin{sisin}
+一つの考え方としては，まず$\mathrm{a}$, $\mathrm{b}$の波動の方程式を決定し，それを［19］と同様に実際に足し合わせて定在波の方程式を求めてしまい，それを元に節の位置やすべての点が変位0となる時刻を決めるという考え方もある．しかし実際にこれを行うのはなかなか簡単ではない．重なる二つの波は同一振幅，同一波長，同一周期の波であるから，作られる合成波は定在波となるので，定在波の特徴を考えることによって，(1)$\sim$(3)を考えていけば比較的容易に解くことができる．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} 波動$\mathrm{a}$, $\mathrm{b}$はいずれも波長が$\lambda=32\U{m}$の正弦波であるから，$\mathrm{a}$, $\mathrm{b}$の二つの波動が重なってできる合成波は定在波となる．
+
+       まず，与えられた二つの$\mathrm{a}$, $\mathrm{b}$の波を重ね合わせると，時刻$t=0\U{s}$の合成波について，下のような波形（太線）が得られる．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a20_1.png}\end{center}
+       （$x$軸を切る座標は一見すると分かりづらいが，グラフの対称性を考えると，$x=14\U{m}$と$x=30\U{m}$のちょうど中点で，$\mathrm{a}$, $\mathrm{b}$の変位は正負逆になっていることが分かる．同様に考えれば，$x=6\U{m}$の点でも合成変位は0となる）
+
+       定在波では，節の点は時刻に関係なく変位が0になるのだから，与えられた時刻$t=0\U{s}$の瞬間においても変位が0になっているはずである．よって，定在波の節の座標は，
+       \[x=6\U{m},\ 22\U{m}\Ans\]
+\end{komon}
+\begin{chuu}
+定在波では節−節は半波長間隔（$\dfrac{\lambda}{2}=16\U{m}$間隔）で並んでいるから，上の2点以外には節の点はない．
+\end{chuu}
+\begin{komon}
+\ko{2} (1)から分かるように，定在波の腹の座標は，
+       \[x=14\U{m},\ 30\U{m}\]
+       である．定在波は全体が一斉に上下に振動するものであるから，各点が$+y$方向もしくは$-y$方向に最大変位を取る時刻は同じである．また，腹の最大変位は一つの波の振幅の2倍，すなわち$0.20\U{m}$であることに注意すると，この定在波が最大変位を取る瞬間の波形は次図のようになっているはずである．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a20_2.png}\end{center}
+       （もしくはこれとちょうど正負逆の場合もある）
+
+       問題文で問われている，$x=18\U{m}$の点は，ちょうど腹と節の中点にあたり，この点が最大変位を取っているのは上の図の場合である．よって，この点の最大変位（$-y$方向）は
+       \[-0.20\times\frac{1}{\sqrt{2}}\U{m}\]
+       である．よって，この点の定在波の振幅は，
+       \[\left|-0.20\times\frac{1}{\sqrt{2}}\right|\fallingdotseq 0.14\U{m}\Ans\]
+\ko{3} 定在波において，すべての座標の変位が同時に0となるためには，重なりあう二つの波が，次図のようにちょうど完全に正負逆になっていればよい．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a20_3a.png}\end{center}
+       波動$\mathrm{a}$は右へ，波動$\mathrm{b}$は左へ進んでいること，またこの二つの波動の速さは同じであることなどに注意すると，時刻$t=0\U{s}$の状態のあと，初めてこのような波形の重なり方をするのは次図のような場合であることが分かる．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n15_a20_3b.png}\end{center}
+       （このように重なればよいということを見つけられない人は次のように考えよ．先に述べたような波形の重なり方をするためには，問題で与えられた図の，\MARU{1}波動$\mathrm{a}$の$x=\cdots,\,-20,\,12,\,44,\,\cdots\U{m}$の点と，\MARU{2}波動$\mathrm{b}$の$x=\cdots,\,-16,\,16,\,32,\,\cdots\U{m}$の点について，\MARU{1}に属する点と\MARU{2}に属する点のいずれか同士が進行して重なればよい．それが一番早くに実現するのは，\MARU{1}の$x=12\U{m}$の点と，\MARU{2}の$x=16\U{m}$の点とが進行して重なる時であり，これは上図の場合である）
+
+       よって，各々の波がそれぞれ$2\U{m}$ずつ進めばよいので，これは時刻
+       \[\frac{2}{0.20}=10\U{s}\Ans\]
+       のときに起こる．
+\end{komon}
+\begin{bsHosoku}{参考}
+これをまともに数式的に解こうとすると，以下のようになる．進行する波動の方程式は，一般に$\varphi$を初期位相として，
+\[y(x,t)=A\sin 2\pi\left(\frac{t}{T}\pm\frac{x}{\lambda}+\varphi\right)\]
+（$+$は$x$軸の負の向きに進む波，$-$は$x$軸の正の向きに進む波）という形に必ず当てはめることができる．そこで，波動$\mathrm{a}$, $\mathrm{b}$をこの方程式に当てはめてみると，
+\[y_\mathrm{a}(x,t)=0.10\sin\left\{2\pi\left(\frac{t}{160}-\frac{x}{32}\right)+\frac{3\pi}{4}\right\}\]
+\[y_\mathrm{b}(x,t)=0.10\sin\left\{2\pi\left(\frac{t}{160}+\frac{x}{32}\right)+\pi\right\}\]
+となる（余力のある者はこの方程式を実際に導いてみよ．ヒント：$\mathrm{b}$についてはよかろう．$\mathrm{a}$については，時刻$t=-\dfrac{3}{8}T\U{s}$における波形を考えて，それを元に導出してみよ）．ここで，合成波の位置$x\U{m}$における時刻$t\U{s}$の変位を$y(x,t)\U{m}$とすれば，波の重ね合わせの原理より，
+\[y(x,t)=y_\mathrm{a}(x,t)+y_\mathrm{b}(x,t)\]
+であるから，三角関数を合成して，
+\[y(x,t)=0.20\sin\left(2\pi\frac{t}{160}+\frac{7}{8}\pi\right)\times\cos\left(2\pi\frac{x}{32}+\frac{\pi}{8}\right)\]
+となる．従って位置$x$における振幅$A^\prime(x)\U{m}$は，
+\[A^\prime(x)=0.20\left|\cos\left(2\pi\frac{x}{32}+\frac{\pi}{8}\right)\right|\U{m}\]
+であり，時刻によらず変位が0となる座標，すなわち節の位置は
+\[2\pi\frac{x}{32}+\frac{\pi}{8}=\frac{\pi}{2}+m\pi\]
+より，
+\[x=6+16m\U{m}\hspace{3mm}(\text{$m$は整数値})\]
+また，$x=18\U{m}$における振幅は，
+\[0.20\left|\cos\left(2\pi\frac{18}{32}+\frac{\pi}{8}\right)\right|\fallingdotseq 0.14\U{m}\]
+さらに，すべての座標の変位が同時に0となるのは，時刻$t$によって変化する項が0となるときであるから，
+\[\sin\left(2\pi\frac{t}{160}+\frac{7}{8}\pi\right)=0\]
+となるとき，すなわち
+\[2\pi\frac{t}{160}+\frac{7}{8}\pi=m\pi\]
+となるときである．よってこれを解いて，
+\[t=80m-70\U{s}\hspace{3mm}(\text{$m$は整数値})\]
+であるから，初めてすべての座標の変位が同時に0となるのは，$m=1$の
+\[t=10\U{s}\]
+のときである．
+
+このように，定在波をまともに数式的に扱おうとするのは一般的には非常に困難である．特徴をうまく利用して求めていくことを心がけよう．
+\end{bsHosoku}
+
+\end{multicols}

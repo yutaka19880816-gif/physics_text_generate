@@ -1,0 +1,298 @@
+\section{振動回路・交流回路(2)}
+
+\subsection{交流のベクトル表示とキルヒホッフの法則}
+  \begin{wrapfigure}[8]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p88_fig1.png}
+\end{wrapfigure}
+例えば右のような回路において，時刻$t$[s]における電源電圧を$V(t)$[V]，抵抗にかかる電圧を$V_R(t)$[V]，コイルにかかる電圧を$V_L(t)$[V]とすると，この回路の時刻$t$[s]において，等式
+\[V(t)=V_R(t)+V_L(t)\]
+が成立するが，一般に回路に交流電源を接続すると交流電流が流れ，各素子にかかる電圧が
+\begin{eqnarray*}
+V_R(t)&=&V_{R0}\sin (\omega t+\theta_1) \hspace{2mm} [{\rm V}]\\
+V_L(t)&=&V_{L0}\sin (\omega t+\theta_2) \hspace{2mm} [{\rm V}]
+\end{eqnarray*}
+のように三角関数的に時間変化をする．
+そのため，数式的に考えると三角関数の足し算，引き算をしなければならないため，計算が煩雑になる．
+
+  \begin{wrapfigure}[10]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=70mm]
+  {text2_p88_fig2.png}
+\end{wrapfigure}
+ここで，右図のような長さ$V_{R0}$，振れ角$\omega t+\theta_1$の$\overrightarrow{V_R}$ベクトルを持ち出すと，その$y$軸投影が$V_R(t)$となる．
+同様に，長さ$V_{L0}$，振れ角$\omega t+\theta_2$の$\overrightarrow{V_L}$ベクトルを持ち出すと，その$y$軸投影が$V_L(t)$となる．
+これらのベクトルを用いると，\mbox{\boldmath$V_R(t)+V_L(t)$}{\bf の和は，2つのベクトルの和}\mbox{\boldmath$\overrightarrow{V_R}+\overrightarrow{V_L}$}{\bf の}\mbox{\boldmath$y$}{\bf 軸投影に等しくなる}ので，三角関数の和を図形的なベクトル和に直して簡単に考えることができる．
+このように，瞬時値の足し算を，その$y$軸投影が瞬時値となるようなベクトルを持ち出して図形的に考える方法を，{\bf 交流のベクトル表示}と呼ぶ．
+
+このようなベクトル表示を用いて交流回路を考えると，煩雑な計算をすることなく交流回路に流れる電流，かかる電圧などを考えていくことができる．
+
+\begin{matome}{交流回路のベクトル表示による解法}
+ \hspace{3mm} その$y$軸投影が瞬時値となるようなベクトルを持ち出して図形的に考える．
+ \end{matome}
+ 
+ なお，交流回路では各電流，電圧に位相差があるため，その{\bf 最大値もしくは実効値の単純和を用いてキルヒホッフの第二法則を考えてはならない．}
+ キルヒホッフの第二法則を用いてよいのは，瞬時値についてのみである．
+
+\subsection{抵抗・コイル・コンデンサーの直列回路}
+ベクトル表示を用いる考え方と，素子にかかる交流電圧と交流電流の関係を用いて，交流回路に流れる電流を求めていく．
+
+交流回路をベクトル図で考えていく際には以下の順序で考えると良い．
+\begin{description}
+\item[\MARU{1}] 直列接続であれば，電流が共通なので，まず電流を仮定してベクトルで図示する．
+\item[\MARU{2}] 各素子に流れる電流を元にして，各素子にかかる電圧ベクトルを図示する．
+\item[\MARU{3}] 各素子にかかる電圧ベクトルの和が電源ベクトルに等しいとおく．
+\end{description}
+
+\subsection{${\rm RLC}$直列共振回路}
+${\rm RLC}$直列回路において，電源の周波数を変化させていくと流れる電流の最大値がある周波数で極大値をとる．
+この状況では抵抗の電圧が電源の電圧に等しくなり，回路の消費電力が最も大きくなる．これを${\rm RLC}$直列共振と呼ぶ．
+
+電源電圧の最大値と流れる電流の最大値との比を回路の{\bf インピーダンス}という．
+インピーダンスとは交流に対する回路の電流の通しにくさであり，単位は抵抗と同じ$[\Omega]$である．
+${\rm RLC}$の直列回路の場合のインピーダンスは
+\[Z=\dfrac{V_0}{I_0}=\sqrt{R^2+\left( \omega L-\dfrac{1}{\omega C} \right)^2} \hspace{2mm} [\Omega] \]
+となることは覚えておくと良い．
+
+\subsection{複雑な交流回路}
+これまでに考えた交流回路はいずれも直列回路であったが，並列部分を含む場合であっても，電流ベクトル図と電圧ベクトル図の組み合わせ・作図によって解くことができる．
+以下のように考えると良い．
+
+\begin{matome}{複雑な交流回路の求め方}
+\begin{description}
+\item[\MARU{1}] 回路中で共通になっているものは何かを探す．\\
+直列回路であれば{\bf 電流}が，並列回路であれば{\bf 電圧}が共通になる．
+\item[\MARU{2}] $\MARU{1}$の共通のものの大きさ，位相をとりあえず仮定してベクトルで図示する．
+\item[\MARU{3}] $\MARU{2}$を元にして，回路の各素子にかかる電圧，流れる電流を図示していく．
+\item[\MARU{4}] 電源電圧の大きさ，位相が図のどれと一致するかを考えて三平方の定理を利用する．
+\end{description}
+\end{matome}
+問題文の誘導の順番に考えていく前に，まず先にベクトル図の作図を行ってから考えるようにした方が簡単なことも多い．
+
+
+\subsection{電磁波}
+  \begin{wrapfigure}[5]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text2_p93_fig1.png}
+\end{wrapfigure}
+磁場が時間変化すると，電磁誘導の法則に従い，その周りにはその変動を打ち消すように電場が発生する．
+これと似た現象として，電場が時間変化すると，その周りには磁場が生じることが知られている．
+そのため，ある点近辺の電場が増加するとその周辺の磁場が増加し，それによって新たな電場が生じ，それによってまた新たな磁場が生じる，という現象を繰り返し，電場や磁場が同時に空間中を伝わっていく．
+これを{\bf 電磁波}と呼ぶ．
+
+電磁波には以下のような特徴がある．
+\begin{description}
+\item[\MARU{1}] 電場と磁場の波が同時に伝わっていく．
+\item[\MARU{2}] 電磁波は横波である．（進行方向と垂直な変位をもつ．）
+\item[\MARU{3}] 電場と磁場の垂直面は互いに垂直である．
+\end{description}
+
+この電磁波を数式的に取り扱うのは非常に複雑であるが，電磁波の進行する速さ$c$[m/s]は，空間の誘電率$\varepsilon [{\rm C^2/N\cdot m^2}]$および空間の透磁率$\mu[{\rm Wb^2/N\cdot m^2}]$を用いて，
+\[c=\dfrac{1}{\sqrt{\varepsilon \mu} } \hspace{2mm} [{\rm m/s}]\]
+と書けることが知られている．
+特に真空中の場合は，
+\[c=\dfrac{1}{\sqrt{\varepsilon \mu} } \fallingdotseq 3.00\times 10^8\hspace{2mm} [{\rm m/s}]\]
+である．
+
+  \begin{wrapfigure}[14]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=70mm]
+  {text2_p93_fig2.png}
+\end{wrapfigure}
+電磁波は波動であるから，波長$\lambda$[m]と振動数$f$[Hz]との間に，
+\[c=f\lambda\]
+の関係式が成立するが，電磁波はその波長，振動数により右図のように分類されている．
+{\bf 光や電波，紫外線は電磁波の一種}であり，その波長が異なっているだけである．
+
+いわゆる可視光とは，通常およそ$380〜780$[nm]程度（個人差により多少前後する）の波長の電磁波のことを言う．
+{\bf 光はその波長によって色が違い，長波長側から，赤，橙，黄，緑，青，藍，紫の順に並ぶ．}
+
+   \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p50.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p51.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p52.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p53.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p54.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p55.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p161.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p162.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p163.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p164.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p165.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p166.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p167.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p168.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p169.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p170.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p171.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p172.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p173.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p174.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p175_1.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

@@ -1,0 +1,293 @@
+\section{仕事とエネルギー}
+
+\subsection{仕事の定義と仕事率}
+
+\begin{wrapfigure}[8]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text_p24_fig1.png}
+\end{wrapfigure}
+
+物体に対して力が作用し，その力が作用した結果，{\bf 物体が移動した場合，その力は仕事をした}という．
+物体に一定の力$\overrightarrow{F}$[N]（大きさを$F$とする）を加え，力の方向と角度$\theta$をなす方向に直線的に$s$[m]（この移動ベクトルを$\overrightarrow{s}$[m]とする）だけ移動したとき，
+\[ W=Fs\cos \theta \]
+を{\bf その力がした仕事}と定義する．
+
+上の仕事の定義はベクトルの内積の式と同じであるから，その力が物体に対してした仕事$W$はベクトルの内積を用いて
+\[ W=\overrightarrow{F\mathstrut}・\overrightarrow{s \mathstrut}\]
+で与えられる．
+
+仕事の単位は定義式より，${\rm [N・m]=[kg・m^2/s^2]}$と表されるが，これを\mbox{\boldmath $J（ジュール）$}と書く．
+
+この定義から，{\bf 移動方向と垂直な方向に作用する力は仕事をしない}ことや，{\bf 移動方向と逆向きに作用する力の仕事は負になる}ことがわかる．
+
+また，力が単位時間当たりにする仕事を{\bf 仕事率}という．
+時間$t$[s]の間に$W$[J]の仕事をしたときの仕事率$P$は
+\[ P=\dfrac{W}{t}\]
+で与えられる．
+仕事率の単位は定義式より[J/s]で与えられるが，これを\mbox{\boldmath $W（ワット）$}と書く．
+
+仕事率の定義式を変形すると，
+\[ P=\dfrac{W}{t}=\dfrac{Fs\cos\theta}{t}=F\dfrac{s}{t}\cos\theta\]
+となるが，$\dfrac{s}{t}$は物体の速さ$v$[m/s]であるから，
+\[ P=Fv\cos \theta \]
+によりある瞬間における仕事率が定義される．
+ベクトル形式で表せば，
+\[ \overrightarrow{F\mathstrut}・\overrightarrow{v \mathstrut}\]
+となる．
+
+なお，力の大きさや物体の移動する向きが途中で変化する場合は微小区間に区切り，積分して求める必要がある．
+
+\begin{matome}{仕事・仕事率の定義}
+ \hspace{5mm} 力$F$のした仕事=$Fs\cos\theta$[J]\\
+ \hspace{5mm} 力$F$の仕事率=$Fv\cos\theta$[W]\\
+ \hspace{5mm} $F-xグラフとx軸の囲む面積=仕事$
+ \end{matome}
+ 
+  \ 
+%  \newpage
+% \begin{breakbox}
+%\ex＜仕事の定義式＞\\
+%\begin{wrapfigure}[5]{r}[5mm]{80mm}
+%  \centering
+%  \vspace{-10mm}
+%  \includegraphics[keepaspectratio,width=70mm]
+%  {text_p25_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}粗い床面の上に質量$m$[kg]の物体が置かれている．
+%この物体に対して図のように水平方向から角度$\theta$方向に一定の大きさ$F$[N]の力を加えて，一定の速度$v$[m/s]で距離$s$[m]だけ移動させた．
+%物体と床面との間の動摩擦係数を$\mu'$，重力加速度の大きさを$g[{\rm m/s^2}]$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 物体に加えた力の大きさ$F$[N]を求めよ．
+%\item[(2)] 力$F$のした仕事$W_F$[J]を求めよ．
+%\item[(3)] 重力および垂直抗力のした仕事$W_g,W_N$[J]を求めよ．
+%\item[(4)] 動摩擦力のした仕事$W_f$[J]を求めよ．
+%\item[(5)] 物体に作用させた力$F$の仕事率$P_F$[W]を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+%\newpage
+ \ 
+ 
+\subsection{力学的エネルギー}
+
+物体が外力により仕事をされると，された仕事の分だけ他の物体に対して仕事をすることができるようになる．
+この状態にあるとき，その物体は{\bf エネルギーを持っている}という．
+特に，力学現象において物体が持つエネルギーのことを{\bf 力学的エネルギー}という．
+
+力学的エネルギーには大きく分けて，{\bf 運動エネルギー}と{\bf 位置エネルギー}の2種類がある．
+以下に運動エネルギー，位置エネルギーの導出を示す．
+
+ \ 
+ 
+\fbox{1} {\bf 運動エネルギー}
+
+質量$m$[kg]の物体が速さ$v$[m/s]で運動しているとき，物体は
+\[ K=\dfrac{1}{2}mv^2 [{\rm J}]\]
+の運動エネルギーを持つ．
+外力によりされた仕事は，運動エネルギーの変化量に等しい．
+
+% \ 
+% 
+%\begin{breakbox}
+%\ex＜運動エネルギー＞\\
+%\begin{wrapfigure}[3]{r}[5mm]{70mm}
+%  \centering
+%  \vspace{-10mm}
+%  \includegraphics[keepaspectratio,width=60mm]
+%  {text_p26_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}なめらかな水平面上に質量$m$[kg]の物体$A$が置かれている．
+%この物体を水平右向きに一定の大きさ$F$[N]の力で引っ張り，$s$[m]移動させた．
+%以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 運動方程式より，物体の右向きの加速度$a{\rm [m/s^2]}$を求めよ．
+%\item[(2)] $s$[m]移動した後の物体$A$の速さ$v$[m/s]を求めよ．
+%\item[(3)] 外力のした仕事$Fs$[J]を$m,v$を用いて表せ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+ 
+また，場所によって決められるエネルギーを位置エネルギーといい，重力による位置エネルギーとバネの弾性力による位置エネルギーは以下のようにして導出できる．
+
+ \ 
+%\newpage
+\fbox{2} {\bf 重力による位置エネルギー}
+
+\begin{wrapfigure}[12]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p26_fig2.png}
+\end{wrapfigure}
+
+質量$m$[kg]の物体が高さ$h$[m]にあるときについて考える．
+物体が高さ$h$[m]の位置から0[m]の位置まで移動するとき，重力は物体に対して
+\[ W=mg・h=mgh{\rm [J]}\]
+の仕事をする．言い換えれば，この物体は高さ$h$[m]にあるとき，高さ0[m]の位置まで移動することにより重力から$mgh$[J]の仕事をしてもらうことになる．
+
+これより，質量$m$[kg]の物体が高さ$h$[m]にあるとき，その物体は
+\[ U_g=mgh{\rm [J]}\]
+のエネルギーを持つと考え，これを{\bf 重力による位置エネルギー}という．
+
+なお，重力による高さの基準点は自由にとってよい．
+基準点より低い位置，高さ$-h$[m]にあるときは位置エネルギーは$mg(-h)=-mgh$で与えられる．
+
+また，水平方向の移動では重力のする仕事は0[J]であるため，{\bf 同じ高さにあるとき，重力による位置エネルギーは同じ値になる．}
+
+ \ 
+ 
+%\newpage
+\fbox{3} {\bf バネの弾性力による位置エネルギー}
+
+\begin{wrapfigure}[12]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text_p27_fig1.png}
+\end{wrapfigure}
+
+バネの弾性定数が$k$[N/m]のバネに物体を接続し，図のように自然長の位置を原点として$x$軸を設定する．
+バネが$x$[m]の位置から0[m]の位置まで移動するときに物体に対してする仕事を求める．
+
+物体に作用する力は物体の位置に応じて変化するので，微小区間に区切って考える．
+$x$[m]の位置から原点に向かって$y$[m]移動した位置$x-y$[m]にあるとき物体には$k(x-y)$の大きさの力が$-x$の向きに作用する．
+よって，物体が位置$x-y$[m]から微小距離$dy$[m]だけ移動する（力の向きと同じ向きであることに注意）とき，バネの弾性力は
+\[ k(x-y)・dy \]
+の仕事をする．
+物体が$x$[m]の位置から0[m]の位置まで移動する間にバネの弾性力がする仕事はこの微小な仕事を足し合わせることにより，
+\[ W=\int^x_0 k(x-y)dy =\left[ kxy-\dfrac{1}{2}ky^2\right]^x_0=\dfrac{1}{2}kx^2 \]
+と求められる．
+
+これより，弾性定数が$k$[N/m]のバネの自然長からの変位が$x$[m]のとき，そのバネは
+\[ U_k=\dfrac{1}{2}kx^2{\rm [J]}\]
+のエネルギーを持つと考えられる．
+これを{\bf バネの弾性力による位置エネルギー}という．
+
+%\newpage
+\subsection{力学的エネルギー保存則}
+
+物体に対して作用する力のうち，重力や弾性力といった，仕事が途中の経路によらない力を{\bf 保存力}といい，これらの力に対し位置エネルギーを定義できる．
+これに対して，垂直抗力，摩擦力，張力といった仕事が途中の経路に依存する力を{\bf 非保存力}という．これらの力に対して位置エネルギーは定義できない．
+
+このとき，非保存力が作用していない，もしくは作用していても仕事をしない場合には，物体の持つ力学的エネルギー（＝運動エネルギー$K$＋位置エネルギー$U$）が変化しないことが知られている．
+これを{\bf 力学的エネルギー保存則}という．
+
+\begin{matome}{力学的エネルギー保存則}
+ 
+ $\hspace{5mm}物体に対して非保存力が仕事をしないとき，その系の力学的エネルギーの総和は時刻によらず一定に保たれる．$
+ \[K+U=一定値\]
+ \end{matome}
+
+これまでに扱った様々な問題は，力学的エネルギー保存則を用いると容易に解けるものも多い．
+また，等加速度運動でない場合にはこの力学的エネルギー保存則が有効である．
+
+ \ 
+ 
+%\newpage
+%\begin{breakbox}
+%\ex＜斜方投射のエネルギーによる解法＞\\
+%\begin{wrapfigure}[3]{r}[5mm]{70mm}
+%  \centering
+%  \vspace{-10mm}
+%  \includegraphics[keepaspectratio,width=60mm]
+%  {text_p28_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}質量$m$[kg]の物体を地上$h$[m]の高さの点から迎角$\theta$，初速$V_0$[m/s]で打ち上げられた．
+%重力加速度の大きさを$g[{\rm m/s^2}]$として以下の問いに答えよ．
+%ただし，位置エネルギーの基準点を地面にとるものとする．
+%\begin{description}
+%\item[(1)] 投げた直後の物体の運動エネルギーおよび位置エネルギーを求めよ．
+%\item[(2)] 物体の達する最高点における物体の運動エネルギーを求めよ．
+%\item[(3)] 地上から測った最高点の高さを求めよ．
+%\item[(4)] 地上に落下する直前の物体の速さを求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+% \ 
+% 
+%\begin{breakbox}
+%\ex＜単振動のエネルギーによる解法＞\\
+%\begin{wrapfigure}[5]{r}[5mm]{70mm}
+%  \centering
+%  \vspace{-10mm}
+%  \includegraphics[keepaspectratio,width=60mm]
+%  {text_p28_fig2.png}
+%\end{wrapfigure}
+%\hspace{5mm}弾性定数が$k$[N/m]のつるまきバネをなめらかな水平面の上におき，その一端を固定し，もう一端に質量$m$[kg]の物体を取り付ける．バネの自然長の位置を原点とし，図のように$x$軸をとる．
+%物体を$x=A$[m]の位置まで引っ張り，その位置でそっと手を離すときについて以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] はじめの位置$x=A$[m]の位置における系の力学的エネルギー$E_0$[J]を求めよ．
+%\item[(2)] 物体が$x=x$[m]の位置に来たときの物体の速さ$v$[m/s]を求めよ．
+%\item[(3)] (2)より，物体の速さが最大となる点，およびその速さを求めよ．
+%\item[(4)] (2)より，物体が達するもう一方の端点の座標を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p14.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p15.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p16.png}
+\vspace{20cm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p81_2.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p82.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p83.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p84.png}
+\end{center}
+\end{figure}
+
+
+
+
+

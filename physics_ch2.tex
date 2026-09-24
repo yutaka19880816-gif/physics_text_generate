@@ -1,0 +1,624 @@
+\section{落下運動・放物運動}
+
+\subsection{重力加速度と自由落下運動}
+
+\begin{wrapfigure}[5]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=30mm]
+  {text_p10_fig1.png}
+\end{wrapfigure}
+地表付近にあるすべての物体は，地球から引力を受けている．
+この力のことを{\bf 重力}という．
+高いところで手を離した物体は重力によって落下するが，空気抵抗を無視した場合，物体が落下していくときの加速度は，物体によらず一定値となることが知られている．
+この加速度のことを{\bf 重力加速度}といい，その大きさを$g$で表す．
+$g$の値は地表付近でおよそ\mbox{\boldmath $9.8 {\rm[m/s^2]}$}である．
+
+\begin{matome}{重力加速度}
+ $\hspace{10mm}地表付近の物体は，鉛直下向きにg=9.8[{\rm m/s^2}]の重力加速度を持つ．$
+\end{matome}
+%
+% \ 
+% 
+%\begin{breakbox}
+%\ex＜自由落下運動と鉛直投げおろし運動＞\\ \\
+%\hspace{5mm}地上$h$[m]の高さの所から小球を自由落下させるときについて以下の問いに答えよ．
+%ただし，重力加速度の大きさを$g[{\rm m/s^2}]$とする．
+%\begin{description}
+%\item[(1)] 自由落下を始めてから小球が地面に当たるまでの時間を求めよ．
+%\item[(2)] 小球が地面に当たる直前の速さを求めよ．
+%\item[(3)] 小球が鉛直下向きの初速度を与えて(1)の半分の時間で地面に当たるようにしたい．そのために必要な初速度の大きさを求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+% \ 
+% 
+% \begin{breakbox}
+%\ex＜自由落下運動と相対運動＞\\ \\
+%\hspace{5mm}点Oから小球Aを自由落下させ，その$t_0$[s]後に小球Bを点Oから鉛直下向きに初速度$v_0$[m/s]で投げおろした．点Oを原点とし，鉛直下向きに$y$軸を取るものとし，重力加速度の大きさを$g[{\rm m/s^2}]$とする．以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] Bを投げた瞬間のAの速度および座標を求めよ．
+%\item[(2)] Bを投げてから$t$[s]後のA,Bのそれぞれの速度および座標を求めよ．また，この瞬間のAに対するBの相対速度を求めよ．
+%\item[(3)] BがAに追いつくために必要な$v_0$の条件を求めよ．またこの条件が成り立つとき，Bを投げてからAに追いつくまでに必要な時間を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+% \ 
+ 
+ 
+\subsection{鉛直投げ上げ運動}
+
+\begin{wrapfigure}[8]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=35mm]
+  {text_p11_fig1.png}
+\end{wrapfigure}
+
+鉛直上向きに投げ上げられた物体の運動を考えてみる．
+投げられた後，この物体は鉛直下向きの加速度を持つから次第に上向きの速さが遅くなり，ある点で速度が0[m/s]となって，そして下向きの速度となって落下して戻ってくる，という運動を行う．
+これも自由落下と同様，鉛直下向きの加速度が\mbox{\boldmath $g [{\rm m/s^2}]$}の等加速度直線運動である．
+
+初速度$v_0$[m/s]で鉛直上向きに投げ上げた物体の運動について考える．投げ上げた点を原点とし，今度は鉛直上向きに$y$軸を設定すると，物体の加速度は鉛直上向きに$-g{\rm [m/s^2]}$であるから，投げてから$t$[s]後の速度$v$[m/s]，座標$y$[m]について等加速度直線運動の関係式より，
+\begin{eqnarray*}
+v&=&v_0+(-g)t \hspace{2mm}{\rm[m/s]}\\
+y&=&v_0t+\dfrac{1}{2}(-g)t^2 \hspace{2mm}{\rm[m]}\\
+v^2&-&v_0^2=2(-g)y
+\end{eqnarray*}
+という式が成立する．
+
+% \ 
+% 
+% \begin{breakbox}
+%\ex＜鉛直投げ上げ運動＞\\ \\
+%\hspace{5mm}初速度$v_0$[m/s]で鉛直上向きに投げ上げた物体の運動について考える．
+%投げ上げた地上の点を原点とし，鉛直上向きに$y$軸を設定する．
+%重力加速度の大きさを$g[{\rm m/s^2}]$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 投げ上げてから運動の頂点に達するのに必要な時間を求めよ．
+%\item[(2)] 最高点の高さを求めよ．
+%\item[(3)] 投げ上げてから地上に戻ってくるのに要する時間を求めよ．
+%\item[(4)] 地上に戻ってきたときの物体の速度を求めよ．
+%\item[(5)] この運動の$v-t$グラフ，$y-t$グラフを作図せよ．
+%\end{description}
+%
+%\end{breakbox}
+
+% \ 
+ 
+鉛直投げ上げ運動について以下の特徴がまとめられる．
+鉛直投げ上げ運動を解く際にはこれらの特徴を用いると素早く計算することができる．
+
+\begin{matome}{鉛直投げ上げ運動}
+\begin{wrapfigure}[8]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text_p11_fig2.png}
+\end{wrapfigure}
+ $\hspace{10mm}\MARU{1} 上昇過程と落下過程は対称$\\
+ $\hspace{10mm}\MARU{2} 頂点では速度が0$[m/s]\\
+ $\hspace{10mm}\MARU{3} 地面→頂点と，頂点→地上に要する時間は同じ$\\
+ $\hspace{10mm}\MARU{4} 地面から速度v_0{\rm[m/s]}で投げ上げた時，\\ \hspace{15mm}地面に戻ってくる時の速度は-v_0$[m/s]
+\vspace{30mm}
+\end{matome}
+
+%\newpage
+\subsection{放物運動}
+
+迎角$\theta$，初速$V_0$[m/s]で打ち出した物体の運動について考える．
+空中ではこの物体は重力により鉛直下向きに重力加速度$g {\rm m/s^2}$を持つが，水平方向には加速度を持たない．
+そこで，この物体の運動を{\bf 水平方向と鉛直方向に分解して考える．}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=150mm]{text_p12_fig1.png}
+\end{center}
+\end{figure}
+
+
+図のように軸をとると，初速度を成分分解して，
+\[ x軸方向の初速度\hspace{5mm} V_0\cos \theta \hspace{10mm} y軸方向の初速度\hspace{5mm} V_0\sin \theta \]
+となるから，各軸方向の運動は，
+\begin{matome}{放物運動}
+ $\hspace{10mm}x軸方向：初速度V_0\cos \theta [{\rm m/s}] の等速度運動\\
+\hspace{10mm} y軸方向：初速度V_0\sin \theta [{\rm m/s}] ，加速度-g[{\rm m/s^2}]の等加速度運動（鉛直投げ上げ運動）$
+\end{matome}
+とまとめられる．
+よって，投げてから$t$[s]後の物体の座標は
+\begin{eqnarray*}
+x&=&(V_0\cos \theta)・t \hspace{2mm}{\rm[m]}\\
+y&=&(V_0\sin \theta )・t+\dfrac{1}{2}(-g)t^2 \hspace{2mm}{\rm[m]}
+\end{eqnarray*}
+とまとめられる．
+$t$を消去して得られる軌跡は放物線である．
+このように，斜方投射を扱う際には水平方向と鉛直方向とに運動を分けて扱うのがポイントである．
+
+% \ 
+% \newpage
+%\begin{breakbox}
+%\ex＜放物運動＞\\
+%\begin{wrapfigure}[5]{r}[5mm]{80mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=70mm]
+%  {text_p13_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}水平面上に$x$軸を取り，$x$軸上の原点から鉛直上向きを正として$y$軸をとる．
+%時刻$t=0$[s]に原点から$xy$面内の迎角$\theta \left(0<\theta<\dfrac{\pi}{2} \right)$[rad]の方向へ初速$V_0$[m/s]でボールを投げた．重力加速度の大きさを$g[{\rm m/s^2}]$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 初速度$\overrightarrow{V_0}$をベクトルの成分表示で示せ．
+%\item[(2)] 任意の時刻$t$[s]での$x$軸方向の速度成分$v_x$[m/s]，および，$y$軸方向の速度成分$v_y$[m/s]を$V_0,\theta ,g,t$を用いて表せ．
+%\item[(3)] 任意の時刻$t$[s]でのボールの位置$(x,y)$[m]を$V_0,\theta ,g,t$を用いて表せ．
+%\item[(4)] (3)をもとに，ボールの運動経路を表す方程式を求めよ．
+%\item[(5)] ボールが最高点に達する時刻$t_1$[s]を求めよ．
+%\item[(6)] 最高点の高さ$h$[m]を求めよ．
+%\item[(7)] ボールが再び地面に戻ってくる時刻$t_2$[s]を求めよ．
+%\item[(8)] ボールが地面に戻ってきたときの$x$座標（到達距離）$L$[m]を求めよ．また，これを最大にする迎角$\theta$を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+ 
+\begin{matome}{放物運動（斜方投射）}
+ $\hspace{10mm}x軸方向：初速度V_0\cos \theta [{\rm m/s}] の等速度運動\\
+\hspace{10mm} y軸方向：初速度V_0\sin \theta [{\rm m/s}] ，加速度-g[{\rm m/s^2}]の等加速度運動（鉛直投げ上げ運動）$\\
+\MARU{1} 頂点では$y$軸方向の速度が0[m/s]であることに着目する．\\
+\MARU{2} 地面に達する時は$y$座標が0[m]，かつ$t>0$[s]であることに着目する．
+\end{matome}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%  練習問題（旧 prob_p5.png / prob_p6.png / prob_p7.png）  %%%%%%%%%%%%%%%%%%%%
+\Rank{A問題}
+
+\Mon{基本事項の確認}
+
+\hspace{1zw}以下の設問に答えよ．ただし，重力加速度の大きさを$9.8\U{m/s^2}$とせよ．
+\begin{komon}
+\ko{1} 塔の上から小石を自由落下させたところ，$2.0\U{s}$後に地面に達した．塔の高さは何$\U{m}$か．また，小石が地面に達する直前の速さは何$\U{m/s}$か．
+\ko{2} ビルの屋上から，初速度$9.8\U{m/s}$でボールを投げ下ろした．$3.0\U{s}$後の速さは何$\U{m/s}$か．
+\ko{3} 初速度$19.6\U{m/s}$で地面から小球を鉛直上向きに投げ上げた．$2.0\U{s}$後の速さは何$\U{m/s}$か，また，そのとき地面からの高さは何$\U{m}$か．
+\ko{4} 物体を水平方向に初速度$20\U{m/s}$で投げたとき，$3.0\U{s}$後の水平方向の移動距離と鉛直方向の落下距離はそれぞれ何$\U{m}$か．
+\ko{5} ボールを地面から斜め$30^\circ$の方向に，初速度$20\U{m/s}$で投げ出した．$1.0\U{s}$後の速度の水平成分と鉛直成分は何$\U{m/s}$か．
+\ko{6} ゴルフボールを水平な地面から斜め$30^\circ$の方向に，初速度$19.6\U{m/s}$で打ち上げた．最高点に達するまでの時間は何$\U{s}$か．
+\end{komon}
+
+\Rank{B問題}
+
+\Mon{鉛直投げ下げと自由落下}
+
+\hspace{1zw}ある点から小石$\mathrm{A}$を自由落下させ，$1.0\U{s}$後に同じ高さの点から小石$\mathrm{B}$をある速さで投げ下ろしたところ，$\mathrm{B}$は投げ下ろしてから$2.0\U{s}$後に$\mathrm{A}$に追いついた．重力加速度の大きさを$9.8\U{m/s^2}$として，以下の問いに答えよ．
+\begin{komon}
+\ko{1} 小石$\mathrm{B}$に追いつかれるまでに小石$\mathrm{A}$はどれだけ落下したかを求めよ．
+\ko{2} 小石$\mathrm{B}$の初速度の大きさを求めよ．
+\end{komon}
+
+\Mon{鉛直投げ上げ}\Sitei
+
+\begin{zuright}{52mm}
+\hspace{1zw}地面から高さ$h\U{m}$のビルの屋上から，小石を初速$v_0\U{m/s}$で真上に投げ上げた．重力加速度の大きさを$g\U{m/s^2}$として，以下の問いに答えよ．
+\begin{komon}
+\ko{1} 最高点に達するまでの時間と，地面から最高点までの高さを求めよ．
+\ko{2} 地面に達するまでの時間と，地面に達する直前の速さを求めよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=52mm]{fig/ch2_p5_up.png}
+\end{zuright}
+
+\Mon{水平投射}
+
+\begin{zuright}{48mm}
+\hspace{1zw}地面から高さ$h\U{m}$のビルの屋上から，水平右向きに初速$v_0\U{m/s}$で小石を投げた．重力加速度の大きさを$g\U{m/s^2}$として，以下の問いに答えよ．
+\begin{komon}
+\ko{1} 小石を投げてから地面に達するまでの時間を求めよ．
+\ko{2} ビルから小石の落下点までの水平距離を求めよ．
+\ko{3} 小石が地面に達する直前の速さを求めよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=48mm]{fig/ch2_p5_hor.png}
+\end{zuright}
+
+\Mon{斜方投射}\Sitei
+
+\begin{zuright}{52mm}
+\hspace{1zw}地面から仰角$\theta\U{rad}$の向きに初速$v_0\U{m/s}$でボールを投げた．投げた点を原点$\mathrm{O}$とし，図のように水平右向きに$x$軸，鉛直上向きに$y$軸を取る．重力加速度の大きさを$g\U{m/s^2}$として以下の問いに答えよ．
+\begin{komon}
+\ko{1} 投げてから時間$t\U{s}$後の$x,y$座標を求めよ．
+\ko{2} 投げてから最高点に達するまでの時間を求めよ．また，そのときの$y$座標を求めよ．
+\ko{3} ボールの水平到達距離を求めよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=52mm]{fig/ch2_p6_obl.png}
+\end{zuright}
+
+\Mon{斜方投射}
+
+\begin{zuright}{48mm}
+\hspace{1zw}地上から高さ$h\U{m}$のビルの屋上から，初速$v_0\U{m/s}$，仰角$\theta\U{rad}$でボールを投げた．重力加速度の大きさを$g\U{m/s^2}$として，以下の問いに答えよ．
+\begin{komon}
+\ko{1} 投げてから最高点に達するまでの時間を求めよ．
+\ko{2} 投げてからボールが地面に落下するまでに要する時間を求めよ．
+\ko{3} 投げた点から落下点までの水平方向の移動距離を求めよ．
+\ko{4} 落下点におけるボールの速度の水平成分と鉛直成分を求めよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=48mm]{fig/ch2_p6_bldg.png}
+\end{zuright}
+
+\Mon{自由落下と鉛直投げ上げ}
+
+\hspace{1zw}地面から高さ$h\U{m}$のビルの屋上から小石$\mathrm{A}$を自由に落下させた．$\mathrm{A}$を手放すと同時に小石$\mathrm{B}$を地面から初速$v_0\U{m/s}$で鉛直上向きに投げ上げたところ，$\mathrm{A}$と$\mathrm{B}$は衝突した．重力加速度の大きさを$g\U{m/s^2}$として，以下の問いに答えよ．
+\begin{komon}
+\ko{1} 運動を始めてから$\mathrm{A}$と$\mathrm{B}$が衝突するまでの時間を求めよ．
+\ko{2} $\mathrm{A}$と$\mathrm{B}$が衝突する点の，地上からの高さを求めよ．
+\end{komon}
+
+\Rank{C問題}
+
+\Mon{鉛直投げ上げと等速度運動}
+
+\hspace{1zw}一定の速さ$7.0\U{m/s}$で下降している気球から，小石を鉛直上向きに投げたら，$3.0\U{s}$後に小石が気球を追い越して落ちていった．さらに$4.0\U{s}$後には小石は地上に達した．重力加速度の大きさを$9.8\U{m/s^2}$として，以下の問いに答えよ．
+\begin{komon}
+\ko{1} 小石を投げてから小石が気球を追い越すまでに気球が下降した距離を求めよ．
+\ko{2} 小石が気球を追い越す瞬間における，小石の地面に対する速さを求めよ．
+\ko{3} 小石が地面に達したときの気球の地面からの高さを求めよ．
+\end{komon}
+
+\Mon{放物運動}
+
+\begin{zuright}{50mm}
+\hspace{1zw}右図のように，一定の速さ$v\U{m/s}$で運動している台車が点$\mathrm{A}$を通過する瞬間に，台車からボールを初速度$u\U{m/s}$で鉛直上向きに打ち出したところ，ボールは点$\mathrm{B}$で台車に落下した．
+\zusep
+\includegraphics[keepaspectratio,width=50mm]{fig/ch2_p7_cart.png}
+\end{zuright}
+\vspace{-\medskipamount}
+\hspace{1zw}$u\U{m/s}$が台車に対するボールの相対速度であることに注意して，以下の設問に答えよ．重力加速度の大きさを$g\U{m/s^2}$とする．
+\begin{komon}
+\ko{1} $\mathrm{AB}$間の水平距離を求めよ．
+\end{komon}
+\hspace{1zw}次に，台車の速さを$\dfrac{1}{2}v\U{m/s}$にして，点$\mathrm{A}$を通過する瞬間に台車からボールをある初速度で鉛直上向きに打ち上げたところ，ボールは先ほどと全く同じ点$\mathrm{B}$で台車に落下した．
+\begin{komon}
+\ko{2} ボールの鉛直方向の初速度は先ほどの場合の何倍か．
+\ko{3} ボールが到達した最高点の高さは先ほどの場合の何倍か．
+\end{komon}
+
+\Mon{モンキーハンティング}
+
+\begin{zuright}{47mm}
+\hspace{1zw}右図のように水平な地上で，点$\mathrm{O}$から水平距離$l\U{m}$だけ離れた点$\mathrm{B}$の真上の高さ$h\U{m}$の点$\mathrm{A}$から物体$\mathrm{P}$を自由落下させると同時に，点$\mathrm{O}$から物体$\mathrm{Q}$を仰角$\theta\U{rad}$，初速$v_0\U{m/s}$で投げ出した．投げ出した時刻を$0\U{s}$とし，右図のように$x,y$軸をとる．重力加速度の大きさを$g\U{m/s^2}$として以下の問いに答えよ．
+\begin{komon}
+\ko{1} 時刻$t\U{s}$における$\mathrm{P}$から$\mathrm{Q}$までの距離を求めよ．
+\ko{2} 時刻$t\U{s}$における$\mathrm{P}$から見た$\mathrm{Q}$の相対速度の水平成分および鉛直成分を求めよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=47mm]{fig/ch2_p7_monkey.png}
+\end{zuright}
+\begin{komon}
+\ko{3} $\mathrm{Q}$が$\mathrm{P}$に命中するためには，$\theta,l,h$の間にはどのような条件式が成立していなければならないか．
+\ko{4} 地上に落下するまでに$\mathrm{Q}$が$\mathrm{P}$に命中するには，初速$v_0$にどのような条件が必要か．$g,l,\theta$を用いて表せ．
+\end{komon}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%  解答（旧 prob_p67_2〜p72_1.png）  %%%%%%%%%%%%%%%%%%%%
+\KaiTitle{第2回　落下運動・放物運動}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+\raggedcolumns
+
+
+\Rank{A問題}
+\MonN{9}{基本事項の確認}\par\nopagebreak
+\begin{sisin}
+軸の設定の向きに注意せよ．投げ上げる運動のときは鉛直上向きを正にとり，投げ下ろすもしくは自由落下させる場合には下向きを正にとって考えるとよい．各々の場合に，物体の加速度が正・負どちらになるのかに注意して立式せよ．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} $h=\dfrac{1}{2}\cdot 9.8\cdot 2.0^2=19.6\fallingdotseq 2.0\times 10\U{m}$\Ans\par
+       $v=0+9.8\cdot 2.0=19.6\fallingdotseq 2.0\times 10\U{m/s}$\Ans
+\ko{2} $v=9.8+9.8\cdot 3.0=39.2$\par
+       \hspace*{1zw}$\fallingdotseq 3.9\times 10\U{m/s}$\Ans
+\ko{3} $v=19.6+(-9.8)\cdot 2.0=0.0\U{m/s}$\Ans\par
+       $h=0+19.6\cdot 2.0+\dfrac{1}{2}\cdot(-9.8)\cdot 2.0^2$\par
+       \hspace*{1zw}$=19.6\fallingdotseq 2.0\times 10\U{m}$\Ans
+\ko{4} $x=0+20\cdot 3.0=6.0\times 10\U{m}$\Ans\par
+       $y=0+0\cdot 3.0+\dfrac{1}{2}\cdot 9.8\cdot 3.0^2$\par
+       \hspace*{1zw}$=44.1\fallingdotseq 4.4\times 10\U{m}$\Ans
+\ko{5} $v_x=20\cos 30^\circ=10\sqrt{3}$\par
+       \hspace*{1zw}$\fallingdotseq 1.7\times 10\U{m/s}$\Ans\par
+       $v_y=20\sin 30^\circ-9.8\cdot 1.0$\par
+       \hspace*{1zw}$=2.0\times 10^{-1}\U{m/s}$\Ans
+\ko{6} 最高点では速度の鉛直成分が$0\U{m/s}$なので，
+       \[0=19.6\sin 30^\circ-9.8\cdot t\]
+       これより，
+       \[t=1.0\U{s}\Ans\]
+\end{komon}
+
+\Rank{B問題}
+\MonN{10}{鉛直投げ下げと自由落下}\par\nopagebreak
+\begin{sisin}
+自由落下運動あるいは鉛直投げ下げ運動であるから，小石$\mathrm{A}$，$\mathrm{B}$を投げ出すところを原点$\mathrm{O}$として鉛直下向きに$y$軸をとって考えるとよい．物体の落下運動は等加速度直線運動であるから，前回学んだ三つの関係式をうまく適用して考えよ．
+\end{sisin}
+\KaiHead
+\hspace{1zw}小石$\mathrm{A}$，$\mathrm{B}$を投げ出すところを原点$\mathrm{O}$として，鉛直下向きに$y$軸をとる．
+\begin{komon}
+\ko{1} $\mathrm{A}$は$\mathrm{B}$に追い付かれるまでに，$y$軸上にて初速度$0\U{m/s}$，加速度$9.8\U{m/s^2}$の等加速度直線運動を$3.0\U{s}$間だけ行っている．ゆえに，この$3.0\U{s}$間の$\mathrm{A}$の移動距離$\Delta y$は
+       \[\Delta y=\frac{1}{2}\cdot 9.8\cdot 3.0^2=44.1\U{m}\Ans\]
+\ko{2} $\mathrm{B}$の初速度を$v_0\U{m/s}$とおくと，$\mathrm{B}$が投げ下ろされてからの運動は，初速度$v_0$，加速度$9.8\U{m/s^2}$の等加速度直線運動だと捉えることができる．そして，この運動を$2.0\U{s}$だけ行うと$44.1\U{m}$だけ落下して$\mathrm{A}$に追い付くのだから，
+       \[v_0\cdot 2.0+\frac{1}{2}\cdot 9.8\cdot 2.0^2=44.1\]
+       これを解いて，
+       \[v_0=12.25\fallingdotseq 1.2\times 10\U{m/s}\Ans\]
+\end{komon}
+
+\MonN{11}{鉛直投げ上げ}\par\nopagebreak
+\begin{sisin}
+本問は「投げ上げ」運動であるから，鉛直上向きに$y$軸をとって考えるとよい．加速度は$-g$になる．また，$y$軸の原点を地上にとる方法と屋上にとる方法との2通りが考えられるが，どちらでも構わない．ここでは地上を原点$\mathrm{O}$とした場合の解答を示す．
+
+「鉛直投げ上げ運動の最高点では，小石の速度が$0\U{m/s}$」に着目する．
+\end{sisin}
+\KaiHead
+\hspace{1zw}地面を原点として鉛直上向きに$y$軸をとり，小石を投げ上げた時刻を$0\U{s}$とする．
+\begin{komon}
+\ko{1} 小石は$y$軸上を初期位置$h$，初速度$v_0$，加速度$-g$の等加速度直線運動するので，時刻$t\U{s}$における小石の速度$v(t)\U{m/s}$および座標$y(t)\U{m}$は，
+       \[v(t)=v_0+(-g)t\Eq{1}\]
+       \[y(t)=h+v_0t+\frac{1}{2}(-g)t^2\Eq{2}\]
+       \hspace{1zw}最高点で小石の速度は$0\U{m/s}$となるから，最高点に達する時刻$t_0\U{s}$は\MARU{1}より，
+       \[0=v_0-gt_0\]
+       これより，$t_0=\dfrac{v_0}{g}\U{s}$\Ans\Eq{3}\par
+       \hspace{1zw}また地上から最高点までの高さは，\MARU{2}式に$t=t_0$を代入して，
+       \[h+\frac{v_0^2}{2g}\U{m}\Ans\]
+\ko{2} 地面に達するとき小石の座標は$y=0\U{m}$となるので，\MARU{2}より，
+       \[0=h+v_0t+\frac{1}{2}(-g)t^2\]
+       解の公式より，$t=\dfrac{v_0\pm\sqrt{v_0^2+2gh}}{g}$\par
+       求める時刻は正であり，
+       \[t=\frac{v_0+\sqrt{v_0^2+2gh}}{g}\U{s}\Ans\Eq{4}\]
+       またそのときの速さは，\MARU{1}\MARU{4}より，
+       \[|v|=\sqrt{v_0^2+2gh}\U{m/s}\Ans\]
+\end{komon}
+\begin{bsHosoku}{参考}
+\hspace{1zw}(1)の高さでは，$2a\Delta x=v^2-v_0^2$を利用してもよい．最高点の高さを$h'$とすると，上昇距離は$h'-h$であるから，
+\[2\cdot(-g)\cdot(h'-h)=0^2-v_0^2\]
+からも答えが求められる．本問の座標において加速度は$-g$なのだから，
+\[2\cdot g\cdot(h'-h)=v_0^2-0^2\]
+\[2\cdot g\cdot(h-h')=0^2-v_0^2\]
+などと立式しないように注意せよ．
+
+\hspace{1zw}なお，(2)の2解のうち$t<0$の解は，この時刻に地上から鉛直上向きに小石を投げ上げて，時刻$t=0$に屋上を上向き速さ$v_0\U{m/s}$で通過する場合に対応する解である．
+\end{bsHosoku}
+
+\MonN{12}{水平投射}\par\nopagebreak
+\begin{sisin}
+2次元面内で物体が運動する場合には，物体の運動を水平方向と鉛直方向に分解して考えるのが基本．特に本問の場合は加速度を持つのは鉛直方向のみであるから，分解して考えれば水平方向については等速度運動，鉛直方向には等加速度運動（自由落下）となり，それぞれについて直線運動と同様に扱えばよくなる．
+
+座標軸の設定としては，本問の場合は小石を投げ出したところを原点$\mathrm{O}$とし，水平右向きに$x$軸，鉛直下向きに$y$軸をとると計算が楽になる．
+\end{sisin}
+\KaiHead
+\hspace{1zw}小石を投げ出したところを原点$\mathrm{O}$とし，水平右向きに$x$軸，鉛直下向きに$y$軸をとる．また，投げ出した時刻を$0\U{s}$とする．小石は$x$軸方向には速度$v_0\U{m/s}$の等速度運動を，$y$軸方向には初速度$0\U{m/s}$，加速度$g\U{m/s^2}$の等加速度運動（自由落下）をするので，時刻$t\U{s}$における小石の速度の$x,y$成分，および$x,y$座標は，
+\[v_x(t)=v_0\quad v_y(t)=gt\Eq{1}\]
+\[x(t)=v_0t\quad y(t)=\frac{1}{2}gt^2\Eq{2}\]
+と表される．
+\begin{komon}
+\ko{1} 地面に達するときの$y$座標は$y=h\U{m}$であるから，地面に達する時刻を$t=t_0\U{s}$とすると，\MARU{2}より，
+       \[\frac{1}{2}g{t_0}^2=h\]
+       よって，$t_0=\sqrt{\dfrac{2h}{g}}\U{s}$\Ans\Eq{3}
+\ko{2} この間の水平方向の運動に着目すると，水平到達距離は\MARU{2}\MARU{3}より，
+       \[x(t_0)=v_0\sqrt{\frac{2h}{g}}\U{m}\Ans\Eq{4}\]
+\ko{3} 地面に達する直前の速度の水平成分および鉛直成分は，\MARU{1}\MARU{3}より，\par
+       \hspace{1zw}水平成分：$v_x=v_0$\par
+       \hspace{1zw}鉛直成分：$v_y=gt_0=\sqrt{2gh}$\par
+       \hspace{1zw}よってこのときの速さ$|v|$（速度ベクトルの大きさ）は，
+       \[|v|=\sqrt{{v_x}^2+{v_y}^2}=\sqrt{v_0^2+2gh}\U{m/s}\Ans\]
+\end{komon}
+
+\MonN{13}{斜方投射}\par\nopagebreak
+\begin{sisin}
+本問も2次元面内での物体の運動なので，$x,y$各軸方向の運動に分けて考えればよいが，斜方投射の場合にはボールの鉛直方向の運動が鉛直投げ上げ運動になっていることに着目すると素早く解くことができる．
+
+［11］同様，鉛直上向きを$y$軸の正とするので，重力加速度は$-g$と考える．
+\end{sisin}
+\KaiHead
+\hspace{1zw}ボールを投げ出した時刻を$0\U{s}$とする．
+\begin{komon}
+\ko{1} ボールは$x$軸方向には速度$v_0\cos\theta\U{m/s}$の等速度運動を，$y$軸方向には初速度$v_0\sin\theta\U{m/s}$，加速度$-g\U{m/s^2}$の鉛直投げ上げ運動をする．よって，時刻$t\U{s}$におけるボールの速度の$x,y$成分は，
+       \[v_x(t)=v_0\cos\theta\]
+       \[v_y(t)=v_0\sin\theta+(-g)t\Eq{1}\]
+       \hspace{1zw}また，物体の$x,y$座標は，
+       \[x(t)=v_0\cos\theta\cdot t\U{m}\]
+       \[y(t)=v_0\sin\theta\cdot t+\frac{1}{2}(-g)t^2\U{m}\Ans\Eq{2}\]
+\ko{2} 最高点ではボールの速度の鉛直成分が$0\U{m/s}$であるから，最高点に達する時刻を$t_1\U{s}$とおくと\MARU{1}より，
+       \[0=v_0\sin\theta-gt_1\]
+       これより，$t_1=\dfrac{v_0\sin\theta}{g}\U{s}$\Ans\Eq{3}\par
+       \hspace{1zw}またこのときの$y$座標は，\MARU{2}\MARU{3}より，
+       \[y(t_1)=\frac{v_0^2\sin^2\theta}{2g}\U{m}\Ans\]
+\end{komon}
+\begin{bekkai}
+\hspace{1zw}$y$軸方向の等加速度運動に着目すると，最高点での速度の鉛直成分は$0\U{m/s}$なので，高さを$h$として，
+\[2\cdot(-g)\cdot h=0^2-(v_0\sin\theta)^2\]
+が成立する．これより，
+\[h=\frac{v_0^2\sin^2\theta}{2g}\U{m}\Ans\]
+\end{bekkai}
+\begin{komon}
+\ko{3} 再び地面に戻ってきたときの時刻を$t_2\U{s}$とおくと，$y$座標が$0\U{m}$となるので，\MARU{2}より，
+       \[0=v_0\sin\theta\cdot t_2+\frac{1}{2}\cdot(-g){t_2}^2\]
+       が成り立つ．ボールを投げ出した時刻が$0\U{s}$であり，$t_2>0$であるから，
+       \[t_2=\frac{2v_0\sin\theta}{g}\U{s}\]
+       \hspace{1zw}よって水平到達距離は$x$軸方向に着目して，\MARU{2}より，
+       \[x(t_2)=\frac{2v_0^2\sin\theta\cos\theta}{g}\U{m}\Ans\]
+\end{komon}
+
+\MonN{14}{斜方投射}\par\nopagebreak
+\begin{sisin}
+平面内の運動なので，水平方向と鉛直方向に分解する．初速が斜め右上向きであるから，水平右向きに$x$軸を，鉛直上向きに$y$軸をとって考えよう．加速度は$-g\U{m/s^2}$になることに注意．
+\end{sisin}
+\KaiHead
+\hspace{1zw}ボールを投げた時刻を$0\U{s}$とする．ボールは$x$軸方向には速度$v_0\cos\theta\U{m/s}$の等速度運動を，$y$軸方向には初速度$v_0\sin\theta\U{m/s}$，加速度$-g\U{m/s^2}$の等加速度運動をする．よって，時刻$t\U{s}$におけるボールの速度の$x,y$成分$v_x(t),v_y(t)\U{m/s}$は，
+\[v_x(t)=v_0\cos\theta\]
+\[v_y(t)=v_0\sin\theta+(-g)t\Eq{1}\]
+と表され，ボールの$x,y$座標$x(t),y(t)\U{m}$は，
+\[x(t)=v_0\cos\theta\cdot t\U{m}\Eq{2}\]
+\[y(t)=v_0\sin\theta\cdot t+\frac{1}{2}(-g)t^2\U{m}\]
+と表される．
+\begin{komon}
+\ko{1} 最高点では，ボールの速度の鉛直成分が$0\U{m/s}$であるから，\MARU{1}より，
+       \[0=v_0\sin\theta-gt\]
+       これより，$t=\dfrac{v_0\sin\theta}{g}\U{s}$\Ans
+\ko{2} 地面に達するとき，すなわちボールの$y$座標が$-h\U{m}$となる時刻を$t=t_0\U{s}$とおくと，
+       \[-h=v_0\sin\theta\cdot t_0-\frac{1}{2}g{t_0}^2\]
+       であるから，
+       \[t_0=\frac{v_0\sin\theta\pm\sqrt{v_0^2\sin^2\theta+2gh}}{g}\]
+       $t_0>0$であるから，地面に達するまでの時間は，
+       \[\frac{v_0\sin\theta+\sqrt{v_0^2\sin^2\theta+2gh}}{g}\U{s}\]
+       \hspace*{\fill}\Ans\hspace{1zw}\mbox{$\cdots$\MARU{3}}
+\ko{3} このときの水平到達距離は，\MARU{2}\MARU{3}より，
+       \[x(t_0)=\frac{v_0^2\cos\theta\sin\theta}{g}\]
+       \[\hspace*{2zw}+\frac{v_0\cos\theta\sqrt{v_0^2\sin^2\theta+2gh}}{g}\U{m}\Ans\]
+\ko{4} 地面に達する直前のボールの速度の$x,y$成分は，\MARU{1}\MARU{3}より，\par
+       \hspace{1zw}$x$成分：$v_x(t_0)=v_0\cos\theta\U{m/s}$\par
+       \hspace{1zw}$y$成分：$v_y(t_0)=-\sqrt{v_0^2\sin^2\theta+2gh}\U{m/s}$\par
+       \hspace*{\fill}\Ans
+\end{komon}
+
+\MonN{15}{自由落下と鉛直投げ上げ}\par\nopagebreak
+\begin{sisin}
+運動は一直線上で起こるから，鉛直方向に$y$軸をとって考えればよいが，上向き・下向きのどちらを正とするかで2通りある．もちろんどちらを用いてもよいが，本問の場合は地上を原点にとるのが楽そうであるから，地上を原点にとって鉛直上向きに$y$軸をとればよいだろう．鉛直上向きを正としたのなら，速度・加速度は鉛直上向きの場合を正，鉛直下向きの場合を負として式に代入しなければならない．加速度は$-g\U{m/s^2}$を用いなければならないことにも注意せよ．
+\end{sisin}
+\KaiHead
+\hspace{1zw}地面を原点$\mathrm{O}$として鉛直上向きに$y$軸をとり，$\mathrm{A}$と$\mathrm{B}$を投げ出した時刻を$0\U{s}$とする．
+\begin{komon}
+\ko{1} $\mathrm{A}$は$y=h$の初期位置から初速度$0\U{m/s}$，加速度$-g\U{m/s^2}$の等加速度直線運動を，また$\mathrm{B}$は$y=0\U{m}$の初期位置から初速度$+v_0\U{m/s}$，加速度$-g\U{m/s^2}$の等加速度直線運動をするので，時刻$t\U{s}$における$\mathrm{A}$，$\mathrm{B}$の速度および$y$座標は，
+       \[\mathrm{A}:v_{\mathrm{A}}(t)=0+(-g)\cdot t\]
+       \[y_{\mathrm{A}}(t)=h+0\cdot t+\frac{1}{2}(-g)\cdot t^2\Eq{1}\]
+       \[\mathrm{B}:v_{\mathrm{B}}(t)=v_0+(-g)\cdot t\]
+       \[y_{\mathrm{B}}(t)=0+v_0t+\frac{1}{2}(-g)\cdot t^2\Eq{2}\]
+       \hspace{1zw}$\mathrm{A}$と$\mathrm{B}$が衝突するときとは，$y$座標が一致するときなので，この時刻を$t=t_0\U{s}$とすると，\MARU{1}\MARU{2}より，
+       \[h-\frac{1}{2}g{t_0}^2=v_0t_0-\frac{1}{2}g{t_0}^2\]
+       % 誤植訂正（2026-08-29）：元の問題集はこの式が h = \frac{1}{2}gt_0^2 = v_0t_0 - \frac{1}{2}gt_0^2 と
+       %   なっていた（最初の等号が誤り）．正しくは左辺が y_A(t_0) すなわち h-\frac{1}{2}gt_0^2．
+       %   次行の t_0 = h/v_0 とも整合する．
+       これより，$t_0=\dfrac{h}{v_0}\U{s}$\Ans\Eq{3}
+\ko{2} このときの地面からの高さは，\MARU{1}$\sim$\MARU{3}より，
+       \[y_{\mathrm{A}}(t_0)=y_{\mathrm{B}}(t_0)=h-\frac{gh^2}{2v_0^2}\U{m}\Ans\]
+\end{komon}
+
+\Rank{C問題}
+\MonN{16}{鉛直投げ上げと等速度運動}\par\nopagebreak
+\begin{sisin}
+本問を捉えるには「いつの時刻に，気球および小石がどこにいるのか」をまずはっきりさせる必要がある．そのためには，小石を投げた瞬間，その$3.0\U{s}$後，さらに$4.0\U{s}$後の三つの瞬間について，小石，気球，地面の三者の位置関係を図示し，すぐに分かる部分について距離を記入せよ．例えば，最初の瞬間と$3.0\U{s}$後，さらに$4.0\U{s}$後の気球の位置関係は，最初の位置に対してそれぞれ下方向に$21\U{m}$，$49\U{m}$だけずれている．このような図を図示することがまず第一歩である．
+
+各物体の座標を座標軸上に置き，ひたすら数式計算で考えていく，というのも一つの方法としてはあるが，その場合でも上に述べたような簡単な図を描くだけでケアレスミスが防げる．
+\end{sisin}
+\KaiHead
+\hspace{1zw}小石を投げ出した地点を原点$\mathrm{O}$として鉛直上向きに$y$軸をとり，小石を投げ出した時刻を$0\U{s}$とする．小石の地面に対する鉛直上向きの初速度を$v_0\U{m/s}$とすると，時刻$t\U{s}$における小石の速度$v(t)\U{m/s}$および座標$y(t)\U{m}$は，
+\[\left\{\begin{array}{l}
+  v(t)=v_0+(-9.8)t\\[1mm]
+  y(t)=v_0t+\dfrac{1}{2}(-9.8)t^2
+\end{array}\right.\Eq{1}\]
+である．また，気球は一定速度$-7.0\U{m/s}$で運動しつづけるので，時刻$t\U{s}$における気球の速度および座標は，
+\[V(t)=-7.0\U{m/s},\ \ Y(t)=-7.0\cdot t\U{m}\Eq{2}\]
+となる．
+\begin{komon}
+\ko{1} 小石が気球を追い越す時刻$3.0\U{s}$における気球の位置は$Y(3.0)=-21$であるから，気球の落下距離は，
+       \[|Y|=2.1\times 10\U{m}\Ans\Eq{3}\]
+\ko{2} 時刻$3.0\U{s}$では小石と気球の$y$座標が等しくなるので，\MARU{1}\MARU{3}より
+       \[v_0\cdot 3.0-\frac{1}{2}\cdot 9.8\cdot 3.0^2=-21.0\]
+       よって，$v_0=7.7\U{m/s}$\Eq{4}\par
+       \hspace{1zw}これより，時刻$3.0\U{s}$での小石の速さは，
+       \[|v(3.0)|=21.7\fallingdotseq 2.2\times 10\U{m/s}\Ans\]
+\ko{3} 小石は時刻$t=3.0+4.0=7.0\U{s}$に地上に達するので，地上は$y(7.0)\U{m}$の位置にある．この時刻における気球の座標は$Y(7.0)\U{m}$であり，これは地上からは$Y(7.0)-y(7.0)\U{m}$の高さである．
+       \[Y(t)-y(t)=-(7.0+v_0)t-\frac{1}{2}(-9.8)t^2\]
+       % 誤植訂正（2026-08-29）：元の問題集は右辺第2項が +\frac{1}{2}(-9.8)t^2 だったが，
+       %   Y(t)-y(t) = -7.0t-\{v_0t+\frac{1}{2}(-9.8)t^2\} なので符号は -\frac{1}{2}(-9.8)t^2 が正しい．
+       %   これで Y(7.0)-y(7.0)=137.2 となり次行の答と整合する（誤植のままだと -343 になる）．
+       であるから，求める高さは，
+       \[Y(7.0)-y(7.0)=137.2\fallingdotseq 1.4\times 10^2\U{m}\Ans\]
+\end{komon}
+\begin{bsHosoku}{参考}
+\hspace{1zw}上述の解答では，座標軸の原点を最初の点としたが，地上を原点とするのも一つの手である．この場合は，最初の気球の地上からの高さを$h$として考えればよい．
+\end{bsHosoku}
+
+\MonN{17}{放物運動}\par\nopagebreak
+\begin{sisin}
+台車からボールを真上に打ち上げた，とは，台車に対して真上に打ち上げた，という意味である．すなわち，台車に対するボールの相対速度が鉛直上向きであったことを意味する．よって，地面から見た場合には，ボールは鉛直上向きに$u\U{m/s}$を持つとともに，水平右向きに台車の速度$v\U{m/s}$を持つ．ゆえにこのボールは地面から見て放物線を描いて$\mathrm{B}$点に達することになる．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} ボールは投げ出された直後，地面から見て鉛直上向きに$u\U{m/s}$，水平右向きに$v\U{m/s}$の速度を持つ．鉛直方向の投げ上げ運動に着目すると上昇に$\dfrac{u}{g}\U{s}$，下降に$\dfrac{u}{g}\U{s}$を要するので，$\mathrm{A}\to\mathrm{B}$に要する時間は$\dfrac{2u}{g}\U{s}$である．\par
+       \hspace{1zw}よってこの間にボールが水平方向に進んだ距離，すなわち$\mathrm{AB}$間の距離は，
+       \[\overline{\mathrm{AB}}=v\cdot\frac{2u}{g}\U{m}\Ans\]
+       となる．\par
+       \hspace{1zw}またボールが達した最高点の高さ$h$は，鉛直方向の運動に着目して，
+       \[2\cdot(-g)\cdot h=0^2-u^2\]
+       よって，$h=\dfrac{u^2}{2g}\U{m}$\Ans
+\end{komon}
+\begin{bsHosoku}{参考}
+\hspace{1zw}この間に台車が進んだ距離について考えると，これも全く同じく$v\cdot\dfrac{2u}{g}\U{m}$となるので，ボールは地上に戻ってきたときにちょうど台車に衝突することになる．
+\end{bsHosoku}
+\begin{komon}
+\ko{2} 台車に対するボールの鉛直上向き投げ上げ速度を$u'$とすると，この場合のボールの水平到達距離は，(1)の場合の答えを$v\to\dfrac{1}{2}v$，$u\to u'$と置き換えることにより，
+       \[\frac{1}{2}v\cdot\frac{2u'}{g}\U{m}\]
+       となる．これがちょうど$\mathrm{AB}$間の距離$\overline{\mathrm{AB}}=v\cdot\dfrac{2u}{g}\U{m}$に等しくなるので，
+       \[\frac{1}{2}v\cdot\frac{2u'}{g}=v\cdot\frac{2u}{g}\U{m}\]
+       よって，$\dfrac{u'}{u}=2$\Ans
+\ko{3} このときのボールの最高点までの高さを$h'$とすると，これは(1)の場合の$h$の式において$u\to u'$と置き換えればすぐに求められ，
+       \[h'=\frac{u'^2}{2g}\U{m}\]
+       ゆえに，
+       \[\frac{h'}{h}=4\Ans\]
+       % 誤植訂正（2026-08-29）：元の問題集はここが \frac{h'}{u}=4 だったが，
+       %   設問は「最高点の高さは先ほどの場合の何倍か」なので h'/h が正しい．
+       %   h'/h=(u'/u)^2=2^2=4 で値も整合する．
+\end{komon}
+
+\MonN{18}{モンキーハンティング}\par\nopagebreak
+\begin{sisin}
+本問は，落下する物体をライフルで打ち落とす場合に，どの方向を狙って撃てばよいのかを示す問題である．物体$\mathrm{P}$が落下してくることを考慮すると，$\mathrm{A}$点よりも下方を狙った方がよさそうに思えるが，実際には$\mathrm{A}$点を狙って発射すれば落下してきた$\mathrm{P}$に当たる．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} $\mathrm{P}$は自由落下運動をするので，時刻$t\U{s}$における$\mathrm{P}$の速度の$x,y$成分および$x,y$座標は，
+       \[V_x(t)=0\quad V_y(t)=-gt\Eq{1}\]
+       \[X(t)=l\quad Y(t)=h+\frac{1}{2}(-g)t^2\Eq{2}\]
+       \hspace{1zw}$\mathrm{Q}$は放物運動をするので，時刻$t\U{s}$における$\mathrm{Q}$の速度の$x,y$成分および$x,y$座標は，
+       \[\left\{\begin{array}{l}
+         v_x(t)=v_0\cos\theta\\[1mm]
+         v_y(t)=v_0\sin\theta+(-g)t
+       \end{array}\right.\Eq{3}\]
+       \[\left\{\begin{array}{l}
+         x(t)=v_0\cos\theta\cdot t\\[1mm]
+         y(t)=v_0\sin\theta\cdot t+\dfrac{1}{2}(-g)t^2
+       \end{array}\right.\Eq{4}\]
+       \hspace{1zw}よって，時刻$t\U{s}$における$\overline{\mathrm{PQ}}$は，\MARU{2}\MARU{4}より，
+       \[\overline{\mathrm{PQ}}=\sqrt{(v_0\cos\theta\cdot t-l)^2+(v_0\sin\theta\cdot t-h)^2}\]
+       \hspace*{\fill}$\U{m}$\Ans
+\ko{2} 時刻$t\U{s}$における$\mathrm{P}$から見た$\mathrm{Q}$の相対速度は，
+       \[\overrightarrow{v_{\mathrm{PQ}}}=\overrightarrow{v_{\mathrm{Q}}}-\overrightarrow{v_{\mathrm{P}}}\Eq{5}\]
+       よって，\MARU{1}\MARU{3}\MARU{5}より，
+       \[\overrightarrow{v_{\mathrm{PQ}}}=\left(\begin{array}{c}
+         v_0\cos\theta\\ v_0\sin\theta
+       \end{array}\right)\]
+       であり，
+       \[\left\{\begin{array}{l}
+         \mbox{水平成分：}v_0\cos\theta\U{m/s}\\[1mm]
+         \mbox{鉛直成分：}v_0\sin\theta\U{m/s}
+       \end{array}\right.\Ans\]
+\ko{3} $\mathrm{P}$と$\mathrm{Q}$が衝突するのは$x,y$座標が同時刻に等しくなるときである．衝突時刻を$t=t_0$とすると，$x$座標が等しくなるのは，\MARU{2}\MARU{4}より，
+       \[v_0\cos\theta\cdot t_0=l\]
+       よって，$t_0=\dfrac{l}{v_0\cos\theta}$\Eq{6}\par
+       \hspace{1zw}この時刻に$y$座標も等しくなればよい．\MARU{2}\MARU{4}より，
+       \[v_0\sin\theta\cdot t_0-\frac{1}{2}g{t_0}^2=h-\frac{1}{2}g{t_0}^2\]
+       これを解いて，
+       \[h=l\tan\theta\U{m}\Ans\Eq{7}\]
+\ko{4} $\mathrm{P}$と$\mathrm{Q}$が衝突する$y$座標は，\MARU{2}\MARU{6}\MARU{7}より，
+       \[y=h-\frac{1}{2}g\left(\frac{l}{v_0\cos\theta}\right)^2\Eq{8}\]
+       これが$y>0$であればよいので，
+       \[v_0>\frac{l}{\cos\theta}\sqrt{\frac{g}{2h}}=\sqrt{\frac{gl}{2\sin\theta\cos\theta}}\U{m/s}\]
+       \hspace*{\fill}\Ans
+\end{komon}
+\begin{bsHosoku}{参考}
+\hspace{1zw}(2)の結果から分かるように，物体$\mathrm{P}$の上から見ると物体$\mathrm{Q}$は初速度を保ったまま$\mathrm{P}$に接近してくるように見える．ゆえに$\mathrm{Q}$が$\mathrm{P}$に衝突する条件は，$\mathrm{P}$から見たときに$\mathrm{Q}$が直進しつづければ$\mathrm{P}$に当たるようになっていることであり，最初の瞬間において$\mathrm{A}$点を狙って撃てばよいことが分かる．
+\end{bsHosoku}
+
+\end{multicols}

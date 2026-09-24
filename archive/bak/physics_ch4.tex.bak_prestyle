@@ -1,0 +1,211 @@
+\section{運動方程式}
+
+\subsection{運動方程式}
+
+\begin{wrapfigure}[8]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text_p21_fig1.png}
+\end{wrapfigure}
+
+物体に作用する力がつり合っているとき，物体は静止もしくは等速度直線運動を続ける．
+これに対して，物体に作用する力がつり合っていないときは，物体はその力に応じた加速度を生じ，物体の運動状態が変化する．
+
+物体の質量を$m$[kg]，物体に作用する力の合力を$F$[N]，物体の持つ加速度を$a[{\rm m/s^2}]$とすると，
+\[ ma=F\]
+という関係が成り立つ（運動の第二法則）．この式を{\bf 運動方程式}という．
+
+力および加速度は一般にはベクトル量であるから，各軸方向の運動方程式を組み合わせることにより，
+\[ m\overrightarrow {a}=\overrightarrow {F}\]
+となる．
+
+なお，物体に作用する全合力が$\overrightarrow {0}$，つまり$\overrightarrow {F}=\overrightarrow {0}$のときは$\overrightarrow {a}=\overrightarrow {0}$となり，{\bf 全外力がつり合っている場合は加速度が0で，等速度直線運動（もしくは静止）を行う}ことが運動方程式からも示される．
+
+\begin{itembox}[l]{【運動方程式】}
+ \hspace{5mm} 物体に作用している力と質量・加速度の間に$m\overrightarrow {a}=\overrightarrow {F}$が成立
+ \end{itembox}
+
+
+ \ 
+% 
+%\begin{breakbox}
+%\ex＜力の作図と運動方程式の立式＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{40mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=30mm]
+%  {text_p21_fig2.png}
+%\end{wrapfigure}
+%\hspace{5mm}定滑車に糸をかけ，その両端に質量$M$[kg]の物体Aと質量$m$[kg]の物体Bを図のようにつるす．
+%Bは地上にあり，Aは高さ$h$[m]のところにある．
+%物体Aを静かに離して，物体Aが落下している間の運動について以下の問いに答えよ．
+%ただし，糸や定滑車の質量は無視でき，$M>m$，重力加速度の大きさを$g [{\rm m/s^2}]$とする．
+%\begin{description}
+%\item[(1)] 物体A，物体B，定滑車に作用するすべての力を書き出せ．
+%\item[(2)] 物体Aの加速度の大きさ$a [{\rm m/s^2}]$ならびに糸の張力の大きさ$T$[N]を求めよ．
+%\item[(3)] AとBがすれ違うのに要する時間$t_1$[s]およびそのときのAの速さ$v_1$[m/s]を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+\subsection{動摩擦力}
+
+\begin{wrapfigure}[8]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text_p22_fig1.png}
+\end{wrapfigure}
+
+互いに接触している2つの物体がこすれ合うように相対的に運動している場合，接触面がなめらかでないときは運動を妨げるような向きに摩擦力が作用する．
+この摩擦力を{\bf 動摩擦力}という．
+
+静止摩擦力と違い，{\bf 動摩擦力の大きさは（垂直抗力が一定ならば）常に一定}である．
+接触面間の垂直抗力を$N$[N]とすると動摩擦力の大きさ$f'$[N]は
+\[ f'=\mu'N\]
+で与えられる．
+比例定数$\mu'$を接触面の{\bf 動摩擦係数}という．
+
+{\bf 動摩擦力は最大静止摩擦力よりも必ず小さい．}
+そのため，静止摩擦係数$\mu_0$と動摩擦係数$\mu'$の間には
+\[ \mu_0>\mu'\]
+の関係が成立している．
+$\mu_0と\mu'$は物体の速度$v$に依存しない．
+
+\begin{itembox}[l]{【動摩擦力】}
+ \hspace{5mm} 摩擦のある2物体同士の相対運動$\Rightarrow $動摩擦力が作用\\
+ \hspace{5mm} 大きさは常に$\mu'N$，相対運動を妨げる向きに作用
+ \end{itembox}
+
+
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜力の作図と運動方程式の立式＞\\
+%\begin{wrapfigure}[4]{r}[5mm]{70mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=60mm]
+%  {text_p22_fig2.png}
+%\end{wrapfigure}
+%\hspace{5mm}粗い水平面上で質量$m$[kg]の物体に初速度$v_0$[m/s]を与えて滑らせたときの運動について以下の問いに答えよ．ただし，床と物体の間の動摩擦係数を$\mu'$，重力加速度の大きさを$g [{\rm m/s^2}]$とする．
+%\begin{description}
+%\item[(1)] 物体の持つ右向きの加速度$a [{\rm m/s^2}]$を求めよ．
+%\item[(2)] 物体が静止するのに要する時間$t_1$[s]およびそれまでに滑った距離$\Delta x$[m]を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+
+%\subsection{運動方程式の立式}
+%
+%ここまで学んできた知識を用いて，実際に運動方程式を立てる練習を行う．
+%
+% \ 
+% 
+%\begin{breakbox}
+%\ex＜力の作図と運動方程式の立式＞\\
+%\begin{wrapfigure}[8]{r}[5mm]{70mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=60mm]
+%  {text_p23_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}水平面上に固定された粗い斜面を持つ傾斜角$\theta$の斜面台に滑車を取り付け，質量$M$[kg]の物体Aと質量$m$[kg]の物体Bを糸を用いて図のようにつなげてつるす．
+%Bを手で押さえておき，糸をぴんと張った状態にしておいた上でそっと手を離すときについて以下の問いに答えよ．
+%ただし，糸や定滑車の質量は無視でき，Bと斜面との間の静止摩擦係数を$\mu_0$，動摩擦係数を$\mu'$とし，重力加速度の大きさを$g [{\rm m/s^2}]$とする．
+%\begin{description}
+%\item[(1)] Bをそっと手放したとき，Bはそのまま静止していたという．このときの$M,m$の間の関係式を与えられた適当な文字を用いて不等式で表せ．
+%\item[(2)] Bをそっと手放したとき，Bが上昇していくために必要な条件式を表せ．
+%\item[(3)] Bをそっと手放したとき，Bは斜面を滑り降りたという．これに必要な条件式および，このときBが斜面を滑り降りる加速度を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p11.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p12.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p13.png}
+\vspace{20cm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p76_2.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p77.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p78.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p79.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p80.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p81_1.png}
+\end{center}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+

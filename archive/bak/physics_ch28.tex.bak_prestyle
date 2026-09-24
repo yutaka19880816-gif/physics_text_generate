@@ -1,0 +1,246 @@
+\section{レンズ(2)}
+
+\subsection{写像公式}
+作図した図を元に，光源の位置と像の位置に関する関係式を導くことができる．
+
+\begin{wrapfigure}[14]{r}[5mm]{82mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=82mm]
+  {text2_p22_fig1.png}
+\end{wrapfigure}
+まず，右図のような凸レンズの写像について考えてみよう．
+
+この図において，レンズの焦点距離を$f$[m]，レンズから光源までの距離を$a$[m]，レンズから実像までの距離を$b$[m]とすると，$\triangle {\rm AA^\prime O}∽\triangle {\rm BB^\prime O}$，また$\triangle {\rm POF_2}∽\triangle {\rm BB^\prime F_2}$であるから，
+\[\dfrac{\rm AA^\prime}{\rm BB^\prime} =\dfrac{a}{b}\hspace{2mm}，\hspace{2mm}\dfrac{\rm PO}{\rm BB^\prime}=\dfrac{\rm AA^\prime}{BB^\prime}=\dfrac{f}{b-f}\]
+が成立し，これを整理すると，
+\begin{eqnarray*}
+\dfrac{a}{b}=\dfrac{f}{b-f} \hspace{2mm} &\Leftrightarrow& \hspace{2mm} a(b-f)=bf\\
+& \Leftrightarrow& \hspace{2mm} bf+af=ab\\
+& \Leftrightarrow& \hspace{2mm}\dfrac{1}{a}+\dfrac{1}{b}=\dfrac{1}{f}
+\end{eqnarray*}
+が得られる．\\[5mm]
+
+
+\begin{wrapfigure}[14]{r}[5mm]{82mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=82mm]
+  {text2_p22_fig2.png}
+\end{wrapfigure}
+凹レンズの写像公式についても考えてみよう．
+図において，レンズの焦点距離を$f$[m]，レンズから光源までの距離を$a$[m]，レンズから虚像までの距離を$b$[m]とすると，$\triangle {\rm AA^\prime O}∽\triangle {\rm BB^\prime O}$，また$\triangle {\rm POF_1}∽\triangle {\rm BB^\prime F_1}$であるから，
+\[\dfrac{\rm AA^\prime}{\rm BB^\prime} =\dfrac{a}{b}\hspace{2mm}，\hspace{2mm}\dfrac{\rm PO}{\rm BB^\prime}=\dfrac{\rm AA^\prime}{BB^\prime}=\dfrac{f}{f-b}\]
+が成立し，これを整理すると，
+\begin{eqnarray*}
+\dfrac{a}{b}=\dfrac{f}{f-b} \hspace{2mm} &\Leftrightarrow& \hspace{2mm} a(f-b)=bf\\
+& \Leftrightarrow& \hspace{2mm} bf-af=-ab\\
+& \Leftrightarrow& \hspace{2mm}\dfrac{1}{a}-\dfrac{1}{b}=-\dfrac{1}{f}
+\end{eqnarray*}
+が得られる．
+この式は，凸レンズにおける式において，$b$および$f$の符号が逆になっている．
+
+\newpage
+これらの結果は，像の位置$b$，焦点距離$f$を\vspace{5mm}
+
+$\MARU{1}$\hspace{2mm} {\bf 像の位置}\mbox{\boldmath$b$}
+
+レンズの位置を原点に{\bf レンズの向こう側を正として}$b$軸をとる．
+つまり，{\bf 実像となる場合に}\mbox{\boldmath$b>0$}，{\bf 虚像となる場合に}\mbox{\boldmath$b<0$}となるように定める．
+
+$\MARU{2}$\hspace{2mm} {\bf 焦点距離}\mbox{\boldmath$f$}
+
+{\bf 凸レンズの場合に}\mbox{\boldmath$f>0$}，{\bf 凹レンズの場合に}\mbox{\boldmath$f<0$}となるようにとる．
+平行光を入射した際の像の位置$b$として定めていると考えることができる．\vspace{5mm}
+
+のように設定し直すことで，1つの式
+\[\mbox{\boldmath$\dfrac{1}{a}+\dfrac{1}{b}=\dfrac{1}{f}$}\]
+でまとめて表すことができる．
+
+ \begin{itembox}[l]{【写像公式】}
+レンズから光源までの距離を$a$として，\\
+\hspace{5mm} ・レンズから像までの距離$b$[m]をレンズの向こう側を正にとる\\
+\hspace{5mm} ・焦点距離$f$[m]を凸レンズのときが正，凹レンズのときを負にとる\\
+のように$b$と$f$を定めると，次の写像公式が成立する．
+\[ \dfrac{1}{a}+\dfrac{1}{b}=\dfrac{1}{f}\]
+ \end{itembox}
+ 
+ また，像の大きさは光源の大きさに比べて，いずれの場合も$\left| \hspace{1mm} \dfrac{b}{a} \hspace{1mm} \right|$倍となっている．
+ これを倍率と呼ぶ．
+ 
+  \begin{itembox}[l]{【倍率】}
+像の大きさは光源の大きさに比べて，$\left| \hspace{1mm}\dfrac{b}{a} \hspace{1mm}\right|$倍となる．
+ \end{itembox}
+ 
+ 光源の位置が虚光源となる場合であっても，同様に三角形の相似を考えることで，光源の位置$a$，像の位置$b$，焦点距離$f$の間に成立する関係式を得ることができる．
+ 
+ 前述における写像公式は，像の位置$b$，焦点距離$f$を\vspace{5mm}
+
+$\MARU{1}$\hspace{2mm} {\bf 像の位置}\mbox{\boldmath$b$}
+
+レンズの位置を原点に{\bf レンズの向こう側を正として}$b$軸をとる．
+つまり，{\bf 実像となる場合に}\mbox{\boldmath$b>0$}，{\bf 虚像となる場合に}\mbox{\boldmath$b<0$}となるように定める．
+
+$\MARU{2}$\hspace{2mm} {\bf 焦点距離}\mbox{\boldmath$f$}
+
+{\bf 凸レンズの場合に}\mbox{\boldmath$f>0$}，{\bf 凹レンズの場合に}\mbox{\boldmath$f<0$}となるようにとる．
+平行光を入射した際の像の位置$b$として定めていると考えることができる．\vspace{5mm}
+
+と定めたが，光源の位置$a$も実光源，虚光源の場合を扱えるよう，\vspace{5mm}
+
+$\MARU{3}$\hspace{2mm} {\bf 光源の位置}\mbox{\boldmath$a$}
+
+レンズの位置を原点に{\bf レンズの手前側を正として}$a$軸をとる．
+つまり，{\bf 実光源となる場合に}\mbox{\boldmath$a>0$}，{\bf 虚光源となる場合に}\mbox{\boldmath$a<0$}となるように定める．\vspace{5mm}
+
+と定めればいい．
+
+これらの結果は，光源の位置$a$，像の位置$b$，焦点距離$f$を次のように設定し直すことで，1つの式
+\[ \dfrac{1}{a}+\dfrac{1}{b}=\dfrac{1}{f}\]
+でまとめて表すことができる．
+
+以上，写像公式についてまとめると，次のようになる．
+ \begin{itembox}[l]{【写像公式】}
+ 
+レンズから光源までの距離$a$[m]はレンズの手前側を正に，レンズから像までの距離$b$[m]はレンズの向こう側を正にとり，焦点距離$f$[m]は凸レンズのときを正，凹レンズのときを負にとると，次の写像公式が成立する．
+\[ \dfrac{1}{a}+\dfrac{1}{b}=\dfrac{1}{f}\]
+\hspace{50mm}$a>0：実光源　　　　b>0：実像$\\
+\hspace{50mm}$a<0：虚光源　　　　b<0：虚像$\\[2mm] 
+像の大きさは光源の大きさに比べて，$\left| \hspace{1mm}\dfrac{b}{a} \hspace{1mm}\right|$倍となる．
+ \end{itembox}
+
+\subsection{偏光}
+\begin{wrapfigure}[17]{r}[5mm]{55mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=55mm]
+  {text2_p25_fig1.png}
+\end{wrapfigure}
+光は横波であるため，進行方向に対して垂直な面内で振動しているが，太陽の光などは垂直な面内のあらゆる方向に振動しており，ある特定の方向のみに偏って振動してはいない．
+このような光を{\bf 自然光}と呼ぶ．
+
+しかし，{\bf 偏光板}と呼ばれる板を用意してこれに自然光を通すと，偏光板を通過した光はある特定の方向のみの振動になり，それに垂直な方向の振動は全くなくなる．
+このように，ある特定方向のみの振動になったものを{\bf 偏光}と呼ぶ．
+
+この現象は，偏光板を一種のブラインドのようなものだと考えるとわかりやすい．
+ブラインドの節目に沿った方向の振動を持つ光はこれを通過することができるが，それに垂直な方向の振動は通過することができない．
+そのため，2つの偏光板を用意してこれを順番に並べて光を通す場合，2つの偏光板の軸方向が揃っている場合は偏光は2枚目の偏光板を通過できるが，2つの偏光板の軸方向が互いに垂直になっている場合は偏光は2枚目の偏光板を通過できない．
+
+もし仮に光が縦波であるならこのような偏光という現象は起きないはずである．
+すなわち，{\bf 偏光という現象は光波が横波であることを裏付ける1つの証拠}なのである．
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p14.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p15.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p16.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p17.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p87.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p88.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p89.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p90.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p91.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p92.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p93.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p94.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p95_1.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

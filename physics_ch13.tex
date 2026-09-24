@@ -1,0 +1,167 @@
+\section{剛体のつり合い（2）}
+
+\subsection{偶力}
+
+\begin{wrapfigure}[10]{r}[5mm]{35mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=35mm]
+  {text_p60_fig1.png}
+\end{wrapfigure}
+
+ここまでで剛体に作用する力の合成方法を学んだが，大きさが同じで互いに逆向きの力については，力の作用点を結ぶ線分1：1に外分する点は存在しないから，この2つの力を合成することはできない．
+そこで，このような2つの力は一組として考え，これを{\bf 偶力}という．
+
+偶力の作用線間の距離を$a$[m]，片方の作用線から回転軸Oまでの距離を$x$[m]，力の大きさ$F$[N]とすると，この回転軸まわりの力のモーメントの和は
+\[ N=F・x=F・(a-x)=Fa\]
+となり，$x$に依存しない．
+すなわち，{\bf 回転軸のどの位置をとっても，その回転軸のまわりの偶力のモーメントは一定である．}
+
+一般に，回転軸Oまわりの力のモーメントは$N=F_\perp r$であり，力のうちの垂直成分が剛体を回転させる作用を持ち，平行成分は回転軸を動かそうとする力，すなわち剛体を移動させる作用を持っている．
+これに対して偶力はどの回転軸まわりに対しても剛体を回転させる作用のみしか持たない．
+
+\begin{matome}{偶力のモーメント}
+ \hspace{3mm} 大きさ$F$[N]の2力が平行で互いに逆向きに作用しているとき，この一組を偶力という．\\
+\hspace{3mm}偶力のモーメントは，作用線間の距離を$a$とすると，\\
+\[ N=Fa\]
+\hspace{3mm}で与えられ，回転軸の位置によらない．
+ \end{matome}
+
+\subsection{重心}
+
+\begin{wrapfigure}[14]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=75mm]
+  {text_p60_fig2.png}
+\end{wrapfigure}
+
+ここまでにおいて，物体に作用する重力は物体の中心に対して作用すると考えてきたが，厳密には大きさのある物体に対して作用する重力は，右図のように物体の各微小部分ごとに対してそれぞれ鉛直下向きに作用している．しかし各微小部分に作用する重力は全て平行かつ同じ向きになっているので，12.2で学習した剛体に作用する平行力の合成の方法に従って必ずひとつの力に合成することができる．
+
+合成した力の大きさは，物体の質量が$m$[kg]であれば常に$mg$[N]となるが，その作用線は物体の向きによって変化する．
+しかしその作用線は，物体の向きによらず必ずある一点を通過することが知られており，この点を{\bf 重心}という．
+
+
+\begin{wrapfigure}[8]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=55mm]
+  {text_p61_fig1.png}
+\end{wrapfigure}
+
+物体の重心位置を求めるためには次のようにすればよい．
+上図にあるようにまず物体を微小部分に分割し，各微小部分に対してかかる重力を合成してその作用線を求める．
+これを$x,y$軸の2方向について行い，その作用線の交点を取ればよい．
+
+各部分にかかる多数の重力を合成するには2つずつ順番に合成していけばよいので，とりあえず座標$x_1,x_2$[m]に置かれている質量$m_1,m_2$[kg]の物体に作用する重力の合成を行ってみよう．
+この場合，大きさ$(m_1+m_2)g$[N]の力が線分を$m_2:m_1$に内分する点Gに作用することになる．
+よって，この場合の重心位置Gは内分公式を用いて，
+\[ x_G=\dfrac{m_1x_1+m_2x_2}{m_1+m_2} \hspace{2mm}{\rm [m]}\]
+として求めることができる．
+さらにこのGに対して他の微小部分に作用する重力を合成していくことにより，全重力の合力の作用点，すなわち物体の重心座標を求めることができ，その点は$n$個の物体であれば
+\[ x_G=\dfrac{m_1x_1+m_2x_2+\cdots +m_nx_n}{m_1+m_2+\cdots +m_n} \hspace{2mm}{\rm [m]}\]
+の位置となる．
+
+以上より，剛体がいかなる向きをとっていても剛体に作用する重力の全合力は，{\bf 重心に対して全質量分の重力が作用している}とだけ考えればよく，{\bf 重心まわりの重力のモーメントの和は必ず0となる}と言える．
+
+一般的な物体の重心位置は，以上で述べたような複雑な手続きを踏む必要があるが，一様な密度を持つ物体の場合は幾何学的対称性から明らかなことが多い．
+例えば一様な棒の重心はその中点に，また一様な円盤や正方形板，球の重心はその中心にある．
+
+\begin{matome}{重心}
+ \hspace{3mm} 剛体もしくは質点系に作用する重力を一点で支えたときに，剛体もしくは質点系の向きによらずにつり合いの条件を満たすことのできる点を重心という．その重心の座標は\\
+\[ \overrightarrow{x_G\mathstrut}=\dfrac{m_1\overrightarrow{x_1\mathstrut}+m_2\overrightarrow{x_2\mathstrut}+\cdots +m_n\overrightarrow{x_n \mathstrut}}{m_1+m_2+\cdots +m_n} \hspace{2mm}{\rm [m]}\]
+ \end{matome}
+
+
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜重心座標＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{60mm}
+%  \centering
+%%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=53mm]
+%  {text_p62_fig1.png}
+%  \includegraphics[keepaspectratio,width=45mm]
+%  {text_p62_fig2.png}
+%\end{wrapfigure}
+%\hspace{5mm}重心に関する以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] $x$軸上の座標で$x=-2,1,3$[m]の各点に質量$2m,m,m$[kg]の物体がそれぞれ置かれている．この質点系の重心の位置を求めよ．
+%\item[(2)] (1)において，重心の座標を$x=2$[m]の位置にするためには，$x=4$[m]の地点に新たにどれだけの質量の物体を置けばよいか求めよ．
+%\item[(3)] 一辺の長さが$l$[m]，全質量が$4m$[kg]の薄く，均質な正方形の板がある．この板の右上$\dfrac{1}{4}$を図のように切り取った．図のように座標軸を取るとき，この残った部分の物体の重心位置を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+% \newpage 
+%
+%\begin{breakbox}
+%\ex＜剛体のつり合い＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{50mm}
+%  \centering
+% \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=40mm]
+%  {text_p62_fig3.png}
+%\end{wrapfigure}
+%\hspace{5mm}長さ$l$[m]，質量$m$[kg]のかたくて一様な棒がある．この棒の下端を床にちょうつがいで止め，棒の上端につけた糸を引いて図のように角$\theta$でつり合わせて静止させることについて考える．重力加速度の大きさを$g {\rm [m/s^2]}$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 糸を水平に引いてつり合わせるためにはどれだけの大きさで引けばよいか．
+%\item[(2)] 糸が棒と垂直をなすようにして引いてつり合わせるためにはどれだけの大きさで引けばよいか．
+%\item[(3)] (2)のとき，ちょうつがいが棒に及ぼす力の水平成分および鉛直成分をそれぞれ求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+
+  \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p33.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p34.png}
+\vspace{10cm}
+\end{center}
+\end{figure}
+
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p113_2.png}
+\vspace{20cm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p114.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p115.png}
+\end{center}
+\end{figure}
+ 
+ \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p116.png}
+\end{center}
+\end{figure}

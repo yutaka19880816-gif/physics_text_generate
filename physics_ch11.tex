@@ -1,0 +1,222 @@
+\section{万有引力・惑星運動（1）}
+
+\subsection{万有引力の法則}
+
+\begin{wrapfigure}[7]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text_p50_fig1.png}
+\end{wrapfigure}
+
+質量$M$[kg]の物体Aと質量$m$[kg]の物体Bが距離$r$[m]だけ隔てて置かれている場合について考える．
+このとき，この2つの物体はその質量に応じて互いに引力を及ぼし合う．
+これを{\bf 万有引力}といい，その大きさ$f$[N]は
+\[ f=G\dfrac{Mm}{r^2} {\rm [N]} \]
+で与えられる．
+向きは{\bf 互いに引き合う向き}で，作用・反作用の法則より各物体に作用する力の大きさは同じである．
+比例定数$G{\rm [N・m^2/kg^2]}$を万有引力定数といい，その大きさは実験により$G=6.672\times 10^{-11}{\rm [N・m^2/kg^2]}$であることが知られている．
+
+この万有引力は非常に微小な力であるため，通常の力学問題では重力以外の万有引力は無視してよい．
+この万有引力が問題になるのは惑星運動のときが主である．
+
+\begin{matome}{万有引力の法則}
+
+\hspace{3mm}質量$M$[kg]の物体と質量$m$[kg]の物体が距離$r$[m]だけ隔てて置かれているとき，2つの物体間には互いに引き合う方向に，大きさ
+ \[ f=G\dfrac{Mm}{r^2} \hspace{2mm}[N]\]
+ の万有引力が作用する．（ただし，$G{\rm [N・m^2/kg^2]}$は万有引力定数）
+ \end{matome}
+
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜万有引力による等速円運動＞\\
+%
+%地球の周りを等速円運動する物体について以下の問いに答えよ．
+%ただし，地球の質量を$M$[kg]，万有引力定数を$G{\rm [N・m^2/kg^2]}$，地球の半径を$R$[m]，地球表面における重力加速度の大きさを$g{\rm [m/s^2]}$，地球の自転周期を$T$[s]とする．
+%\begin{description}
+%\item[(1)] 地球表面で地球から物体に作用する万有引力が地表における重力であることを利用して，$G$と$g$との間に成り立つ関係を与えられた文字を用いて表せ．
+%\item[(2)] (1)をもとに，地表から高度$h$[m]の高さで地球から万有引力による物体の加速度の大きさ$g(h)[{\rm m/s^2}]$を求めよ．
+%\item[(3)] 赤道上高度$h$[m]の高さを等速円運動している人工衛星の速さ$V$[m/s]を$G,M,R,h$を用いて表せ．
+%\item[(4)] この人工衛星が静止衛星となるにはどれだけの高度の位置を飛行すればよいか．$g,R,T$を用いて表せ．
+%\end{description}
+%
+%\end{breakbox}
+
+%\newpage
+
+\subsection{万有引力による位置エネルギー}
+
+\begin{wrapfigure}[7]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text_p51_fig1.png}
+\end{wrapfigure}
+
+重力やバネによる弾性力などと同様に万有引力も保存力であり，万有引力に関する位置エネルギーを考えることができる．
+位置エネルギーとは，基準点と比較したときに余分に持っているエネルギーのことであり，その状態から基準点まで移動したときに位置エネルギーの元となる力が物体に対してなす仕事に等しい．
+このことを用いて万有引力による位置エネルギーの式を求める．
+
+質量$M$[kg]の物体が図のO点に固定されており，これから距離$r$[m]の位置に質量$m$[kg]の物体があるとする．
+図のように$x$軸を設定し，この物体を基準点$x_0$[m]の位置まで動かすときに万有引力のする仕事を計算する．
+物体に作用する万有引力は位置によって大きさが変化するので，微小区間に分けて考える．
+物体が位置$x$[m]から$x+dx$[m]まで動くときに万有引力がする微小な仕事$dW$[J]は，
+\[ dW=-G\dfrac{Mm}{x^2} ・dx\hspace{2mm}{\rm [J]}\]
+で与えられる．
+位置$x=r$[m]から基準点$x=x_0$[m]まで動くときに万有引力のする仕事の総和は
+\[ W=\int^{x=x_0}_{x=r}dW=\int^{x=x_0}_{x=r}\left( -G\dfrac{Mm}{x^2}\right) dx=G\dfrac{Mm}{x_0}-G\dfrac{Mm}{r}\hspace{2mm}[J]\]
+と計算される．
+ゆえに質量$m$[kg]の物体が位置$x=r$[m]で持つ位置エネルギーは
+\[ U=G\dfrac{Mm}{x_0}-G\dfrac{Mm}{r} \hspace{2mm}{\rm [J]}\]
+で与えられる．
+
+\begin{wrapfigure}[7]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p51_fig2.png}
+\end{wrapfigure}
+
+さて一般に，位置エネルギーの基準点$x_0$の取り方は任意であるが，上の式において$x_0 \rightarrow \infty$（無限遠点）を基準とすると式の扱いが容易になる．
+そこで{\bf 無限遠点を基準点（}\mbox{\boldmath $U=0$} {\bf となる点）}として，質量$m$[kg]の物体が位置$r$[m]で持つ位置エネルギーは
+\[ U=-G\dfrac{Mm}{r} \hspace{2mm}[{\rm J}] \]
+で与えられる．
+
+
+\begin{matome}{万有引力による位置エネルギー}
+
+\hspace{3mm}質量$M$[kg]の物体に中心から距離$r$[m]の位置にある質量$m$[kg]の物体の持つ位置エネルギーは，無限遠点を基準として
+ \[ U=-G\dfrac{Mm}{r} \hspace{2mm}[J]\]
+ で与えられる．
+ \end{matome}
+
+ \ 
+
+一般に，万有引力のみによる運動では力学的エネルギー，すなわち物体の運動エネルギーと位置エネルギーの総和が一定に保たれる．
+\[ E=\dfrac{1}{2}mv^2-G\dfrac{Mm}{r}=（一定）\]
+
+
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜万有引力による位置エネルギー＞\\
+%\begin{wrapfigure}[5]{r}[5mm]{70mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=60mm]
+%  {text_p52_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}地球表面から図のように地球の動径方向に質量$m$[kg]のロケットを初速$v_0$[m/s]で打ち上げる場合を考える．
+%地球の質量を$M$[kg]，万有引力定数を$G{\rm [N・m^2/kg^2]}$，地球の半径を$R$[m]として以下の問いに答えよ．なお，地球の自転は考えなくてよい．
+%\begin{description}
+%\item[(1)] このロケットが地球中心から距離$r$[m]の位置にきたときに持つ速さを$v$[m/s]とする．この瞬間と打ち上げた直後との間の力学的エネルギー保存則の式を示せ．
+%\item[(2)] (1)をもとに，ロケットが再び地球に戻ってこないために必要な初速度（第二宇宙速度）の大きさを求めよ
+%\end{description}
+%
+%\end{breakbox}
+
+\subsection{ケプラーの法則}
+
+地球は太陽から受ける万有引力により，太陽のまわりを等速円運動している．
+しかし詳しい解析によって実際には地球の軌道は完全な円ではなく，楕円軌道であることがわかっている．17世紀の初めにケプラーはチコ・ブラーエの集めた天体運動のデータをもとに，惑星運動に関する以下の3つの法則を発見した．
+
+\begin{matome}{ケプラーの法則}
+
+\hspace{3mm}{\bf 第一法則　楕円軌道の法則}
+
+\hspace{5mm}太陽系の惑星は太陽を1つの焦点とする楕円上を運動する．
+
+\hspace{3mm}{\bf 第二法則　面積速度保存則}
+
+\hspace{5mm}惑星と太陽を結ぶ線分が単位時間あたりに掃く面積は軌道上のすべての点で一定である．
+%\[\dfrac{1}{2}rv\sin \theta =（一定）\]
+
+\hspace{3mm}{\bf 第三法則　公転周期と長半径の関係}
+
+\hspace{5mm}惑星の公転周期の2乗は楕円軌道の長半径の3乗に比例する．
+\[\dfrac{T^2}{a^3}=（一定）\]
+ \end{matome}
+
+ \ 
+ 
+% 
+% まずは第三法則について考える．
+% 
+%  \ 
+ 
+%\begin{breakbox}
+%\ex＜ケプラーの第三法則＞\\
+%
+%ケプラーの第三法則に関する以下の問いに答えよ．
+%ただし，太陽の質量を$M_s$[kg]，万有引力定数を$G{\rm [N・m^2/kg^2]}$とする．
+%\begin{description}
+%\item[(1)] 太陽から距離$r$[m]の半径で等速円運動する質量$m$[kg]の惑星について，その公転周期$T$[s]と半径$r$[m]について$\dfrac{T^2}{a^3}$の比の値が惑星自身の質量$m$[kg]に依存しないことを示せ．
+%\item[(2)] ハレー彗星は1986年2月に太陽に最接近している．このハレー彗星は周期76年で，近日点距離（太陽との最接近距離）は0.59天文単位である．ハレー彗星の遠日点距離はおよそ何天文単位か．ただし，1天文単位は$1.5\times 10^{11}$[m]で，これは太陽と地球との距離である．
+%\item[(3)] ハレー彗星の遠日点は相当に遠いので，無限遠点から初速度0[m/s]で太陽に近づいてくると近似して，近日点でのハレー彗星の速さを求めよ．ただし，$GM_s=1.3\times 10^{20}[{\rm m^3/s^2}]$
+%\end{description}
+%
+%\end{breakbox}
+
+  \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p29.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p30.png}
+\vspace{10cm}
+\end{center}
+\end{figure}
+
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p105_2.png}
+\vspace{20cm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p106.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p107.png}
+\end{center}
+\end{figure}
+ 
+ \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p108.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p109.png}
+\end{center}
+\end{figure}
+
+
+ 

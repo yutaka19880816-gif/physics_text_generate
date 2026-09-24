@@ -1,0 +1,577 @@
+{
+  "source": "/Users/yutaka/Google Drive/マイドライブ/鉄緑会物理/20161215144626.pdf",
+  "examples": [
+    {
+      "original": 1,
+      "title": "クーロンの法則",
+      "page": 27,
+      "subquestions": 3,
+      "chapter": 24,
+      "role": "例題"
+    },
+    {
+      "original": 2,
+      "title": "点電荷の作る電場",
+      "page": 28,
+      "subquestions": 4,
+      "chapter": 24,
+      "role": "例題"
+    },
+    {
+      "original": 3,
+      "title": "電気力線",
+      "page": 29,
+      "subquestions": 2,
+      "chapter": 24,
+      "role": "例題"
+    },
+    {
+      "original": 4,
+      "title": "箔検電器",
+      "page": 30,
+      "subquestions": 2,
+      "chapter": 24,
+      "role": "練習へ移動"
+    },
+    {
+      "original": 5,
+      "title": "一様電場による電位",
+      "page": 33,
+      "subquestions": 6,
+      "chapter": 24,
+      "role": "例題"
+    },
+    {
+      "original": 6,
+      "title": "点電荷による電位",
+      "page": 34,
+      "subquestions": 3,
+      "chapter": 24,
+      "role": "例題"
+    },
+    {
+      "original": 7,
+      "title": "電位による位置エネルギー",
+      "page": 34,
+      "subquestions": 3,
+      "chapter": 29,
+      "role": "例題"
+    },
+    {
+      "original": 8,
+      "title": "平行平板コンデンサー",
+      "page": 37,
+      "subquestions": 3,
+      "chapter": 25,
+      "role": "例題"
+    },
+    {
+      "original": 9,
+      "title": "誘電体",
+      "page": 39,
+      "subquestions": 3,
+      "chapter": 25,
+      "role": "例題"
+    },
+    {
+      "original": 10,
+      "title": "コンデンサーの並列接続",
+      "page": 40,
+      "subquestions": 2,
+      "chapter": 25,
+      "role": "例題"
+    },
+    {
+      "original": 11,
+      "title": "コンデンサーの直列接続",
+      "page": 41,
+      "subquestions": 2,
+      "chapter": 25,
+      "role": "例題"
+    },
+    {
+      "original": 12,
+      "title": "コンデンサー回路",
+      "page": 42,
+      "subquestions": 3,
+      "chapter": 25,
+      "role": "例題"
+    },
+    {
+      "original": 13,
+      "title": "複合極板コンデンサー",
+      "page": 43,
+      "subquestions": 3,
+      "chapter": 25,
+      "role": "練習へ移動"
+    },
+    {
+      "original": 14,
+      "title": "電流",
+      "page": 44,
+      "subquestions": 2,
+      "chapter": 26,
+      "role": "例題"
+    },
+    {
+      "original": 15,
+      "title": "抵抗モデルによる電気抵抗の記述",
+      "page": 46,
+      "subquestions": 7,
+      "chapter": 26,
+      "role": "例題"
+    },
+    {
+      "original": 16,
+      "title": "内部抵抗",
+      "page": 50,
+      "subquestions": 2,
+      "chapter": 26,
+      "role": "例題"
+    },
+    {
+      "original": 17,
+      "title": "キルヒホッフの法則の適用",
+      "page": 51,
+      "subquestions": 4,
+      "chapter": 27,
+      "role": "例題"
+    },
+    {
+      "original": 18,
+      "title": "合成抵抗",
+      "page": 53,
+      "subquestions": 2,
+      "chapter": 26,
+      "role": "例題"
+    },
+    {
+      "original": 19,
+      "title": "分流器・倍率器",
+      "page": 54,
+      "subquestions": 5,
+      "chapter": 26,
+      "role": "例題"
+    },
+    {
+      "original": 20,
+      "title": "ホイートストンブリッジ・メートルブリッジ",
+      "page": 55,
+      "subquestions": 2,
+      "chapter": 27,
+      "role": "例題"
+    },
+    {
+      "original": 21,
+      "title": "コンデンサーの過渡現象",
+      "page": 56,
+      "subquestions": 6,
+      "chapter": 27,
+      "role": "例題"
+    },
+    {
+      "original": 22,
+      "title": "抵抗・コンデンサー複合回路",
+      "page": 57,
+      "subquestions": 4,
+      "chapter": 27,
+      "role": "例題"
+    },
+    {
+      "original": 23,
+      "title": "非オーム抵抗を含む回路",
+      "page": 58,
+      "subquestions": 3,
+      "chapter": 27,
+      "role": "例題"
+    },
+    {
+      "original": 24,
+      "title": "磁場・磁束密度",
+      "page": 63,
+      "subquestions": 1,
+      "chapter": 28,
+      "role": "例題"
+    },
+    {
+      "original": 25,
+      "title": "直線電流・円形電流の作る磁場",
+      "page": 63,
+      "subquestions": 3,
+      "chapter": 28,
+      "role": "例題"
+    },
+    {
+      "original": 26,
+      "title": "平行導線の作る磁場の合成",
+      "page": 64,
+      "subquestions": 2,
+      "chapter": 28,
+      "role": "例題"
+    },
+    {
+      "original": 27,
+      "title": "平行導線の及ぼし合う電磁力",
+      "page": 65,
+      "subquestions": 5,
+      "chapter": 28,
+      "role": "例題"
+    },
+    {
+      "original": 28,
+      "title": "磁場による荷電粒子の円運動",
+      "page": 66,
+      "subquestions": 3,
+      "chapter": 29,
+      "role": "例題"
+    },
+    {
+      "original": 29,
+      "title": "磁場中における荷電粒子のらせん運動",
+      "page": 67,
+      "subquestions": 4,
+      "chapter": 29,
+      "role": "例題"
+    },
+    {
+      "original": 30,
+      "title": "トムソンの実験",
+      "page": 68,
+      "subquestions": 4,
+      "chapter": 29,
+      "role": "例題"
+    },
+    {
+      "original": 31,
+      "title": "磁場偏向",
+      "page": 69,
+      "subquestions": 3,
+      "chapter": 29,
+      "role": "例題"
+    },
+    {
+      "original": 32,
+      "title": "ファラデーの電磁誘導の法則",
+      "page": 71,
+      "subquestions": 2,
+      "chapter": 30,
+      "role": "例題"
+    },
+    {
+      "original": 33,
+      "title": "一様な磁場中を回転する導体棒",
+      "page": 72,
+      "subquestions": 2,
+      "chapter": 30,
+      "role": "例題"
+    },
+    {
+      "original": 34,
+      "title": "磁場中を落下していく導体棒",
+      "page": 73,
+      "subquestions": 5,
+      "chapter": 30,
+      "role": "例題"
+    },
+    {
+      "original": 35,
+      "title": "自己インダクタンス",
+      "page": 74,
+      "subquestions": 4,
+      "chapter": 30,
+      "role": "例題"
+    },
+    {
+      "original": 36,
+      "title": "コイルを含む直流回路",
+      "page": 76,
+      "subquestions": 4,
+      "chapter": 31,
+      "role": "例題"
+    },
+    {
+      "original": 37,
+      "title": "相互誘導",
+      "page": 78,
+      "subquestions": 5,
+      "chapter": 30,
+      "role": "例題"
+    },
+    {
+      "original": 38,
+      "title": "相互インダクタンス",
+      "page": 79,
+      "subquestions": 4,
+      "chapter": 30,
+      "role": "練習へ移動"
+    },
+    {
+      "original": 39,
+      "title": "電気振動",
+      "page": 81,
+      "subquestions": 8,
+      "chapter": 31,
+      "role": "例題"
+    },
+    {
+      "original": 40,
+      "title": "抵抗にかかる交流電圧と交流電流",
+      "page": 84,
+      "subquestions": 3,
+      "chapter": 31,
+      "role": "例題"
+    },
+    {
+      "original": 41,
+      "title": "コイルにかかる交流電圧と交流電流",
+      "page": 85,
+      "subquestions": 3,
+      "chapter": 31,
+      "role": "例題"
+    },
+    {
+      "original": 42,
+      "title": "コンデンサーにかかる交流電圧と交流電流",
+      "page": 87,
+      "subquestions": 3,
+      "chapter": 31,
+      "role": "例題"
+    },
+    {
+      "original": 43,
+      "title": "RL直列回路",
+      "page": 89,
+      "subquestions": 5,
+      "chapter": 32,
+      "role": "例題"
+    },
+    {
+      "original": 44,
+      "title": "RC直列回路",
+      "page": 90,
+      "subquestions": 5,
+      "chapter": 32,
+      "role": "例題"
+    },
+    {
+      "original": 45,
+      "title": "RLC直列回路",
+      "page": 91,
+      "subquestions": 6,
+      "chapter": 32,
+      "role": "例題"
+    },
+    {
+      "original": 46,
+      "title": "複雑な交流回路",
+      "page": 92,
+      "subquestions": 2,
+      "chapter": 32,
+      "role": "例題"
+    }
+  ],
+  "example_order": {
+    "24": [
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "25": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "26": [
+      14,
+      15,
+      18,
+      16,
+      19
+    ],
+    "27": [
+      17,
+      20,
+      21,
+      22,
+      23
+    ],
+    "28": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "29": [
+      7,
+      30,
+      28,
+      29,
+      31
+    ],
+    "30": [
+      32,
+      33,
+      34,
+      35,
+      37
+    ],
+    "31": [
+      36,
+      39,
+      40,
+      41,
+      42
+    ],
+    "32": [
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "practice_originals": {
+    "24": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14
+    ],
+    "25": [
+      15,
+      16,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "26": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      41,
+      45
+    ],
+    "27": [
+      17,
+      37,
+      38,
+      39,
+      40,
+      42,
+      43,
+      44,
+      46,
+      47,
+      48,
+      95
+    ],
+    "28": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+    ],
+    "29": [
+      12,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      96,
+      "原23"
+    ],
+    "30": [
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      73,
+      74,
+      76,
+      77
+    ],
+    "31": [
+      72,
+      75,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84
+    ],
+    "32": [
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      97,
+      98
+    ]
+  },
+  "moved_examples": {
+    "24": [
+      4
+    ],
+    "25": [
+      13
+    ],
+    "30": [
+      38
+    ]
+  },
+  "practice_counts": {
+    "24": 13,
+    "25": 13,
+    "26": 10,
+    "27": 12,
+    "28": 9,
+    "29": 9,
+    "30": 12,
+    "31": 9,
+    "32": 12
+  }
+}

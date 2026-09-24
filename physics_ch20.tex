@@ -1,0 +1,217 @@
+\section{波動の干渉}
+
+\subsection{縦波}
+弦の振動のように，波の進行方向に対して垂直な方向に媒質が振動する波を{\bf 横波}と呼ぶ．
+波にはこの横波の他に，波の進行方向と平行に媒質が振動する波である{\bf 縦波}がある．
+
+\begin{wrapfigure}[18]{r}[5mm]{120mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=120mm]
+  {text_p91_fig1.png}
+\end{wrapfigure}
+縦波を理解するためには図のような等しい質量をもつ小球と等しいバネとが連結されて水平面上に置かれている状況を考えるとよい．
+
+この図において，一番左端の小球$P_0$を左右に単振動させると，$P_0$の振動につられて$P_1$が動き出し，それにつられて$P_2$が，というように$P_0$の振動が右方向に順に伝わっていく．
+$P_0$の単振動が右端に達して左に戻ると，それにつられて$P_1$も左へ，$P_2$も，というように振動するため，各小球は初期位置を中心とすに波の進行方向と平行な方向に振動する．
+このように，{\bf 媒質の振動方向と平行に振動が伝播する波のことを縦波という．}
+
+各小球は少しずつ時間がずれて単振動するため，小球が集まって密度が高くなる部分（密部）と，小球が離れて密度が低くなる部分（疎部）とができ，これらの密部，疎部が波の進行方向へ一定の速さで伝播していく．
+そのため，縦波は疎密波と呼ばれることもある．
+
+\begin{wrapfigure}[10]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text_p91_fig2.png}
+\end{wrapfigure}
+縦波の各点の振動は波の伝搬方向と一致しているため，そのまま図示すると分かりにくい．
+そこで，振動中心からの変位を縦軸にしたグラフを用いることが多い．
+この際，{\bf 媒質の変位は初期位置からの変位を反時計回りに90度回転させて図示すればよい．}
+媒質が$x$軸正の向きに変位したときに，$y$軸正の向きに変位を取るようにして図示するとちょうど横波と同様な$y-x$グラフとなるため，数式的には横波と同様にして扱うことができる．
+これを{\bf 縦波の横波表示}という．
+横波表示された縦波の媒質の各点の変位を実際の変位に戻すためには，$y$軸正の向きの変位を時計回りに90度回転させて，$x$軸正の向きの変位に直せばよい．
+
+\vspace{15mm}
+\begin{matome}{正弦波}
+ \hspace{3mm} 横波：波の進行方向と媒質の変位方向が垂直であるもの．水面波，弦の振動など．\\
+\hspace{3mm} 縦波：波の進行方向と媒質の変位方向が平行であるもの．疎密波とも呼ばれる．音波など．
+ \end{matome}
+
+\subsection{波の独立性と干渉による強め合い・弱め合い}
+\begin{wrapfigure}[6]{r}[5mm]{35mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=35mm]
+  {text_p92_fig1.png}
+\end{wrapfigure}
+1つの媒質上のある1点に2つの波が同時に伝わってきたときには，その点の変位は各々が単独で届いたときの変位$y_1$，$y_2$の代数和$y_1+y_2$となることが知られている．
+これを波の{\bf 重ね合わせの原理}という．
+
+このように，2つの波が1つの媒質中で重なるときには各々の波が同時に1つの媒質中を進むだけで，互いの波の進行を妨げたり，影響を及ぼしたりすることがない．
+この性質を{\bf 波の独立性}という．
+
+\vspace{15mm}
+\begin{wrapfigure}[10]{r}[5mm]{90mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=90mm]
+  {text_p92_fig2.png}
+\end{wrapfigure}
+さて，水面上の2点A,Bを同周期，同振幅，同変位（=同位相）で連続的に振動させると，水面にはA,B点から円形に波が伝わっていき，水面上でそれらが重ね合わせの原理に従って重なり合う．
+各波源で発生した波は山と谷とが交互に送り出され，重なり合った結果として水面上にできる合成波では，
+\begin{description}
+\item[・] Aからの波の振動とBからの波の振動が同位相で重なるために2つの波が強めあって大きく振動する点（腹）
+\item[・] Aからの波の振動とBからの波の振動が逆位相で重なるために2つの波が弱めあって全く振動しない点（節）
+\end{description}
+が作られる．
+これらの点は連続的に連なって分布しているために曲線となり，前者を腹線，後者を節線という．
+
+\begin{wrapfigure}[6]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text_p93_fig1.png}
+\end{wrapfigure}
+平面上のある点で2つの異なる波源からやってきた波が強め合うか弱め合うかは，
+\begin{description}
+\item[\MARU{1}] 2つの波源の振動の位相差
+\item[\MARU{2}] 2つの波源の距離の差
+\end{description}
+の2つによって決定される．
+まず簡単のため，2つの波源の振動が全く同じ（=位相差がない）場合について考える．
+
+A点とB点からの距離の差がちょうど1波長$\lambda$[m]の整数倍になっているような点Pの場合，2つの波源から点Pに向かってやってくる波を横に並べて描いてみると，P点には常に同一の変位が届いていることがわかる．
+よって，2つの変位を足し合わせたものは1つの変位の倍になる．
+これを互いに{\bf 強め合っている}といい，このときP点は大きく振動することになる．
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=120mm]{text_p93_fig2.png}
+\end{center}
+\end{figure}
+
+\vspace{50mm}
+また，A点とB点からの距離の差がちょうど1波長$\lambda$[m]の$m-\dfrac{1}{2}$倍（$m$は整数）になっているような点Pの場合，2つの波源からやってくる変位は点Pにおいて必ず正負逆の変位をもつ．
+よって，2つの変位を足し合わせたものは常に0となり，全く振動しなくなる．
+これを互いに{\bf 弱め合っている}といい，このときP点は全く振動しないことになる．
+
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=120mm]{text_p93_fig3.png}
+\end{center}
+\end{figure}
+
+以上より，A，Bからの距離がそれぞれ$r_1,r_2$である点Pが，
+\[強め合いとなる条件：r_1-r_2=m\lambda \hspace{5mm}（ただしmは整数）\hspace{13mm}\]
+\[弱め合いとなる条件：r_1-r_2=\left( m-\dfrac{1}{2} \right) \lambda \hspace{5mm}（ただしmは整数）\]
+であり，これらはそれぞれ水面上で波源の位置を焦点とする双曲線となる．
+\begin{matome}{水面波の干渉}
+ \hspace{3mm} 波源A,Bが同位相で振動しているとき，2点からの距離がそれぞれ$r_1,r_2$である点Pは
+ \[ r_1-r_2=m\lambda \hspace{18mm}のとき強め合い\]
+ \[r_1-r_2=\left( m-\dfrac{1}{2} \right)\lambda \hspace{5mm}のとき弱め合い\]
+\end{matome}
+波源A,Bの振動に位相差がある場合はこれも考慮して強め合い，弱め合いを決定する必要がある．
+
+\newpage
+\subsection{定常波}
+\begin{wrapfigure}[13]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=70mm]
+  {text_p95_fig1.png}
+\end{wrapfigure}
+先の水面波の干渉では，水面上に節線，・腹線ができたが，特に2つの波源を結ぶ線分上では波形がどちら方向にも進行しない波が観察される．
+一般に，{\bf 一直線上で，互いに逆向きに伝播する，波長・振幅・振動数の等しい2つの波が重なった場合，大きく振動する点と，全く振動しない点とが交互に並び，それらの点がそれらの点が左右どちらにも動かない波が観察される．}
+このような波を{\bf 定常波（または定在波）}と呼ぶ．
+
+右図は合成波の様子を表したものであるが，場所により最大の変位（振幅）は異なり，最も大きく振動する点を腹，全く振動しない点を節という．
+右図のもとの波長と比較すれば，{\bf 腹と腹の間隔，節と節の間隔は波長の半分の長さであり，腹と節の間隔は波長の}\mbox{\boldmath $\dfrac{1}{4}$}となることがわかる．
+また，定常波の周期はもとの波の周期と一致している．
+
+\vspace{15mm}
+\begin{matome}{定常波}
+ \hspace{3mm} 互いに逆方向に進む同一振幅・波長・周期の2つの波が重なるとき，合成波は進行しない定常波となる．
+ 振幅は媒質各点ごとに違い，各点で上下に単振動を行うが，波形は左右には動いていかない．
+ \[ 定常波の腹-腹間隔＝節-節間隔＝\dfrac{\lambda}{2} \hspace{10mm} 腹-節間隔＝\dfrac{\lambda}{4}\]
+\end{matome}
+
+\subsection{うなり}
+\begin{wrapfigure}[9]{r}[5mm]{50mm}
+  \centering
+  \vspace{-10mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p96_fig1.png}
+\end{wrapfigure}
+定常波では同一振動数をもつ2つの波の干渉を考えたが，振動数がわずかに異なる2つの波の干渉では，合成波は図のように振幅の大きい部分と小さい部分を持つ波群となって伝播していく．
+特に干渉する波が音波の場合は振幅は音の強さに対応するため，観測者は位置に関係なく，音が周期的に大きくなったり小さくなったりする現象を観測する．
+この現象をうなりという．
+
+うなりの振動数（1秒間あたりのうなりの回数）$N$[Hz]は，二つの波の振動数をそれぞれ$f_1,f_2$[Hz]として，
+\[\mbox{\boldmath $N=|f_1-f_2|$} \hspace{2mm}[{\rm Hz}]\]
+で与えられる．
+\begin{matome}{うなり}
+ \hspace{3mm} 振動数がそれぞれ$f_1,f_2$[Hz]の音波が干渉するとき，観測されるうなりの振動数$N$[Hz]は
+\[N=|f_1-f_2| \hspace{2mm}[{\rm Hz}]\]
+\end{matome}
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p50.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p51.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p52.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p149.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p150.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p151.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p152.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p153.png}
+\end{center}
+\end{figure}

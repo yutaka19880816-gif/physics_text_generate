@@ -1,0 +1,246 @@
+\section{落下運動・放物運動}
+
+\subsection{重力加速度と自由落下運動}
+
+\begin{wrapfigure}[5]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=30mm]
+  {text_p10_fig1.png}
+\end{wrapfigure}
+地表付近にあるすべての物体は，地球から引力を受けている．
+この力のことを{\bf 重力}という．
+高いところで手を離した物体は重力によって落下するが，空気抵抗を無視した場合，物体が落下していくときの加速度は，物体によらず一定値となることが知られている．
+この加速度のことを{\bf 重力加速度}といい，その大きさを$g$で表す．
+$g$の値は地表付近でおよそ\mbox{\boldmath $9.8 {\rm[m/s^2]}$}である．
+
+\begin{itembox}[l]{【重力加速度】}
+ $\hspace{10mm}地表付近の物体は，鉛直下向きにg=9.8[{\rm m/s^2}]の重力加速度を持つ．$
+\end{itembox}
+%
+% \ 
+% 
+%\begin{breakbox}
+%\ex＜自由落下運動と鉛直投げおろし運動＞\\ \\
+%\hspace{5mm}地上$h$[m]の高さの所から小球を自由落下させるときについて以下の問いに答えよ．
+%ただし，重力加速度の大きさを$g[{\rm m/s^2}]$とする．
+%\begin{description}
+%\item[(1)] 自由落下を始めてから小球が地面に当たるまでの時間を求めよ．
+%\item[(2)] 小球が地面に当たる直前の速さを求めよ．
+%\item[(3)] 小球が鉛直下向きの初速度を与えて(1)の半分の時間で地面に当たるようにしたい．そのために必要な初速度の大きさを求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+% \ 
+% 
+% \begin{breakbox}
+%\ex＜自由落下運動と相対運動＞\\ \\
+%\hspace{5mm}点Oから小球Aを自由落下させ，その$t_0$[s]後に小球Bを点Oから鉛直下向きに初速度$v_0$[m/s]で投げおろした．点Oを原点とし，鉛直下向きに$y$軸を取るものとし，重力加速度の大きさを$g[{\rm m/s^2}]$とする．以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] Bを投げた瞬間のAの速度および座標を求めよ．
+%\item[(2)] Bを投げてから$t$[s]後のA,Bのそれぞれの速度および座標を求めよ．また，この瞬間のAに対するBの相対速度を求めよ．
+%\item[(3)] BがAに追いつくために必要な$v_0$の条件を求めよ．またこの条件が成り立つとき，Bを投げてからAに追いつくまでに必要な時間を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+% \ 
+ 
+ 
+\subsection{鉛直投げ上げ運動}
+
+\begin{wrapfigure}[8]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=35mm]
+  {text_p11_fig1.png}
+\end{wrapfigure}
+
+鉛直上向きに投げ上げられた物体の運動を考えてみる．
+投げられた後，この物体は鉛直下向きの加速度を持つから次第に上向きの速さが遅くなり，ある点で速度が0[m/s]となって，そして下向きの速度となって落下して戻ってくる，という運動を行う．
+これも自由落下と同様，鉛直下向きの加速度が\mbox{\boldmath $g [{\rm m/s^2}]$}の等加速度直線運動である．
+
+初速度$v_0$[m/s]で鉛直上向きに投げ上げた物体の運動について考える．投げ上げた点を原点とし，今度は鉛直上向きに$y$軸を設定すると，物体の加速度は鉛直上向きに$-g{\rm [m/s^2]}$であるから，投げてから$t$[s]後の速度$v$[m/s]，座標$y$[m]について等加速度直線運動の関係式より，
+\begin{eqnarray*}
+v&=&v_0+(-g)t \hspace{2mm}{\rm[m/s]}\\
+y&=&v_0t+\dfrac{1}{2}(-g)t^2 \hspace{2mm}{\rm[m]}\\
+v^2&-&v_0^2=2(-g)y
+\end{eqnarray*}
+という式が成立する．
+
+% \ 
+% 
+% \begin{breakbox}
+%\ex＜鉛直投げ上げ運動＞\\ \\
+%\hspace{5mm}初速度$v_0$[m/s]で鉛直上向きに投げ上げた物体の運動について考える．
+%投げ上げた地上の点を原点とし，鉛直上向きに$y$軸を設定する．
+%重力加速度の大きさを$g[{\rm m/s^2}]$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 投げ上げてから運動の頂点に達するのに必要な時間を求めよ．
+%\item[(2)] 最高点の高さを求めよ．
+%\item[(3)] 投げ上げてから地上に戻ってくるのに要する時間を求めよ．
+%\item[(4)] 地上に戻ってきたときの物体の速度を求めよ．
+%\item[(5)] この運動の$v-t$グラフ，$y-t$グラフを作図せよ．
+%\end{description}
+%
+%\end{breakbox}
+
+% \ 
+ 
+鉛直投げ上げ運動について以下の特徴がまとめられる．
+鉛直投げ上げ運動を解く際にはこれらの特徴を用いると素早く計算することができる．
+
+\begin{itembox}[l]{【鉛直投げ上げ運動】}
+\begin{wrapfigure}[8]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text_p11_fig2.png}
+\end{wrapfigure}
+ $\hspace{10mm}\MARU{1} 上昇過程と落下過程は対称$\\
+ $\hspace{10mm}\MARU{2} 頂点では速度が0$[m/s]\\
+ $\hspace{10mm}\MARU{3} 地面→頂点と，頂点→地上に要する時間は同じ$\\
+ $\hspace{10mm}\MARU{4} 地面から速度v_0{\rm[m/s]}で投げ上げた時，\\ \hspace{15mm}地面に戻ってくる時の速度は-v_0$[m/s]
+\vspace{30mm}
+\end{itembox}
+
+%\newpage
+\subsection{放物運動}
+
+迎角$\theta$，初速$V_0$[m/s]で打ち出した物体の運動について考える．
+空中ではこの物体は重力により鉛直下向きに重力加速度$g {\rm m/s^2}$を持つが，水平方向には加速度を持たない．
+そこで，この物体の運動を{\bf 水平方向と鉛直方向に分解して考える．}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=150mm]{text_p12_fig1.png}
+\end{center}
+\end{figure}
+
+
+図のように軸をとると，初速度を成分分解して，
+\[ x軸方向の初速度\hspace{5mm} V_0\cos \theta \hspace{10mm} y軸方向の初速度\hspace{5mm} V_0\sin \theta \]
+となるから，各軸方向の運動は，
+\begin{itembox}[l]{【放物運動】}
+ $\hspace{10mm}x軸方向：初速度V_0\cos \theta [{\rm m/s}] の等速度運動\\
+\hspace{10mm} y軸方向：初速度V_0\sin \theta [{\rm m/s}] ，加速度-g[{\rm m/s^2}]の等加速度運動（鉛直投げ上げ運動）$
+\end{itembox}
+とまとめられる．
+よって，投げてから$t$[s]後の物体の座標は
+\begin{eqnarray*}
+x&=&(V_0\cos \theta)・t \hspace{2mm}{\rm[m]}\\
+y&=&(V_0\sin \theta )・t+\dfrac{1}{2}(-g)t^2 \hspace{2mm}{\rm[m]}
+\end{eqnarray*}
+とまとめられる．
+$t$を消去して得られる軌跡は放物線である．
+このように，斜方投射を扱う際には水平方向と鉛直方向とに運動を分けて扱うのがポイントである．
+
+% \ 
+% \newpage
+%\begin{breakbox}
+%\ex＜放物運動＞\\
+%\begin{wrapfigure}[5]{r}[5mm]{80mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=70mm]
+%  {text_p13_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}水平面上に$x$軸を取り，$x$軸上の原点から鉛直上向きを正として$y$軸をとる．
+%時刻$t=0$[s]に原点から$xy$面内の迎角$\theta \left(0<\theta<\dfrac{\pi}{2} \right)$[rad]の方向へ初速$V_0$[m/s]でボールを投げた．重力加速度の大きさを$g[{\rm m/s^2}]$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 初速度$\overrightarrow{V_0}$をベクトルの成分表示で示せ．
+%\item[(2)] 任意の時刻$t$[s]での$x$軸方向の速度成分$v_x$[m/s]，および，$y$軸方向の速度成分$v_y$[m/s]を$V_0,\theta ,g,t$を用いて表せ．
+%\item[(3)] 任意の時刻$t$[s]でのボールの位置$(x,y)$[m]を$V_0,\theta ,g,t$を用いて表せ．
+%\item[(4)] (3)をもとに，ボールの運動経路を表す方程式を求めよ．
+%\item[(5)] ボールが最高点に達する時刻$t_1$[s]を求めよ．
+%\item[(6)] 最高点の高さ$h$[m]を求めよ．
+%\item[(7)] ボールが再び地面に戻ってくる時刻$t_2$[s]を求めよ．
+%\item[(8)] ボールが地面に戻ってきたときの$x$座標（到達距離）$L$[m]を求めよ．また，これを最大にする迎角$\theta$を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+ 
+\begin{itembox}[l]{【放物運動（斜方投射）】}
+ $\hspace{10mm}x軸方向：初速度V_0\cos \theta [{\rm m/s}] の等速度運動\\
+\hspace{10mm} y軸方向：初速度V_0\sin \theta [{\rm m/s}] ，加速度-g[{\rm m/s^2}]の等加速度運動（鉛直投げ上げ運動）$\\
+\MARU{1} 頂点では$y$軸方向の速度が0[m/s]であることに着目する．\\
+\MARU{2} 地面に達する時は$y$座標が0[m]，かつ$t>0$[s]であることに着目する．
+\end{itembox}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p5.png}
+\vspace{1cm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p6.png}
+\vspace{3cm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p7.png}
+\vspace{10cm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p67_2.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p68.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p69.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p70.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p71.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p72_1.png}
+\end{center}
+\end{figure}

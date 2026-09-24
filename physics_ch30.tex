@@ -1,0 +1,188 @@
+\section{電位・電位によるエネルギー}
+
+\subsection{電位}
+
+空間中の電場の様子を表す方法として，電気力線を使う方法の他に，電位というものを利用する方法がある．
+この電位を利用すると，電場が荷電粒子に対してなす仕事を考えることができる．
+
+ \begin{wrapfigure}[10]{r}[5mm]{60mm}
+  \centering
+  \vspace{-10mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p31_fig1.png}
+\end{wrapfigure}
+\vspace{5mm}
+$+1$[C]の点電荷を，電場に逆らってO点（基準点）からゆっくりP点まで動かすのに必要な仕事（エネルギー）が$V$[J]であるとき，P点の{\bf 電位}を$V$[V]（ボルト）と定義する．
+この電位を利用すると，$+q$[C]の電荷を基準点Oから電位$V$[V]の点までゆっくりと動かすためには，$qV$[J]のエネルギーが必要である，と言える．
+このことから，\mbox{\boldmath $+q$}{\bf [C]の電荷が電位}\mbox{\boldmath $V$}{\bf [V]の点で持つ位置エネルギーは}\mbox{\boldmath $U=qV$}{\bf [J]である．}
+
+\vspace{5mm}
+電位の基準点は，基本的にどこに取っても良いが，無限遠方，もしくは回路の問題では接地されている点（アース）を基準点に取ることが多い．
+
+\vspace{8mm}
+\begin{matome}{電荷の持つ位置エネルギー}
+ \hspace{3mm} $+q$[C]の点電荷が$V$[V]の電位の点で持つ位置エネルギーは
+ \[ U=qV \hspace{2mm}[{\rm J}] \]
+ \end{matome}
+
+この電位を用いて電場を考えると，{\bf 電場は電位の大きい方から小さい方へと向かっている}ので，電位は電荷にとっての高さのようなものだと考えれば良い．
+すなわち，{\bf 正電荷は高電位$\rightarrow$ 低電位へ向かおうとし，負電荷は低電位$\rightarrow$ 高電位へと向かおうとする．}
+また，電位の傾きが大きいほど受ける力は大きいので，{\bf 電位の傾きが電場の大きさに対応している．}
+
+電場の様子に応じてさまざまな電位が存在するが，そのうち以下の2つを覚えておけば十分である．\\[5mm]
+
+ \begin{wrapfigure}[15]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p32_fig1.png}
+\end{wrapfigure}
+$\MARU{1}$\hspace{2mm} {\bf 一様電場}
+
+2つの金属板を距離$d$[m]だけ離して平行に配置し（これを{\bf 平行平板コンデンサー}という），各々を$+Q$[C]，$-Q$[C]に帯電させると，図のA$\rightarrow$Bへと向かう，平行かつ一様な電場$E$[N/C]が生じる．図から明らかに正に帯電したA側がより高電位となる．
+図の$V-x$グラフの傾きが$E$であるから，AとBの電位差は
+\[ \Delta V=Ed \]
+で与えられる．
+すなわち，{\bf 負に帯電した金属板よりも正に帯電した金属板の方が} \mbox{\boldmath $Ed$} {\bf [V]だけ電位が高い．}
+
+$\MARU{1}$のグラフから分かるように，向きまで考慮すると電場と電位との間には，
+\[ E=-\dfrac{dV}{dx} \hspace{2mm}[{\rm N/C}]\]
+の関係がある．
+この式から，電場の単位は[N/C]=[V/m]である．\\[5mm]
+
+ \begin{wrapfigure}[25]{r}[5mm]{75mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=75mm]
+  {text2_p32_fig2.png}
+\end{wrapfigure}
+$\MARU{2}$\hspace{2mm} {\bf 点電荷による電場}
+
+原点に$+Q$[C]の点電荷が置かれているとき，座標$x$[m]$(>0)$における電場は$+x$方向に$E=k\dfrac{Q}{x^2}$[N/C]であるから，この点において$\dfrac{d}{dx}V(x)=-k\dfrac{Q}{x^2}$を満たすような$V(x)$[V]が電位である．
+よって，この式の両辺を積分すると，
+\[ V(x)=-\displaystyle \int k\dfrac{Q}{x^2}dx =k\dfrac{Q}{x} +C\]
+となるが，この積分定数$C$の値は，電位の基準点をどこにするかによって決まる．
+
+式が簡単になるように，{\bf 無限遠点を基準にする}，すなわち$x \rightarrow \infty$のとき$V(x)\rightarrow 0$となるように$C$の値をとると，
+\[ V(x)=k\dfrac{Q}{x} \hspace{2mm} [{\rm V}] \]
+と表される．$x<0$の場合も含めると，
+\[ V(x)=k\dfrac{Q}{|x|} \hspace{2mm} [{\rm V}] \]
+となり，点電荷からの距離を$r$[m]とすれば
+\[ V(x)=k\dfrac{Q}{r} \hspace{2mm} [{\rm V}] \]
+となる．
+また，点電荷が複数ある場合には，その重ね合わせで電位を求めれば良い．
+
+\begin{matome}{電場と電位}
+\[ E=-\dfrac{dV}{dx} \hspace{2mm}[{\rm N/C}]\]
+電場は高電位$\rightarrow$ 低電位を向く．
+電位の傾きが電場の大きさに対応．
+ \end{matome}
+ 
+ \begin{matome}{一様電場・点電荷による電位}
+\begin{description}
+\item[\MARU{1}] 一様電場による電位\\
+強さ$E$[N/C]，距離$d$[m]離れた2点間の電位差は$\Delta V=Ed$\hspace{2mm}[V]
+\item[\MARU{2}] 点電荷による電位\\
+$+Q$[C]の点電荷から距離$r$[m]の点における電位は無限遠点を基準として，$V=k\dfrac{Q}{r}$\hspace{2mm}[V]
+\end{description}
+ \end{matome}
+ 
+ \newpage
+ \subsection{導体の性質}
+ 
+ 金属のように電気をよく通すものを{\bf 導体}と呼び，逆にプラスチックのように電気を通さないものを{\bf 不導体}（もしくは{\bf 誘電体}）と呼ぶ．
+ 
+  \begin{wrapfigure}[7]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p35_fig1.png}
+\end{wrapfigure}
+ 導体，例えば金属の場合，その自由電子は金属内を自由に動き回れるため，電子が導体内で動くのにエネルギーを必要としない．
+ このことから，{\bf 導体内の電位は一定}である．
+ また，導体に外部から電場がかけられるとその電場によって速やかに電子が移動し，外部からかけられた電場を打ち消すことにより電子の移動が止まる．
+ そのため，外部から{\bf 電場をかけても導体内には電場が生じない．}
+ 
+ また，静電状態（電流が流れていない状態）の導体内部にもし電荷があると導体内部に電場が生じてしまうが，これは上で述べたことに反する．
+ よって，{\bf 静電状態にある導体の内部には電荷が生じず，導体表面に電荷が現れる．}
+ 
+ この性質を利用すると，例えば図(a)のように箔検電器を接地した金属製の箱で囲むことにより，外部から帯電したエボナイト棒を近づけても静電誘導は起こらない．
+ また図(b)のように帯電した物体を接地した金属製の箱で覆うことにより，帯電体から出てくる電場を遮断することができる．
+ このように，導体で囲むことによって内外の電場を遮断することを{\bf 静電遮蔽}という．
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=125mm]{text2_p35_fig2.png}
+\end{center}
+\end{figure}
+
+ \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p20.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p21.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p100_2.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p101.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p102.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p103.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p104.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p105_1.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

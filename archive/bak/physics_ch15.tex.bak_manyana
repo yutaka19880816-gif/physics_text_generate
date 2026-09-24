@@ -1,0 +1,737 @@
+\section{気体分子運動論}
+
+% 原本と同じく第2章（熱力学）の例題の通し番号を引き継ぐ（第14回が【例題1】〜【例題4】）
+\setcounter{nombre}{4}
+
+\subsection{気体分子運動論}
+
+理想気体の状態方程式$PV=nRT$は実験によって経験的に導き出されたものであるが，実際には気体は分子から構成され，その分子が容器内で飛び回っている．
+この分子の運動を数式的に解析することにより，圧力や運動エネルギー，内部エネルギーを求めるというものがこの{\bf 気体分子運動論}である．
+
+最終的に得られる結論を先に示す．
+体積$V$[m$^3$]の容器内に分子1つあたりの質量が$m$[kg]の気体分子が$N$個あり，分子の速さの二乗の平均が$\overline{v^2} [{\rm m^2/s^2}]$であるなら，その気体の圧力は
+\[P=\dfrac{Nm\overline{v^2}}{3V} \]
+で与えられる．
+この式を{\bf ベルヌーイの式}と呼び，この式は容器の形状によらず成立する．
+
+さらにこの式を変形すると，
+\[PV=\dfrac{Nm\overline{v^2}}{3}\]
+であるが，気体のモル数$n$[mol]は気体1[mol]あたりの質量を$M$[kg/mol]，アボガドロ数を$N_A$とすれば，$N=nN_A$，$m=\dfrac{M}{N_A}$の関係が成り立つので
+\[ PV=\dfrac{nM\overline{v^2}}{3}\]
+となる．
+気体の状態方程式$PV=nRT$と比較すると，$nRT=n\dfrac{M\overline{v^2}}{3}$より，$T=\dfrac{M\overline{v^2}}{3R}$となる．
+すなわち，{\bf 気体の温度は分子の運動によって決まるものである．}
+また，この式より，温度が$T$[K]の気体分子がどの程度の速さで飛び回っているかを計算できる．
+気体分子の二乗平均平方根速度（二乗平均速度）$\sqrt{\overline{v^2}}$[m/s]は
+\[ \sqrt{\overline{v^2}} =\sqrt{\dfrac{3RT}{M}} \]
+となる．
+% 誤植訂正（2026-08-31）：右辺の \sqrt が抜けていた（原本 p69 および下のまとめ枠は
+%   \sqrt{3RT/M}）．
+ただし，$M$は気体の1[mol]あたりの質量を{\bf kg単位}で表したものであり，分子量$\mu$とは$M=\mu \times 10^{-3}$[kg/mol]の関係にある．
+{\bf 二乗平均速度の式に分子量をそのまま代入してはならない}ので注意せよ．
+% 加筆（2026-08-31）：原本 p69 にはあるが本文に無く，練習問題［10］(2)・［13］(1)で
+%   必ず必要になる（解答の指針でも「[kg/mol] に換算してから代入せよ」と注意している）．
+また，ここで求めた二乗平均平方根速度は分子の速さの平均$\overline{v}$とは厳密には異なるが，おおざっぱにはこれを分子の速さと考えてよい（通常1割程度の過大評価となる）．
+
+ベルヌーイの式を一般の容器の形状の場合について示すのは非常に難しいが，入試で出題されるのはほとんどが立方体や直方体の場合である．
+
+\begin{matome}{気体の分子運動論}
+ \hspace{3mm} ベルヌーイの式\hspace{23mm} $P=\dfrac{Nm\overline{v^2}}{3V} $\\
+ \hspace{3mm} 気体分子の二乗平均速度\hspace{10mm} $\sqrt{\overline{v^2}}=\sqrt{\dfrac{3RT}{M}}$ 
+ \end{matome}
+ 
+ 気体分子運動論の問題は圧力を求めるまでの流れが決まっている．
+ その道筋を把握しておくこと．
+ 
+ \begin{matome}{気体の分子運動論の手順}
+ \hspace{3mm} \MARU{1}\hspace{2mm} 1回あたりの衝突で壁面に与える力積を計算\\
+ \hspace{3mm} \MARU{2}\hspace{2mm} 時間$t$[s]内での衝突回数および与える力積を計算\\
+ \hspace{3mm} \MARU{3}\hspace{2mm} 力積と平均の力の関係から，1分子が与える平均の力を計算\\
+ \hspace{3mm} \MARU{4}\hspace{2mm} 気体分子運動の等方性より，\MARU{3} 式を$\overline{v^2}$で書き換える\\
+ \hspace{3mm} \MARU{5}\hspace{2mm} 気体分子総数より，壁面に及ぼす圧力を計算\\
+ \hspace{3mm} \MARU{6}\hspace{2mm} （必要があれば）状態方程式と比較して二乗平均速度を計算
+ \end{matome}
+ 
+ この気体分子運動論で鍵となるのは$\MARU{4}$である．
+ 
+ \begin{matome}{気体の分子運動の等方性}
+ \hspace{3mm} 気体分子は容器内をランダムに飛び回るため，方向性を持たない．瞬間ごと，分子ごとには$x,y,z$各軸方向の速度は異なるが，平均をとると同じ値をとる．
+ \[ \overline{v_x^2}=\overline{v_y^2}=\overline{v_z^2} \hspace{2mm} \left(=\dfrac{1}{3} \overline{v^2} \right) \]
+ \end{matome}
+ 
+%%%%%%%%%%  例題5（15.1 の直後）  %%%%%%%%%%%%%%%%%%%%
+\begin{reidaiunit}
+\begin{reidai}{気体分子運動論}
+\begin{zuright}{42mm}
+\hspace{1zw}気体分子の運動に関する以下の問に答えよ．ただし，速度，運動量，力積は$x$, $y$, $z$軸正の向きを正とする．\par
+\hspace{1zw}一辺の長さが$l\U{m}$の立方体の容器があり，その中に$n\U{mol}$の理想気体が封入されている．気体分子1つあたりの質量を$m\U{kg}$とし，簡単のため分子同士が衝突することはないものと仮定する．\par
+\hspace{1zw}今，気体分子の1つに着目し，この気体分子の持つ速度が$(v_x, v_y, v_z)\U{m/s}$だったとする．この分子が図に示した面に完全弾性衝突し，この気体分子の持つ速度が$(v_x', v_y', v_z')\U{m/s}$になったとする．
+\zusep
+\includegraphics[keepaspectratio,width=42mm]{fig/ch15_ex5_cube.png}\\[3mm]
+\includegraphics[keepaspectratio,width=42mm]{fig/ch15_ex5_hane.png}
+\end{zuright}
+\begin{komon}
+\ko{1} 衝突後の速度$(v_x', v_y', v_z')$を$v_x$, $v_y$, $v_z$を用いて表せ．
+\ko{2} 気体分子の持つ運動量の$x$軸方向成分の衝突1回あたりの変化$\Delta p\U{N\cdot s}$を求めよ．
+\ko{3} 気体分子がこの1回の衝突により壁面に与えた力積の大きさを求めよ．
+\end{komon}
+\hspace{1zw}以上より，この気体分子が他の壁に衝突したとしても$x$軸方向の速度の大きさ$|v_x|\U{m/s}$は不変である．
+\begin{komon}
+\ko{4} この気体分子が図の面に衝突したのち再びこの面に衝突するまでにかかる時間$\tau\U{s}$を求めよ．
+\ko{5} (4)を元に，この気体分子が時間$t\U{s}$の間に図の面に衝突する回数を求めよ．
+\ko{6} 以上より，この気体分子が時間$t\U{s}$の間に図の面に与える力積の大きさを求めよ．
+\end{komon}
+\begin{zuright}{50mm}
+\hspace{1zw}実際にはこの面に力（力積）が作用するのは不連続で，とぎれとぎれに作用しているが，実際には再衝突までの時間が短いために，あたかも一定の力が連続的に作用しているかのように感じられる．作用する時間を$t\U{s}$，作用する平均の力の大きさを$\overline{F}\U{N}$とする．
+\zusep
+\includegraphics[keepaspectratio,width=50mm]{fig/ch15_ex5_Ft.png}
+\end{zuright}
+\begin{komon}
+\ko{7} (6)より，この1分子が壁に作用する平均の力の大きさ$\overline{F}\U{N}$を求めよ．
+\end{komon}
+\hspace{1zw}さて，実際には分子ごとに分子の持つ速度は異なっている．よって分子ごとに$\overline{F}\U{N}$の値も異なるが，これを全分子に対して平均化することを考える．$x$軸方向の速度$v_x$の二乗の平均値を$\overline{v_x^2}$とおく．
+\begin{komon}
+\ko{8} 平均して1分子あたりがこの壁面に対して及ぼす力の大きさを求めよ．
+\ko{9} 気体分子の運動は容器の形状によらずに空間に対して等方的である．このことから，$\overline{v_x^2}$, $\overline{v_y^2}$, $\overline{v_z^2}$の間に成り立つ関係式を示せ．
+\ko{10} (9)より，(8)の1分子あたりの力を気体分子の持つ速度の大きさ$v\U{m/s}$の二乗平均$\overline{v^2}\U{m^2/s^2}$を用いて表せ．
+\ko{11} アボガドロ数を$N_{\mathrm{A}}$として，この容器内に入っている気体分子の総数を求めよ．
+\ko{12} これらより，壁に作用する全力の大きさ，および壁に作用する圧力$p\U{Pa}$を求めよ．
+\ko{13} 容器の体積を$V(=l^3)\U{m^3}$とする．$pV$の値を求めよ．
+\end{komon}
+\hspace{1zw}理想気体であれば，気体定数$R\U{J/mol\cdot K}$，気体の温度$T\U{K}$を用いて状態方程式$pV=nRT$が成立する．
+\begin{komon}
+\ko{14} (13)と状態方程式を元に，気体分子の二乗平均平方根速度$\sqrt{\overline{v^2}}\U{m/s}$を，気体分子の$1\U{mol}$あたりの質量$M\U{kg/mol}$を用いて表せ．
+\end{komon}
+\end{reidai}
+
+\begin{sisinE}
+気体分子運動論の問題は，圧力を求めるまでの流れが決まっている．その道筋を把握しておくこと．本問はその流れを(1)から(13)まで順にたどるように作られている．
+
+とくに混同しやすいのが「分子が受けた力積」と「分子が壁に与えた力積」，および「力積」と「力」である．前者は作用・反作用の法則で等大逆向き，後者は（力積）＝（平均の力）$\times$（作用した時間）で結ばれる．
+
+(9)の等方性は，$x$, $y$, $z$のどの向きも同等であることから従う．三平方の定理$v^2=v_x^2+v_y^2+v_z^2$と合わせると$\overline{v_x^2}=\dfrac{1}{3}\overline{v^2}$となり，ここではじめて$\overline{v^2}$の式に書き換えられる．
+\end{sisinE}
+
+\Key{運動量の変化＝受けた力積\quad 作用・反作用で壁が受ける力積は逆向き\quad $\overline{F}t=$力積の総和\quad $\overline{v_x^2}=\frac{1}{3}\overline{v^2}$}
+
+\begin{kaitou}
+\begin{komon}
+\ko{1} 図の面は$x$軸に垂直であるから，完全弾性衝突では面に平行な$y$, $z$成分は変化せず，面に垂直な$x$成分だけが符号を変える．よって，
+       \Ana{(v_x', v_y', v_z')=(-v_x, v_y, v_z)\Ans}
+\ko{2} 運動量の$x$成分の変化は，
+       \Ana{\Delta p=mv_x'-mv_x=-2mv_x\U{N\cdot s}\Ans}
+\ko{3} (2)は分子が壁から受けた力積である．作用・反作用の法則より，分子が壁に与えた力積はこれと等大逆向きの$2mv_x\U{N\cdot s}$であるから，その大きさは
+       \Ana{2m|v_x|\U{N\cdot s}\Ans}
+\ko{4} 図の面に再び衝突するには，分子は$x$軸方向に往復分の$2l\U{m}$を進まなければならない．$x$軸方向の速さは$|v_x|$のまま変化しないので，
+       \Ana{\tau=\frac{2l}{|v_x|}\U{s}\Ans}
+\ko{5} 衝突の時間間隔は$\tau$で一定であるから，時間$t\U{s}$の間の衝突回数は
+       \Ana{\frac{t}{\tau}=\frac{|v_x|t}{2l}\,[\text{回}]\Ans}
+\ko{6} 1回あたり$2m|v_x|\U{N\cdot s}$を$\dfrac{|v_x|t}{2l}$回与えるから，
+       \Ana{2m|v_x|\cdot\frac{|v_x|t}{2l}=\frac{mv_x^2t}{l}\U{N\cdot s}\Ans}
+\ko{7} （力積）＝（平均の力）$\times$（作用した時間）より$\overline{F}\cdot t=\dfrac{mv_x^2t}{l}$であるから，
+       \Ana{\overline{F}=\frac{mv_x^2}{l}\U{N}\Ans}
+\ko{8} (7)の$v_x^2$を全分子について平均すればよいから，
+       \Ana{\overline{F}=\frac{m\overline{v_x^2}}{l}\U{N}\Ans}
+\ko{9} $x$, $y$, $z$のどの向きも同等であるから，
+       \Ana{\overline{v_x^2}=\overline{v_y^2}=\overline{v_z^2}\Ans}
+\ko{10} 三平方の定理$v^2=v_x^2+v_y^2+v_z^2$の両辺を全分子で平均すると$\overline{v^2}=\overline{v_x^2}+\overline{v_y^2}+\overline{v_z^2}$となり，(9)よりこれは$3\overline{v_x^2}$に等しい．よって$\overline{v_x^2}=\dfrac{1}{3}\overline{v^2}$であるから，
+       \Ana{\overline{F}=\frac{m\overline{v^2}}{3l}\U{N}\Ans}
+\ko{11} $n\U{mol}$あるから，分子の総数は
+       \Ana{N=nN_{\mathrm{A}}\,[\text{個}]\Ans}
+\ko{12} 壁に作用する全力の大きさは，(10)を全分子分足し合わせて
+       \Ana{N\overline{F}=\frac{nN_{\mathrm{A}}m\overline{v^2}}{3l}\U{N}\Ans}
+       壁の面積は$l^2\U{m^2}$であるから，圧力は
+       \Ana{p=\frac{nN_{\mathrm{A}}m\overline{v^2}}{3l\cdot l^2}=\frac{nN_{\mathrm{A}}m\overline{v^2}}{3l^3}\U{Pa}\Ans}
+\ko{13} $V=l^3$であるから，
+       \Ana{pV=\frac{nN_{\mathrm{A}}m\overline{v^2}}{3}\left(=\frac{Nm\overline{v^2}}{3}\right)\Ans}
+       これがベルヌーイの式である．
+\ko{14} (13)と$pV=nRT$を結ぶと，
+       \Ana{\frac{nN_{\mathrm{A}}m\overline{v^2}}{3}=nRT}
+       ここで$M=mN_{\mathrm{A}}\U{kg/mol}$であるから，$\dfrac{M\overline{v^2}}{3}=RT$，すなわち$\overline{v^2}=\dfrac{3RT}{M}$となる．よって，
+       \Ana{\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{M}}\U{m/s}\Ans}
+\end{komon}
+\end{kaitou}
+\end{reidaiunit}
+
+ \subsection{単原子分子理想気体の内部エネルギー}
+ 
+ 実在する気体の中で，希ガス（=He,\hspace{1mm}Ne,\hspace{1mm}Arなど）のように原子そのものが単独で飛び回っているもの，すなわち分子=原子であるものを{\bf 単原子分子}という．
+ これに対して，窒素や酸素のように2つの原子によって1つの分子が構成されているものは{\bf 二原子分子}という．
+ ここでは気体のうち前者の単原子分子気体のみに着目する．
+ 
+ 単原子分子気体の代表は上で述べた希ガスだが，希ガスは閉殻構造をとるため原子間に作用する力が非常に小さい．
+ そのため，実在気体でも理想気体にかなり近いことが知られている．
+ ここでは単原子分子であり，かつ理想気体の条件を満たす単原子分子理想気体について考え，その内部エネルギーを分子運動に基づいて算出する．
+ 
+ 気体の内部エネルギーとは蓄えることのできるエネルギーのことをいう．
+ 気体の内部を微視的に見てみると，与えたエネルギーは気体分子が個々にもつ力学的エネルギー（=運動エネルギー+位置エネルギー）として蓄えられる．
+ よって，{\bf 気体のもつ内部エネルギーとは気体のもつ力学的エネルギーの総和のことを意味する．}
+ 
+ 気体の内部エネルギーを一般の気体すべてについて分子運動に基づいて求めることは不可能であるが，上で述べた単原子分子理想気体の場合は容易に求めることができる．
+ 理想気体であるなら前に述べたベルヌーイの式や気体の二乗平均速度の式，気体の状態方程式などをすべて適用できる．
+ さらに，単原子分子気体においては気体分子（=原子）のもつエネルギーは運動エネルギーのみであり，1分子あたりの平均運動エネルギーは
+ \[E=\dfrac{1}{2}m\overline{v^2}\]
+ % 誤植訂正（2026-08-31）：$v^2$ の上のバーが抜けていた（原本 p71 および下のまとめ枠は
+ %   $E=\frac{1}{2}m\overline{v^2}$）．
+ これと気体の二乗平均速度の式より
+ \[E=\dfrac{3}{2}\dfrac{R}{N_A}T\]
+ この式の$\dfrac{R}{N_A}$を{\bf ボルツマン定数} \mbox{\boldmath $k$}という（$k_{\mathrm{B}}$と書くこともある）．
+ ボルツマン定数は気体1分子あたりの気体定数を表すものである．
+ \[k=\dfrac{R}{N_A} \fallingdotseq 1.38\times10^{-23}[{\rm J/K}]\]
+ 気体の内部エネルギー$U$[J]はこの運動エネルギーの総和である．
+ 気体分子の総数は$nN_A$であるから，
+ \[ U=\dfrac{3}{2}kT\times nN_A =\mbox{\boldmath $\dfrac{3}{2}nRT$} \hspace{2mm}[{\rm J}]\]
+ と求められる．
+ 
+ \begin{matome}{単原子分子理想気体}
+ \hspace{3mm} 1分子あたりの平均運動エネルギー\hspace{11mm} $E=\dfrac{1}{2}m\overline{v^2}=\dfrac{3}{2}kT$\\
+ \hspace{3mm} ボルツマン定数\hspace{40mm} $k=\dfrac{R}{N_A}$\\
+ \hspace{3mm} 単原子分子理想気体の内部エネルギー\hspace{8mm} $U=\dfrac{3}{2}nRT$ 
+ \end{matome}
+ 
+ ただし，内部エネルギーが$U=\dfrac{3}{2}nRT$となるのは{\bf 単原子分子理想気体の場合のみ}である．
+ 一般的には，理想気体の内部エネルギーは後に述べる定積モル比熱$C_V$[J/mol・K]を用いて
+ \[U=nC_VT\]
+ と表され，単原子分子理想気体ではこの定積モル比熱$C_V$が$C_V=\dfrac{3}{2}R$であるため上の式となる．
+ しかし，例えば窒素や酸素といった二原子分子であれば$C_V=\dfrac{5}{2}R$となり，内部エネルギーの式は
+ \[U=\dfrac{5}{2}nRT\]
+ となる．\mbox{\boldmath $U=\dfrac{3}{2}nRT$} {\bf が成立するのは単原子分子理想気体の場合のみ}であることに注意せよ．
+ 
+%%%%%%%%%%  例題6（15.2 の直後）  %%%%%%%%%%%%%%%%%%%%
+\begin{reidaiunit}
+\begin{reidai}{単原子分子理想気体の内部エネルギー}
+\begin{zuright}{50mm}
+\hspace{1zw}容積が$V_1$, $V_2\U{m^3}$の断熱容器$\mathrm{A}$, $\mathrm{B}$をコック$\mathrm{K}$のついた細管でつなぐ．$\mathrm{K}$を閉じた状態で単原子分子理想気体を$\mathrm{A}$には圧力$P_1\U{Pa}$，温度$T_1\U{K}$で，$\mathrm{B}$には圧力$P_2\U{Pa}$，温度$T_2\U{K}$でそれぞれ注入した．$\mathrm{K}$を開いて十分時間を経過させるときの変化について，気体定数を$R\U{J/mol\cdot K}$として以下の問に答えよ．
+\zusep
+\includegraphics[keepaspectratio,width=50mm]{fig/ch15_ex6_cock.png}
+\end{zuright}
+\vspace{-\medskipamount}
+\begin{komon}
+\ko{1} $\mathrm{K}$を開く前に$\mathrm{A}$，$\mathrm{B}$に入っていた気体のモル数$n_1$, $n_2\U{mol}$を求めよ．
+\ko{2} この状態変化で気体の内部エネルギーの総和は保存される．このことを利用して十分時間が経過した後の気体の温度$T\U{K}$を求めよ．
+\ko{3} 十分時間が経過した後の容器内の気体の圧力$P\U{Pa}$を求めよ．
+\end{komon}
+\end{reidai}
+
+\begin{sisinE}
+容器は断熱されているので外界と熱のやり取りをせず（$Q=0$），容器全体の体積も変わらないので気体は仕事もしない（$W=0$）．よって熱力学第一法則より内部エネルギーの総和は変化しない，というのが(2)の「保存される」の中身である．
+
+あとは単原子分子理想気体の内部エネルギーが$U=\dfrac{3}{2}nRT$と書けることを使えばよい．$nRT=PV$であることに注意すると，$U=\dfrac{3}{2}PV$と書き直せて計算がかなり楽になる．
+\end{sisinE}
+
+\Key{単原子分子理想気体\quad $\Rightarrow$\quad 内部エネルギー$U=\dfrac{3}{2}nRT$}
+
+\begin{kaitou}
+\begin{komon}
+\ko{1} それぞれの状態方程式$P_1V_1=n_1RT_1$, $P_2V_2=n_2RT_2$より，
+       \Ana{n_1=\frac{P_1V_1}{RT_1}\U{mol},\quad n_2=\frac{P_2V_2}{RT_2}\U{mol}\Ans}
+\ko{2} 単原子分子理想気体であるから，$\mathrm{K}$を開く前の内部エネルギーの総和は，$nRT=PV$を用いて
+       \Ana{U=\frac{3}{2}n_1RT_1+\frac{3}{2}n_2RT_2=\frac{3}{2}(P_1V_1+P_2V_2)}
+       である．$\mathrm{K}$を開いた後は全体が温度$T\U{K}$の一様な状態になるから，そのときの内部エネルギーは
+       \Ana{U'=\frac{3}{2}(n_1+n_2)RT}
+       である．内部エネルギーの総和は保存されるので$U'=U$，すなわち
+       \Ana{(n_1+n_2)RT=P_1V_1+P_2V_2}
+       これに(1)を代入して，
+       \Ana{\left(\frac{P_1V_1}{T_1}+\frac{P_2V_2}{T_2}\right)T=P_1V_1+P_2V_2}
+       よって，
+       \Ana{T=\frac{T_1T_2(P_1V_1+P_2V_2)}{P_1V_1T_2+P_2V_2T_1}\U{K}\Ans}
+\ko{3} 十分時間が経過した後の気体は，体積$V_1+V_2\U{m^3}$，物質量$n_1+n_2\U{mol}$，温度$T\U{K}$であるから，状態方程式は
+       \Ana{P(V_1+V_2)=(n_1+n_2)RT}
+       である．(2)で得た$(n_1+n_2)RT=P_1V_1+P_2V_2$を代入して，
+       \Ana{P=\frac{P_1V_1+P_2V_2}{V_1+V_2}\U{Pa}\Ans}
+\end{komon}
+\end{kaitou}
+\end{reidaiunit}
+
+ \subsection{状態変化と$P-V$図}
+ 
+ 気体の状態を変化させる（=圧力，体積，温度などを変化させる）際，圧力$P$[Pa]を縦軸に，体積$V[{\rm m^3}]$を横軸に取ったグラフを用いてその変化の様子を表すと便利なことが多い．
+ この変化図を$P-V$図という．
+ 
+ \begin{wrapfigure}[4]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text_p73_fig1.png}
+\end{wrapfigure}
+
+ $P-V$図上での特徴を以下にまとめる．\\
+ $\MARU{1} \hspace{2mm} 水平な直線上での変化は定圧変化を表す．$\\
+ $\MARU{2} \hspace{2mm} 鉛直な直線上での変化は定積変化を表す．$\\
+ $\MARU{3} \hspace{2mm} 等温変化はP=\dfrac{nRT}{V} \propto \dfrac{1}{V}であるから，直角双曲線（反比例グラフ）となる．$\\
+ $\MARU{4} \hspace{2mm} 上側にある双曲線上に乗っている点の方が温度が高い．$\\
+ $\MARU{5} \hspace{2mm} P-V図で囲む面積が気体のやりとりした仕事を表す．$\\
+ 
+%%%%%%%%%%  例題7（15.3 の直後）  %%%%%%%%%%%%%%%%%%%%
+\begin{reidaiunit}
+\begin{reidai}{$P-V$図}
+\begin{zuright}{44mm}
+\hspace{1zw}一定量の理想気体の状態を図の矢印の順に静かに変化させた．$\mathrm{A}$での体積が$V_0\U{m^3}$であるときについて，この状態変化を$P-V$図上での変化に書き直せ．ただし，グラフには$\mathrm{A}$, $\mathrm{B}$, $\mathrm{C}$, $\mathrm{D}$点を明示し，変化の方向に矢印をつけること．
+\zusep
+\includegraphics[keepaspectratio,width=44mm]{fig/ch15_ex7_pt.png}
+\end{zuright}
+\end{reidai}
+
+\begin{sisinE}
+例えば温度が変化しないならば，$pV=nRT$, $p'V'=nRT$のかわりに$pV=p'V'$を考えるなど，変化しない状態量を状態方程式から除いて考えると楽である．
+
+まず4点それぞれの体積を状態方程式から求めて位置を決め，そのあとで各変化が定圧変化・等温変化のどちらであるかを見て，直線で結ぶか双曲線で結ぶかを決めればよい．
+\end{sisinE}
+
+\begin{kaitou}
+\hspace{1zw}気体の物質量を$n\U{mol}$，気体定数を$R\U{J/mol\cdot K}$とする．与えられた図より，各点の圧力と温度は
+\Ana{\mathrm{A}(T_0,\,2P_0),\quad \mathrm{B}(2T_0,\,2P_0),}
+\Ana{\mathrm{C}(2T_0,\,P_0),\quad \mathrm{D}(T_0,\,P_0)}
+である．$\mathrm{A}$での体積が$V_0$であるから，$\mathrm{A}$での状態方程式より
+\Ana{2P_0V_0=nRT_0\qquad \text{すなわち}\quad nR=\frac{2P_0V_0}{T_0}}
+となる．これを用いて各点の体積を求めると，
+\Ana{\mathrm{B}:2P_0V_{\mathrm{B}}=nR\cdot 2T_0\ \ \text{より}\ \ V_{\mathrm{B}}=2V_0}
+\Ana{\mathrm{C}:P_0V_{\mathrm{C}}=nR\cdot 2T_0\ \ \text{より}\ \ V_{\mathrm{C}}=4V_0}
+\Ana{\mathrm{D}:P_0V_{\mathrm{D}}=nR\cdot T_0\ \ \text{より}\ \ V_{\mathrm{D}}=2V_0}
+となる．\par
+\hspace{1zw}次に各変化を見る．
+\begin{komon}
+\ko{1} $\mathrm{A}\to\mathrm{B}$は圧力が$2P_0$のまま変化しないので{\bf 定圧変化}であり，$P-V$図上では$P=2P_0$の水平な直線上を$V=V_0\to 2V_0$まで変化する．
+\ko{2} $\mathrm{B}\to\mathrm{C}$は温度が$2T_0$のまま変化しないので{\bf 等温変化}であり，$PV=nR\cdot 2T_0=4P_0V_0$（一定）となる．すなわち$P-V$図上では双曲線$P=\dfrac{4P_0V_0}{V}$の上を$V=2V_0\to 4V_0$まで変化する．
+\ko{3} $\mathrm{C}\to\mathrm{D}$は圧力が$P_0$のまま変化しないので{\bf 定圧変化}であり，$P=P_0$の水平な直線上を$V=4V_0\to 2V_0$まで変化する．
+\ko{4} $\mathrm{D}\to\mathrm{A}$は温度が$T_0$のまま変化しないので{\bf 等温変化}であり，$PV=nRT_0=2P_0V_0$（一定）となる．すなわち双曲線$P=\dfrac{2P_0V_0}{V}$の上を$V=2V_0\to V_0$まで変化する．
+\end{komon}
+\hspace{1zw}以上をまとめると，求める$P-V$図は次のようになる．
+\begin{center}
+% 穴埋め版（生徒用）では答のグラフを軸だけの図に差し替える．
+% 2枚は同じ画素寸法なので，貼付幅が同じなら両版のページ送りは揃う．
+\ifbsAnaume
+\includegraphics[keepaspectratio,width=76mm]{fig/ch15_ex7_pv_blank.png}
+\else
+\includegraphics[keepaspectratio,width=76mm]{fig/ch15_ex7_pv.png}
+\fi
+\end{center}
+\hspace*{\fill}\Ans
+\end{kaitou}
+\end{reidaiunit}
+
+ \newpage
+
+%%%%%%%%%%%%%%%%%%%%  練習問題（旧 prob_p37.png / prob_p38.png / prob_p39.png）  %%%%%%%%%%%%%%%%%%%%
+% 第14回の［9］に続く．章単体で組んだときも番号が本体と一致するように明示しておく
+% （make_chapter.sh が出す推定値より後に実行されるので，こちらが必ず勝つ）
+\setcounter{qno}{9}
+
+\filbreak
+\Rank{A問題}
+
+\Mon{基本事項の確認}
+
+\hspace{1zw}以下の設問に答えよ．ただし気体は理想気体であるとし，気体定数を$R=8.31\U{J/mol\cdot K}$，アボガドロ数を$N_{\mathrm{A}}=6.02\times 10^{23}$\,[個/mol]とする．
+\begin{komon}
+\ko{1} ボルツマン定数$k_{\mathrm{B}}$はいくらか．
+\ko{2} $27\Cel$における酸素分子の二乗平均速度は何$\U{m/s}$か．
+\ko{3} $27\Cel$におけるヘリウム気体の1分子あたりの平均運動エネルギーは何$\U{J}$か．
+\ko{4} $0.20\U{mol}$の単原子分子理想気体の温度が$10\U{K}$上昇するとき，気体の内部エネルギーの増加量は何$\U{J}$か．
+\end{komon}
+
+\filbreak
+\Rank{B問題}
+
+\Mon[\Sitei]{気体分子運動論}
+
+\begin{wrapfigure}[7]{r}[0mm]{40mm}
+\vspace{-4mm}
+\centering
+\includegraphics[keepaspectratio,width=38mm]{fig/ch15_p37_cube.png}
+\end{wrapfigure}
+\hspace{1zw}一辺の長さが$l\U{m}$の立方体の容器の中に，分子一個の質量が$m\U{kg}$の気体分子が$N$個入っている．右図のように$x$, $y$, $z$軸をとり，分子は互いに衝突することなく，壁と気体分子は完全弾性衝突をするものとして以下の空欄に適当な式を入れよ．必要であれば単位をつけて答えよ．
+
+\hspace{1zw}今ある一つの分子に着目する．この分子の速さを$v\U{m/s}$，速度成分をそれぞれ$v_x\U{m/s}$, $v_y\U{m/s}$, $v_z\U{m/s}$とすれば，この分子が壁$\mathrm{A}$に衝突してはね返される際，壁$\mathrm{A}$が分子から受ける力積の大きさは，\fbox{\MARU{1}}である．よって$t\U{s}$間に壁$\mathrm{A}$がこの分子から受ける力積の大きさは，\fbox{\MARU{2}}となる．
+% 誤植訂正（2026-08-31）：原本は「よってこの分子が t[s] 間に壁 A がこの分子から受ける力積の
+%   大きさは」と主語が二重になっていたので，「よって t[s] 間に壁 A が…」に改めた．
+ここで$N$個の分子の速さの2乗の平均値を$\overline{v^2}$，各成分の二乗の平均値をそれぞれ$\overline{v_x^2}$, $\overline{v_y^2}$, $\overline{v_z^2}$とすると，全分子が$t\U{s}$間に壁$\mathrm{A}$に及ぼす力積$I\U{N\cdot s}$は$\overline{v_x^2}$を用いて，$I=$\fbox{\MARU{3}}となる．ここで気体分子運動の等方向性および三平方の定理を利用すると，$\overline{v^2}$と$\overline{v_x^2}$の間には\fbox{\MARU{4}}の関係が成り立つから，$\overline{v^2}$を用いて$I=$\fbox{\MARU{5}}と表せる．よって壁$\mathrm{A}$が全分子から受ける力は\fbox{\MARU{6}}$\U{N}$となるから，壁$\mathrm{A}$が受ける圧力，すなわち気体の圧力$p\U{Pa}$は，$p=$\fbox{\MARU{7}}となる．したがって，容器の体積を$V\ (=l^3)\U{m^3}$とすれば，$pV=$\fbox{\MARU{8}}となる．
+
+\Mon{気体分子運動論}
+
+\hspace{1zw}体積$V\U{m^3}$の容器の中に，質量$m\U{kg}$の理想気体の気体分子が$N$個入っており，容器内の気体の圧力，温度はそれぞれ$p\U{Pa}$, $T\U{K}$である．気体定数を$R\U{J/mol\cdot K}$，アボガドロ定数を$N_{\mathrm{A}}\U{/mol}$とし，前問で導出したベルヌーイの式：$pV=\dfrac{Nm\overline{v^2}}{3}$を利用して以下の設問に答えよ．
+\begin{komon}
+\ko{1} この気体分子の二乗平均平方根速度$\sqrt{\overline{v^2}}$を，気体の温度$T$，気体定数$R$および$1\U{mol}$あたりの気体分子の質量$M\U{kg/mol}$を用いて表せ．
+\ko{2} この気体分子の二乗平均平方根速度$\sqrt{\overline{v^2}}$を，圧力$p$と密度$\rho\U{kg/m^3}$を用いて表せ．
+\ko{3} この気体分子1分子あたりの平均運動エネルギー$\overline{E}\U{J}$を，温度$T$とボルツマン定数$k_{\mathrm{B}}\U{J/K}$を用いて表せ．
+\end{komon}
+
+\Mon{気体分子運動論の利用}
+
+\hspace{1zw}気体分子の運動に関する下の各問に答えよ．ただし，気体はすべて理想気体とみなしてよい．
+\begin{komon}
+\ko{1} 窒素ガスの分子量を28，アボガドロ定数を$6.0\times 10^{23}\U{/mol}$，気体定数を$8.3\U{J/mol\cdot K}$とする．$300\U{K}$における窒素分子の二乗平均速度を求めよ．
+\ko{2} ヘリウムガス（原子量4），ネオンガス（原子量20）について，二つのガスが同じ温度のとき，1分子あたりの平均運動エネルギーの比を求めよ．
+\ko{3} ヘリウムガスについて，温度が$273\Cel$になったときのヘリウム1分子あたりの平均運動エネルギーおよび二乗平均速度は$0\Cel$の時のそれぞれ何倍となるか．
+\end{komon}
+
+\Mon[\Sitei]{内部エネルギー}
+
+\hspace{1zw}温度が$T\U{K}$の単原子分子理想気体が$n\U{mol}$ある．気体定数を$R\U{J/mol\cdot K}$として以下の設問に答えよ．
+\begin{komon}
+\ko{1} 温度を一定に保って体積を$m$倍にするとき，内部エネルギーは何倍になるか．
+\ko{2} 圧力を一定に保って体積を$m$倍にするとき，内部エネルギーは何倍になるか．
+\end{komon}
+
+\begin{zuright}{38mm}
+\hspace{1zw}温度が$T\U{K}$のこの気体を図のような断熱材で出来た体積$V\U{m^3}$の箱に圧力が$P\U{Pa}$となるまで封入し，ヒーターを用いて$Q\U{J}$の熱を気体に与えたところ，気体の温度は$T'\U{K}$となった．この状態変化では気体の体積が変わらないため，気体は仕事のやり取りをしない．このことを利用して，以下の設問に答えよ．
+\zusep
+\includegraphics[keepaspectratio,width=38mm]{fig/ch15_p38_box.png}
+\end{zuright}
+\vspace{-\medskipamount}
+\begin{komon}
+\ko{3} 熱力学第一法則を用いて，気体の上昇温度$\Delta T=T'-T$を求めよ．
+\ko{4} 気体の圧力$P'$を求めよ．
+\end{komon}
+
+\Mon{$p-V$図}
+
+\begin{zuright}{40mm}
+\hspace{1zw}一定量の理想気体の状態を右図の矢印の順に静かに変化させた．$\mathrm{A}$での圧力が$2p_0\U{Pa}$であるときについて，この状態変化を$p-V$図上での変化に書き直せ．ただし，グラフには$\mathrm{A}$, $\mathrm{B}$, $\mathrm{C}$点を明示し，変化の方向に矢印をつけること．
+\zusep
+\includegraphics[keepaspectratio,width=40mm]{fig/ch15_p38_tv.png}
+\end{zuright}
+
+\filbreak
+\Rank{C問題}
+
+\Mon{球内での気体分子運動論}
+
+\hspace{1zw}以下の空欄に適当な式を入れよ．
+
+\begin{zuright}{40mm}
+\hspace{1zw}半径$a\U{m}$の球形の容器の中に，質量$m\U{kg}$の気体分子が$N$個入っている．簡単のために，気体の各分子は一定の速さ$v\U{m/s}$で容器内を不規則な方向に飛び交っており，分子同士は互いに衝突することなく，器壁と完全弾性衝突を繰り返しているものとして考えよう．今，ある一つの分子に着目すると，この分子は器壁と衝突を繰り返して飛び回っているが，その軌跡は必ず球の中心$\mathrm{O}$を含むある一つの面内にある．これを図示したのが右図である．
+\zusep
+\includegraphics[keepaspectratio,width=40mm]{fig/ch15_p39_sphere.png}
+\end{zuright}
+% 誤植訂正（2026-08-31）：原本は「内径 a[m] の球形の容器」となっているが，図でも解答でも
+%   a は中心 O から器壁までの距離（半径）として使われている（BC = 2a cosθ，S = 4πa^2，
+%   V = 4πa^3/3）．内径＝直径では式が合わないので「半径」に改めた．
+
+\hspace{1zw}さて，今，この分子が入射角$\theta$で器壁の一点$\mathrm{B}$に衝突したとすると，力積を及ぼしあう方向は半径$\mathrm{OB}$方向であるから，これに垂直な方向の速度成分は衝突の前後で変化しない．よって，衝突によるこの分子の運動量の変化は\fbox{\MARU{1}}方向に大きさ\fbox{\MARU{2}}$\U{N\cdot s}$である．次の衝突までの時間は\fbox{\MARU{3}}$\U{s}$であり，図から分かるように各回の衝突から衝突までの時間間隔は同じになるから，時間$t\U{s}$中の衝突回数は\fbox{\MARU{4}}回になる．したがって，この分子が時間$t\U{s}$中に壁面に対して与えた力積の大きさの総和は\fbox{\MARU{5}}$\U{N\cdot s}$である．
+
+\hspace{1zw}さて，気体分子はそれぞれ運動方向が異なるため，壁面への入射角$\theta$は気体分子ごとに異なるが，(5)の答えは$\theta$に依存していない．すなわち，速度ベクトルの向きが異なる他の分子についても壁面に対して与える力積の大きさは同じになるので，$N$個の分子が時間$t\U{s}$間の間に器壁に与える力積の大きさは\fbox{\MARU{6}}$\U{N\cdot s}$となる．よって，器壁に対して及ぼす平均の力の大きさは\fbox{\MARU{7}}$\U{N}$となる．したがって容器内の圧力，つまり気体の圧力$p\U{Pa}$は\fbox{\MARU{8}}となり，また，容器の容積を$V\U{m^3}$とすると，$pV=$\fbox{\MARU{9}}と表せる．
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%  解答（旧 prob_p120_2〜p126_1.png）  %%%%%%%%%%%%%%%%%%%%
+\KaiTitle{第15回　気体分子運動論}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+\raggedcolumns
+
+\Rank{A問題}
+\MonN{10}{基本事項の確認}\par\nopagebreak
+\begin{sisin}
+ボルツマン定数の定義式をよく覚えておこう．また，気体の内部エネルギーの式$U=\dfrac{3}{2}nRT$は単原子分子理想気体に対してしか成立しないが，気体分子の二乗平均速度$\sqrt{\overline{v^2}}=\sqrt{\dfrac{3RT}{M}}$は理想気体でさえあれば成立し，二原子分子などに対しても利用できる式である．二乗平均速度の公式を利用する際には，分子量を$\U{kg/mol}$の単位にしてから$M$に代入することを忘れないようにせよ．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} ボルツマン定数は気体1分子あたりの気体定数といえるので，
+       \[k_{\mathrm{B}}=\frac{R}{N_{\mathrm{A}}}=\frac{8.31}{6.02\times 10^{23}}\]
+       \hspace*{2zw}$\fallingdotseq 1.38\times 10^{-23}\U{J/K}$\Ans
+\ko{2} 酸素分子$\mathrm{O_2}$の分子量は$32\U{g/mol}$であるから，$M=32\times 10^{-3}\U{kg/mol}$である．よって，
+       \[\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{M}}=\sqrt{\frac{3\cdot 8.31\cdot 300}{32\times 10^{-3}}}\]
+       \hspace*{2zw}$\fallingdotseq 4.83\times 10^2\U{m/s}$\Ans
+\ko{3} $1\U{mol}$あたりの内部エネルギーを考えると，ヘリウムは単原子分子であるから，
+       \[U=\frac{3}{2}\times 1\cdot R\cdot 300\U{J}\]
+       これはヘリウム気体分子の運動エネルギーの総和ゆえ，一分子あたりの平均運動エネルギーは，
+       \[E=\frac{U}{N_{\mathrm{A}}}=\frac{3}{2}\cdot\frac{R}{N_{\mathrm{A}}}\cdot 300=\frac{3}{2}k_{\mathrm{B}}\cdot 300\]
+       \hspace*{2zw}$\fallingdotseq 6.21\times 10^{-21}\U{J}$\Ans
+\ko{4} $T\to T+10\U{K}$へ温度上昇するときの内部エネルギーの増加量は，(変化後)$-$(変化前)を求めて，
+       \[\Delta U=\frac{3}{2}nR\cdot(T+10)-\frac{3}{2}nRT\]
+       \hspace*{2zw}$=\dfrac{3}{2}\cdot 0.20\cdot 8.31\cdot 10\fallingdotseq 24.9\U{J}$\Ans
+\end{komon}
+
+\Rank{B問題}
+\MonN{11}{気体分子運動論}\par\nopagebreak
+\begin{sisin}
+気体分子運動論の問題を解く際に，ミスしやすい点を以下に挙げる．これらのキーポイントをミスしないように注意すること．
+\begin{komon}
+\ko{1} 分子が壁$\mathrm{A}$に与えた力積と，壁$\mathrm{A}$が分子に与えた力積とを混同してはならない．分子の運動量変化から求められるのは分子が受けた力積，すなわち壁$\mathrm{A}$が分子に与えた力積である．作用・反作用の法則より，分子が壁$\mathrm{A}$に与えた力積は，壁$\mathrm{A}$が分子に与えた力積と等大逆向きである．
+\ko{2} 分子が壁$\mathrm{A}$に衝突してから再び壁$\mathrm{A}$に衝突するには，分子は容器内を\underline{往復し}\hskip0pt\underline{なけれ}\hskip0pt\underline{ばなら}\hskip0pt\underline{ない}．各分子の速度成分の大きさは弾性衝突によって変化せず，速さは一定とみなしてよいので，例えば$x$軸方向に往復分$2l$の道のりを動くのに要する時間は$\dfrac{2l}{v_x}$となる．
+\ko{6} 力積と力とを混同してはならない．力積とは平均の力$\times$時間であるから，力積から力を計算するには，力積を作用していた時間で割る必要がある．
+\end{komon}
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} 分子と壁$\mathrm{A}$との衝突は完全弾性衝突であるから，衝突前後でこの分子の速度は$x$成分のみが$v_x$から$-v_x$へ変化する．よって衝突による分子の運動量ベクトルの変化は，
+       \[\begin{aligned}
+         \Delta\overrightarrow{p}&=m\begin{pmatrix}-v_x\\ v_y\\ v_z\end{pmatrix}-m\begin{pmatrix}v_x\\ v_y\\ v_z\end{pmatrix}\\[1mm]
+         &=\begin{pmatrix}-2mv_x\\ 0\\ 0\end{pmatrix}
+       \end{aligned}\]
+       であり，これは壁$\mathrm{A}$が分子に対して与えた力積である．ここで作用・反作用の関係より，衝突の際に分子が壁$\mathrm{A}$に対して与えた力積$\overrightarrow{I_m}$は，壁$\mathrm{A}$が分子に対して与えた力積と等大逆向きになるので，
+       \[\overrightarrow{I_m}=-\begin{pmatrix}-2mv_x\\ 0\\ 0\end{pmatrix}=\begin{pmatrix}2mv_x\\ 0\\ 0\end{pmatrix}\]
+       である．よって，大きさは$2mv_x\U{N\cdot s}$\Ans
+\ko{2} 壁$\mathrm{A}$に衝突した後，分子が$x$軸方向に往復分の$2l$の道のりを進むと，再び壁$\mathrm{A}$に衝突する．分子の$x$軸方向の速さは，衝突によらず一定値$v_x$であるから，一往復に要する時間は$\dfrac{2l}{v_x}$である．よって，この分子は$t\U{s}$間に壁$\mathrm{A}$と$\dfrac{v_xt}{2l}$回衝突する．\par
+       \hspace*{1zw}以上と(1)より，$t\U{s}$間にこの分子が壁$\mathrm{A}$に対して及ぼす力積の大きさは，
+       \[2mv_x\cdot\frac{v_xt}{2l}=\frac{mv_x^2t}{l}\U{N\cdot s}\Ans\]
+\ko{3} 各分子ごとに速度の$x$成分の二乗値の$v_x^2$が異なるので，(2)で求めた，$t\U{s}$間に分子が壁$\mathrm{A}$に対して及ぼす力積の大きさは分子ごとに異なるが，$v_x^2$の平均値を$\overline{v_x^2}$とすると，$t\U{s}$間に壁$\mathrm{A}$に対して及ぼす力積の大きさの平均値は，一分子あたり
+       \[\frac{m\overline{v_x^2}t}{l}\U{N\cdot s}\]
+       である．全分子は$N$個だから，
+       \[I=N\frac{m\overline{v_x^2}t}{l}\U{N\cdot s}\Ans\]
+\ko{4} $v$と$v_x$, $v_y$, $v_z$の間には三平方の定理より
+       \[v^2=v_x^2+v_y^2+v_z^2\]
+       が成立する．全分子に対して両辺それぞれ平均を取ると，
+       \[\overline{v^2}=\overline{v_x^2}+\overline{v_y^2}+\overline{v_z^2}\]
+       が成立する．また気体分子運動の等方向性より，各軸方向の速度成分の二乗の平均値の間に，
+       \[\overline{v_x^2}=\overline{v_y^2}=\overline{v_z^2}\]
+       が成立する．以上より，
+       \[\overline{v_x^2}=\frac{1}{3}\overline{v^2}\Ans\]
+\ko{5} (3)(4)を用いて，
+       \[I=\frac{Nm\cdot\frac{1}{3}\overline{v^2}\cdot t}{l}=\frac{Nm\overline{v^2}t}{3l}\U{N\cdot s}\Ans\]
+\ko{6} 壁$\mathrm{A}$が全分子から受ける平均の力を$\overline{F}\U{N}$とすれば，平均の力の定義より，$I$, $\overline{F}$, $t$の間に
+       \[I=\overline{F}\cdot t\]
+       が成り立つ．よって，
+       \[\overline{F}=\frac{I}{t}=\frac{Nm\overline{v^2}}{3l}\U{N}\Ans\]
+\ko{7} 壁$\mathrm{A}$の面積は$l^2$であるから，気体の圧力は
+       \[p=\frac{\overline{F}}{l^2}=\frac{Nm\overline{v^2}}{3l^3}\U{Pa}\Ans\]
+\ko{8} (7)および$V=l^3$より，
+       \[p=\frac{Nm\overline{v^2}}{3V}\]
+       これより，
+       \[pV=\frac{Nm\overline{v^2}}{3}\Ans\]
+\end{komon}
+
+\MonN{12}{気体分子運動論}\par\nopagebreak
+\begin{sisin}
+前問で得られたベルヌーイの式は，気体分子運動と気体の圧力を結びつける式である．一方，理想気体の状態方程式$pV=nRT$は気体の圧力と気体の温度とを結びつける式である．よって，この二つを組み合わせれば，気体の温度と気体の分子運動（二乗平均速度など）とを結びつけることができる．あとはこれによって得られた式を，問題条件で要求されている変数にうまく置き換えていこう．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} 気体分子運動論のベルヌーイの式より，
+       \[pV=\frac{Nm\overline{v^2}}{3}\]
+       である．またこの理想気体の物質量は$n=\dfrac{N}{N_{\mathrm{A}}}\U{mol}$であるから，状態方程式は，
+       \[pV=\frac{N}{N_{\mathrm{A}}}RT\]
+       である．以上2式の両辺を結ぶと
+       \[\frac{Nm\overline{v^2}}{3}=\frac{N}{N_{\mathrm{A}}}RT\]
+       であり，これを変形すると，
+       \[\overline{v^2}=\frac{3RT}{mN_{\mathrm{A}}}\]
+       となる．ここで，$mN_{\mathrm{A}}$は気体分子$1\U{mol}$あたりの質量$M\U{kg/mol}$を表しているので，
+       \[\overline{v^2}=\frac{3RT}{M}\]
+       である．以上より，
+       \[\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{M}}\U{m/s}\Ans\]
+\ko{2} 密度$\rho$は，単位体積当たりの質量である．気体分子の全質量は$M\cdot n\U{kg}$であるから，
+       \[\rho=\frac{M\cdot n}{V}\U{kg/m^3}\]
+       であるが，状態方程式$pV=nRT$より$\dfrac{p}{RT}=\dfrac{n}{V}$であるから，
+       \[\rho=\frac{pM}{RT}\U{kg/m^3}\]
+       と表せる．よって，$\dfrac{RT}{M}=\dfrac{p}{\rho}$であるから，(1)で得られた答を書き換えて，
+       % 誤植訂正（2026-08-31）：原本は「(2)で得られた答を書き換えて」だが，
+       %   書き換えているのは(1)の答なので「(1)」に改めた．
+       \[\sqrt{\overline{v^2}}=\sqrt{\frac{3p}{\rho}}\U{m/s}\Ans\]
+\ko{3} 気体分子の平均運動エネルギー$\overline{E}$は，
+       \[\begin{aligned}
+         \overline{E}&=\frac{1}{2}m\overline{v^2}=\frac{1}{2}m\cdot\frac{3RT}{M}=\frac{1}{2}m\cdot\frac{3RT}{mN_{\mathrm{A}}}\\[1mm]
+         &=\frac{3RT}{2N_{\mathrm{A}}}
+       \end{aligned}\]
+       と表せる．
+       \[k_{\mathrm{B}}=\frac{R}{N_{\mathrm{A}}}\]
+       を用いて$\overline{E}$を書き換えると，
+       \[\overline{E}=\frac{3}{2}k_{\mathrm{B}}T\U{J}\Ans\]
+\end{komon}
+\begin{chuu}
+A問題においては，ヘリウム一分子が持つ運動エネルギーを，気体の内部エネルギー$U=\dfrac{3}{2}nRT$を気体の分子数で割り算することによって求めたが，\underline{この方}\hskip0pt\underline{法は単}\hskip0pt\underline{原子分}\hskip0pt\underline{子理想}\hskip0pt\underline{気体で}\hskip0pt\underline{なけれ}\hskip0pt\underline{ば利用}\hskip0pt\underline{するこ}\hskip0pt\underline{とがで}\hskip0pt\underline{きない}．なぜなら，気体の内部エネルギーの結果式$U=\dfrac{3}{2}nRT$は単原子分子理想気体でなければ成立しないからである．ところが，本問で導いた気体分子一分子あたりの平均運動エネルギー
+\[\overline{E}=\frac{3}{2}k_{\mathrm{B}}T\U{J}\]
+\underline{の式は}\hskip0pt\underline{単原子}\hskip0pt\underline{分子理}\hskip0pt\underline{想気体}\hskip0pt\underline{でなく}\hskip0pt\underline{ても成}\hskip0pt\underline{立する}．なぜなら，この式を導くのに利用した式はすべて理想気体でさえあれば成立する式だからである．すなわち，単原子分子理想気体でない場合について，気体分子1分子あたりの平均運動エネルギーを求めよと問われた場合には，内部エネルギーの割り算という考え方から求めるのは間違いであり，必ず\underline{気体分}\hskip0pt\underline{子運動}\hskip0pt\underline{論によ}\hskip0pt\underline{るベル}\hskip0pt\underline{ヌーイ}\hskip0pt\underline{の式を}\hskip0pt\underline{元にし}\hskip0pt\underline{て考え}\hskip0pt\underline{なけれ}\hskip0pt\underline{ばなら}\hskip0pt\underline{ない}．
+\end{chuu}
+\begin{bsHosoku}{参考}
+では2原子分子の場合，内部エネルギーの式を気体の総分子数で割り算して出てくる答えはどうなるのかを考えてみよう．2原子分子の場合，内部エネルギーの式は
+\[U=\frac{5}{2}nRT\U{J}\]
+である．これを気体分子数$N=n\cdot N_{\mathrm{A}}$で割り算して気体分子一分子あたりが持つエネルギーを求めると，
+\[\frac{U}{N}=\frac{5}{2}k_{\mathrm{B}}T\U{J}\]
+となる．(3)で求めたように，気体分子の運動エネルギーは
+\[\overline{E}=\frac{3}{2}k_{\mathrm{B}}T\U{J}\]
+であるから，気体分子一分子あたりが持つエネルギーはこれよりも$k_{\mathrm{B}}T\U{J}$だけ多い．このエネルギーの正体は，実は気体分子がその内部で回転運動することによって持つエネルギーである．単原子分子の場合には内部回転というものは存在しないため，気体分子の運動エネルギー$\overline{E}=\dfrac{3}{2}k_{\mathrm{B}}T\U{J}$がそのまま気体分子一分子あたりが持つエネルギーとなるが，2原子分子以上になると，気体分子内回転が存在するため，回転によって持つエネルギーを加えたものが気体分子一分子あたりが持つエネルギーとなる．
+\end{bsHosoku}
+
+\MonN{13}{気体分子運動論の利用}\par\nopagebreak
+\begin{sisin}
+前問・前々問で導出した気体分子運動の二乗平均速度の式$\sqrt{\overline{v^2}}=\sqrt{\dfrac{3RT}{M}}\U{m/s}$を利用して考えていけばよい．$M$に分子量を代入する際には，単位を$\U{kg/mol}$に換算してから代入することに注意せよ．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} 気体分子運動の二乗平均速度の式
+       \[\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{M}}\U{m/s}\]
+       に各値を代入して求めると，
+       \[\sqrt{\overline{v^2}}=\sqrt{\frac{3\cdot 8.3\cdot 300}{28\times 10^{-3}}}\]
+       \hspace*{2zw}$\fallingdotseq 5.2\times 10^2\U{m/s}$\Ans
+\ko{2} 二乗平均速度の式より，温度$T$が共通であれば，気体分子運動の速さは$\dfrac{1}{\sqrt{M}}$に比例する．また，ヘリウム・ネオンは希ガスで単原子分子であるから，分子量＝原子量である．よって，二つの気体の二乗平均速度の比は，
+       \[\begin{aligned}
+         \sqrt{\overline{v_{\mathrm{He}}^2}}:\sqrt{\overline{v_{\mathrm{Ne}}^2}}
+         &=\frac{1}{\sqrt{M_{\mathrm{He}}}}:\frac{1}{\sqrt{M_{\mathrm{Ne}}}}\\[1mm]
+         &=\frac{1}{\sqrt{4}}:\frac{1}{\sqrt{20}}
+       \end{aligned}\]
+       である．以上より，平均運動エネルギー$\overline{E}=\dfrac{1}{2}m\overline{v^2}$の比は，
+       \[\begin{aligned}
+         \overline{E_{\mathrm{He}}}:\overline{E_{\mathrm{Ne}}}
+         &=\frac{1}{2}m_{\mathrm{He}}\overline{v_{\mathrm{He}}^2}:\frac{1}{2}m_{\mathrm{Ne}}\overline{v_{\mathrm{Ne}}^2}\\[1mm]
+         &=m_{\mathrm{He}}N_{\mathrm{A}}\overline{v_{\mathrm{He}}^2}:m_{\mathrm{Ne}}N_{\mathrm{A}}\overline{v_{\mathrm{Ne}}^2}\\[1mm]
+         &=4\cdot\frac{1}{4}:20\cdot\frac{1}{20}\\[1mm]
+         &=1:1
+       \end{aligned}\]
+       である．よって，1分子あたりの平均運動エネルギーは同じである．\Ans
+\end{komon}
+\begin{bekkai}
+前問の，1分子あたりの平均運動エネルギーの式
+\[\overline{E}=\frac{3}{2}k_{\mathrm{B}}T\U{J}\]
+を覚えていれば答えは明らかである．この式は分子量を含まず，$T$のみを変数として含むので，1分子あたりの平均運動エネルギーは温度のみによって決まる．よって，温度が同じであれば1分子あたりの平均運動エネルギーは同じである．\par
+\hspace*{1zw}この式を覚えていない場合，問題文で問われているのが単原子分子気体であることに着目して考えることも可能である．単原子分子気体であれば，前問の注意で述べたように1分子あたりの平均運動エネルギーを，内部エネルギーの式/気体分子数によって求めることができるので，
+\[\overline{E}=\frac{U}{N}=\frac{\frac{3}{2}nRT}{n\cdot N_{\mathrm{A}}}=\frac{3}{2}\cdot\frac{R}{N_{\mathrm{A}}}T\U{J}\]
+と求められる．後は上述と同じ議論をすればよい．
+\end{bekkai}
+\begin{komon}
+\ko{3} $\sqrt{\overline{v^2}}=\sqrt{\dfrac{3RT}{M}}\U{m/s}$の式より，気体分子の二乗平均速度は$\sqrt{T}$に比例している．よって，温度$T\U{K}$が$273\U{K}$から$273+273=546\U{K}$へと変化した際には，二乗平均速度は$\sqrt{2}$倍になる．\Ans\par
+       \hspace*{1zw}また，1分子あたりの平均運動エネルギーは，
+       \[\overline{E}=\frac{1}{2}m\overline{v^2}\]
+       で与えられるのだから，二乗平均速度の二乗に比例して変化する．よって，二乗平均速度が$\sqrt{2}$倍になれば平均運動エネルギーは2倍になる．\Ans
+\end{komon}
+\begin{bekkai}
+もちろん後者については$\overline{E}=\dfrac{3}{2}k_{\mathrm{B}}T\U{J}$の式を利用して2倍と答えてもよい．
+\end{bekkai}
+\begin{bsHosoku}{参考}
+本問の(1)〜(3)では，理想気体の気体分子の二乗平均速度$\sqrt{\overline{v^2}}=\sqrt{\dfrac{3RT}{M}}\U{m/s}$の式をフル活用して答えを導いているが，この式は利用する機会が少ないこともあり，意外と忘れがちである．以下のように考えると簡単に導くことができるので，覚えておくとよい．\par
+\hspace*{1zw}まず，$n\U{mol}$の単原子分子理想気体を考える．単原子分子理想気体であれば，その内部エネルギーは
+\[U=\frac{3}{2}nRT\U{J}\]
+で与えられる．単原子分子理想気体ではその内部エネルギーとは原子の持つ運動エネルギーの総和のことだから，1分子あたりの平均運動エネルギー$\dfrac{1}{2}m\overline{v^2}$と全分子数$nN_{\mathrm{A}}$との積が内部エネルギー$U$となる．よって，
+\[U=(nN_{\mathrm{A}})\times\frac{1}{2}m\overline{v^2}\]
+\hspace*{1zw}これらを結んで解くと，
+\[\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{mN_{\mathrm{A}}}}\]
+が導かれる．ただし$m$は原子一つあたりの質量（{\gtfamily kg}単位）である．式の中に出てくる$mN_{\mathrm{A}}$は$1\U{mol}$あたりの分子の質量を表していることになるので，$1\U{mol}$あたりの分子の質量を$M\U{kg/mol}$で表すと$M=mN_{\mathrm{A}}$であるから
+\[\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{M}}\]
+として二乗平均速度の式を導くことが可能となる．\par
+\hspace*{1zw}以上の議論では単原子理想気体であることを用いているが，結論の式である
+\[\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{M}}\]
+は，\underline{単原子}\hskip0pt\underline{分子理}\hskip0pt\underline{想気体}\hskip0pt\underline{でなく}\hskip0pt\underline{とも成}\hskip0pt\underline{立する}．二乗平均速度は気体分子運動論から導出されるものであり，単原子分子気体を仮定せずとも導出できるからである．\par
+\hspace*{1zw}また，
+\[\frac{1}{2}m\overline{v^2}\times(nN_{\mathrm{A}})=\frac{3}{2}nRT=\frac{3}{2}PV\]
+と変形すれば簡単にベルヌーイの式を導出することができる．検算の方法として覚えておくとよい．
+\end{bsHosoku}
+
+\MonN{14}{内部エネルギー}\par\nopagebreak
+\begin{sisin}
+この気体は単原子分子理想気体であるから，内部エネルギーは$U=\dfrac{3}{2}nRT$と表せる．この式から分かるように，\underline{理想気}\hskip0pt\underline{体の内}\hskip0pt\underline{部エネ}\hskip0pt\underline{ルギー}\hskip0pt\underline{は温度}\hskip0pt\underline{のみに}\hskip0pt\underline{依存す}\hskip0pt\underline{る}ので，温度・圧力・体積などの変化によって内部エネルギーがどう変化するのかを考える際には，温度がどう変化するかさえ考えればよい．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} 気体の内部エネルギー$U$は$U=\dfrac{3}{2}nRT\U{J}$と表される．\par
+       \hspace*{1zw}ここで，温度を一定に保てば（$U=\dfrac{3}{2}nRT\U{J}$の式は変化しないので）体積を変化させても内部エネルギーは変わらず，1倍のままである．\Ans
+\ko{2} 状態方程式$PV=nRT$の式より，圧力を一定に保って体積を$m$倍にするときは温度が$m$倍になる．\par
+       \hspace*{1zw}よって，温度が$m$倍になれば，内部エネルギーも$m$倍になる．\Ans
+\end{komon}
+\begin{bekkai}
+シャルルの法則より，体積と温度は比例する．内部エネルギーは温度に比例するので，体積が$m$倍になるとき，内部エネルギーも$m$倍になる．\Ans
+\end{bekkai}
+\begin{komon}
+\ko{3} 箱に封入された気体のモル数を$n'\U{mol}$とする．初めの状態における，この気体の状態方程式は
+       \[PV=n'RT\]
+       であるから，この箱に封入された気体のモル数は
+       \[n'=\frac{PV}{RT}\U{mol}\]
+       で与えられる．この気体の温度は$\Delta T=T'-T$だけ上昇したので，この変化による内部エネルギーの増加$\Delta U$は
+       \[\Delta U=\frac{3}{2}n'RT'-\frac{3}{2}n'RT=\frac{3}{2}n'R\cdot\Delta T\]
+       で与えられる（変化後$-$変化前で増加量が求められる）．ここで，熱力学第一法則を考えると，気体は仕事のやり取りをしていないから，気体に対して与えた熱量$Q\U{J}$はすべて内部エネルギーの増加$\Delta U$に利用されたと考えられる．よって，熱力学第一法則を表す式は，
+       \[Q=\Delta U\]
+       である．これを解いて，
+       \[\Delta T=\frac{2Q}{3n'R}=\frac{2Q}{3PV}T\U{K}\Ans\]
+\ko{4} 状態変化後の気体の状態方程式を立てると，
+       \[P'V=n'RT'\]
+       である．これと(3)の答より，
+       \[\begin{aligned}
+         P'&=\frac{n'RT'}{V}=\frac{n'R(T+\Delta T)}{V}=\frac{P}{T}(T+\Delta T)\\[1mm]
+         &=P+P\frac{\Delta T}{T}=P+\frac{2Q}{3V}\U{Pa}\Ans
+       \end{aligned}\]
+\end{komon}
+
+\MonN{15}{$p-V$図}\par\nopagebreak
+\begin{sisin}
+まず初めに各点での状態方程式を立てて，その圧力，体積を求めてしまい，それからそれらの点を結んでいくとよい．\par
+\hspace*{1zw}ただし，$T-V$図上での変化が直線的だからといって，$p-V$図上の変化も直線的であるとは限らない．どのような曲線の上に乗って変化していくかについては，状態方程式$pV=nRT$の式からその変化中に一定であるものをはじき出して考えるとよい．$\mathrm{B}\to\mathrm{C}$では一定の変数がないので，状態方程式と，$T$と$V$の関係式を整理して考えよ．
+\end{sisin}
+\KaiHead
+\hspace{1zw}気体の物質量を$n\U{mol}$とし，$\mathrm{B}$, $\mathrm{C}$における気体の圧力をそれぞれ$p_{\mathrm{B}}\U{Pa}$, $p_{\mathrm{C}}\U{Pa}$とする．\par
+\hspace{1zw}$\mathrm{A}$，$\mathrm{B}$，$\mathrm{C}$各点での気体の状態方程式は，
+\[\mathrm{A}:2p_0\cdot V_0=nR\cdot 2T_0\]
+\[\mathrm{B}:p_{\mathrm{B}}\cdot 2V_0=nR\cdot 2T_0\]
+\[\mathrm{C}:p_{\mathrm{C}}\cdot V_0=nR\cdot T_0\]
+となる．これらの式を解くと，
+\[n=\frac{p_0V_0}{RT_0},\ p_{\mathrm{B}}=p_0,\ p_{\mathrm{C}}=p_0\]
+が得られる．よって，$\mathrm{A}$，$\mathrm{B}$，$\mathrm{C}$は$p-V$図上では次図のような位置にくる点である．
+\begin{center}
+\includegraphics[keepaspectratio,width=34mm]{fig/ch15_p124_pv.png}
+\end{center}
+\hspace{1zw}各状態変化をそれぞれ考える．
+\begin{komon}
+\ko{1} $\mathrm{A}\to\mathrm{B}$の状態変化\par
+       \hspace*{1zw}この変化において気体の温度は一定であるから，理想気体の状態方程式より，$pV=nRT=$一定となる．よって，体積が$V\U{m^3}$になったときの気体の圧力を$p(V)\U{Pa}$とすれば，$\mathrm{A}$点との間に
+       \[p(V)\cdot V=2p_0\cdot V_0\]
+       の関係が成立する．よって，
+       \[p(V)=2p_0V_0\frac{1}{V}\U{Pa}\quad\left(\propto\frac{1}{V}\right)\]
+       となり，$p-V$図上では双曲線を描いて変化する．
+\ko{2} $\mathrm{B}\to\mathrm{C}$の変化\par
+       \hspace*{1zw}この変化途中の，温度，体積がそれぞれ$(T,\ V)$の状態のときの気体の圧力を$p(V)\U{Pa}$とおく．グラフより，体積と温度は
+       \[T=\frac{T_0}{V_0}V\]
+       の関係を保ちつつ，$T=2T_0\to T_0\U{K}$（$V=2V_0\to V_0\U{m^3}$）まで変化する．また，$(p(V),\ T,\ V)$のときの状態方程式より，
+       \[p(V)\cdot V=nRT\]
+       が成立するので，以上2式を整理すると，
+       \[p(V)=nR\frac{T_0}{V_0}=p_0\]
+       となり，変化途中の気体の体積$V$によらず，圧力は常に$p_0\U{Pa}$となる．すなわち，この変化は定圧変化であり，$\mathrm{B}\to\mathrm{C}$へは$p=p_0$の直線上を$V=2V_0\to V_0\U{m^3}$まで変化する．
+\ko{3} $\mathrm{C}\to\mathrm{A}$の状態変化\par
+       \hspace*{1zw}この変化では，与えられた$T-V$グラフより体積が一定値のまま変化するので，$\mathrm{C}\to\mathrm{A}$へは$V=V_0$の直線上を変化していく．
+\end{komon}
+\hspace{1zw}以上をまとめると，この状態変化の$p-V$図は次図のようになる．
+\begin{center}
+\includegraphics[keepaspectratio,width=34mm]{fig/ch15_p125_pv.png}
+\end{center}
+\hspace*{\fill}\Ans
+
+\Rank{C問題}
+\MonN{16}{球内での気体分子運動論}\par\nopagebreak
+\begin{sisin}
+考え方の指針は直方体容器の場合と全く変わらない．\MARU{1}1回あたりの衝突で壁面に与える力積を求める，\MARU{2}時間$t\U{s}$間での衝突回数および与える力積を求める，\MARU{3}力積と力の関係，および全分子について与える力積を考えて，壁面に作用する力を求める，\MARU{4}気体分子運動の等方向性を利用，\MARU{5}圧力を計算する，という流れである．（本問の場合はすべての分子が同じ速さと考えて分子ごとのバラつきを考えていないため，\MARU{4}は不要）
+\end{sisin}
+\KaiHead
+% 誤植訂正（2026-08-31）：原本の解答は (1)(2) の次が (1)(2)(3)…(7) と振り直されており，
+%   問題文の空欄番号（1〜9）と2つずれていた．空欄番号に合わせて (3)〜(9) に改めた．
+\begin{komon}
+\item[{\makebox[1.9zw][r]{(1)(2)}}] 分子と壁との衝突は完全弾性衝突であるから，衝突前後で点$\mathrm{B}$における接線方向，すなわち半径$\mathrm{OB}$に垂直な方向の速度成分は変化せず，$\mathrm{OB}$方向の速度成分が反転して$v\cos\theta$から$-v\cos\theta$へ変化する．よって，衝突によるこの分子の運動量の変化は，$\mathrm{O}$から$\mathrm{B}$の方向を正として，
+       \[m\cdot(-v\cos\theta)-m\cdot v\cos\theta=-2mv\cos\theta\]
+       となる．よって，(1)$\ \overrightarrow{\mathrm{BO}}$ベクトルの方向に，大きさ(2)$\ 2mv\cos\theta\U{N\cdot s}$\Ans
+\ko{3} 次の衝突点は$\mathrm{C}$であるが，$\mathrm{B}$点での衝突は弾性衝突であるから，$\angle\mathrm{ABO}=\angle\mathrm{OBC}=\theta$である．よって，$\mathrm{B}\to\mathrm{C}$までの距離は，図より
+       \[\overline{\mathrm{BC}}=2a\cos\theta\U{m}\]
+       である．また，分子の速さは衝突前後で変化しないので，次に衝突するまでにかかる時間は
+       \[\frac{\overline{\mathrm{BC}}}{v}=\frac{2a\cos\theta}{v}\U{s}\Ans\]
+\ko{4} 図より明らかに$\angle\mathrm{BOC}=\theta$であるから，分子の器壁への入射角は一定である．また，分子の速さも器壁と何回衝突しても一定のままであるから，衝突時間間隔はずっと$\dfrac{2a\cos\theta}{v}\U{s}$の一定のままである．よって，時間$t\U{s}$間の間の壁面との衝突回数は
+       \[t\Big/\frac{2a\cos\theta}{v}=\frac{vt}{2a\cos\theta}\,[\text{回}]\Ans\]
+\ko{5} 一回の衝突によってこの気体分子が壁面に対して与える力積の大きさは，(1)・(2)の正負逆なので
+       \[\text{壁面を押す方向に，大きさ}\ 2mv\cos\theta\U{N\cdot s}\]
+       である．よって，時間$t\U{s}$間の間に壁面に対して与えた力積の大きさの総和は
+       \[2mv\cos\theta\cdot\frac{vt}{2a\cos\theta}=\frac{mv^2}{a}t\U{N\cdot s}\Ans\]
+\ko{6} 1分子あたりが(5)であるから，
+       \[N\cdot\frac{mv^2}{a}t\U{N\cdot s}\Ans\]
+\ko{7} 器壁に及ぼす平均の力の大きさを$\overline{F}\U{N}$とすれば，平均の力と力積との関係より，
+       \[\overline{F}\cdot t=N\cdot\frac{mv^2}{a}t\]
+       である．よって，器壁に対して及ぼす平均の力の大きさは
+       \[\overline{F}=\frac{Nmv^2}{a}\U{N}\Ans\]
+\ko{8} 容器内面の面積は$S=4\pi a^2\U{m^2}$であるから，
+       \[p=\frac{\overline{F}}{S}=\frac{\dfrac{Nmv^2}{a}}{4\pi a^2}=\frac{Nmv^2}{4\pi a^3}\U{Pa}\Ans\]
+\ko{9} また$V=\dfrac{4}{3}\pi a^3\U{m^3}$より，
+       \[p=\frac{Nmv^2}{3V}\]
+       よって，
+       \[pV=\frac{Nmv^2}{3}\Ans\]
+\end{komon}
+\begin{bsHosoku}{参考}
+結局，球形の容器であっても気体分子の速さの二乗と圧力との関係式は，立方体容器の場合と全く同一になる．また，これと状態方程式を組み合わせれば気体の二乗平均速度の式が立方体容器の場合と全く同様に導かれる．
+\end{bsHosoku}
+\begin{bsHosoku}{参考}
+（ここに書かれていることはかなり難しいため，興味のある人のみ読めばよい）\par
+\hspace*{1zw}本問では気体分子運動の等方向性
+\[\overline{v_x^2}=\overline{v_y^2}=\overline{v_z^2}\]
+を利用しなかったが，この式は容器の形状によらずに成立する．\par
+\hspace*{1zw}これは気体分子同士が非常に頻繁に相互に衝突しているためである．例えば$0\Cel$，1気圧下において，気体分子が他の気体分子に衝突せずに進める距離（平均自由行程という）はおよそ$10^{-7}\U{m}$程度でしかなく，およそ$10^{-19}\U{s}$程度の間隔で気体分子は衝突を繰り返している．
+このため，例えば容器の一部の器壁などの移動によってある軸方向の速度成分が大きくなったとしても，気体分子相互の衝突のためすぐに他の軸方向の速度成分も増加してしまう（断熱変化を気体分子運動論に基づいて考える場合などに用いられる）．\par
+\hspace*{1zw}ベルヌーイの式の導出などに用いた「気体分子相互の衝突はない」という仮定とつじつまが合わなくなってしまうように感じるかもしれないが，これについては考慮しなくてよい．というのは，本来ベルヌーイの式は統計熱力学を元にして導出されるものであり，これを高校範囲の知識だけで扱おうとするのは無理である．正しくはどうなのか，という点については大学に入ってから学べばよいが，高校範囲では次のように考えて問題を解けばよい．
+\begin{komon}
+\item[{\makebox[1.9zw][r]{\MARU{1}}}] ベルヌーイの式を導く際には，気体分子相互間の衝突については考慮しなくてよい．
+\item[{\makebox[1.9zw][r]{\MARU{2}}}] ただし，気体分子運動の等方向性を用いる際には，気体分子の相互衝突が起こっていると考える．
+\end{komon}
+\end{bsHosoku}
+
+\end{multicols}

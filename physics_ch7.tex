@@ -1,0 +1,197 @@
+\section{物体の衝突と跳ね返り係数}
+
+\subsection{跳ね返り係数}
+
+\begin{wrapfigure}[10]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text_p33_fig1.png}
+\end{wrapfigure}
+
+摩擦のない床面の上を一直線上で運動する質量$m_1$[kg]の物体と質量$m_2$[kg]の物体とが，右向きを正として速度$v_1$[m/s]，$v_2$[m/s]で衝突し，その結果，速度が$v_1'$[m/s]および$v_2'$[m/s]になったとき，運動量保存則
+\[ m_1v_1+m_2v_2=m_1v_1'+m_2v_2'\]
+が成立する．
+しかし，この式だけでは衝突後の2物体の速度$v_1',v_2'$を求めることは不可能である．
+金属球同士の衝突と，粘土で作った球同士の衝突を比較すれば明らかなように，実際の衝突後の速度はこの運動量保存則と，2物体の材質・形状によって決まる．
+
+実験によると，衝突直前の2物体の相対速度の大きさ（＝{\bf 相対的に近づく速さ}）と，衝突直後の2物体の相対速度の大きさ（＝{\bf 相対的に離れる速さ}）との比の値は，2物体によって決まる一定の値になることが知られている．
+上図の場合，相対的に近づく速さは$v_1-v_2$，相対的に遠ざかる速さは$v_2'-v_1'$であり，
+\[ e=\dfrac{（相対的に離れる速さ）}{（相対的に近づく速さ）}=\dfrac{v_2'-v_1'}{v_1-v_2} \]
+
+この比の値$e$のことを，その2物体の{\bf 跳ね返り係数}という．
+
+また，衝突に際して，相対速度の向きは必ず反転するので，衝突前後の相対速度$v_1-v_2$と$v_1'-v_2'$を用いれば
+\[ e=-\dfrac{（衝突直後の相対速度）}{（衝突直前の相対速度）}=-\dfrac{v_1'-v_2'}{v_1-v_2}\]
+と表されることになる．
+
+必ず離れる速さは近づく速さ以下になる．
+そのため，\mbox{\boldmath $跳ね返り係数eは0\leqq e \leqq 1 の範囲の正の値となる$}．
+
+\begin{matome}{跳ね返り係数}
+ \hspace{5mm} 跳ね返り係数\hspace {10mm}$e=\dfrac{（相対的に離れる速さ）}{（相対的に近づく速さ）}=-\dfrac{（衝突直後の相対速度）}{（衝突直前の相対速度）}$
+ \end{matome}
+ 
+  \ 
+%  
+%\begin{breakbox}
+%\ex＜跳ね返り係数による衝突の分類＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{50mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=40mm]
+%  {text_p33_fig2.png}
+%\end{wrapfigure}
+%\hspace{5mm}水平でなめらかな床面の上に，質量$M$[kg]の物体Bが静止して置かれている．
+%これに質量$m$[kg]の物体Aを速さ$v_0$[m/s]で衝突させる場合について以下の問いに答えよ．
+%ただし，A,Bの間の跳ね返り係数は$e$であり，物体Aの初速度の向きを速度の正の向きとする．
+%\begin{description}
+%\item[(1)] 衝突後の物体A,Bの速度をそれぞれ$v$[m/s]，$V$[m/s]とする．このとき，運動量保存則および跳ね返り係数の式を立てよ．
+%\item[(2)] 衝突後の物体A,Bの速度$v,V$をそれぞれ求めよ．
+%\item[(3)] この衝突による運動エネルギーの減少量を求めよ．
+%\item[(4)] 運動エネルギーの減少がないときの跳ね返り係数の値，および減少量が最も大きくなるときの跳ね返り係数の値をそれぞれ求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+% \newpage
+跳ね返り係数$e$に応じて衝突は以下のように分類される．
+
+ \begin{matome}{跳ね返り係数による衝突の分類}
+ \hspace{5mm} \MARU{1} \hspace{2mm}\mbox{\boldmath $e=1$} \hspace {11mm}{\bf 弾性衝突（完全弾性衝突）}\\
+ \hspace{10mm} 衝突前後で全運動量と同時に全力学的エネルギーも保存される．\\
+ \hspace{5mm} \MARU{2} \hspace{2mm}\mbox{\boldmath $0<e<1$}\hspace {5mm}{\bf 非弾性衝突}\\
+ \hspace{10mm} 力学的エネルギーの一部が衝突により，音，発熱，変形などによって失われる．\\
+ \hspace{5mm} \MARU{3} \hspace{2mm}\mbox{\boldmath $e=o$}\hspace {13mm}{\bf 完全非弾性衝突}\\
+ \hspace{10mm} 2物体は合体する．力学的エネルギーの損失が最大となる．
+ \end{matome}
+
+
+\subsection{壁面・床面との垂直な衝突による跳ね返り}
+
+今ままでは2物体間の衝突を考えてきたが，壁面や床面と物体が衝突して跳ね返るときは壁や床の質量をはっきりさせることができないため，運動量保存則を用いることができない．
+しかし，壁面や床面は通常，物体に比べて質量が非常に大きく，静止したままであることが多い．
+このような場合は物体と壁面・床面との間の跳ね返り係数$e$を用いて跳ね返りを考えることができる．
+
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜床面との垂直衝突＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{70mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=60mm]
+%  {text_p34_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}質量$m$[kg]の小球を，床面から高さ$h$[m]のところから自由落下させ，床面でバウンドさせる．
+%床面と小球との間の跳ね返り係数は$e\hspace{2mm}(0<e<1)$である．
+%重力加速度の大きさを$g {\rm [m/s^2]}$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 最初に床面に衝突する直前の速さ$v_0$[m/s]を求めよ．
+%\item[(2)] 1回目のバウンドの直後，小球が跳ね上がる速さ$v_1$[m/s]を求めよ．
+%\item[(3)] 1回目のバウンドの後，小球の達する最高点の高さ$h_1$[m]を求めよ．
+%\item[(4)] 2回目のバウンドの後，小球の達する最高点の高さ$h_2$[m]を求めよ．
+%\item[(5)] 小球が飛び跳ねなくなるまでに要する時間$T$[s]を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+% \newpage 
+  
+
+\subsection{壁面・床面との斜めの衝突による跳ね返り}
+
+\begin{wrapfigure}[10]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=70mm]
+  {text_p35_fig1.png}
+\end{wrapfigure}
+
+物体が壁面や床面に対して斜めに衝突するとき，摩擦が無視できる場合には{\bf 接触面に平行な速度成分は衝突によって変化しない．}
+一方，{\bf 接触面に垂直な速度成分は跳ね返り係数}\mbox{\boldmath $eによって速さが変化する．$}
+右図のように軸を取り，衝突前後の物体の速度をそれぞれ$(v_x,v_y)$および$(v_x',v_y')$とすると（衝突前の$y$軸成分は負の値となる），
+\[ v_x'=v_x ,\hspace{3mm} e=-\dfrac{v_y'}{v_y} \]
+が成立する．
+
+% \ 
+% 
+%\begin{breakbox}
+%\ex＜壁面・床面との斜めの衝突による跳ね返り＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{60mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=50mm]
+%  {text_p35_fig2.png}
+%\end{wrapfigure}
+%\hspace{5mm}質量$m$[kg]の小球を，図のように水平な床面上の点Aから迎角$\theta$，初速$V_0$[m/s]で打ち出したところ，小球は距離$R$[m]離れたなめらかな鉛直な壁面にB点で衝突し，上向きに跳ね返った．
+%小球と壁面との跳ね返り係数を$e$，重力加速度の大きさを$g {\rm [m/s^2]}$，速度は図の右向きおよび上向きを正の値にとるものとして以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 小球が壁面と衝突する直前の鉛直方向の速度を求めよ．
+%\item[(2)] 小球が壁面と衝突した直後の水平方向の速度を求めよ．
+%\item[(3)] 小球が壁面と衝突してから，最高点Cに達するまでの時間を求めよ．
+%\item[(4)] 小球が床に落下する点Dと，壁面との距離$L$[m]を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p19.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p20.png}
+\end{center}
+\end{figure}
+
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p88_2.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p89.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p90.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p91.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p92_1.png}
+\end{center}
+\end{figure}
+
+\newpage
+　

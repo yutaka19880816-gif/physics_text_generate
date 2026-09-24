@@ -1,0 +1,252 @@
+\section{光波の干渉(1)}
+
+\subsection{ヤングの実験}
+\begin{wrapfigure}[15]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=70mm]
+  {text2_p4_fig1.png}
+\end{wrapfigure}
+単一の波長の光を出す単色光源を用意し，これを単スリットAに当てると回折現象により光はS$_0$を新たな波源として円形上に光波が広がっていく．
+さらに複スリットBを，そのスリットS$_1$,S$_2$がS$_0$から等距離となるように置くと，スリットS$_1$,S$_2$には同位相の光が届くため，複スリットBの向こうにはS$_1$,S$_2$を新たな波源として同位相の円形波が広がっていく．
+
+スクリーン上の各点はS$_1$,S$_2$からの距離が異なるため，ある点では2つの波が強め合って明るくなり，ある点では2つの波は弱め合って暗くなる．
+そのため，スクリーン上には明暗の縞模様が出来上がる．
+これを干渉縞という．
+
+S$_1$,S$_2$は同位相の波源であるから，図のP点で強め合うか否かは経路差によって決まる．
+水面波の干渉と同様に考えると，$m$を整数として
+\begin{eqnarray*}
+{\bf S_1,S_2が同位相} \mbox{\boldmath $\Rightarrow \left\{ 
+\begin{array}{l}
+\overline{ {\rm S_2P}}-\overline{{\rm S_1P}}=m\lambda \hspace{10mm}のとき強め合い\\
+\overline{{\rm S_2P}}-\overline{{\rm S_1P}}=\left( m-\dfrac{1}{2} \right) \lambda \hspace{5mm}のとき弱め合い
+\end{array}
+\right. $}
+\end{eqnarray*}
+であることが言える．
+
+\begin{wrapfigure}[9]{r}[5mm]{95mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=95mm]
+  {text2_p4_fig2.png}
+\end{wrapfigure}
+通常，スクリーンCは複スリットBから十分な距離を隔てた場所に置いて干渉縞を観察する．
+このときはスクリーン上にできる明暗位置を簡単な式で表すことが可能である．
+スリットS$_1$,S$_2$の間隔を$d$[m]とし，垂直二等分線を図のMOとする．
+複スリットBからスクリーンCまでの距離を$l$[m]とし，$d \ll l$であるとする．
+このとき，O点から距離が$x$[m]のP点について考えると，$d \ll l$であるなら${\rm S_1P \ll MP \ll  S_2P}$であるとみなせるから，${\rm S_1}$から直線${\rm S_2P}$に下ろした垂線の足をHとすると$\overline{{\rm S_1P}}=\overline{{\rm HP}}$とみなせ，図の$\angle {\rm PMO}=\theta$とおくと，
+\[ \overline{{\rm S_2P}} -\overline{{\rm S_1P}}\fallingdotseq \overline{{\rm S_2H}} \fallingdotseq d\sin \theta \]
+と近似できる．
+さらに$d\ll l$であるなら$|\theta | \ll 1$であるから，
+\[ \overline{{\rm S_2P}} -\overline{{\rm S_1P}}\fallingdotseq \overline{{\rm S_2H}} \fallingdotseq d\sin \theta \fallingdotseq d\tan \theta =d\dfrac{x}{l}\]
+と近似できる．
+これと強め合い・弱め合いの条件式を組み合わせると，
+\begin{eqnarray*}
+d\dfrac{x}{l}=m\lambda \hspace{2mm} \Leftrightarrow \hspace{2mm} x=m\dfrac{l\lambda}{d} \hspace{27mm}の位置で強め合い（{\bf 明線}）\\
+d\dfrac{x}{l}=\left(m-\dfrac{1}{2}\right) \lambda \hspace{2mm} \Leftrightarrow \hspace{2mm} x=\left(m-\dfrac{1}{2}\right) \dfrac{l\lambda}{d} \hspace{2mm}の位置で弱め合い（{\bf 暗線}）
+\end{eqnarray*}
+となり，これから明線と暗線が等間隔で並ぶことがわかる．
+
+これより，スクリーン上にできる明線の間隔$\Delta x$[m]は$m$をずらすことにより，
+\[  \mbox{\boldmath $\Delta x=\dfrac{l\lambda}{d} $}\hspace{2mm}{\rm [m]}\]
+と求められる．
+
+（参考）\hrulefill 
+
+$ \overline{{\rm S_2P}} -\overline{{\rm S_1P}}$を求める近似計算は，次のように一次近似を用いて求めることもできる．
+\begin{eqnarray*}
+ \overline{{\rm S_2P}} -\overline{{\rm S_1P}} &=& \sqrt{l^2+(x+d/2)^2}-\sqrt{l^2+(x-d/2)^2}\\
+ &=&l\left\{ 1+\left( \dfrac{x+d/2}{l} \right)^2 \right\}^{1/2}-l\left\{ 1+\left( \dfrac{x-d/2}{l} \right)^2 \right\}^{1/2}\\
+ &\fallingdotseq& l\left\{ 1+\dfrac{1}{2} \left( \dfrac{x+d/2}{l} \right)^2 \right\}-l\left\{ 1+\dfrac{1}{2} \left( \dfrac{x-d/2}{l} \right)^2 \right\}\\
+ &=&d\dfrac{x}{l}
+\end{eqnarray*}
+
+\hrulefill
+
+
+ \begin{matome}{ヤングの実験}
+ \hspace{3mm} 経路差$\overline{{\rm S_2P}} -\overline{{\rm S_1P}}\fallingdotseq \overline{{\rm S_2H}} \fallingdotseq d\sin \theta \fallingdotseq d\tan \theta =d\dfrac{x}{l}$\\
+ 強め合い・弱め合いは${\rm S_1,S_2}$点の位相を考慮して決める．\\
+ スクリーン上には間隔$\Delta x=\dfrac{l\lambda}{d}$[m]で明線が並ぶ．
+ \end{matome}
+ 
+ \subsection{光波干渉を考える基礎}
+ 前節で見たヤングの実験に限らず，光波干渉の問題の大半は，1つの光が異なる経路をたどり，それが再び1点に集まるときにどのように重なるかを議論し，それにより強め合い・弱め合いを決める．
+ 
+ \begin{wrapfigure}[18]{r}[5mm]{110mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=110mm]
+  {text2_p6_fig1.png}
+\end{wrapfigure}
+ 2つの別の経路A,Bからやってきた光について考えよう．
+ このA,Bが右図(a)のように全く同一の波形でやってきて，いかなる瞬間でも同一変位で重なるとき，2つの波は完全に強め合う．
+ このように全く同一の波形がやってくる場合を，やってくる2つの波に{\bf 位相差がない}と表現する．
+ 
+ しかし，もしこのA,Bが右図(b)のように完全に上下逆の波形でやってきて，いかなる瞬間でも正負逆の変位をもっているのであれば，この2つの波は重なると完全に打ち消し合ってしまう．
+ このように正負逆の変位がやってくる場合を，やってくる2つの波の{\bf 位相が$\pi$ずれている}と表現する．
+ 
+ また，$m$を整数として位相が$2m\pi$ずれていても全く同じ波になるため，以上をまとめると次のようになる．
+ 
+  \begin{matome}{強め合い・弱め合いの位相差による表現}
+・やってくる2つの波の位相差が$2m\pi$（ただし$m$は整数）のとき\\
+ \hspace{3mm} 2つの波は常に同一の変位をもつため，重なると強め合う．\\
+・やってくる2つの波の位相差が$(2m-1)\pi$（ただし$m$は整数）のとき\\
+ \hspace{3mm} 2つの波は常に正負逆の変位をもつため，重なると打ち消し合い，弱め合う． 
+ \end{matome}
+ 
+ つまり，異なる経路をたどってやってくる波が強め合うか否かは2つの波の位相差によって決まる．
+ その位相差を生じさせる原因となるものは2つある．
+ 
+   \begin{matome}{位相差を与える原因}
+   
+\hspace{2mm}$\MARU{1}$\hspace{2mm} {\bf 経路差による位相のずれ}\\
+ \hspace{3mm} 2つの経路が同一媒質中をたどってくるとき，経路差を$\Delta D$[m]，媒質中の波長を$\lambda$[m]とすると，$m$を整数として
+ \[   \mbox{\boldmath$\Delta D=m\lambda$} \hspace{16mm} {\bf のとき}\hspace{2mm} \Rightarrow \hspace{2mm} {\bf 経路差による位相のずれはない} \]
+ \[  \mbox{\boldmath$ \Delta D=\left(m-\dfrac{1}{2} \right)\lambda$} \hspace{5mm} {\bf のとき}\hspace{2mm} \Rightarrow \hspace{2mm} {\bf 経路差によって位相が}  \mbox{\boldmath$\pi$}  {\bf ずれる} \]
+言い換えると，{\bf 経路差の部分が整数波長分のときは位相のずれがなく，整数波長分+半波長分のとき位相は} \mbox{\boldmath$\pi$} {\bf ずれる．}
+
+\hspace{2mm}$\MARU{2}$\hspace{2mm} {\bf 反射による位相のずれ}\\
+ \hspace{3mm} 光波が屈折率の異なる媒質との境界面で反射するとき，
+ \[{\bf 屈折率がより大きな媒質との境界面で反射するとき}\hspace{2mm} \Rightarrow \hspace{2mm} {\bf 反射により位相が}  \mbox{\boldmath$\pi$} {\bf ずれる}\]
+ \[{\bf 屈折率がより小さな媒質との境界面で反射するとき}\hspace{2mm} \Rightarrow \hspace{2mm} {\bf 反射しても位相はずれない}\]
+ただし，屈折光はいかなる場合でも位相はずれない．
+ \end{matome}
+ 
+ そして，この2つの原因に基づく位相差を全て足し合わせたときに，
+ 
+ \begin{matome}{POINT}  
+\hspace{2mm}$\MARU{1}$\hspace{2mm} やってくる2つの波の位相差が$2m\pi$のとき\hspace{2mm} $\Rightarrow $\hspace{2mm} 強め合い（明）\\
+\hspace{2mm}$\MARU{2}$\hspace{2mm} やってくる2つの波の位相差が$(2m-1)\pi$のとき \hspace{2mm} $\Rightarrow $\hspace{2mm} 弱め合い（暗）
+ \end{matome}
+ となる．
+ 
+ 光波の干渉問題はすべてこの考え方で処理することができる．
+ これから学ぶ種々の光波の干渉問題ではこの二つを順番に考えていき，強め合い・弱め合いを決定していけばよいので，各干渉問題では経路差がどのような式で与えられるかさえ覚えておけば，その都度強め合い・弱め合いが決定できる．
+ 
+ \newpage
+  \subsection{光路長}
+  経路差による位相のずれを議論する際，経路差が発生している位置での波長と経路差を比較するが，もし，途中で波長が変化する場合はその議論が難しくなる．
+  この問題を解決するため，{\bf 光路長}という長さを次のように定義する．
+ \begin{matome}{光路長}  
+\hspace{3mm}$（光路長）=（媒質の屈折率）\times （幾何学的距離）$
+ \end{matome}
+  
+  \begin{wrapfigure}[14]{r}[5mm]{65mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=65mm]
+  {text2_p8_fig1.png}
+\end{wrapfigure}
+  光路長の意味合いは右図のように考えるとわかりやすい．
+  屈折率$n$の媒質中を進む光は波長が$\dfrac{1}{n}$に縮むため，真空中を進む経路Aと媒質中を進む経路Bとで何波長分ずれるのかが考えにくい．
+  しかし，媒質中の長さ$l$[m]を$n$倍に引き伸ばして，経路が$n\cdot l$[m]のようになっていると考えれば，何波長ずれるかは波長を真空中の波長$\lambda$としたまま簡単に考えることが可能となる．
+  このように，媒質中を光が進んでいる場合には，経路差ではなく光路差を用いて考えると，媒質中での波長の変化を考える必要がなくなるので便利である．
+  
+  経路差による位相のずれを光路長から考える際，気をつけるべきは，{\bf 光路差と比較するのは，媒質中の波長ではなく，真空中における波長である}という点である．
+  
+  光路長を用いた経路差による位相のずれをまとめると次のようになる．\\[10mm]
+ \begin{matome}{光路差を用いた，経路差による位相のずれ}
+\hspace{2mm}2つの経路が異なる媒質中をたどってくるとき， {\bf 光路差（光路長の差）を} \mbox{\boldmath$\Delta D$} {\bf [m] ，真空中の波長を} \mbox{\boldmath$\lambda$} {\bf [m]}とすると，$m$を整数として
+ \[   \mbox{\boldmath$\Delta D=m\lambda$} \hspace{16mm} {\bf のとき}\hspace{2mm} \Rightarrow \hspace{2mm} {\bf 経路差による位相のずれはない} \]
+ \[  \mbox{\boldmath$ \Delta D=\left(m-\dfrac{1}{2} \right)\lambda$} \hspace{5mm} {\bf のとき}\hspace{2mm} \Rightarrow \hspace{2mm} {\bf 経路差によって位相が}  \mbox{\boldmath$\pi$}  {\bf ずれる} \]
+ \end{matome}
+  
+\subsection{回折格子}
+\begin{wrapfigure}[9]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=70mm]
+  {text2_p8_fig2.png}
+\end{wrapfigure}
+ヤングの実験ではスクリーン上に明暗の縞模様ができると述べたが，実際にスクリーン上に作られる明暗縞は非常にぼやけたものになる．
+これは，隣り合う明線と暗線との間は連続的に変化していくためで，明るさも連続的に変化していき，明瞭な明線は観測されない．
+
+一方，回折格子はヤングの実験と干渉の条件は非常に似ているものの，明暗がはっきりした島を得ることができる．
+ヤングの実験ではスリットは2つしかなかったが，回折格子はスリットを等間隔に並べたものである．
+図のように，間隔$d$[m]で多数の極めて狭い幅のスリット${\rm A_1,A_2,A_3} \cdots$が並んでおり，これに波長$\lambda$[m]の平行光線を当てる．
+各スリットを抜けた光は回折を起こして広がっていくが，回折格子から角度$\varphi$方向へ回折していく光について考える．
+隣り合う2つのスリットから回折する光が強め合うための条件はヤングの実験と同様であり，
+\[d\sin \varphi =m\lambda \]
+であるが，この条件が満たされる角度$\varphi$方向の場合，${\rm A_1}$からの光と${\rm A_2}$からの光が強め合うのと同時に，${\rm A_2}$と${\rm A_3}$からの光も強め合いの条件を満たしており，同様に${\rm A_3}$と${\rm A_4}$，${\rm A_4}$と${\rm A_5}$，$\cdots$もすべて強め合いの条件を満たすことになる．
+そのため，この条件式を満たす角度$\varphi$方向では強い回折光が観察されることになる．
+
+しかしこの方向からずれた場合は，隣り合うスリットからの光のずれは少ないものの，多数のスリットがあるために隣り合わないスリット間で弱め合いの条件が満たされる場合が出てきてしまう．
+そのため上の式を満たす角度$\varphi$方向のみが非常に明るく，その他の点は暗くなり，細い明線が際立って観測される．
+\begin{matome}{回折格子}  
+\hspace{3mm}$角度\varphi 方向での強め合いの条件\hspace{2mm} \Rightarrow \hspace{2mm} d\sin \varphi =m\lambda$
+\end{matome}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p2.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p3.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p4.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p5.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p71.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p72.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p73.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p74.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

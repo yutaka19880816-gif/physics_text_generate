@@ -1,0 +1,293 @@
+\section{惑星運動（2）・剛体のつり合い（1）}
+
+\subsection{面積速度}
+
+\begin{wrapfigure}[12]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p54_fig1.png}
+\end{wrapfigure}
+
+平面内で運動する物体Pと定点Oに対して，Pの運動によって線分OPが単位時間（1秒）あたりに掃く面積のことを，点Oに関する{\bf 面積速度}という．
+右図において，Pが微小時間$dt$[s]の間にP$'$点まで進んだとすると，微小時間であるからこの間の移動は長さ$v・dt$[m]の直線だとみなせる．
+線分OPの掃く面積は近似的に三角形の面積とみなすことができるので，右図のように$\theta$をとると，その面積は
+\[ dS=\dfrac{1}{2}r・v・dt\sin \theta \hspace{2mm}{\rm [m^2]} \]
+で与えられる．
+よって，単位時間あたりに掃く面積，すなわち面積速度は
+\[\dfrac{dS}{dt}=\dfrac{1}{2}rv\sin \theta \]
+となる．
+
+惑星運動の際に作用する万有引力のように，物体Pに作用する力が常にその物体と定点Oとを結ぶ線分方向に平行な力を{\bf 中心力}と呼ぶ．
+物体に{\bf 中心力しか作用しない場合はこの面積速度が一定値に保たれる}ことが知られている．
+
+ \ 
+ 
+\begin{itembox}[l]{【面積速度保存則】}
+
+\hspace{3mm}物体に作用する力が中心力のみであるとき，その物体の面積速度は一定に保たれる．
+\[\dfrac{1}{2}rv\sin \theta =（一定）\]
+ \end{itembox}
+
+ \ 
+ 
+惑星運動（地球の周りを回る人工衛星の運動なども含んで考える）は円軌道上を運動する場合と楕円軌道上を運動する場合に分けられる．
+それぞれの場合に問題に対する取り組み方は以下のようになる．
+
+\underline{{\bf 円軌道上}} 
+ 
+ 等速円運動となり，向心方向の運動方程式を立てることで軌道の半径$r$[m]と運動する速さ$v$[m/s]の関係を求めることができる．
+ 
+ 周期は$T=\dfrac{2\pi r}{v}$[s]で求まる．
+ 
+\underline{{\bf 楕円軌道上}}
+ 
+ 近日点および遠日点の2点の間で成立する{\bf エネルギー保存則}および{\bf 面積速度保存則}を連立することで近日点および遠日点での速さを求めることができる．
+ 
+ 周期は{\bf ケプラーの第三法則を用いて円軌道上での周期と比較する}ことで求めることができる．
+ 
+%  \newpage 
+% 
+%\begin{breakbox}
+%\ex＜万有引力による楕円運動＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{70mm}
+%  \centering
+%  \vspace{-10mm}
+%  \includegraphics[keepaspectratio,width=60mm]
+%  {text_p55_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}地球の周りを質量$m$[kg]の人工衛星が回っている．
+%この人工衛星は地球中心から遠地点までの距離が$r_1$[m]，近地点までの距離が$r_2$[m]の楕円軌道を描いて運動している．
+%地球の質量を$M$[kg]，万有引力定数を$G {\rm [N・m^2/kg^2]}$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] この人工衛星の速さの最小値を$v_1$[m/s]とする．遠地点および近地点におけるこの人工衛星の速さを$v_1,r_1,r_2$を用いて表せ．
+%\item[(2)] (1)の速さ$v_1$を$G,M,r_1,r_2$を用いて表せ．
+%\end{description}
+%ここで，人工衛星が遠地点に来たとき，短時間燃料を噴射して半径$r_1$[m]の円軌道に移させる．
+%燃料噴射による人工衛星の質量変化は無視できるほど小さいとして以下の問いに答えよ．
+%\begin{description}
+%\item[(3)] 半径$r_1$[m]の円軌道に移った後の人工衛星の速さ$v'$[m/s]を求めよ．
+%\item[(4)] 楕円軌道から円軌道に移るために人工衛星に追加されたエネルギー$\Delta E$[J]はいくらか．$G,M,r_1,r_2$を用いて表せ．
+%\item[(5)] 円軌道における周期$T_0$[s]を求めよ．
+%\item[(6)] $T_0$をもとに，初めの楕円軌道の周期$T$[s]を$G,M,r_1,r_2$を用いて表せ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \newpage 
+ 
+ 
+\subsection{剛体と剛体に作用する力}
+
+ここまでで取り扱ってきた物体の運動は，本質的には物体の運動を「点の運動」として取り扱えるものであった．
+物体を，質量を持つ点とみなしたものを{\bf 質点}というが，現実には物体は大きさを持っている．
+一般に，大きさを持つ物体を取り扱うのは難しいので，ここでは大きさと質量はあるが，力を作用させても全く変形をしない仮想的な物体（{\bf 剛体}）について考えることにし，さらに簡単のため，剛体は平面内でしか運動せず，力も平面方向にしか作用しない場合について考えることにする．
+
+図1のように，剛体のある1点Pに力$\overrightarrow{F}$が作用している場合を考える．
+ここに2つの力$\overrightarrow{F}$，$-\overrightarrow{F}$を図2のように力$\overrightarrow{F}$と同じ作用線（作用点を通り，力と平行な方向に伸びる直線）上の2点P，Qに加えても力の効果は変わらない．
+しかし，図2ではP点に作用する力は打ち消し合って存在しないとみなせるから，図1のような力の作用の仕方は，図3のようにQ点に力$\overrightarrow{F}$が作用している場合と同じである．
+すなわち，{\bf 剛体に作用する力は作用線上で移動させてもその効果は変わらない}．
+
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=120mm]{text_p56_fig1.png}
+\end{center}
+\end{figure}
+
+
+
+また，このように剛体に作用する力の効果は，{\bf 力の大きさ，向き，作用線}によって決まる．
+この3つを剛体に作用する{\bf 力の三要素}という．
+
+\begin{wrapfigure}[6]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text_p56_fig2.png}
+\end{wrapfigure}
+
+これをもとに，剛体に作用する2つの力を合成することができる．
+図のように平行でない2つの力$\overrightarrow{F_1}$，$\overrightarrow{F_2}$が作用しているとき，各力は作用線上で動かしても不変であるから，2つの力の作用線の交点まで移動させて2力を合成すれば合力が求まる．
+合力は
+\[ \overrightarrow{F_1}+\overrightarrow{F_2}\]
+であり，その作用線は図の直線となる．
+
+\begin{wrapfigure}[10]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=70mm]
+  {text_p56_fig3.png}
+\end{wrapfigure}
+
+また，平行な2つの力を合成する場合は交点が取れないが，この場合はそれぞれの力の作用点に作用点を結ぶ直線PQ方向を作用線とする力$\overrightarrow{f}$，$-\overrightarrow{f}$を加えて考える．
+この力を加えても力の作用の効果は全体として不変であるから，$\overrightarrow{F_1}+\overrightarrow{f}$と$\overrightarrow{F_2}-\overrightarrow{f}$の2力を合成すればよい．
+計算により，以下の結果が得られる．$\overrightarrow{F_1}$，$\overrightarrow{F_2}$の大きさを$F_1,F_2$とするとき，
+\[ F_1l_1=F_2l_2\]
+{\bf この原理を満たす点R（線分PQを}\mbox{\boldmath $F_2:F_1$}{\bf に内分する点）に対して，合力}\mbox{\boldmath $\overrightarrow{F_1}+\overrightarrow{F_2}$}{\bf が作用しているとみなせる．}
+
+さらに，平行で逆向きの力についても同様な考察により，{\bf 合力が作用点を結ぶ線分を力の比に外分する点に作用する}と見なせばよいことが知られている．
+
+
+\begin{itembox}[l]{【剛体に作用する力】}
+ \hspace{2mm} {\bf・ 剛体に作用する力の三要素＝力の大きさ，向き，作用線}\\
+ \hspace{2mm} {\bf・ 剛体に作用する力の合成}
+ 
+  \begin{wrapfigure}[12]{r}[5mm]{55mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=45mm]
+  {text_p57_fig1.png}
+\end{wrapfigure}
+ \hspace{3mm} {\bf \MARU{1} \hspace{1mm}平行でない2つの力}\\
+ \hspace{5mm} 作用線を延ばして交点を取り，平行移動して合成\\
+ \hspace{3mm} {\bf \MARU{2} \hspace{1mm}平行で同じ向きの2つの力}\\
+ \hspace{5mm} 大きさ＝2つの力の大きさの和$F_1+F_2$\\
+ \hspace{5mm} 向き＝2つの力と同じ\\
+ \hspace{5mm} 作用線＝2つの力の作用点間を$F_2:F_1$に内分する点を通り，\\ \hspace{15mm}2つの力に平行な直線\\
+ \hspace{3mm} {\bf \MARU{3} \hspace{1mm}平行で逆向きの2つの力}\mbox{\boldmath $（F_1>F_2のとき）$}\\
+ \hspace{5mm} 大きさ＝2つの力の大きさの和$F_1-F_2$\\
+ \hspace{5mm} 向き＝大きい方の力と同じ\\
+ \hspace{5mm} 作用線＝2つの力の作用点間を$F_2:F_1$に外分する点を通り，\\ \hspace{15mm}2つの力に平行な直線\\
+ \end{itembox}
+ 
+  \ 
+
+%\begin{breakbox}
+%\ex＜剛体に作用する力の合成＞\\
+%
+%質量の無視できる軽くてかたい棒に図のように平行力が作用している．
+%このとき，これらの平行力の合力の大きさ，向き，作用線と棒の交点の位置をそれぞれ求めよ．
+%
+%\begin{wrapfigure}[7]{r}[5mm]{170mm}
+%  \centering
+%  \vspace{-30mm}
+%  \includegraphics[keepaspectratio,width=120mm]
+%  {text_p57_fig2.png}
+%\end{wrapfigure}
+%
+%\vspace{30mm}　
+%
+%\end{breakbox}
+
+ \newpage 
+ 
+ 
+\subsection{力のモーメントと剛体のつり合い}
+
+作用している力がどれだけ回転に寄与するかを示す物理量をモーメント，またはトルクという．
+
+\begin{wrapfigure}[10]{r}[5mm]{40mm}
+  \centering
+ % \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=30mm]
+  {text_p58_fig1.png}
+\end{wrapfigure}
+
+図のO点から$\overrightarrow{r}$離れた位置に力$\overrightarrow{F}$が作用しているとき，この力によるモーメントの大きさは，$\overrightarrow{F}$の大きさを$F$，$\overrightarrow{r}$の大きさを$r$，$\overrightarrow{F}$と$\overrightarrow{r}$のなす角を$\theta$とすると，次のように表せることが知られている．
+\[ N=Fr\sin \theta \]
+$\sin \theta$を$F$の方にかけて考えると，作用点とを結ぶ直線に対して垂直方向の成分$F_\perp =F\sin \theta$で書き替えることができ，
+\[ N=F_\perp r\]
+となる．
+同様に$\sin \theta$を$r$の方にかけて考えた場合は，力の作用線までの距離$r_\perp=r\sin \theta$（この長さOから力の作用線までの距離に等しい）で書き替えて
+\[ N=Fr_\perp \]
+と表すこともできる．
+
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=90mm]{text_p58_fig2.png}
+\end{center}
+\end{figure}
+
+モーメントの大きさは$F_\perp r$または$Fr_\perp$で求められるが，これに加えてどちらの回りの回転（右回りor左回り）に寄与しているかを考える必要がある．
+物体に作用している各力ごとにモーメントを求め，剛体が回転しないならばこれらの合計が0となる．
+したがって，回転しない条件は
+\[ （右回りのモーメントの合計）＝（左回りのモーメントの合計）\]
+となる．
+
+回転していない場合，どこを中心に考えても回転をしないので，どこ周りでモーメントのつり合いを立てるかは自由である．
+したがって，式が煩雑にならないようにするためには$F_\perp$または$r_\perp$が0となる力が多くなる場所を選ぶとよい．
+
+なお，力のモーメントのつり合いが成立するのは，剛体が静止している場合に加えて，回転軸回りの角速度が一定の場合，剛体の質量が無視できる場合がある．
+
+ \ 
+ 
+\begin{itembox}[l]{【力のモーメント】}
+\[N=Fr\sin \theta =F_\perp r=Fr_\perp \]
+ \end{itembox}
+
+ \ 
+
+{\bf 剛体が静止している場合，力のモーメントがつり合うことに加えて，力のつり合いが成立する．}
+
+%  \newpage 
+% 
+%\begin{breakbox}
+%\ex＜力のモーメントのつり合い＞\\
+%\begin{wrapfigure}[10]{r}[5mm]{50mm}
+%  \centering
+%  \vspace{-10mm}
+%  \includegraphics[keepaspectratio,width=40mm]
+%  {text_p59_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}図のように，質量の無視できる軽くてかたい長さ$3l$[m]の棒の一端を垂直な壁に固定して固定点Oまわりに回転できるようにし，これに同一の質量$m$[kg]の小物体A,Bを棒に沿って壁から距離$l,2l$[m]だけ離した位置にひもでつり下げた．
+%そして棒が鉛直線と$\theta$の角度をなすように，棒の右端に鉛直上方の力を加えて静止させた．
+%重力加速度の大きさを$g {\rm [m/s^2]}$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 棒がA,Bをつり下げているひもから受けるO点まわりの力のモーメントをそれぞれ求めよ．
+%\item[(2)] ひもを引っぱる力の大きさ$F$[N]を求めよ．
+%\item[(3)] 回転軸を通して壁面から棒に作用する抗力の鉛直成分$f$[N]を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+  \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p31.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p32.png}
+\vspace{10cm}
+\end{center}
+\end{figure}
+
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p110.png}
+\vspace{20cm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p111.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p112.png}
+\end{center}
+\end{figure}
+ 
+ \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p113_1.png}
+\end{center}
+\end{figure}

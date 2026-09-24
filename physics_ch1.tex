@@ -1,0 +1,717 @@
+\begin{center}
+{\Huge \bf 第1章　力学}
+\end{center}
+
+\section{速度と加速度}
+
+\subsection{平均の速度と瞬間の速度}
+
+\begin{wrapfigure}[5]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p4_fig1.png}
+\end{wrapfigure}
+$x軸上を進む物体が，時刻t_1に位置x_1を，また時刻t_2に位置x_2を通過したときについて考える．このとき．この物体は，時間\Delta t=t_2-t_1の間に距離\Delta x=x_2-x_1だけ動いたことになるので，物体の速度は平均して$
+\[ \bar{v}=\dfrac{\Delta x}{\Delta t}=\dfrac{x_2-x_1}{t_2-t_1} \]
+$で与えられる．しかし，一般的にはこの時間内に物体の速度は瞬間ごとに時々刻々と変化しているので，上で求めた\bar{v}はこの時間内における{\bf 平均の速度}となる．$
+
+$ここで，もし速度を測定する時間間隔\Delta tを非常に短くしていくのであれば，その時間内における平均の速度は，その測定の瞬間における速度に限りなく近づくことになる．そこで，測定する時間間隔を限りなく短くしたときの平均の速度のことを物体の{\bf 速度}と呼ぶ．$
+\[  v=\lim_{\Delta t \to 0} \dfrac{\Delta x}{\Delta t} =\lim_{t_2 \to t_1} \dfrac{x_2-x_1}{t_2-t_1}\]
+
+一般に，速度は大きさに移動の向きを併せたものである．これに対し，${\bf 速さとは速度の大きさのこと}であり|v|を意味する．特に，直線上で運動する物体であれば，符号の正負を用いて向きを表すことができる．上の式はx_2<x_1の場合は負の値をとるので，これが瞬間の速度の定義式となっている．$\\
+
+
+
+
+\begin{matome}{速度・速さ}
+ $\hspace{10mm}速度\hspace{5mm} v=\displaystyle \lim_{\Delta t \to 0} \dfrac{\Delta x}{\Delta t} =\dfrac{dx}{dt}$\\[1mm]
+ $\hspace{10mm}速さ\hspace{5mm} |v|$
+\end{matome}
+
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜平均の速度と瞬間の速度＞\\
+%\begin{wrapfigure}[5]{r}[5mm]{60mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=40mm]
+%  {text_p4_fig2.png}
+%\end{wrapfigure}
+%\hspace{5mm}$x軸上を運動する物体の，時刻t$[s] における座標$x$[m]が，
+%\[ x=2t^2+3t\]
+%で与えられているとき，以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 時刻$t=3$[s]から$5$[s]の間のこの物体の平均の速度を求めよ．
+%\item[(2)] 時刻$t=3$[s]における瞬間の速度を求めよ．
+%\item[(3)] 任意の時刻$t$[s]における物体の速度を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+ 
+（参考）時刻と時間\hrulefill 
+
+日常では時刻と時間は特に区別されずに用いられる用語だが，時間とは時刻と時刻の間隔のことを言う．例えば，午前9時20分，午後8時半などは時刻であり，1時間半，5時間20分などは時間である．
+
+\hrulefill
+
+\newpage
+\subsection{\mbox{\boldmath $v-t$}グラフと加速度}
+
+\begin{wrapfigure}[3]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p5_fig1.png}
+\end{wrapfigure}
+物体の速度は一般的には時々刻々と変化する．これを示すために横軸に時刻$t，縦軸に速度vをとって速度の変化を表したグラフのことを\mbox{\boldmath $v-tグラフ$}という．$\\
+\vspace{20mm}
+
+\begin{wrapfigure}[8]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p5_fig2.png}
+\end{wrapfigure}
+
+$運動の種類によってさまざまなv-tグラフが存在するが，ここでは最も簡単な，v-tグラフが右上がりの直線になるものを考える．この直線の傾きをa，v切片をv_0とすると，時刻t$[s]におけるこの物体の速度は
+\[ v=v_0+at \hspace{2mm} [{\rm m/s}] \]
+$で与えられる．aは{\bf 1[s]あたりの速度の変化}を表し,これを{\bf 加速度}と呼ぶ．加速度の単位は{\rm[m/s]/[s]}={\bf [m/s^2]}となる．$
+
+加速度は1\hspace{1mm}[s]あたりの速度の変化率を示すものであるから，一般に$v-t$グラフが曲線の場合は，{\bf その点における接線の傾き}に相当する．ゆえに，加速度は一般には次のようにして計算される．
+\[ a=\lim_{\Delta t \to 0} \dfrac{\Delta v}{\Delta t} = \dfrac{dv}{dt} \hspace{2mm} {\rm[m/s^2]} \]
+
+また，速度の定義$v=\dfrac{dx}{dt}$を代入すれば，
+\[ a=\dfrac{dv}{dt}=\dfrac{d^2x}{dt^2} \hspace{2mm} {\rm[m/s^2]} \]
+と表せることがわかる．
+
+特に，直線上における運動で加速度がどの時刻でも一定の運動を，${\bf 等加速度直線運動}$と呼ぶ．
+
+物体がどれだけ動くかは$v-t$グラフをもとに考えることができる．微小な時間$\Delta t$\hspace{1mm}[s]の間については速度がほぼ一定とみなせるため，物体の変位は$v・\Delta t$\hspace{1mm}[m]であるとでき，これは$v-t$グラフ上の短冊の面積に等しい．よって，それらを総和することにより，\mbox{\boldmath $ある時間内における物体の変位はv-tグラフとt軸の囲む面積に等しい$}．\\
+
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=120mm]{text_p5_fig3.png}
+\end{center}
+\end{figure}
+
+\begin{matome}{速度・加速度}
+ $\hspace{10mm}加速度：速度の変化率\hspace{5mm} a=\displaystyle \lim_{\Delta t \to 0} \dfrac{\Delta v}{\Delta t} =\dfrac{dv}{dt}=\dfrac{d^2x}{dt^2} \hspace{2mm}{\rm [m/s^2]}$\\[1mm]
+ $\hspace{10mm}v-tグラフ：横軸に時刻t\hspace{1mm}[{\rm s}] ，縦軸に速度v\hspace{1mm}[{\rm m/s}] をとって速度の変化を表したグラフ$\\
+ $\hspace{30mm}${\bf 接線の傾き=加速度，面積=変位}を表す
+\end{matome}
+
+
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜等加速度直線運動＞\\
+%
+%\hspace{2mm}時刻$t=0$[s]において，座標$x=x_0$[m]を通過し，初速度$v_0$[m/s]，加速度$a[{\rm m/s^2}]$で$x$軸上で等加速度直線運動を行う物体について以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] この物体の$v-t$グラフを作図せよ．
+%\item[(2)] この物体の速度$v$[m/s]を時刻$t$[s]の関数として表せ．
+%\item[(3)] 時刻$t=0$[s]に座標$x=x_0$にいたことに注意して，時刻$t$[s]における物体の位置$x$[m]を時刻$t$[s]の関数として表せ．
+%\item[(4)] (2),(3)より，$t$を消去して，$v,v_0,a,x,x_0$の間に成り立つ関係式を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+ 
+等加速度直線運動については以下の関係式が成り立つ．
+これらの式については暗記しておき，物体の運動が等加速度直線運動であることを述べた後，用いて良い．\\
+
+\begin{matome}{等加速度直線運動}
+時刻$t=0$\hspace{1mm}[s]に$x=x_0$\hspace{1mm}[m]，$v=v_0$\hspace{1mm}[m/s]，加速度$a$ \hspace{1mm}${\rm [m/s^2]}$で等加速度直線運動を行う物体は，\\
+ $\hspace{10mm}$ \mbox{\boldmath $v=v_0+at$} ${\rm [m/s^2]}$\\[1mm]
+ $\hspace{10mm}$ \mbox{\boldmath $x=x_0+v_0t+\dfrac{1}{2}at^2$}  {\rm [m]}$\\[1mm] 
+ $\hspace{10mm}$ \mbox{\boldmath $2a・\Delta x=v^2-v_0^2$ }\hspace{3mm}（ただし\Delta x=x-x_0）$
+\end{matome}
+
+\newpage
+\subsection{ベクトルによる速度・加速度の表現と相対速度}
+
+\begin{wrapfigure}[8]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text_p7_fig1.png}
+\end{wrapfigure}
+速さに向きを加えたものを速度と呼ぶが，平面上を運動する物体の速度を表すためには二次元のベクトルを用いれば良い．
+
+平面上を運動する物体の速度は，ベクトルを各軸方向に成分分解することにより，
+\[ \overrightarrow{v} =(v_x,v_y) \]
+で表される．
+これは速度そのものであるが，特にこのようにベクトルの形で表現したものをその物体の{\bf 速度ベクトル}と呼ぶ．
+また，$x（またはy）$軸方向の成分のことを\mbox{\boldmath $x（またはy）軸方向の速度成分$ }という．
+
+このとき，物体の速さ$v$は速度ベクトルの大きさに対応するから，
+\[ v=|\overrightarrow{v}|=\sqrt{v_x^2+v_y^2} \]
+と表される．
+
+また，加速度に関しても$x,y$軸方向の速度成分に対する加速度を考えることができるので，
+\[ \overrightarrow{a} =(a_x,a_y) \]
+と記述され，これを{\bf 加速度ベクトル}という．
+また，この加速度ベクトルの大きさのことを，加速度の大きさという．
+
+速度の足し算，引き算といった操作はベクトル同士の演算であるから，数学と全く同様に扱えば良い．
+また，速度・加速度ベクトルを用いれば平面上の物体の運動を記述できるが，実際に問題を解くときにベクトルで計算するのは一部の例外を除き，面倒である．
+そこで，二次元または三次元での運動は各方向の成分を取り出し，各方向ごとの計算を行うと良い．
+具体的には，速度や加速度を$x$軸方向，$y$軸方向に分解して成分計算を行い，$x$軸方向の運動と，$y$軸方向の運動とを分けて扱うのが普通である．
+
+ベクトルを使って考えると便利な場合は，相対運動に関する議論や，後に学ぶ運動量保存則などの場合である．\\
+
+\begin{matome}{速度ベクトル・加速度ベクトル}
+ $\hspace{10mm}速度ベクトル\hspace{8mm} \overrightarrow{v}=(v_x,v_y) \hspace{1mm} {\rm [m/s]}$ \hspace{15mm} （ベクトル量）\\[1mm]
+ $\hspace{10mm}速さ\hspace{21mm} v=|\overrightarrow{v}|=\sqrt{v_x^2+v_y^2 }\hspace{1mm}{\rm [m/s]}$ \hspace{3mm} （スカラー量）\\[1mm]
+  $\hspace{10mm}加速度ベクトル\hspace{5mm} \overrightarrow{a}=(a_x,a_y) \hspace{1mm} {\rm [m/s^2]}$ \hspace{14mm} （ベクトル量）\\[1mm]
+ $\hspace{10mm}加速度\hspace{18mm} a=|\overrightarrow{a}|=\sqrt{a_x^2+a_y^2 }\hspace{1mm}{\rm [m/s^2]}$ \hspace{2mm} （スカラー量）
+\end{matome}
+
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜相対運動＞\\
+%\begin{wrapfigure}[5]{r}[5mm]{60mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=50mm]
+%  {text_p8_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}西から東へ一定の速さ15[m/s]で走る自動車$A$がある．
+%\begin{description}
+%\item[(1)] 南から北へ20[m/s]の速さで走る列車$B$から見た自動車$A$の見かけの速度を求めよ．
+%\item[(2)] 自動車$C$から見た自動車$A$は西から東へ20[m/s]の速さで走っているように見えた．自動車$C$の速度を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+ 
+相対運動については以下の関係式が成り立つ．\\
+
+\begin{matome}{相対速度}
+$A$の持つ速度が $\overrightarrow{v_A\mathstrut}$，$B$の持つ速度が $\overrightarrow{v_B\mathstrut}$のとき，$Aから見たBの相対速度 \overrightarrow{v_{AB}\mathstrut}は$\\
+ $\hspace{10mm}\overrightarrow{v_{AB}}= \overrightarrow{（相手の速度）}-\overrightarrow{（自分の速度）}$\\[1mm]
+ $\hspace{17mm}=\overrightarrow{v_B}-\overrightarrow{v_A}$
+ \end{matome}
+
+
+また，位置，加速度に関しても相対速度と同様に相対位置，相対加速度を定義することができる．
+物体$A,B$の位置をそれぞれ$\overrightarrow{r_A\mathstrut}$\hspace{1mm}[m]，$\overrightarrow{r_B\mathstrut}$\hspace{1mm}[m]，加速度をそれぞれ$\overrightarrow{a_A\mathstrut}$\hspace{1mm}${\rm [m/s^2]}$，$\overrightarrow{a_B\mathstrut}$\hspace{1mm}${\rm [m/s^2]}$とすれば，物体$A$から見た物体$B$の相対位置$\overrightarrow{r_{AB}\mathstrut}$\hspace{1mm}[m]および相対加速度$\overrightarrow{a_{AB}\mathstrut}$ \hspace{1mm}${\rm [m/s^2]}$は
+\[ \overrightarrow{r_{AB}\mathstrut}=\overrightarrow{r_B\mathstrut}-\overrightarrow{r_A\mathstrut}\]
+\[ \overrightarrow{a_{AB}\mathstrut}=\overrightarrow{a_B\mathstrut}-\overrightarrow{a_A\mathstrut}\]
+で与えられることがわかる．いずれも\\
+\hspace{10mm}$相対\left\{
+\begin{array}{l}
+位置\\
+速度\\
+加速度
+\end{array}
+\right\}
+=観測する対象の
+\left\{
+\begin{array}{l}
+位置\\
+速度\\
+加速度
+\end{array}
+\right\}
+-観測する主体の
+\left\{
+\begin{array}{l}
+位置\\
+速度\\
+加速度
+\end{array}
+\right\}$\\
+となっている．
+
+（参考）ベクトル量・スカラー量\hrulefill 
+
+速さのように大きさしか持たない量のことを一般にスカラー量といい，速度のように大きさと向きの両方を持つ量のことを一般にベクトル量と呼んで区別する．物理の場合，ベクトル量に関する式の多くはベクトルをそのまま用いて記述されるため，成分を取り出して考える際には符号を用いて向きを併せて考える必要があるので注意を要する．
+力学範囲では，速度，加速度，力，運動量，力積などがベクトル量，また，質量，長さ，時間，仕事，エネルギーなどがスカラー量である．
+
+\hrulefill
+
+%\newpage
+\subsection{等加速度直線運動のまとめ}
+ 
+%\begin{breakbox}
+%\ex＜等加速度直線運動＞\\ \\
+%\hspace{5mm}$x$軸上を運動する物体が，原点$O$を正の向きに12.0[m/s]の速さで通過してから等加速度運動を行い，$O$点を通過してから5.0[s]後に点$P$を負の向きに8.0[m/s]の速さで通過した．このとき以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 物体の加速度を求めよ．
+%\item[(2)] $OP$間の距離を求めよ．
+%\item[(3)] 物体が$O$点から正の向きへ最も遠ざかった点の位置を求めよ．
+%\item[(4)] 物体が$O$点を通過したのち，再び$O$点に戻ってくる時刻を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+ 
+\begin{shadebox}
+\ \\
+【POINT】
+
+\hspace{10mm}$v=v_0+at \hspace{10mm} x=x_0+v_0t+\dfrac{1}{2}at^2 \hspace{10mm} 2a・\Delta x=v^2-v_0^2\hspace{2mm}（ただし\Delta x=x-x_0）$
+\ \\[1mm]
+\end{shadebox}
+
+ \ 
+ 
+この3つの関係式は，$a,v_0,v,x_0,x,t$の変数の間に成立する関係式であるが，まず{\bf どの量が与えられているのか，どの量を求めるのか}を把握したのち，どの式を用いるのかを考えよ．また，$v-t$グラフによる解析も非常に有効である場合が多い．
+
+また，上の3つの関係式を利用する際には{\bf 速度・加速度を，座標軸正方向をプラスとして扱う必要がある．}適宜図を描き，負の向きに向いているものについては向きを逆転して取り直すと良い．
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%  練習問題（旧 prob_p2.png / prob_p3.png / prob_p4.png）  %%%%%%%%%%%%%%%%%%%%
+\Rank{A問題}
+
+\Mon{基本事項の確認}
+
+以下の設問に答えよ．
+\begin{komon}
+\ko{1} $200\U{m}$進むのに$5\U{s}$かかったときの平均の速さは何$\U{m/s}$か．
+\ko{2} 直線道路を速度$5.0\U{m/s}$で走っていた自動車がある時刻に加速し始め，$8.0\U{s}$後に速度$13\U{m/s}$になった．この間の平均の加速度は何$\U{m/s^2}$か．
+\ko{3} 直線上を初速度$3.0\U{m/s}$，加速度$0.20\U{m/s^2}$で運動している物体がある．加速し始めてから$5.0\U{s}$後のこの物体の速さは何$\U{m/s}$か．また，この間の移動距離は何$\U{m}$か．
+\ko{4} 直線上を速度$20\U{m/s}$で走っていた自動車がブレーキをかけたところ，$10\U{m}$だけ等加速度直線運動をして止まった．ブレーキをかけてから止まるまでの加速度は何$\U{m/s^2}$か．
+\ko{5} 東向きに速度$5\U{m/s}$で進む船の甲板上で，北向きに速度$5\U{m/s}$で走る人は，海面に対してどちらの向きに何$\U{m/s}$の速さで進んでいるか．
+\ko{6} ロケットが仰角$60^\circ$の向きに速さ$200\U{m/s}$で飛んでいる．ロケットの速度の水平成分と鉛直成分は何$\U{m/s}$か．
+\ko{7} 速度$10\U{m/s}$で走っている列車から，線路に平行な道路を同じ向きに速度$40\U{m/s}$で走っている自動車を見ると，どちら向きに何$\U{m/s}$で走っているように見えるか．
+\end{komon}
+
+\Rank{B問題}
+
+\Mon{平均の速度と瞬間の速度}
+
+\hspace{1zw}$x$軸上を運動する物体の時刻$t\U{s}$における座標$x\U{m}$が$x(t)=5t^2-16t+10$で与えられている．
+\begin{komon}
+\ko{1} 時刻$2\U{s}$から$3\U{s}$の間のこの物体の平均の速度を求めよ．
+\ko{2} 時刻$2\U{s}$における瞬間の速度を求めよ．
+\ko{3} 任意の時刻$t\U{s}$におけるこの物体の速度を求めよ．
+\end{komon}
+\Mon{$v-t$グラフ}\Sitei
+
+\begin{zuright}{48mm}
+\hspace{1zw}右図は直線上を運動する物体の時刻$t\U{s}$と速度$v\U{m/s}$の関係を示したグラフである．
+\begin{komon}
+\ko{1} 時刻$0\U{s}$から$2.0\U{s}$の間の加速度を求めよ．
+\ko{2} 時刻$6.0\U{s}$から$10.0\U{s}$の間の加速度を求めよ．
+\ko{3} 動き始めてから静止するまでに動いた距離を求めよ．
+\ko{4} 加速度と時刻の関係を表すグラフを描け．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=48mm]{fig/ch1_p3_vt.png}
+\end{zuright}
+
+\Mon{等加速度直線運動}
+
+\hspace{1zw}直線道路上を速さ$10\U{m/s}$で走っていた自動車が一定の割合で加速し，$5.0\U{s}$後には速さ$16\U{m/s}$となった．
+\begin{komon}
+\ko{1} この間の加速度を求めよ．
+\ko{2} この間の移動距離を求めよ．
+\end{komon}
+\hspace{1zw}次に，同じ直線道路上を速さ$16\U{m/s}$で走っていたこの自動車が一定の割合で減速し，$80\U{m}$だけ走って停止した．
+\begin{komon}
+\ko{3} この間の加速度を求めよ．
+\ko{4} 減速し始めてから停止するまでに要した時間を求めよ．
+\end{komon}
+
+\Mon{相対速度}\Sitei
+
+\begin{zuright}{43mm}
+\hspace{1zw}右図のように船$\mathrm{A}$は東向きに速さ$5.0\U{m/s}$，船$\mathrm{B}$は北向きに速さ$5.0\U{m/s}$，船$\mathrm{C}$は西向きに速さ$5.0\U{m/s}$で，それぞれ海面上を進んでいる．
+\begin{komon}
+\ko{1} $\mathrm{C}$から見た$\mathrm{A}$の相対速度の大きさと向きを求めよ．
+\ko{2} $\mathrm{B}$から見た$\mathrm{A}$の相対速度の大きさと向きを求めよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=43mm]{fig/ch1_p3_boat.png}
+\end{zuright}
+
+\Mon{速度の合成}
+
+\begin{zuright}{41mm}
+\hspace{1zw}静水上を速さ$10\U{m/s}$で進むことのできる船が，右図のように流れの速さ$6.0\U{m/s}$，川幅$100\U{m}$の川を横断する．
+\begin{komon}
+\ko{1} 船が岸に対して直角に進むとき，岸に対する船の速さを求めよ．
+\ko{2} (1)のとき，船が川を横断するのに要する時間を求めよ．
+\ko{3} 船が最も短い時間で川を横断するとき，船が対岸に着くまでに下流に流される距離を求めよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=41mm]{fig/ch1_p3_river.png}
+\end{zuright}
+
+\Rank{C問題}
+
+\Mon{等加速度直線運動}
+
+\hspace{1zw}一直線上を右向きに速さ$4.0\U{m/s}$で進んでいた物体がある時刻に等加速度運動をし始めたところ，$8.0\U{s}$後には左向きに速さ$12.0\U{m/s}$となった．等加速度運動をし始めた時刻を$0\U{s}$として，以下の問いに答えよ．
+\begin{komon}
+\ko{1} 加速度の大きさと向きを求めよ．
+\ko{2} 右向きを正として，時刻$t\U{s}$における物体の速度$v(t)\U{m/s}$を求めよ．
+\ko{3} 物体が出発点から右に最も離れる時刻を求めよ．
+\ko{4} 物体が出発点を左向きに通過するときの速さを求めよ．
+\ko{5} 時刻$8.0\U{s}$における出発点から物体の位置を求めよ．
+\end{komon}
+\Mon{$v-t$グラフ}
+
+\begin{zuright}{63mm}
+\hspace{1zw}右図は，$x$軸上の原点を時刻$0\U{s}$に出発した物体の，速度$v\U{m/s}$と時刻$t\U{s}$の関係を示している．
+\begin{komon}
+\ko{1} 時刻$t\U{s}$における物体の加速度を求めよ．
+\ko{2} 時刻$9\U{s}$における物体の$x$座標を求めよ．
+\ko{3} 時刻$13\U{s}$における物体の$x$座標を求めよ．
+\ko{4} 時刻$0\U{s}$から$13\U{s}$の間に物体が動いた道のりを求めよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=63mm]{fig/ch1_p4_vt.png}
+\end{zuright}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%  解答（旧 prob_p64〜p67_1.png）  %%%%%%%%%%%%%%%%%%%%
+\KaiTitle{第1回　速度と加速度}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+
+
+\Rank{A問題}
+\MonN{1}{基本事項の確認}
+\begin{sisin}
+等加速度直線運動の関係式，相対速度の考え方などを再確認せよ．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} $\bar{v}=\dfrac{200}{5}=40\U{m/s}$\Ans
+\ko{2} $\bar{a}=\dfrac{13-5}{8}=1.0\U{m/s^2}$\Ans
+\ko{3} $v=3.0+0.20\cdot 5.0=4.0\U{m/s}$\Ans\par
+       $x=3.0\cdot 5.0+\dfrac{1}{2}\cdot 0.20\cdot 5.0^2=17.5\U{m}$\Ans
+\ko{4} $2a\cdot 10=0^2-20^2\quad(\Leftrightarrow\ a=-20\U{m/s^2})$\par
+       よって初速度と逆向きに大きさ$20\U{m/s^2}$\Ans
+\ko{5} 海面に対して北東の向きに速さ
+       \[\sqrt{5^2+5^2}=5\sqrt{2}\fallingdotseq 7.1\U{m/s}\Ans\]
+\ko{6} 水平成分：$200\cos 60^\circ=100\U{m/s}$\Ans\par
+       鉛直成分：$200\sin 60^\circ=100\sqrt{3}\fallingdotseq 173\U{m/s}$\Ans
+\ko{7} 相対速度＝相手－自分$=40-10=30\U{m/s}$\par
+       よって，進行の向きに大きさ$30\U{m/s}$\Ans
+\end{komon}
+
+\Rank{B問題}
+\MonN{2}{平均の速度と瞬間の速度}
+\begin{sisin}
+平均の速度と瞬間の速度の定義の違いに注意．単に「速度」という場合は「瞬間の速度」のことを指す．
+
+時刻$t\U{s}$における瞬間の速さは，時刻$t\U{s}$における座標を表した関数$x(t)\U{m}$の時間微分である．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} 平均の速度の定義より，
+       \[\bar{v}=\frac{x(3)-x(2)}{3-2}=9\U{m/s}\Ans\]
+\ko{2} 瞬間の速度の定義より，
+       \begin{eqnarray*}
+       v(2)&=&\lim_{\Delta t\to 0}\frac{x(2+\Delta t)-x(2)}{\Delta t}\\
+           &=&\lim_{\Delta t\to 0}(5\Delta t+4)\\
+           &=&4\U{m/s}\Ans
+       \end{eqnarray*}
+\ko{3} 瞬間の速度の定義より，
+       \begin{eqnarray*}
+       v(t)&=&\lim_{\Delta t\to 0}\frac{x(t+\Delta t)-x(t)}{\Delta t}\\
+           &=&\lim_{\Delta t\to 0}(5\Delta t+10t-16)\\
+           &=&10t-16\U{m/s}\Ans
+       \end{eqnarray*}
+       % 誤植訂正（2026-08-29）：元の問題集はこの中間式が (5\Delta t+10t-6) だったが，
+       %   x(t)=5t^2-16t+10 より正しくは (5\Delta t+10t-16)．次行の答 10t-16 とも整合する．
+\end{komon}
+\begin{bekkai}
+\[v(t)=\frac{d}{dt}x(t)=10t-16\U{m/s}\Ans\]\par
+(2)は(3)を求めてから$t=2$を代入すると簡単に求められる．
+\end{bekkai}
+
+\MonN{3}{$v-t$グラフ}
+\begin{sisin}
+$v-t$グラフの表す各量の読み取り方を覚えておこう．グラフの傾きは加速度を表し，グラフと$t$軸が囲む面積は物体の移動距離$\Delta x$を表す．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} $v-t$グラフの傾きは加速度を表すので，グラフから，
+       \[a=3\U{m/s^2}\Ans\Eq{1}\]
+\ko{2} (1)と同様にして，グラフから，
+       \[a=-1.5\U{m/s^2}\Ans\Eq{2}\]
+\ko{3} 物体が動き始めてから止まるまでの時刻$0\sim 10\U{s}$の間に，$v-t$グラフと$t$軸との囲む面積を求めれば物体の移動距離が求められる．よってグラフから，
+       \[\Delta x=\frac{1}{2}\cdot(4+10)\cdot 6=42\U{m}\Ans\]
+\ko{4} 時刻$2\sim 6\U{s}$の間の加速度はグラフから，
+       \[a=0\U{m/s^2}\hspace{1zw}\cdots\cdots\MARU{3}\]
+       \MARU{1}\MARU{2}\MARU{3}より，時刻$t\U{s}$における加速度$a(t)$は，
+       \[a(t)=\left\{\begin{array}{ll}
+         3\U{m/s^2} & (0<t<2)\\
+         0\U{m/s^2} & (2<t<6)\\
+         -1.5\U{m/s^2} & (6<t<10)
+       \end{array}\right.\]\par
+       \hspace*{\fill}\Ans\par
+       よって，$a-t$グラフは次図の通り．
+       \begin{center}
+       \includegraphics[keepaspectratio,width=45mm]{fig/ch1_p64_at.png}
+       \end{center}
+       （$t=2,\,6\U{s}$での縦の点線は実線でも可）\Ans
+\end{komon}
+
+\MonN{4}{等加速度直線運動}
+\begin{sisin}
+どの量が与えられていて，どの量を求めたいのかを把握してから等加速度直線運動の三つの関係式$v=v_0+at$, $x=x_0+v_0t+\dfrac{1}{2}at^2$, $2a\Delta x=v^2-v_0^2$に値を代入する．速度・加速度を考える際には必ず軸方向を揃えること．本問のように一直線上の運動では，その直線方向に軸をとり，自分で適当に$x$軸正の向きを設定する．
+
+一定の割合の加速・減速とは，等加速度直線運動を意味する．
+\end{sisin}
+\KaiHead\par
+\hspace{1zw}自動車の運動の向きに$x$軸をとり，その進行の向きを正とする．
+\begin{komon}
+\ko{1} 自動車の運動は等加速度直線運動であるから，求める加速度を$a\U{m/s^2}$として，
+       \[16=10+a\cdot 5.0\]
+       が成り立つ．よって，
+       \[a=1.2\U{m/s^2}\Ans\]
+\ko{2} 初速$10\U{m/s}$, $5.0\U{s}$後の速さが$16\U{m/s}$なので，求める移動距離を$\Delta x\U{m}$とすると，(1)より，
+       \[2\cdot 1.2\cdot\Delta x=16^2-10^2\]
+       が成り立つ．よって，
+       \[\Delta x=65\U{m}\Ans\]
+\end{komon}
+\begin{bekkai}
+\[\Delta x=10\cdot 5+\frac{1}{2}\cdot 1.2\cdot 5.0^2=65\U{m}\Ans\]
+\end{bekkai}
+\begin{komon}
+\ko{3} この間の自動車の運動も等加速度直線運動であるから，求める加速度を$a'\U{m/s^2}$として，
+       \[2\cdot a'\cdot 80=0^2-16^2\]
+       が成り立つ．よって，
+       \[a'=-1.6\]
+       したがってこの間の加速度は，進行の向きと逆向きに大きさ$1.6\U{m/s^2}$\Ans
+\ko{4} 求める時間を$t$とすると，(3)より，
+       \[0=16+(-1.6)\cdot t\]
+       が成り立つ．よって，
+       \[t=10\U{s}\Ans\]
+\end{komon}
+\begin{chuu}
+本問で先に$2a\Delta x=v^2-v_0^2$の関係式を利用したのは，静止するまでに要する時間$t$が不明なためである．無論，
+\[0=16+a\cdot t\]
+\[x-x_0=80=16\cdot t+\frac{1}{2}a\cdot t^2\]
+の2つの式を連立させても解くことができる．
+\end{chuu}
+
+\MonN{5}{相対速度}
+\begin{sisin}
+$\mathrm{A}$から見た$\mathrm{B}$の相対速度は，$\overrightarrow{v_{\mathrm{AB}}}=\overrightarrow{v_{\mathrm{B}}}-\overrightarrow{v_{\mathrm{A}}}$と表せるので，それぞれの速度をベクトルで表して考えれば簡単である．そのためには座標軸を設定する必要があるが，本問の場合は東向きに$x$軸，北向きに$y$軸をとって考えればよいだろう．
+\end{sisin}
+\KaiHead\par
+\hspace{1zw}東向きに$x$軸，北向きに$y$軸をとる．$\mathrm{A}$，$\mathrm{B}$，$\mathrm{C}$の速度をベクトルで表すと，
+\[\overrightarrow{v_{\mathrm{A}}}=\begin{pmatrix}5.0\\0\end{pmatrix}\U{m/s}\]
+\[\overrightarrow{v_{\mathrm{B}}}=\begin{pmatrix}0\\5.0\end{pmatrix}\U{m/s}\]
+\[\overrightarrow{v_{\mathrm{C}}}=\begin{pmatrix}-5.0\\0\end{pmatrix}\U{m/s}\]
+\begin{komon}
+\ko{1} $\mathrm{C}$から見た$\mathrm{A}$の相対速度は，
+       \[\overrightarrow{v_{\mathrm{CA}}}=\overrightarrow{v_{\mathrm{A}}}-\overrightarrow{v_{\mathrm{C}}}=\begin{pmatrix}10.0\\0\end{pmatrix}\U{m/s}\]
+       よって，東向きに大きさ$10.0\U{m/s}$\Ans
+\ko{2} $\mathrm{B}$から見た$\mathrm{A}$の相対速度は，
+       \[\overrightarrow{v_{\mathrm{BA}}}=\overrightarrow{v_{\mathrm{A}}}-\overrightarrow{v_{\mathrm{B}}}=\begin{pmatrix}5.0\\-5.0\end{pmatrix}\U{m/s}\]
+       よって，南から東に向かって$45^\circ$（南東）の向きに大きさ$\sqrt{(5.0)^2+(5.0)^2}\fallingdotseq 7.1\U{m/s}$\Ans
+\end{komon}
+
+\MonN{6}{速度の合成}
+\begin{sisin}
+川が流れている場合，例えば次図のように，船首を向こう岸にまっすぐに向けて進んだとしても，川の水が下流方向に動くために，結果として船は岸に対して斜めに動いていることになる．つまり，岸から見た船の速度は，船の速度と流れの速度の合成になる．
+\begin{center}
+\includegraphics[keepaspectratio,width=46mm]{fig/ch1_p65_river.png}
+\end{center}
+岸から見た船の速度は，船の速度と流れの速度の合成になるので，川の流れの向きに$x$軸，岸に対して垂直な方向に$y$軸をとり，速度をベクトルとして表すとよい．
+\end{sisin}
+\KaiHead\par
+\hspace{1zw}川の流れの向きに$x$軸，岸から垂直に対岸に向かう向きに$y$軸をとるとき，岸に対する川の流れの速度ベクトル$\overrightarrow{v}$は
+\[\overrightarrow{v}=\begin{pmatrix}6.0\\0\end{pmatrix}\U{m/s}\]
+である．
+\begin{komon}
+\ko{1} 岸に対する船の速度ベクトルを$\overrightarrow{V_0}$とする．船が岸に対して直角な方向に進んでいるので，$\overrightarrow{V_0}$は
+       \[\overrightarrow{V_0}=\begin{pmatrix}0\\V_0\end{pmatrix}\U{m/s}\quad(\text{ただし }V_0>0)\ \cdots\cdots\MARU{1}\]
+       とおくことができる．川に対する船の速度（船が自力で進もうとする速度ベクトル）を$\overrightarrow{V}$とすれば，指針で述べたことより
+       \[\overrightarrow{V_0}=\overrightarrow{V}+\overrightarrow{v}\ \cdots\cdots\MARU{2}\]
+       \MARU{1}\MARU{2}より，
+       \[\overrightarrow{V}=\begin{pmatrix}-6.0\\V_0\end{pmatrix}\ \cdots\cdots\MARU{3}\]
+       ここで，静水に対してこの船が速さ$10\U{m/s}$で進めるということは，船が自力で進もうとする速度ベクトル$\overrightarrow{V}$の大きさが$10\U{m/s}$であることを意味するので，\MARU{3}より，
+       \[6.0^2+V_0^2=10^2\]
+       $V_0>0$に注意して，
+       \[V_0=8.0\U{m/s}\Ans\Eq{4}\]
+\ko{2} (1)のとき岸に対する船の速度$\overrightarrow{V_0}$は，\MARU{4}より，
+       \[\overrightarrow{V_0}=\begin{pmatrix}0\\8.0\end{pmatrix}\U{m/s}\ \cdots\cdots\MARU{5}\]
+       である．すなわち，岸から見て船は$y$軸方向に速さ$8.0\U{m/s}$で進んでいることになる．よって船が川を横断するのに要する時間は，\MARU{5}の$y$成分に着目して，
+       \[8.0\cdot t=100\]
+       よって，
+       \[t=12.5\U{s}\Ans\]
+\ko{3} 川は$x$軸方向に流れているので，岸に対する船の速度ベクトルの$y$成分は船が自力で進もうとする速度ベクトルの$y$成分となる．よって船首を岸に対して直角に向けたときに岸に対する船の速度ベクトルの$y$成分が最大になるので，このとき最短時間で川を渡ることができる．よって，
+       \[\overrightarrow{V}=\begin{pmatrix}0\\10\end{pmatrix}\U{m/s}\]
+       岸に対する船の速度ベクトルは
+       \[\overrightarrow{V_0}=\begin{pmatrix}6.0\\10\end{pmatrix}\U{m/s}\ \cdots\cdots\MARU{6}\]
+       である．よって，川を横断するのにかかる時間は$y$軸方向に着目すると，
+       \[10\cdot t=100\]
+       が成り立つので，$t=10\U{s}$．したがって対岸に着くまでに船が下流に流される距離は，
+       \[6.0\cdot 10=60\U{m}\Ans\]
+\end{komon}
+
+\Rank{C問題}
+\MonN{7}{等加速度直線運動}
+\begin{sisin}
+基本的には，適当な向きに$x$軸をとり，正の向きを定め，速度・加速度の正の向きを$+x$の向きとして考えればよい．本問のように加速度$a<0$の場合には，\MARU{1} $+x$の向きに減速している場合\hspace{0.5zw}\MARU{2} $-x$の向きに加速している場合の2つがあることに注意せよ．
+\end{sisin}
+\KaiHead\par
+\hspace{1zw}右向きを正，出発点を原点$\mathrm{O}$とする$x$軸をとる．
+\begin{komon}
+\ko{1} 物体の運動は等加速度直線運動であるから，
+       \[-12.0=4.0+a\cdot 8.0\]
+       が成立する．これより，
+       \[a=-2.0\U{m/s^2}\hspace{1zw}\cdots\cdots\MARU{1}\]
+       よって加速度は，
+       \[\text{左向きに大きさ }2.0\U{m/s^2}\Ans\]
+\ko{2} \MARU{1}および等加速度直線運動の関係式より，
+       \begin{eqnarray*}
+       v(t)&=&4.0+(-2.0)\cdot t\\
+           &=&4-2t\U{m/s}\Ans\Eq{2}
+       \end{eqnarray*}
+\ko{3} 加速度が負であるから，速度は正$\to 0\to$負と変化するが，速度が正の間は$+x$の向きに動き，速度が負になると$-x$の向きに動く．よって，出発点から最も右に離れるのは速度が正から負へと変わる瞬間，すなわち物体の速度が$0\U{m/s}$のときである．よって\MARU{2}より，
+       \[4-2t=0\]
+       これより，$t=2.0\U{s}$\Ans
+\ko{4} 時刻$t\U{s}$における物体の位置を$x(t)\U{m}$とすると，\MARU{1}より，
+       \begin{eqnarray*}
+       x(t)&=&0+4.0\cdot t+\frac{1}{2}\cdot(-2.0)\cdot t^2\\
+           &=&-t^2+4t\ \cdots\cdots\MARU{3}
+       \end{eqnarray*}
+       出発点を左向きに通過するときの物体の位置は$x=0\U{m}$であるから，\MARU{3}より，
+       \[-t^2+4t=0\]
+       が成り立つ．よって，$t=0,\,4\U{s}$であるが，等加速度運動をし始めた時刻を$t=0$としているので，求める時刻は$t>0$でなければならない．以上より，出発点を左向きに通過するのは時刻$4\U{s}$であり，このときの速さ（速度の絶対値）は\MARU{2}より，
+       \[|4-2\cdot 4|=|-4|=4\U{m/s}\Ans\]
+\ko{5} 時刻$8.0\U{s}$物体の位置は，\MARU{3}より，
+       \[x(8.0)=-32.0\]
+       よって，左向きに$32.0\U{m}$の位置\Ans
+\end{komon}
+\begin{bekkai}
+$2a\cdot\Delta x=v^2-v_0^2$が成り立つので，
+\[2\cdot(-2.0)\cdot\Delta x=(-12.0)^2-(4.0)^2\]
+よって，$\Delta x=-32.0$であるから左向きに$32.0\U{m}$の位置．\Ans
+\end{bekkai}
+
+\MonN{8}{$v-t$グラフ}
+\begin{sisin}
+$v-t$グラフと$t$軸の囲む面積は物体の移動距離を表す．本問のように$v<0$のときには面積は物体が負の方向に進んだ距離を表すことに注意せよ．
+
+運動中，速度の向きが変化するときには移動距離と道のりとは等しくならないことに注意．移動距離とは始点と終点との2点間の距離のことを言い，動いた道のりとは運動した経路の長さのことを言う．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} $v-t$グラフの傾きは加速度を表すので，時刻$t\U{s}$における加速度は，
+       \[\left\{\begin{array}{ll}
+         2\U{m/s^2} & (0<t<2)\\
+         0\U{m/s^2} & (2<t<5)\\
+         -1\U{m/s^2} & (5<t)
+       \end{array}\right.\]\par
+       \hspace*{\fill}\Ans
+\ko{2} $v-t$グラフと$t$軸との囲む面積は物体の移動距離を表すので，時刻$9\U{s}$における物体の$x$座標は
+       \[\frac{1}{2}\cdot 2\cdot 4+3\cdot 4+\frac{1}{2}\cdot 4\cdot 4=24\U{m}\Ans\]
+\ko{3} 時刻$9\U{s}\sim 13\U{s}$では$v<0$なので，$v-t$グラフと$t$軸との囲む面積は物体が負の方向に動いた距離を表す．よって，
+       \[24-\frac{1}{2}\cdot 4\cdot 4=16\U{m}\Ans\]
+\ko{4} 物体は時刻$0\sim 9\U{s}$には正の方向に$24\U{m}$だけ動き，時刻$9\U{s}\sim 13\U{s}$では負の方向に$8\U{m}$だけ動いたので，物体の進んだ道のりは，
+       \[24+|-8|=32\U{m}\Ans\]
+\end{komon}
+
+\end{multicols}
+
+%\begin{tcolorbox}[colback=white,title=例題1＜平均の速度と瞬間の速度＞,sharp corners]
+%%  \begin{wrapfigure}[3]{r}[5mm]{25mm}
+%%  \centering
+%%  \vspace{-5mm}
+%%  \includegraphics[keepaspectratio,width=100mm]
+%%  {sample.png}
+%%\end{wrapfigure}
+%
+%
+%
+%$x軸上を運動する物体の，時刻t[s] における座標x[m]が，$
+%\[ x=2t^2+3t\]
+%で与えられているとき，以下の問いに答えよ．
+
+%\end{tcolorbox}
+
+
+
+
+%\ex
+%
+%次の式を因数分解せよ．
+%\begin{description}
+%\item[(1)] $x^2+xy-x-y$
+%\item[(2)] $6x^2+x-15$
+%\item[(3)] $2x^2-3xy-2y^2-5x+5y+3$
+%\item[(4)] $xyz+x^2y-xy^2-x+y-z$
+%\item[(5)] $x^4+4$
+%\end{description}
+
+
+
+
+%\vfill
+%
+%\prob[\label{rensyu1}]
+%
+%次の式を因数分解せよ．
+%\begin{description}
+%\item[(1)] $x^2y-2y-x+2xy^2$
+%\item[(2)] $24x^2-2x-15$
+%\item[(3)] $6x^2-5xy-6y^2-x-5y-1$
+%\item[(4)] $(x-3)(x+7)(x+2)^2+144$
+%\item[(5)] $x(y-z)^2+y(z-x)^2+z(x-y)^2+8xyz$
+%\item[(6)] $x^4-27x^2y^2+y^4$\\[1mm]
+%\end{description}
+%\begin{tcolorbox}[colback=white,title=例題1＜平均の速度と瞬間の速度＞,sharp corners]
+%%  \begin{wrapfigure}[3]{r}[5mm]{25mm}
+%%  \centering
+%%  \vspace{-5mm}
+%%  \includegraphics[keepaspectratio,width=100mm]
+%%  {sample.png}
+%%\end{wrapfigure}
+%
+%
+%
+%$x軸上を運動する物体の，時刻t[s] における座標x[m]が，$
+%\[ x=2t^2+3t\]
+%で与えられているとき，以下の問いに答えよ．
+
+%\end{tcolorbox}
+
+
+
+
+%\ex
+%
+%次の式を因数分解せよ．
+%\begin{description}
+%\item[(1)] $x^2+xy-x-y$
+%\item[(2)] $6x^2+x-15$
+%\item[(3)] $2x^2-3xy-2y^2-5x+5y+3$
+%\item[(4)] $xyz+x^2y-xy^2-x+y-z$
+%\item[(5)] $x^4+4$
+%\end{description}
+
+
+
+
+%\vfill
+%
+%\prob[\label{rensyu1}]
+%
+%次の式を因数分解せよ．
+%\begin{description}
+%\item[(1)] $x^2y-2y-x+2xy^2$
+%\item[(2)] $24x^2-2x-15$
+%\item[(3)] $6x^2-5xy-6y^2-x-5y-1$
+%\item[(4)] $(x-3)(x+7)(x+2)^2+144$
+%\item[(5)] $x(y-z)^2+y(z-x)^2+z(x-y)^2+8xyz$
+%\item[(6)] $x^4-27x^2y^2+y^4$\\[1mm]
+%\end{description}

@@ -1,0 +1,190 @@
+\section{弦・気柱振動}
+
+\subsection{音波}
+
+空気中で音叉などを振動させると，その振動によって空気に疎密ができ，これが縦波となって周囲の空間へと伝わる．
+この縦波のことを音叉といい，その疎密が人間の耳に達すると音として感じる．
+人間の耳が感じることのできる縦波の振動数はおよそ20〜20000[Hz]の範囲であり，振動数が高いほど音程の高い音として感知され，振動数が倍になるとちょうど楽器において1オクターブ分だけ上がった音程となる．
+
+圧力$P$[Pa]，温度$T$[K]，密度$\rho [{\rm kg/m^3}]$，1[mol]あたりの質量$M$[kg/mol]である気体の中の音速$c$[m/s]は詳しい解析によると，その気体の比熱比を$\gamma$，気体定数を$R$[J/mol・K]として，
+\[c=\sqrt{\gamma \dfrac{P}{\rho}} =\sqrt{\gamma \dfrac{R}{M} T} \hspace{2mm}[{\rm m/s}] \]
+で与えられることが知られており，これを空気の場合，さらに室温付近の温度$t[^\circ {\rm C}]$の場合について近似計算すると，
+\[c=331.5+0.6・t  \hspace{2mm}{[{\rm m/s}]}\]
+となる．
+$t=15[^\circ {\rm C}]$のとき，およそ340[m/s]となることを覚えておくとよい．
+
+\begin{matome}{音波・音速}
+ \hspace{3mm} 音波=空気を媒質とする疎密波（縦波）\\
+ \hspace{3mm} 空気中，室温付近の温度$t[^\circ{\rm C}]$の場合の音速$\Rightarrow 331.5+0.6・t$[m/s]
+ \end{matome}
+
+\subsection{弦の上に発生する振動}
+\begin{wrapfigure}[17]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text_p101_fig1.png}
+\end{wrapfigure}
+図のように，糸の両端A,Bを固定しておもりによって強く張って長さ$l$[m]の弦を作り，この弦を指ではじくと弦は振動する．
+弦に発生した波動は両端で繰り返して固定端反射をし，左方向からの波と右方向からの波が重なり，結果として{\bf 弦の上には両端が固定端となるような定常波が発生する．}
+
+発生する定常波は{\bf 両端が固定端}，すなわち{\bf 両端が定常波の節}でなければならないから，右図の$\fbox{1},\fbox{2},\fbox{3}$のような定常波しか発生することができない．
+ここで，定常波の節-節間隔が波長の半分であることを用いると，できる定常波の腹の個数が$n$個のときの波長を$\lambda_n$[m]とすれば
+\[l=\dfrac{\lambda_n}{2}\times n\]
+が成立するから，
+\[\lambda_n=\dfrac{2l}{n} \hspace{2mm} [{\rm m}]\]
+の波長をもつ定常波しか発生することができない，
+この式を満足しない波長の波は，両端A,Bの反射を繰り返していると位相のずれのため打ち消しあってすぐに減衰してしまう．
+
+この弦の線密度（=1[m]あたりの質量）を$\rho$[kg/m]，弦を張る張力を$T$[N]とすると，この弦を伝わる波の速さ$v$[m/s]は，
+\[v=\sqrt{ \dfrac{T}{\rho} } \hspace{2mm} [{\rm m/s}] \]
+で与えられることが知られており，これを用いると，波長$\lambda_n$の定常波が発生しているときの振動数$f_n$[Hz]が求められる．
+\[f_n=\dfrac{v}{\lambda_n}=\dfrac{n}{2l}\sqrt{\dfrac{T}{\rho}} \hspace{2mm}[{\rm Hz}]\]
+
+弦に発生しうる定常波のうち，振動数が最小のもの（＝波長が最大のもの）を{\bf 基本振動}という．
+上の式では$n=1$の場合に対応する．
+基本振動の振動数を$f_1$[Hz]とするとき，発生する定常波の振動数$f$[Hz]が$f=nf_1$を満たすなら，その振動は\mbox{\boldmath $n$} {\bf 倍振動}であるという．
+
+\begin{matome}{弦に生じる定常波の求め方}
+ \hspace{3mm} $\MARU{1}$ \hspace{2mm} 両端を固定端（＝節）とするような定常波を描く．\\
+ \hspace{3mm} $\MARU{2}$ \hspace{2mm} 節-節間隔が波長の半分であることを用いて，弦の長さと波長の関係式を求め，波長を計算する．\\
+  \hspace{3mm} $\MARU{3}$ \hspace{2mm} 弦を伝わる波の速さ$v=\sqrt{\dfrac{T}{\rho}}$\hspace{2mm}[m/s]を用いて発生する定常波の振動数を求める．
+ \end{matome}
+
+音叉の振動数はある一定の値をとるが，弦に対するつなぎ方を変えると，弦を伝わる波の振動数は異なる値をとることになる．
+
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=150mm]{text_p103_fig1.png}
+\end{center}
+\end{figure}
+
+\subsection{気柱に生じる振動}
+
+管の中の気体を{\bf 気柱}という．
+気柱を伝わる音波は両端で反射し，その内部に定常波が生じる．
+しかし，弦の場合と同様に発生できる定常波には制限がある．
+
+管の端が開いているものを{\bf 開端}といい，閉じているものを{\bf 閉端}という．
+気柱に生じる定常波は{\bf 縦波の定常波}であること，さらに縦波の定常波の節は媒質変位が最小であること，腹は媒質変位が最大であることに注意すると，
+\begin{description}
+\item[・] {\bf 閉端}：媒質である空気は動けない\hspace{15mm}$\Rightarrow$\hspace{2mm}{\bf 定常波の節となる}
+\item[・] {\bf 開端}：媒質である空気は大きく振動できる\hspace{2mm}$\Rightarrow$\hspace{2mm} {\bf 定常波の腹となる}
+\end{description}
+であるような定常波が発生する．
+
+\begin{wrapfigure}[10]{r}[5mm]{110mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=110mm]
+  {text_p103_fig2.png}
+\end{wrapfigure}
+管には主に両端が開いている開管（右図）と，片方は閉じ，片方は開いている閉管（左図）がある．
+それぞれの管に発生しうる縦波の定常波を横波表示すると，図のような定常波しかできないことがわかる．
+
+この図について，定常波の節-節間隔および腹-腹間隔が気柱中に伝わる音波の波長の半分，節-腹間隔が波長の$\dfrac{1}{4}$であることを用いると，弦振動の場合と同様に，管の長さ$l$[m]を用いて発生する定常波の波長$\lambda$[m]を求めることができる．
+これと音速から発生する定常波の振動数も計算することができる．
+\begin{matome}{気柱に生じる定常波の求め方}
+ \hspace{3mm} $\MARU{1}$ \hspace{2mm} 開口端を自由端（＝腹），閉口端を固定端（=節）とするような定常波を描く．\\
+ \hspace{3mm} $\MARU{2}$ \hspace{2mm} 節-節間隔が波長の半分，節-腹間隔が波長の$\dfrac{1}{4}$であることを用いて，気柱の長さと波長の関係式を求め，波長を計算する．\\
+  \hspace{3mm} $\MARU{3}$ \hspace{2mm} $\MARU{2}$と音速から発生する定常波の振動数を求める．
+ \end{matome}
+
+\subsection{開口端補正}
+\begin{wrapfigure}[5]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text_p104_fig1.png}
+\end{wrapfigure}
+前節にて，気柱に発生する定常波では開端に腹ができると考えたが，厳密には定常波の腹は開口よりも少し外側にできることが知られている．
+このずれを補正することを{\bf 開口端補正}という．
+
+その補正の大きさ，すなわち腹の位置のはみ出し距離$\varepsilon$[m]は管の大きさ，形などによって異なり，半径$r$[m]の円筒の場合はおよそ$\varepsilon \fallingdotseq 0.65\cdot r$[m]となることが経験的に知られている．しかし，一般にはその大きさは分からず，またこの$\varepsilon$があると管の長さ$l$[m]からすぐに波長を計算するということができない．
+このような場合であっても，発生させる定常波の振動数を一定にしたままで管の長さを変えていく手法を用いると，正しい波長および開口端補正距離を求めることができる．
+\begin{matome}{開口端補正}
+ \hspace{3mm} 気柱の開端にできる定常波の腹は，厳密には開口から少しはみ出す． 
+ \end{matome}
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p55.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p56.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p57.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p159_2.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p160.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p161.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p162.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p163.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p164.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

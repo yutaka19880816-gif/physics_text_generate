@@ -1,0 +1,183 @@
+\section{円運動}
+
+\subsection{角速度と等速円運動}
+
+\begin{wrapfigure}[10]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p36_fig1.png}
+\end{wrapfigure}
+
+右図のように，円周の上をなぞって物体が運動することを{\bf 円運動}という．
+
+円運動する物体と円の中心を結ぶ線分{\bf （動径）}が単位時間（1秒間）に掃く中心角を{\bf 角速度} \mbox{\boldmath $\omega$} {\bf [rad/s]}という．
+角速度が一定値であるとき物体の回転する速さは一定値となるので，このような円運動も{\bf 等速円運動}と呼ぶ．
+角速度が$\omega$[rad/s]の等速円運動において，時間$\Delta t$[s]の間に物体が回転する角度$\theta$は，
+\[ \theta =\omega \Delta t\]
+で与えられる．
+ここでは簡単のため，等速円運動に話を限定して取り扱うことにする．
+
+物体が円を一周するのに要する時間を{\bf 周期}という．
+角度$2\pi$だけ回ると円を一周することになるので，円運動の周期$T$[s]は
+\[ T=\dfrac{2\pi}{\omega} \hspace{2mm}[{\rm s}]\]
+で与えられる．
+また，1秒間の回転数$f$（単位は[回/s]=[Hz]（ヘルツ）を用いる）は$f=\dfrac{1}{T}$となる．
+
+半径$r$[m]の円周上を円運動する物体について考える．
+物体の速度ベクトルは物体の経路の接線方向を向くから，{\bf 円運動する物体の速度ベクトルは必ず円の接線方向を向く．}
+物体の速さ$v$[m/s]とすると，時間$\Delta t$[s]の間に物体は$v\Delta t$[m]だけ移動し，中心角は$\omega \Delta t$変化するから，
+\[ v\Delta t =r・\omega \Delta t \hspace{2mm}\Leftrightarrow \hspace{2mm}\mbox{\boldmath $v=r\omega$} \hspace{2mm}{\rm [m/s]} \]
+と速さは与えられる． 
+
+\begin{wrapfigure}[14]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=75mm]
+  {text_p36_fig2.png}
+\end{wrapfigure}
+
+物体が等速円運動を行うとき，速さは一定値であるが，速度ベクトルの向きは時々刻々と変化するから，物体は加速度を持っている．
+微小時間$dt$[s]の間に速度ベクトルが$\overrightarrow{v \mathstrut}$[m/s]から$\overrightarrow{v' \mathstrut}$[m/s]に変化したとする．
+変化した速度ベクトルを始点を揃えて書き出すと，この時間内での速度ベクトルは
+\[ d\overrightarrow{v}=\overrightarrow{v' \mathstrut}-\overrightarrow{v \mathstrut}\]
+であるが，図より$d\overrightarrow{v \mathstrut}$は円の中心方向を向いている．
+よって，{\bf 加速度ベクトル}\mbox{\boldmath $\overrightarrow{a}=\dfrac{d\overrightarrow {v}}{dt} {\rm [m/s^2]}$}{\bf は円の中心方向を向く．}
+その大きさ$a {\rm [m/s^2]}$は，図より
+\[ a=\dfrac{v・\omega dt}{dt}=\mbox{\boldmath $v\omega$}=\mbox{\boldmath $r\omega^2$}=\mbox{\boldmath $\dfrac{v^2}{r} \hspace{2mm}{\rm [m/s^2]}$} \]
+で与えられる．
+この加速度ベクトルは常に速度ベクトルに直交するため，速度ベクトルの大きさは変えず，その向きのみを変える役割を果たす．
+
+\begin{itembox}[l]{【等速円運動】}
+ \hspace{5mm} 周期\hspace {8mm}$T=\dfrac{2\pi}{\omega}=\dfrac{2\pi r}{v}$\hspace{2mm}[s]\\
+ \hspace{5mm} 速さ\hspace {8mm}$v=r\omega$\hspace{2mm}[m/s]　（速度は常に接線方向を向く）\\
+ \hspace{5mm} 加速度\hspace {5mm}$a=r\omega^2=\dfrac{v^2}{r}\hspace{2mm}[{\rm m/s^2}]$　（加速度は常に中心方向を向き，速度ベクトルの向きを変える）
+ \end{itembox}
+
+なお，物体の持つ加速度の大きさなどは円を座標軸に置き，物体の座標を時刻で微分することによっても得られる．
+
+\begin{wrapfigure}[10]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p37_fig1.png}
+\end{wrapfigure}
+
+円運動をする物体は加速度を持つが，このことから円運動をする物体には必ず力が作用していなければならない．
+物体には様々な力が作用しているが，この力を接線方向と動径方向とに成分分解したときに，{\bf 動径方向に作用している力（の成分）のことを向心力という．}
+
+等速円運動する物体は中心向きに大きさ$a=r\omega^2=\dfrac{v^2}{r}\hspace{1mm}[{\rm m/s^2}]$の加速度を持つ．
+このことから，運動方程式を用いて動径方向に作用している力を逆算すると，
+\[ma=mr\omega^2=m\dfrac{v^2}{r} \hspace{1mm}{\rm [N]} \]
+となる．すなわち{\bf 等速円運動している物体に作用する向心力の合力は，必ず中心向きに大きさ}\mbox{\boldmath $mr\omega^2=m\dfrac{v^2}{r}$}\hspace{1mm}{\bf [N]となっている．}
+
+向心力とは中心方向の加速度を生じさせる力の総称であり，{\bf 向心力という名称の力が存在するのではない}ことに注意せよ．
+
+\begin{itembox}[l]{【向心力】}
+ \hspace{5mm} 物体に作用する力の動径方向成分の合力は常に中心向きで大きさは$mr\omega^2=m\dfrac{v^2}{r}$\hspace{1mm}[N]
+ \end{itembox}
+ 
+ 
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜等速円運動＞\\
+%
+%なめらかな水平面上に自然長$l_0$[m]，弾性定数$k$[N/m]の軽いバネの一端を軸に固定し，もう一方に質量$m$[kg]の小球を取り付ける．
+%この小球を軸のまわりに回転させたところ，バネは自然長から$x$[m]だけ伸びた状態を保って等速円運動した．
+%これについて以下の問いに答えよ．
+%\begin{wrapfigure}[7]{r}[5mm]{60mm}
+%  \centering
+%%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=53mm]
+%  {text_p37_fig2.png}
+%\end{wrapfigure}
+%\begin{description}
+%\item[(1)] 向心方向の運動方程式を立式し，小球の速さ$v$[m/s]を求めよ．
+%\item[(2)] 小球の角速度$\omega$[rad/s]を求めよ．
+%\item[(3)] 等速円運動の周期$T$[s],\hspace{1mm}1[s]あたりの回転数$f$[Hz]を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+%\newpage
+ \subsection{非等速円運動}
+ 
+ {\bf 非等速円運動においても動径方向については等速円運動のときと同様に扱うことができる．}
+ すなわち，その瞬間における物体の接線方向の速さを$v$[m/s]とすると，物体の持つ加速度の円の中心方向成分は$\dfrac{v^2}{r}\hspace{1mm}{\rm [m/s^2]}$ になっているといえる．
+ これと力学的エネルギー保存則を組み合わせることで非等速円運動を解くことができる．
+ 
+ \begin{itembox}[l]{【非等速円運動】}
+ \hspace{5mm} $\MARU{1}$\hspace{2mm}力学的エネルギー保存則から物体の速さを求める\\
+ \hspace{5mm} $\MARU{2}$\hspace{2mm}動径方向についての運動方程式を立てる
+ \end{itembox}
+ 
+ 
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜非等速円運動＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{75mm}
+%  \centering
+%  \vspace{-10mm}
+%  \includegraphics[keepaspectratio,width=65mm]
+%  {text_p38_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}内面がなめらかな半径$r$[m]の半円筒をなめらかな水平面に接続して図のように置く．
+%水平面上から質量$m$[kg]の小球を速さ$v_0$[m/s]で円筒の内面へ向けてすべらせたところ，小球は円筒面に沿って登っていき，最高点Q点を通過した．
+%これについて以下の問いに答えよ．
+%ただし，重力加速度の大きさを$g {\rm [m/s^2]}$とし，運動は図の面内でのみ起こるものとせよ．
+%\begin{description}
+%\item[(1)] 図のP点を通過するときの物体の速さ$v_1$[m/s]を求めよ．
+%\item[(2)] 図のP点において物体が円筒面から受ける垂直抗力の大きさ$N_1$[N]を求めよ．
+%\item[(3)] 図のQ点を通過するときの物体の速さ$v_2$[m/s]を求めよ．
+%\item[(4)] 図のQ点において物体が円筒面から受ける垂直抗力の大きさ$N_2$[N]を$v_2$を用いて表せ．
+%\item[(5)] 図のQ点において物体が円筒面から離れないために必要な$v_2$の条件式を求めよ．
+%\item[(6)] 図のQ点を通過させるために必要な初速についての条件を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+
+ \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p21.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p22.png}
+\vspace{10cm}
+\end{center}
+\end{figure}
+
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p92_2.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p93.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p94.png}
+\end{center}
+\end{figure}

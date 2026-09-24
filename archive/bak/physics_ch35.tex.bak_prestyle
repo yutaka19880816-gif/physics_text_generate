@@ -1,0 +1,138 @@
+\section{直流回路}
+
+\subsection{コンデンサーの過渡現象}
+抵抗とコンデンサーを組み合わせて作られた回路では，電流の流入によりコンデンサー極板に電荷が留まり，電位差を生じる．
+電流が流入していく途中の過程を知ることは難しいが，{\bf 十分に時間が経過するとコンデンサーの極板上の電荷は一定値となり，極板上に電流が流れ込まなくなる．}
+このように，見かけ上，回路に変化が起こらなくなった状態を{\bf 定常状態}と呼ぶが，この定常状態において流れる電流量や蓄えられている電荷などは容易に求めることが可能である．
+このような抵抗とコンデンサーを含む回路の問題では，
+\begin{description}
+\item[\MARU{1}] スイッチ操作の直前直後のコンデンサーに蓄えられる電荷は等しい．
+\item[\MARU{2}] 十分時間が経過すると，コンデンサーに蓄えられる電荷は一定となり，電流が流れない．
+\end{description}
+の2点を押さえておくことが重要である．
+
+\subsection{非オーム抵抗を含む回路}
+$I-V$特性曲線が直線にならない非オーム抵抗を含む回路に流れる電流は以下のようにして求めればよい．
+
+\begin{itembox}[l]{【非オーム抵抗を含む回路】}
+\begin{description}
+\item[\MARU{1}] 非オーム抵抗を流れる電流，非オーム抵抗にかかる電圧をともに未知変数として，$I$[A]，$V$[V]とおく．
+\item[\MARU{2}] 回路のキルヒホッフの法則の式を立て，連立し，未知変数として$I$と$V$のみを含む関係式を求める．
+\item[\MARU{3}] 与えられた$I-V$特性曲線に$\MARU{2}$で求めた関係式を曲線として書き込み，その交点を取る．
+\end{description}
+ \end{itembox}
+ 
+ \subsection{ダイオード}
+ \begin{wrapfigure}[16]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text2_p59_fig1.png}
+\end{wrapfigure}
+ N型半導体とP型半導体を接合（PN接合）した素子を{\bf ダイオード}という．
+ N型半導体は，正に帯電して動けないドナーの周りに自由電子があるので，全体としては帯電していない．
+ また，P型半導体も同様に動けないアクセプターの周りに正孔があるため，全体としては帯電されていない．
+ 
+ このP型半導体とN型半導体を接合すると，接合の境界面の前後では，拡散して（ランダムに動いて）電子と正孔がぶつかり，境界面において結合する（再結合）．
+ その結果，境界面前後はキャリアが存在しない領域ができる．
+ この領域を{\bf 空乏層}という．
+ この際，空乏層にはイオン化したドナー，アクセプターが残り，その電荷の偏りによってN型からP型の方向に電場が発生する．
+ 空乏層ができた後に電子と正孔が再結合するためには，この電場に逆らって移動しなければいけない．
+ その結果，空乏層にはほとんどキャリアが存在しなくなる．
+ 
+ Pの方が高電位になるよう電圧をかけると，空乏層の電場を弱め，電子とホールは空乏層内に侵入しやすくなり（つまり，キャリアがほとんど存在しない領域が空乏層なので，空乏層が小さくなり），電流をP型$\rightarrow$ N型の方向に電流を流しやすくなる．
+ しかし，かける電圧が空乏層で発生している電圧より十分小さければ電流をほとんど流すことはできないままとなる．
+ 
+ 一方逆向きに電圧をかけるとさらに空乏層内の電場が強くなり，空乏層は広がり，電子とホールは境界面に近づけなくなり，電流は流れなくなる．
+ このように{\bf ダイオードは順方向のみ電流を流す整流作用がある．}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=120mm]{text2_p59_fig2.png}
+\end{center}
+\end{figure}
+
+ {\bf 発光ダイオード}は，接合面付近の再結合の際に生じるエネルギーが光として放出される．
+ 
+ 逆に，PN接合面付近に光が入射すると，そのエネルギーで自由電子とホールを発生させることができる．
+ 空乏層での電場により，自由電子とホールは逆向きに移動し，ダイオードの逆方向に電流を流すことができる．
+ この仕組みを利用して{\bf 太陽電池}は発電を行なっている．
+ 
+   \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p33.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p34.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p35.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p128.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p129.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p130.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p131.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p132.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p133_1.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

@@ -1,0 +1,833 @@
+\section{弦と気柱の振動}
+
+% ===========================================================================
+%  再編（2026-09-04）：第2章 波動 の第16回．
+%  原本の 第22回「弦・気柱振動」の全体（22.1〜22.4）をそのまま1回とした．
+%  ・練習は 原本 第22回［22］〜［29］の8題．
+%    `saihen/再編案.md` は ㉓[38][40] を足して10題とする案だったが，どちらも
+%    ドップラー効果を使う問題で，ドップラーは次の第17回の内容である（2026-09-04
+%    ユーザー判断で第17回へ移した）。第17回は ㉓[30]〜[40]＋㉔4題となる．
+%  ・問題番号は第15回の［11］〜［20］に続けて［21］〜［28］（\setcounter{qno}{20}）．
+%    新旧対応：［21］＝㉒[22]／［22］＝㉒[23]／［23］＝㉒[24]／［24］＝㉒[25]／
+%    ［25］＝㉒[26]／［26］＝㉒[27]／［27］＝㉒[28]／［28］＝㉒[29]．
+%  ・原本の例題3題をそのまま採用した（削除なし）。挿入位置も原本と同じ．
+%      例題10〈弦の上に発生する定在波〉  … 16.2 のまとめ枠の後（原本 p102）
+%      例題11〈閉管に発生する定在波〉    … 16.3 のまとめ枠の後（原本 p104）
+%      例題12〈開口端補正と共鳴管〉      … 16.4 の後（原本 p105）
+%    原本は「問題枠 →（指針）＝空欄 →【KEY】」で解答が載っていないため，
+%    【指針】と【解答】は書き起こした（KEY と問題文・図は原本からの転写）。
+%  ・旧 physics_ch22.tex の本文には，原本 p105 にある次の2つが欠けていた．
+%    練習［26］（共鳴管と開口端補正）を解くのに必要なので加筆した：
+%      まとめ枠【共鳴管に発生する定在波の波長の計算】（となり合う共鳴の差＝λ/2）
+%      ［参考］固有振動と共鳴
+%    また練習［21］(1)が問う「音色＝波形」「音の強さ＝エネルギー」が本文に無かったので，
+%    16.1 に音の三要素の段落を加筆した（原本の解答［22］の【参考】に対応する内容）。
+%  ・旧本文の 22.4 は原本より説明が短く，「開端の圧力が常に大気圧に等しい（音圧0）」
+%    という開口端補正の理由が落ちていたので原本 p104 の記述に戻した．
+%  ・{\bf …} は新スタイルに合わせて {\gtfamily …} に置き換え，単位は \U{} に統一．
+%    旧レイアウト用の \vspace や \newpage・figure環境は全て取り除き，
+%    wrapfigure の [N] は図の実高（.xbb から算出）に合わせて付け直して \bsNeed を入れた．
+%  ・図は texify_draft/mkfig_new16.py（問題編からの切り出し）／
+%    mkfig_new16ex.py（原本 20161215143926.pdf の p102・p105 からの切り出し）／
+%    mkfig_new16ans.py（例題11・12の解答図をTikZで自作）で再生成できる．
+% ===========================================================================
+
+% 例題番号：波動（原本 第3章）の例題は章の先頭から通し番号．第15回で6〜9を使った．
+\setcounter{nombre}{9}
+
+\subsection{音波}
+
+空気中で音叉などを振動させると，その振動によって空気に疎密ができ，これが縦波となって周囲の空間へと伝わる．
+この縦波のことを{\gtfamily 音波}といい，その疎密が人間の耳に達すると音として感じる．
+人間の耳が感じることのできる縦波の振動数はおよそ$20\sim20000\U{Hz}$の範囲であり，振動数が高いほど音程の高い音として感知され，振動数が倍になるとちょうど楽器において1オクターブ分だけ上がった音程となる．
+
+音を聞き分けるときの手がかりとなる{\gtfamily 音の高さ}，{\gtfamily 音の大きさ}，{\gtfamily 音色}の3つを{\gtfamily 音の三要素}という．
+音の高さは音波の振動数で決まり，振動数が大きいほど高い音として聞こえる．
+% 「振幅，すなわち波の強さ」と書くと振幅と強度を同一視することになり，第15回の
+% 「波の強さは振幅の2乗に比例する」と矛盾する（2026-09-05 修正）。
+音の大きさは音波の振幅で決まり，振幅が大きいほど大きな音として聞こえる．より正確には，音の大きさを決めているのは第15回で述べた波の強さ（進行方向に垂直な$1\U{m^2}$の面を$1\U{s}$あたりに通過するエネルギー）であり，正弦波では強さは振幅の2乗に比例する．
+また，同じ高さ・同じ大きさの音であっても楽器が違えば違った音に聞こえるが，これは音波の波形が異なるためであり，この違いを音色という．
+
+圧力$P\U{Pa}$，温度$T\U{K}$，密度$\rho\,[\mathrm{kg/m^3}]$，$1\U{mol}$あたりの質量$M\,[\mathrm{kg/mol}]$である気体の中の音速$c\U{m/s}$は詳しい解析によると，その気体の比熱比を$\gamma$，気体定数を$R\,[\mathrm{J/mol\cdot K}]$として，
+\[c=\sqrt{\gamma\dfrac{P}{\rho}}=\sqrt{\gamma\dfrac{R}{M}T}\U{m/s}\]
+で与えられることが知られており，これを空気の場合，さらに室温付近の温度$t\Cel$の場合について近似計算すると，
+\[c=331.5+0.6\cdot t\U{m/s}\]
+となる．
+$t=15\Cel$のとき，およそ$340\U{m/s}$となることを覚えておくとよい．
+
+% 加筆（2026-09-10）：練習［22］(3) が風のある場合の音速を使うのに，本文に説明が無く，
+% 指針・解答で初めて $c\pm w$ を導入していた。正式な扱いは第17回 17.5。
+\hspace{1zw}ここで求めた音速$c\U{m/s}$は，{\gtfamily 空気に対する}音の速さである．風が吹いているときは音波が空気ごと運ばれるので，{\gtfamily 地面に対する}音の速さはこれとは異なる．風速を$w\U{m/s}$とすると，風下へ向かって進む音波は風に押されて$c+w\U{m/s}$に，風上へ向かって進む音波は風に押し戻されて$c-w\U{m/s}$になる．この扱いは第17回 17.5 で詳しく述べる．
+
+\begin{matome}{音波・音速}
+\hspace{3mm} 音波 ＝ 空気を媒質とする疎密波（縦波）\\
+\hspace{3mm} 空気中，室温付近の温度$t\Cel$の場合の音速 $\Rightarrow\ 331.5+0.6\cdot t\U{m/s}$\\
+\hspace{3mm} 音の三要素 ＝ 高さ（振動数）・大きさ（振幅）・音色（波形）
+\end{matome}
+
+% ===========================================================================
+%  16.2 音の干渉と回折（2026-09-10 加筆）
+%  本文には「うなり」（＝同じ場所で時間とともに強弱が変わる現象。第15回）はあったが，
+%  空間的な干渉と回折が無かった（ChatGPT指摘・裏取り済み）。音波は波動なので，第15回の
+%  水面波の干渉・第14回 14.7 の回折をここで音に適用しておく。クインケ管は入試頻出。
+% ===========================================================================
+\subsection{音の干渉と回折}
+音波も波動であるから，第15回で水面波について学んだ{\gtfamily 干渉}が同じように起こる．
+振動数の等しい2つのスピーカーから同位相で音を出すと，2つの音源からの距離の差（経路差）によって場所ごとに強め合ったり弱め合ったりし，{\gtfamily 音の大きく聞こえる場所と小さく聞こえる場所が空間に分かれて現れる}．
+
+2つの音源から点$\mathrm{P}$までの距離を$L_1, L_2\U{m}$，音波の波長を$\lambda\U{m}$とすると，音源が同位相で振動している場合，
+\[|L_1-L_2|=m\lambda\quad(m=0,1,2,\cdots)\ \text{のとき}\ \cdots\ \text{強め合う}\]
+\[|L_1-L_2|=\left(m+\dfrac{1}{2}\right)\lambda\quad(m=0,1,2,\cdots)\ \text{のとき}\ \cdots\ \text{弱め合う}\]
+となる．
+
+\bsNeed{46mm}
+\begin{zuright}{54mm}
+\hspace{1zw}ここで，第15回で扱った{\gtfamily うなり}との違いをはっきりさせておこう．
+うなりは{\gtfamily 振動数がわずかに異なる}2つの音を重ねたときに，{\gtfamily 同じ場所で時間とともに}音の大小が周期的に変化する現象であった．
+これに対して干渉は{\gtfamily 振動数の等しい}2つの音を重ねたときに，{\gtfamily 場所によって}音の大小が分かれる現象である．
+右図の上は2つの音源から広がる波の山（円形の波面）を描いたもので，山と山が重なる点（$\bullet$）では波が強め合う．
+この強弱の配置は空間に固定されており，時間が経っても動かない．
+一方，右図の下はうなりの波形で，こちらは1つの場所で観測される時間変化である．
+どちらも波の重ね合わせで説明できるが，「位置の関数として強弱が変わる」のか「時間の関数として強弱が変わる」のかが決定的に違う．
+\zusep
+\includegraphics[keepaspectratio,width=54mm]{fig/n16_interf_beat.png}
+\end{zuright}
+
+\bsNeed{42mm}
+\begin{zuright}{54mm}
+\hspace{1zw}音の干渉を確かめる装置に{\gtfamily クインケ管}がある（右図）．
+管の途中が2つの経路に分かれており，一方は長さを変えられるようになっている．
+$\mathrm{A}$から入った音は2つの経路に分かれて進み，$\mathrm{B}$で重なって出てくる．
+
+\hspace{1zw}スライドを$d\U{m}$だけ引き出すと，その経路は行きと帰りで$d\U{m}$ずつ長くなるので，{\gtfamily 経路差は$2d\U{m}$増える}．
+したがって，スライドを少しずつ引き出していくと，$2d$が$\lambda$の整数倍になるたびに音が大きく聞こえ，その中間で小さく聞こえる．
+音が小さくなってから次に小さくなるまでにスライドを動かす距離は$\dfrac{\lambda}{2}\U{m}$である．
+\zusep
+\includegraphics[keepaspectratio,width=54mm]{fig/n16_quincke.png}
+\end{zuright}
+
+また，第14回 14.7 で述べた{\gtfamily 回折}も，音では非常に起こりやすい．
+可聴音の波長は$1.7\U{cm}\sim17\U{m}$程度であり，これは戸口・塀・建物といった日常的な障害物やすき間の大きさと同程度かそれより大きい．
+そのため{\gtfamily 音は障害物の陰へよく回り込み}，姿の見えない人の声が聞こえたり，塀の向こうの音が聞こえたりする．
+（光の波長はこれよりはるかに短いため回り込みが目立たず，物陰は暗い影になる．この比較は第18回で改めて扱う．）
+
+\begin{matome}{音の干渉と回折}
+\hspace{3mm} 干渉（同位相の2音源，経路差$\Delta L$）\\
+\hspace{5mm} $\Rightarrow$\quad{}$\Delta L=m\lambda$ で強め合い，$\Delta L=\left(m+\dfrac{1}{2}\right)\lambda$ で弱め合う\\[1mm]
+\hspace{3mm} うなりとの違い\quad{}$\Rightarrow$\quad{}干渉は{\gtfamily 場所}による強弱，うなりは{\gtfamily 時間}による強弱\\[1mm]
+\hspace{3mm} 回折\quad{}$\Rightarrow$\quad{}音の波長は障害物と同程度なので，陰へよく回り込む
+\end{matome}
+
+\bsNeed{62mm}   %% 図64.4mm − 16mm ＋ 見出し14mm
+\subsection{弦の上に発生する振動}
+\begin{wrapfigure}[13]{r}[5mm]{52mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=52mm]
+  {text_p101_fig1.png}
+\end{wrapfigure}
+図のように，糸の両端$\mathrm{A}$, $\mathrm{B}$を固定しておもりによって強く張って長さ$l\U{m}$の弦を作り，この弦を指ではじくと弦は振動する．
+弦に発生した波動は両端で繰り返して固定端反射をし，左方向からの波と右方向からの波が重なり，結果として{\gtfamily 弦の上には両端が固定端となるような定在波が発生する．}
+
+発生する定在波は{\gtfamily 両端が固定端}，すなわち{\gtfamily 両端が定在波の節}でなければならないから，右図の\fbox{1}, \fbox{2}, \fbox{3}のような定在波しか発生することができない．
+ここで，定在波の節−節間隔が波長の半分であることを用いると，できる定在波の腹の個数が$n$個のときの波長を$\lambda_n\U{m}$とすれば
+\[l=\dfrac{\lambda_n}{2}\times n\]
+が成立するから，
+\[\lambda_n=\dfrac{2l}{n}\U{m}\]
+の波長をもつ定在波しか発生することができない．
+この式を満足しない波長の波は，両端$\mathrm{A}$, $\mathrm{B}$の反射を繰り返していると位相のずれのため打ち消しあってすぐに減衰してしまう．
+
+この弦の線密度（＝$1\U{m}$あたりの質量）を$\rho\,[\mathrm{kg/m}]$，弦を張る張力を$T\U{N}$とすると，この弦を伝わる波の速さ$v\U{m/s}$は，
+\[v=\sqrt{\dfrac{T}{\rho}}\U{m/s}\]
+で与えられることが知られており，これを用いると，波長$\lambda_n$の定在波が発生しているときの振動数$f_n\U{Hz}$が求められる．
+\[f_n=\dfrac{v}{\lambda_n}=\dfrac{n}{2l}\sqrt{\dfrac{T}{\rho}}\U{Hz}\]
+
+% 加筆（2026-09-10）：練習［23］が「同じ材質で太さの違う弦」を扱い，解答で初めて $\rho=dS$ を
+% 導いていた。本文には線密度の定義しか無かったので，ここで断面積との関係を与えておく。
+なお，弦が一様な材質でできているとき，その材質の密度を$d\,[\mathrm{kg/m^3}]$，弦の断面積を$S\U{m^2}$とすれば，長さ$l\U{m}$の部分の体積は$Sl\U{m^3}$，質量は$dSl\U{kg}$であるから，線密度は
+\[\rho=\dfrac{dSl}{l}=dS\,[\mathrm{kg/m}]\]
+と表される．{\gtfamily 同じ材質で太さの違う弦を比べるときには，この関係を使って線密度を断面積に置き換える．}
+
+弦に発生しうる定在波のうち，振動数が最小のもの（＝波長が最大のもの）を{\gtfamily 基本振動}という．
+上の式では$n=1$の場合に対応する．
+基本振動の振動数を$f_1\U{Hz}$とするとき，発生する定在波の振動数$f\U{Hz}$が$f=nf_1$を満たすなら，その振動は\mbox{\boldmath $n$}{\gtfamily 倍振動}であるという．
+
+\begin{matome}{弦に生じる定在波の求め方}
+\hspace{3mm} $\MARU{1}$\hspace{2mm} 両端を固定端（＝節）とするような定在波を描く．\\
+\hspace{3mm} $\MARU{2}$\hspace{2mm} 節−節間隔が波長の半分であることを用いて，弦の長さと波長の関係式を求め，波長を計算する．\\
+\hspace{3mm} $\MARU{3}$\hspace{2mm} 弦を伝わる波の速さ$v=\sqrt{\dfrac{T}{\rho}}\U{m/s}$を用いて発生する定在波の振動数を求める．
+\end{matome}
+
+%%%%%% 1.2pt罫＋見出し（約12mm）と問題枠がページで分かれないよう，ユニットごと送る
+\bsNeed{105mm}
+%%%%%  例題10（16.2 のまとめ枠の直後）＝ 原本【例題10】〈弦の上に発生する定在波〉（p102）  %%%%%%
+% 問題文・図・KEY は原本からの転写。原本には解答が載っていないので【指針】【解答】は書き起こした。
+\begin{reidaiunit}
+\begin{reidai}{弦の上に発生する定在波}
+\begin{zuright}{62mm}
+\hspace{1zw}線密度が$\rho\,[\mathrm{kg/m}]$の弦の一端を図1のようにして音叉に結び，他端を滑車を通して鉛直に下げて質量$m\U{kg}$のおもりをつるした．重力加速度の大きさを$g\U{m/s^2}$として以下の問に答えよ．
+\begin{komon}
+\ko{1} 弦を伝わる横波の速さ$v\U{m/s}$はいくらか．
+\ko{2} 今，弦の長さを$l\U{m}$として音叉を振動させたところ，弦に基本振動が出来た．このときに弦に生じている定在波の波長$\lambda_1\U{m}$を求め，この音叉の振動数$f\U{Hz}$を求めよ．
+\ko{3} 次に，弦の長さを変えずにおもりの質量を変えたところ，弦には$n$個の腹を持つ定在波が生じた．このとき，弦を伝わる波の速さ$v^\prime\U{m/s}$はいくらか．
+\ko{4} このとき用いたおもりの質量を$M\U{kg}$とするとき，上の事実から，おもりの質量比$\dfrac{M}{m}$を$n$を用いて表せ．
+\ko{5} (2)の後，音叉を図2のように立て，そこに弦をつないだ．この状態で弦に基本振動を発生させるためには，おもりの質量を$m$の何倍にすればよいか．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=62mm]{fig/n16_ex10_z1.png}\par\vspace{2mm}
+\includegraphics[keepaspectratio,width=62mm]{fig/n16_ex10_z2.png}
+\end{zuright}
+\end{reidai}
+
+\begin{sisinE}
+弦の振動は，\MARU{1}おもりのつり合いから張力を求めて$v=\sqrt{T/\rho}$で弦を伝わる波の速さを出す，\MARU{2}定在波の波形を描いて節−節間隔が$\dfrac{\lambda}{2}$であることから波長を出す，\MARU{3}$v=f\lambda$で振動数を出す，という3段階で処理する．
+
+音叉は自分の固有振動数で振動するので，弦に生じる定在波の振動数は音叉の側で決まってしまう．ただし，図1のように音叉を{\gtfamily 横にして}（腕の振動方向が弦に垂直になるように）つないだ場合と，図2のように{\gtfamily 立てて}（腕の振動方向が弦に平行になるように）つないだ場合とでは弦に生じる振動数が違う．その理由はこの例題の直後の本文と図で述べる．
+\end{sisinE}
+\Key{弦に発生する定在波\quad $\Rightarrow$\quad 波形を描き，節−節間隔$\dfrac{\lambda}{2}$および$v=\sqrt{\dfrac{T}{\rho}}$を使う}
+
+\begin{kaitou}
+\begin{komon}
+\ko{1} おもりについての力のつり合いより，弦の張力の大きさは$T=mg\U{N}$である．よって
+       \Ana{v=\sqrt{\frac{T}{\rho}}=\sqrt{\frac{mg}{\rho}}\U{m/s}\Ans}
+\ko{2} 基本振動であるから，弦に生じる定在波は次図のようになり，弦の長さが節−節間隔$\dfrac{\lambda_1}{2}$に等しい．
+       \begin{center}\AnaFig{75mm}{fig/n16_ex10_fund.png}{fig/n16_ex10_fund_blank.png}\end{center}
+       \Ana{l=\frac{\lambda_1}{2}\hspace{4mm}\Leftrightarrow\hspace{4mm}\lambda_1=2l\U{m}\Ans}
+       音叉を横にしてつないでいるので，弦に生じる定在波の振動数は音叉の振動数$f\U{Hz}$に一致する．$v=f\lambda_1$より，
+       \Ana{f=\frac{v}{\lambda_1}=\frac{1}{2l}\sqrt{\frac{mg}{\rho}}\U{Hz}\Ans}
+\ko{3} 腹が$n$個の定在波であるから，波形は次図のようになり，弦の長さと波長$\lambda^\prime\U{m}$との関係は
+       \begin{center}\includegraphics[keepaspectratio,width=75mm]{fig/n16_ex10_n.png}\end{center}
+       \Ana{l=\frac{\lambda^\prime}{2}\times n\hspace{4mm}\Leftrightarrow\hspace{4mm}\lambda^\prime=\frac{2l}{n}\U{m}}
+       である．音叉は同じものを使っているので弦の振動数は$f\U{Hz}$のままである．よって
+       \Ana{v^\prime=f\lambda^\prime=\frac{1}{2l}\sqrt{\frac{mg}{\rho}}\cdot\frac{2l}{n}=\frac{1}{n}\sqrt{\frac{mg}{\rho}}\U{m/s}\Ans}
+\ko{4} このときの張力は$Mg\U{N}$であるから$v^\prime=\sqrt{\dfrac{Mg}{\rho}}$であり，(3)の結果と等しいので
+       \Ana{\sqrt{\frac{Mg}{\rho}}=\frac{1}{n}\sqrt{\frac{mg}{\rho}}}
+       両辺を2乗して整理すると
+       \Ana{\frac{M}{m}=\frac{1}{n^2}\Ans}
+\ko{5} 音叉を立ててつないだ場合，弦に生じる定在波の振動数は音叉の振動数の$\dfrac{1}{2}$倍の$\dfrac{f}{2}\U{Hz}$になる．基本振動であるから波長は$2l\U{m}$であり，このとき弦を伝わる波の速さ$v^{\prime\prime}\U{m/s}$は
+       \Ana{v^{\prime\prime}=\frac{f}{2}\times 2l=fl=\frac{1}{2}\sqrt{\frac{mg}{\rho}}\U{m/s}}
+       である．求めるおもりの質量を$M^\prime\U{kg}$とすると$v^{\prime\prime}=\sqrt{\dfrac{M^\prime g}{\rho}}$であるから，
+       \[\sqrt{\frac{M^\prime g}{\rho}}=\frac{1}{2}\sqrt{\frac{mg}{\rho}}\hspace{4mm}\Leftrightarrow\hspace{4mm}M^\prime=\frac{m}{4}\U{kg}\]
+       よって
+       \Ana{\frac{1}{4}\ \text{倍}\Ans}
+\end{komon}
+\end{kaitou}
+\end{reidaiunit}
+
+音叉の振動数はある一定の値をとるが，図1と図2のように，弦に対するつなぎ方を変えると，弦を伝わる波の振動数は異なる値をとることになる．
+{\gtfamily 音叉を横にしてつないだ場合には弦には音叉と等しい振動数の定在波が発生し，音叉を立ててつないだ場合には音叉の振動数の$\dfrac{1}{2}$の振動数の定在波が発生する．}
+
+% 加筆（2026-09-10）：例題10(5) と下の図が $f$ と $f/2$ の違いを結果として使うのに，その理由が
+% 本文・指針・解答のどこにも書かれていなかった（生徒は図から読み取るしかなかった）。
+\hspace{1zw}この違いは，{\gtfamily 音叉の腕が振動する向きと弦の向きの関係}で決まる．
+
+\hspace{1zw}音叉を横にしてつないだ場合，音叉の腕は{\gtfamily 弦に対して垂直な向き}に振動する．弦の端は腕といっしょに上下に揺さぶられるので，弦は音叉と同じ振動数で振動する．
+
+\hspace{1zw}一方，音叉を立ててつないだ場合，音叉の腕は{\gtfamily 弦に対して平行な向き}に振動する．このときは弦の端が弦に沿って引かれたり戻されたりするだけで，弦を直接上下に揺さぶることはできない．かわりに，{\gtfamily 弦の張力が周期的に変化する}ことによって振動が維持される．弦は1回振動する間に「最も大きく膨らんだ状態」を上向き・下向きに1回ずつ，合わせて2回とるので，張力の変化がこの2回に合っていれば振動を保つことができる．すなわち音叉が2回振動する間に弦が1回振動すればよく，弦の振動数は音叉の$\dfrac{1}{2}$となる．次の図で，音叉の1周期と弦の1周期を見比べて確かめよ．
+
+\bsNeed{88mm}
+\begin{center}
+\includegraphics[keepaspectratio,width=130mm]{text_p103_fig1.png}
+\end{center}
+
+\bsNeed{51mm}   %% 図53.0mm − 16mm ＋ 見出し14mm
+\subsection{気柱に生じる振動}
+
+管の中の気体を{\gtfamily 気柱}という．
+気柱を伝わる音波は両端で反射し，その内部に定在波が生じる．
+しかし，弦の場合と同様に発生できる定在波には制限がある．
+
+管の端が開いているものを{\gtfamily 開端}といい，閉じているものを{\gtfamily 閉端}という．
+気柱に生じる定在波は{\gtfamily 縦波の定在波}であること，さらに縦波の定在波の節は媒質変位が最小であること，腹は媒質変位が最大であることに注意すると，
+\begin{description}
+\item[・] {\gtfamily 閉端}：媒質である空気は動けない\hspace{15mm}$\Rightarrow$\hspace{2mm}{\gtfamily 定在波の節となる}
+\item[・] {\gtfamily 開端}：媒質である空気は大きく振動できる\hspace{2mm}$\Rightarrow$\hspace{2mm}{\gtfamily 定在波の腹となる}
+\end{description}
+であるような定在波が発生する．
+
+\begin{zuright}{110mm}
+\hspace{1zw}管には主に両端が開いている開管（右図）と，片方は閉じ，片方は開いている閉管（左図）がある．
+それぞれの管に発生しうる縦波の定在波を横波表示すると，図のような定在波しかできないことがわかる．
+\zusep
+\includegraphics[keepaspectratio,width=110mm]{text_p103_fig2.png}
+\end{zuright}
+
+この図について，定在波の節−節間隔および腹−腹間隔が気柱中を伝わる音波の波長の半分，節−腹間隔が波長の$\dfrac{1}{4}$であることを用いると，弦振動の場合と同様に，管の長さ$l\U{m}$を用いて発生する定在波の波長$\lambda\U{m}$を求めることができる．
+これと音速から発生する定在波の振動数も計算することができる．
+
+\begin{matome}{気柱に生じる定在波の求め方}
+\hspace{3mm} $\MARU{1}$\hspace{2mm} 開口端を自由端（＝腹），閉口端を固定端（＝節）とするような定在波を描く．\\
+\hspace{3mm} $\MARU{2}$\hspace{2mm} 節−節間隔が波長の半分，節−腹間隔が波長の$\dfrac{1}{4}$であることを用いて，気柱の長さと波長の関係式を求め，波長を計算する．\\
+\hspace{3mm} $\MARU{3}$\hspace{2mm} $\MARU{2}$と音速から発生する定在波の振動数を求める．
+\end{matome}
+
+\bsNeed{95mm}
+%%%%%  例題11（16.3 のまとめ枠の直後）＝ 原本【例題11】〈閉管に発生する定在波〉（p104）  %%%%%%
+\begin{reidaiunit}
+\begin{reidai}{閉管に発生する定在波}
+\hspace{1zw}長さ$l\U{m}$の閉管に発生する定在波について以下の問に答えよ．
+\begin{komon}
+\ko{1} 気柱に発生しうる定在波を横波表示によって，波長の長い方から3つだけ示せ．
+\ko{2} (1)のそれぞれについて，波長を$l$を用いて表せ．
+\ko{3} 一般に，管に発生する定在波の波長を自然数$n$を用いて表せ．
+\ko{4} 音速を$v\U{m/s}$とするとき，管に発生する定在波の振動数$f\U{Hz}$を自然数$n$を用いて表せ．
+\ko{5} (1)の各振動を$\bigcirc\bigcirc$振動の形で表せ．
+\ko{6} 空気の疎密変化が最も激しい点を(1)の図のそれぞれの場合についてマークせよ．
+\ko{7} 3倍振動の場合について，各点の空気の変位が最大となるある瞬間（2通りあり得るが，そのうちの一方を考えればよい）において，空気の圧力が最も高くなる点および低くなる点はどこか，示せ．
+\end{komon}
+\end{reidai}
+
+\begin{sisinE}
+気柱の振動も弦と同じで，まず定在波の波形を描くことが出発点である．{\gtfamily 閉端は空気が動けないので節，開端は空気が自由に振動できるので腹}になる．波形を描いたら，節−節間隔$\dfrac{\lambda}{2}$，節−腹間隔$\dfrac{\lambda}{4}$から管の長さと波長の関係式を作ればよい．
+
+(6)(7)は縦波の定在波の疎密を問うている．横波表示のグラフの傾きが疎密を表すこと（第14回の例題5，および 14.6 のまとめ枠）を思い出せ．変位の節では両側の媒質が近づいたり遠ざかったりするので密度変動が最大，変位の腹では隣り合う媒質が同じ向きに同じだけ動くので密度は変化しない．
+\end{sisinE}
+\Key{$\MARU{1}$ 開口端を自由端＝腹，閉口端を固定端＝節とするような定在波を描く．\par
+\hspace{1zw}$\MARU{2}$ 節−節間隔が波長の半分，節−腹間隔が波長の$\dfrac{1}{4}$であることを用いて，気柱の長さと波長の関係式を求め，波長を計算する．\par
+\hspace{1zw}$\MARU{3}$ $\MARU{2}$と音速から発生する定在波の振動数を求める．}
+
+\begin{kaitou}
+\begin{komon}
+\ko{1}\ko{6} 閉端を節，開端を腹とする定在波を，節−腹間隔が$\dfrac{\lambda}{4}$になるように波長の長い順に3つ描くと次図のようになる（実線と破線は半周期ごとに入れ替わる波形である）．図中の$\bullet$は(6)の答えで，空気の疎密変化が最も激しい点＝{\gtfamily 変位の節}である．
+       \begin{center}\AnaFig{105mm}{fig/n16_ex11_modes.png}{fig/n16_ex11_modes_blank.png}\end{center}
+\ko{2} 図より，管の長さと波長との関係は
+       \Ana{\frac{\lambda_1}{4}=l,\hspace{4mm}\frac{\lambda_2}{4}+\frac{\lambda_2}{2}=l,\hspace{4mm}\frac{\lambda_3}{4}+\frac{\lambda_3}{2}\times2=l}
+       であるから，
+       \Ana{\lambda_1=4l,\hspace{4mm}\lambda_2=\frac{4}{3}l,\hspace{4mm}\lambda_3=\frac{4}{5}l\U{m}\Ans}
+\ko{3} 一般に，閉端から数えて節が$n$個の定在波では
+       \Ana{\frac{\lambda_n}{4}+\frac{\lambda_n}{2}\times(n-1)=l}
+       が成立するから，
+       \Ana{\lambda_n=\frac{4l}{2n-1}\U{m}\Ans}
+\ko{4} $v=f\lambda_n$より，
+       \Ana{f=\frac{v}{\lambda_n}=\frac{(2n-1)v}{4l}\U{Hz}\Ans}
+\ko{5} (4)より振動数は基本振動の振動数$\dfrac{v}{4l}$の$(2n-1)$倍，すなわち{\gtfamily 奇数倍}に限られる．よって
+       \Ana{\MARU{1}\ \text{基本振動},\hspace{4mm}\MARU{2}\ 3\,\text{倍振動},\hspace{4mm}\MARU{3}\ 5\,\text{倍振動}\Ans}
+\ko{7} 3倍振動は(1)の\MARU{2}の場合で，節は閉端と，閉端から$\dfrac{2}{3}l\U{m}$の点との2つである．各点の変位が最大となる瞬間の一方（下図の実線の波形）をとると，閉端の近くの空気は開端の向きに変位しているので閉端の空気は左右に引き離されて{\gtfamily 疎}になり，閉端から$\dfrac{2}{3}l$の節では両側の空気が押し寄せて{\gtfamily 密}になる．よって
+       \begin{center}\AnaFig{100mm}{fig/n16_ex11_p3.png}{fig/n16_ex11_p3_blank.png}\end{center}
+       \Ana{\text{圧力が最も高い点：閉端から}\frac{2}{3}l\U{m}\text{の点},\hspace{4mm}\text{最も低い点：閉端}\Ans}
+       （もう一方の瞬間では変位の向きが逆になるので，圧力の高低もそのまま入れ替わる．）
+\end{komon}
+\end{kaitou}
+\begin{chuu}
+閉管に発生する定在波は{\gtfamily 基本振動の奇数倍の振動しか存在しない}．これに対し，開管や両端を固定した弦では$n$倍振動がすべて存在する（練習［25］）．また(6)(7)からわかるように，{\gtfamily 変位の節が圧力変動の腹}，{\gtfamily 変位の腹が圧力変動の節}であり，両者は$\dfrac{\lambda}{4}$だけずれている．
+\end{chuu}
+\end{reidaiunit}
+
+\bsNeed{22mm}   %% 図24.4mm − 16mm ＋ 見出し14mm
+\subsection{開口端補正と共鳴管}
+\begin{wrapfigure}[5]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text_p104_fig1.png}
+\end{wrapfigure}
+前節にて，気柱に発生する定在波では開端に腹が来てその圧力が常に大気圧と等しくなる（＝音圧が$0\U{Pa}$）と考えたが，厳密には圧力が大気圧と等しくなる点（＝圧力変動の節），すなわち{\gtfamily 変位の腹}は開口よりも少し外側に出来ることが知られている．
+このずれを補正することを{\gtfamily 開口端補正}という．
+
+その補正の大きさ，すなわち腹の位置のはみ出し距離$\varepsilon\U{m}$は管の大きさ，形などによって異なり，半径$r\U{m}$の円筒の場合はおよそ$\varepsilon\fallingdotseq0.65\cdot r\U{m}$となることが経験的に知られている．
+しかし，一般にはその大きさは分からず，またこの$\varepsilon$があると管の長さ$l\U{m}$からすぐに波長を計算するということができない．
+このような場合であっても，発生させる定在波の振動数を一定にしたままで管の長さを変えていく手法を用いると，正しい波長および開口端補正距離を求めることができる．
+これを次の例題で扱う．
+
+\begin{matome}{開口端補正}
+\hspace{3mm} 気柱の開端に出来る定在波の腹は，厳密には開口から少しはみ出す．
+\end{matome}
+
+\bsNeed{110mm}
+%%%%%  例題12（16.4 の直後）＝ 原本【例題12】〈開口端補正と共鳴管〉（p105）  %%%%%%
+\begin{reidaiunit}
+\begin{reidai}{開口端補正と共鳴管}
+\begin{zuright}{45mm}
+\hspace{1zw}右図は共鳴管と呼ばれる装置である．$\mathrm{A}$と$\mathrm{B}$はゴム管でつながれて水が蓄えられており，$\mathrm{A}$の管を固定し，$\mathrm{B}$のタンクを上下させることによって任意の長さ$l\U{m}$の閉管を作ることができる．今，$\mathrm{A}$の上に振動数$f_0\U{Hz}$の音叉を用意し，これを鳴らすとある波長の音波が発生する．気柱の長さを$0\U{m}$からゆっくりと増加させていったところ，まず長さ$l_1\U{m}$のときに音が大きくなり，次に長さ$l_2\U{m}$のときに再び音が大きくなった．開口端補正は無視できないものとして以下の問に答えよ．
+\begin{komon}
+\ko{1} 長さ$l_1\U{m}$, $l_2\U{m}$のときそれぞれについて，発生する定在波の様子を横波表示で図示せよ．
+\ko{2} 発生している定在波の波長$\lambda\U{m}$を求めよ．
+\ko{3} 開口端の補正距離$\varepsilon\U{m}$を求めよ．
+\ko{4} この状態での音速$v\U{m/s}$を求めよ．
+\ko{5} 気柱の長さを$l_2\U{m}$からさらに長くしていくとき，次に音が大きくなる気柱の長さ$l_3\U{m}$を求めよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=45mm]{fig/n16_ex12_tube.png}
+\end{zuright}
+\end{reidai}
+
+\begin{sisinE}
+開口端補正がある場合には，{\gtfamily 腹を管口から$\varepsilon$だけ外側にはみ出させて}定在波を描けばよい．はみ出し距離$\varepsilon$は管の長さを変えても変わらないことに注意して，音が大きくなっている（＝共鳴が起きている）ときについて定在波の様子を作図しよう．
+
+$\varepsilon$が分からなくても，となり合う2つの共鳴の図を並べて描けば，その差がちょうど節−節間隔$\dfrac{\lambda}{2}$になっているので波長が求められる．
+\end{sisinE}
+\Key{開口端補正がある場合\quad $\Rightarrow$\quad 腹を少しはみ出させて定在波を描く}
+
+\begin{kaitou}
+\begin{komon}
+\ko{1} 共鳴しているのは，管口から$\varepsilon$だけ外に腹があり，水面が節となる定在波が出来ているときである．長さ$l_1$のときが基本振動，長さ$l_2$のときが3倍振動にあたり，次図のようになる．
+       \begin{center}\AnaFig{115mm}{fig/n16_ex12_two.png}{fig/n16_ex12_two_blank.png}\end{center}
+\ko{2} 図より
+       \Ana{l_1+\varepsilon=\frac{\lambda}{4},\hspace{6mm}l_2+\varepsilon=\frac{3}{4}\lambda}
+       が成立する．辺々引くと$\varepsilon$が消えて$l_2-l_1=\dfrac{\lambda}{2}$，すなわち
+       \Ana{\lambda=2(l_2-l_1)\U{m}\Ans}
+\ko{3} (2)の第1式に代入して，
+       \Ana{\varepsilon=\frac{\lambda}{4}-l_1=\frac{l_2-l_1}{2}-l_1=\frac{l_2-3l_1}{2}\U{m}\Ans}
+\ko{4} 気柱に生じている定在波の振動数は音叉の振動数$f_0\U{Hz}$に等しいから，$v=f_0\lambda$より
+       \Ana{v=2f_0(l_2-l_1)\U{m/s}\Ans}
+\ko{5} 次に共鳴するのは5倍振動のときで，
+       \Ana{l_3+\varepsilon=\frac{5}{4}\lambda}
+       である．(2)の第2式との差をとると$l_3-l_2=\dfrac{\lambda}{2}=l_2-l_1$であるから，
+       \Ana{l_3=2l_2-l_1\U{m}\Ans}
+\end{komon}
+\end{kaitou}
+\end{reidaiunit}
+
+例題より以下の事項が導かれる．
+
+\begin{matome}{共鳴管に発生する定在波の波長の計算}
+\hspace{3mm} となり合う2つの強め合いの波形を描き，その差分が節−節間隔$\dfrac{\lambda}{2}$であることを用いる
+\end{matome}
+
+\begin{bsHosoku}{参考（固有振動と共鳴）}
+\begin{zuright}{58mm}
+一般に振動する物体には最も振動しやすい振動数があり，これをその物体の{\gtfamily 固有振動数}という．固有振動数は振動体の材質や形状によって決まり，例えば単振り子はその周期の逆数が固有振動数であり，弦や気柱の場合は定在波ができるときの振動数が固有振動数である．振動体に対して外部から固有振動数に等しい周期で変動する外力を与えると，受ける外力が小さくてもその振動体は効率よく外部からの振動エネルギーを吸収し，その振幅が大きくなっていく．この現象を{\gtfamily 共鳴（共振）}という．
+\zusep
+\includegraphics[keepaspectratio,width=58mm]{fig/n16_kyoshin.png}
+\end{zuright}
+\end{bsHosoku}
+
+
+\newpage
+
+% 練習番号：第15回で［11］〜［20］を使ったのでこの回は［21］から
+\setcounter{qno}{20}
+
+\filbreak
+\Rank{A問題}
+
+\Mon{基本事項の確認}
+
+\hspace{1zw}以下の設問に答えよ．
+\begin{komon}
+\ko{1} \framebox[3zw]{\rule[-0.3zw]{0pt}{1.2zw}}の中から適切な語句を選べ．
+       \begin{description}
+       \item[\MARU{1}] 振動数の\fbox{大きい，小さい}音ほど，高く聞こえる．
+       \item[\MARU{2}] 音の\fbox{波長，波形}によって，音色が異なる．
+       \item[\MARU{3}] 音波の進む向きに対して垂直に置かれた平面を，面積$1\U{m^2}$，時間$1\U{s}$あたりに通過する\fbox{エネルギー，運動量}のことを，音の強さという．
+       \end{description}
+% 誤植訂正（2026-09-04）：原本は「面積 1[m^2]，時間 1[s] にあたりに通過する」．「にあたりに」は「あたりに」．
+\ko{2} 長さ$20\U{m}$あたり質量$80\U{g}$のピアノ線の両端を$3.6\times10^2\U{N}$の力で引っぱって固定したとき，このピアノ線を伝わる波の速さは何$\U{m/s}$か．
+\ko{3} 長さ$20\U{cm}$の開管の基本振動の波長は何$\U{m}$か．またこのときの振動数は何$\U{Hz}$か．音速を$340\U{m/s}$とし，開口端補正は考慮しなくてよい．
+\end{komon}
+
+\filbreak
+\Rank{B問題}
+
+\Mon{音の反射}
+
+\begin{zuright}{58mm}
+\hspace{1zw}前方の崖と船との距離を測るために汽笛を鳴らしたところ$\Delta t\U{s}$後に反射音を聞いた．測定時の状況が以下の各状況だったとすると，反射音を聞いた瞬間の位置から崖までの距離$d\U{m}$がいくらであるかを求めよ．ただし，この時の気温での音速を$c\U{m/s}$とする．
+\begin{komon}
+\ko{1} 風がなく，船が静止しているとき．
+\ko{2} 風がなく，船が速さ$v_0\U{m/s}$で崖に近づいているとき．
+\ko{3} 船は静止しているが，崖に向かって風速$w_0\U{m/s}$の風が吹いているとき．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=58mm]{fig/n16_p22_fune.png}
+\end{zuright}
+
+\Mon{弦の基本振動}
+
+\hspace{1zw}ある材質を用いて，長さ$l_0\U{m}$，断面積$S_0\U{m^2}$の弦を作り，張力$T_0\U{N}$をかけて振動させたところ，基本振動の振動数が$f_0\U{Hz}$であった．これと同じ材質を用いて弦を作って振動させる場合，以下のそれぞれのときに発生する基本振動の振動数を求めよ．
+\begin{komon}
+\ko{1} 断面積，張力が同じで，長さが$kl_0\U{m}$の場合．
+\ko{2} 長さ，張力が同じで，断面積が$kS_0\U{m^2}$の場合．
+\ko{3} 長さ，断面積が同じで，張力が$kT_0\U{N}$の場合．
+\end{komon}
+
+\Mon[\Sitei]{弦の振動}
+
+\begin{zuright}{55mm}
+\hspace{1zw}右図のように線密度が$\rho\,[\mathrm{kg/m}]$の弦の一端を音叉に結んで固定し，長さ$l\U{m}$のところで滑車にかけ，弦の他端に質量$m\U{kg}$のおもりをつるして弦を振動させたところ，弦の上には両端を節とする，腹が$n$個の定在波を生じた．重力加速度の大きさを$g\U{m/s^2}$として以下の設問に答えよ．
+% 誤植訂正（2026-09-04）：原本は「弦の一端を固定し」で音叉が本文に現れないが，(1)が音叉の振動数を問い，
+% 図でも弦の左端は音叉に結ばれている（解答も「音叉を横にしてつないでいる」としている）．
+\zusep
+\includegraphics[keepaspectratio,width=55mm]{fig/n16_p24_z1.png}
+\end{zuright}
+\begin{komon}
+\ko{1} 音叉の振動数$f_0\U{Hz}$を求めよ．
+\end{komon}
+\hspace{1zw}次におもりを質量$M\U{kg}$のおもりにかえて弦を振動させたところ，弦には基本振動が生じた．
+\begin{komon}
+\ko{2} $M$を求めよ．
+\end{komon}
+\begin{zuright}{55mm}
+\hspace{1zw}おもりをもとに戻して，長さ$L\U{m}$のところで滑車にかけて弦を振動させたところ，弦には基本振動が生じた．
+\begin{komon}
+\ko{3} $L$を求めよ．
+\end{komon}
+\hspace{1zw}次に，おもりは$m\U{kg}$のままで音叉を立て，弦の長さを調節して$L^\prime\U{m}$にしたところ，弦には両端を節とする腹が$n$個の定在波を生じた．
+\begin{komon}
+\ko{4} $L^\prime$を求めよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=55mm]{fig/n16_p24_z2.png}
+\end{zuright}
+
+\Mon{開管の振動}
+
+\hspace{1zw}長さ$l\U{m}$の開管に発生する定在波について以下の設問に答えよ．ただし，開口端補正については無視してよいものとする．
+\begin{komon}
+\ko{1} 気柱に発生しうる定在波を横波表示によって，波長の長いほうから三つだけ示せ．
+\ko{2} 一般に気柱に発生しうる定在波の波長を自然数$n$を用いて表せ．
+\ko{3} 音速を$v\U{m/s}$とするとき，気柱に発生しうる定在波の振動数を自然数$n$を用いて表せ．
+\ko{4} (1)の各振動の名称を，「$\bigcirc\bigcirc$振動」の形で表せ．
+\end{komon}
+
+\Mon[\Sitei]{共鳴管と開口端補正}
+
+\begin{zuright}{38mm}
+\hspace{1zw}右図のような共鳴の実験装置がある．今，スピーカーから一定の振動数の音を出しておき，水面を下げて行ったところ，気柱の長さ（開口から水面までの距離）が$l_1\U{m}$のとき，初めて音が大きくなった．さらに水面を下げて行くと音は一旦小さくなり，気柱の長さが$l_2\U{m}$のとき再び音が大きくなった．開口端補正の長さは音の振動数によらないとして，以下の設問に答えよ．
+\begin{komon}
+\ko{1} スピーカーの音の振動数が$f_1=423\U{Hz}$のとき，共鳴したのは$l_1=18.9\U{cm}$, $l_2=59.1\U{cm}$のときであった．このとき，管内の定在波の波長および開口端補正距離を求めよ．
+\ko{2} 気柱の中の音速はいくらか．
+\ko{3} さらに水面を下げて行くと音は一旦小さくなり，気柱の長さが$l_3\U{m}$のとき再び音が大きくなった．$l_3$を求めよ．
+\ko{4} 気柱の長さを$l_2=59.1\U{cm}$に保ったまま，スピーカーの音の振動数を$423\U{Hz}$から次第に増して行くと，音は一旦小さくなり，更に増して行くと，ある振動数$f_2\U{Hz}$のとき再び音が大きく聞こえた．この振動数$f_2$を求めよ．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=38mm]{fig/n16_p26_kyomei.png}
+\end{zuright}
+
+\filbreak
+\Rank{C問題}
+
+\Mon{弦の振動}
+
+\begin{zuright}{58mm}
+\hspace{1zw}線密度$\rho_1\,[\mathrm{kg/m}]$，長さ$l_1\U{m}$の弦$\mathrm{A}$の一端を壁に固定し，もう一端に線密度$\rho_2\,[\mathrm{kg/m}]$の弦$\mathrm{B}$をつなぐ．弦$\mathrm{B}$の長さを滑車を用いて調節し，滑車を通して質量$m\U{kg}$のおもりをつるした．この弦に発生する定在波について，重力加速度の大きさを$g\U{m/s^2}$として以下の設問に答えよ．
+\begin{komon}
+\ko{1} 弦$\mathrm{A}$, $\mathrm{B}$に発生する波の速さ$v_1$, $v_2\U{m/s}$の比$\dfrac{v_2}{v_1}$を求めよ．
+\ko{2} 弦$\mathrm{A}$, $\mathrm{B}$のつなぎ目，および$\mathrm{A}$の左端，$\mathrm{B}$の右端のみを節とするような定在波を発生させるためには，弦$\mathrm{B}$の長さ$l_2\U{m}$をどのような値にすればよいか．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=58mm]{fig/n16_p27_gen.png}
+\end{zuright}
+
+\Mon{気柱振動の特徴}
+
+\hspace{1zw}気柱振動に関して，以下の設問に答えよ．
+\begin{zuright}{55mm}
+\begin{komon}
+\ko{1} 図は閉管中での気柱の振動を示した図である．図\MARU{1}の振動数が$100\U{Hz}$であったとすると，図\MARU{2}, \MARU{3}の振動数はそれぞれ何$\U{Hz}$か．ただし，開口端補正は無視してよいものとする．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=55mm]{fig/n16_p28_heikan.png}
+\end{zuright}
+\begin{zuright}{45mm}
+\begin{komon}
+\ko{2} 図のようにある音波が気柱で共鳴しているとき，管内の圧力が最も激しく変動している点，最も大きな振幅で振動している点はそれぞれ$\mathrm{A}\sim\mathrm{D}$のどれか．
+\end{komon}
+\zusep
+\includegraphics[keepaspectratio,width=45mm]{fig/n16_p28_abcd.png}
+\end{zuright}
+
+
+\newpage
+
+\KaiTitle{第16回　弦と気柱の振動}
+\setlength{\columnseprule}{0.4pt}
+\begin{multicols}{2}
+\raggedcolumns
+
+\Rank{A問題}
+\MonN{21}{基本事項の確認}\par\nopagebreak
+\begin{sisin}
+(2)では$v=\sqrt{\dfrac{T}{\rho}}\U{m/s}$の分母・分子を逆にしないように注意．$\rho$は線密度，つまり{\gtfamily 単位長さあたりの質量}$\,[\mathrm{kg/m}]$である．
+
+(3)では気柱振動の振動数を求めるには，まず{\gtfamily 簡単な定在波の波形の図を描き}，腹−腹間隔が$\dfrac{\lambda}{2}\U{m}$であることを利用せよ．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} \MARU{1} 大きい，\MARU{2} 波形，\MARU{3} エネルギー\hspace*{\fill}\Ans
+\end{komon}
+\begin{bsHosoku}{参考}
+音については以下のような特徴がある．
+\begin{description}
+\item[\MARU{1}] 一般に，音の振動数が2倍になると，音程は1オクターブ上昇する．
+% 修正（2026-09-10）：原本は「2倍，4倍…」＝オクターブ倍だけを挙げていたが，倍音は基本振動数の
+% 整数倍（$2f,3f,4f,\cdots$）である。16.2 の $n$ 倍振動（$f_n=nf_1$）とも対応が取れていなかった。
+\item[\MARU{2}] 普通の楽器の場合，ある音程の音（主音，または{\gtfamily 基音}という）を鳴らすと，その振動数$f\U{Hz}$の整数倍の振動数をもつ音$2f, 3f, 4f, \cdots$が同時に鳴っており，これらを{\gtfamily 倍音}という．弦や気柱の$n$倍振動（16.3・16.4）がちょうどこれに当たる．このうち$2f$は1オクターブ，$4f$は2オクターブだけ高い音である．音の音色は，主音に対してこれらの倍音がどのような強さで混ざっているかによって決まる．
+\item[\MARU{3}] 音は音波という波動であるから，音の強さとはその波動の持つ振動強度，すなわちエネルギーである．
+\end{description}
+\end{bsHosoku}
+\begin{komon}
+\ko{2} $\rho=\dfrac{m}{l}=\dfrac{80\times10^{-3}}{20}=4.0\times10^{-3}\,[\mathrm{kg/m}]$であるから，
+       \[\begin{aligned}v&=\sqrt{\frac{T}{\rho}}=\sqrt{\frac{3.6\times10^{2}}{4.0\times10^{-3}}}\\&=3.0\times10^{2}\U{m/s}\Ans\end{aligned}\]
+\ko{3} 開管に基本振動が発生するときは次図の場合．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n16_a21_kaikan.png}\end{center}
+       ゆえに，管の長さは腹−腹間隔$\dfrac{\lambda}{2}\U{m}$である．よって，$\dfrac{\lambda}{2}=20\times10^{-2}$より，
+       \[\lambda=0.40=4.0\times10^{-1}\U{m}\Ans\]
+       また$v=f\lambda$より，
+       \[f=\frac{v}{\lambda}=\frac{340}{0.40}=850\U{Hz}\Ans\]
+\end{komon}
+
+\Rank{B問題}
+\MonN{22}{音の反射}\par\nopagebreak
+\begin{sisin}
+高校物理の問題というよりは，小学校の理科の問題のようなもの．問題条件をきちんと整理し，音・船がどのように移動するのかに注意して解こう．
+
+波とは媒質の振動が伝わっていく現象であり，その伝播速度の大きさのことを波の速さという．波の速さは媒質の{\gtfamily 圧力や温度}などによって定まるものであり，$c=\sqrt{\gamma\dfrac{R}{M}T}\U{m/s}$の式から分かるように，{\gtfamily 波源の運動によらない}．すなわち，船が動いていようといまいと，船から発せられた音波は，必ず$c\U{m/s}$で進行していく．
+
+ただし，音速$c\U{m/s}$とは{\gtfamily 媒質に対して音波が伝わる速さ}である．風が吹いているときは，音波を伝える媒質そのものが運動することになるので，地面に対する波の速さは加速されたり，減速されたりする．地面に対する波の速度は，吹いている風が追い風か向かい風かで加速されるか減速されるかを考えて求めればよい．
+\end{sisin}
+\KaiHead
+\hspace{1zw}汽笛を鳴らしたときの船と崖の距離を$x\U{m}$とする．
+\begin{komon}
+\ko{1} 汽笛を鳴らしてから反射音を聞くまでの間，船は静止しているので，
+       \[x=d\]
+       また風は吹いていないので，空間を伝わる音の地面に対する速さは$c\U{m/s}$である．よって，音を発してからそれが船まで戻ってくるのに要する時間は，
+       \[\Delta t=\frac{x+d}{c}\]
+       以上より，
+       \[d=\frac{c\cdot\Delta t}{2}\U{m}\Ans\]
+\ko{2} 汽笛を鳴らしてから反射音を聞くまでの間，船は$v_0\cdot\Delta t\U{m}$だけ崖に近づくので，
+       \[x=d+v_0\cdot\Delta t\]
+       また風は吹いていないので，空間を伝わる音の地面に対する速さは$c\U{m/s}$である．よって，音を発してからそれが船まで戻ってくるのに要する時間は，
+       \[\Delta t=\frac{x}{c}+\frac{d}{c}\]
+       である（次図参照）．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n16_a22_fune.png}\end{center}
+       以上を解くと，
+       \[d=\frac{(c-v_0)\Delta t}{2}\U{m}\Ans\]
+\ko{3} 崖に向かって速さ$w_0\U{m/s}$の風が吹いているが，これは船から崖へ向かって音が進むときには追い風に，また崖から船に向かって音が進むときには向かい風になる．よって空間を伝わる音の速さは，反射前後でそれぞれ$c+w_0\U{m/s}$, $c-w_0\U{m/s}$となる．
+
+       汽笛を鳴らしてから反射音を聞くまでの間，船は静止しているので，
+       \[x=d\]
+       である．以上より，音波が崖までを往復するのに要する時間は，
+       \[\Delta t=\frac{x}{c+w_0}+\frac{d}{c-w_0}\]
+       以上を解くと，
+       \[d=\frac{\left(c^2-{w_0}^2\right)\cdot\Delta t}{2c}\U{m}\Ans\]
+\end{komon}
+
+\MonN{23}{弦の基本振動}\par\nopagebreak
+\begin{sisin}
+長さ，断面積，張力を変化させたら基本振動がどう変化するのかを問われているのだから，まず，基本振動の振動数がどのような表式になるのかを決めてしまい，その式において長さや断面積などを変化させた場合に振動数が何倍になるのかを考えるのが楽であろう．
+
+弦を伝わる波の速さは$v=\sqrt{\dfrac{T}{\rho}}\U{m/s}$であるが，線密度$\rho\,[\mathrm{kg/m}]$は弦の材質の密度（与えられていないので適当な文字で置く）から求めればよい．
+
+またこのときの基本振動の振動数は，基本振動の図を描いて，節−節間隔が$\dfrac{\lambda}{2}\U{m}$であることを用いてまず波長を求め，$v=f\lambda$から振動数を求める．
+\end{sisin}
+\KaiHead
+\hspace{1zw}弦の長さが$l\U{m}$，断面積が$S\U{m^2}$，張力が$T\U{N}$のとき基本振動の振動数，波長をそれぞれ$f\U{Hz}$, $\lambda\U{m}$とし，このときに弦を伝わる波の速さを$v\U{m/s}$とする．
+
+\hspace{1zw}弦の材質の密度を$d\,[\mathrm{kg/m^3}]$とすると，弦の全体積は$Sl\U{m^3}$であるから全質量は$d\times Sl\U{kg}$である．よって弦の線密度$\rho\,[\mathrm{kg/m}]$は定義より，
+\[\rho=\frac{dSl}{l}=dS\,[\mathrm{kg/m}]\]
+である．以上より，弦を伝わる波の速さ$v\U{m/s}$は
+\[v=\sqrt{\frac{T}{\rho}}=\sqrt{\frac{T}{dS}}\U{m/s}\]
+となる．
+
+\hspace{1zw}弦に基本振動が出来る場合の様子は次図のようになる．
+\begin{center}\includegraphics[keepaspectratio,width=52mm]{fig/n16_a23_kihon.png}\end{center}
+\hspace{1zw}定在波の節−節間隔は$\dfrac{\lambda}{2}$であることから，弦の長さに着目して，
+\[\frac{\lambda}{2}=l\]
+これより，$\lambda=2l\U{m}$．$v=f\lambda$より，振動数を求めると，
+\[f=\frac{v}{\lambda}=\frac{1}{2l}\sqrt{\frac{T}{Sd}}\U{Hz}\]
+となる．$f\propto l^{-1}T^{\frac{1}{2}}S^{-\frac{1}{2}}$であるから，それぞれの場合の基本振動の振動数は，次のようになる．
+\begin{komon}
+\ko{1} $f_1=\dfrac{1}{k}f_0\U{Hz}$\hspace*{\fill}\Ans
+\ko{2} $f_2=\dfrac{1}{\sqrt{k}}f_0\U{Hz}$\hspace*{\fill}\Ans
+\ko{3} $f_3=\sqrt{k}f_0\U{Hz}$\hspace*{\fill}\Ans
+\end{komon}
+
+\MonN[\Sitei]{24}{弦の振動}\par\nopagebreak
+\begin{sisin}
+弦の振動に関する総合問題であるが，基本的な考え方はどれも同じで，\MARU{1}張力を求めて弦を伝わる波の速さを求める，\MARU{2}定在波の図を描いて，節−節間隔$\dfrac{\lambda}{2}$を使い，定在波の波長を求める，\MARU{3}$v=f\lambda$を用いて発生する定在波の振動数を求める，という流れである．
+
+音叉はその固有振動数でしか振動することができないが，音叉を横にしてつないだ場合には弦には音叉の固有振動と等しい振動数の定在波が発生し，音叉を縦にしてつないだ場合には音叉の固有振動の$\dfrac{1}{2}$の振動数の定在波が発生する．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} このときの弦の張力を$T\U{N}$とすれば，おもりについての力のつり合いより，
+       \[T=mg\U{N}\]
+       ゆえに弦を伝わる波の速さは，
+       \[v=\sqrt{\frac{T}{\rho}}=\sqrt{\frac{mg}{\rho}}\U{m/s}\]
+       弦の上には$n$個の腹を持つ定在波が発生しているので，このときの定在波の波長$\lambda\U{m}$と弦の長さとの関係式は，
+       \[l=\frac{\lambda}{2}\times n\]
+       である（次図参照）．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n16_a24_n.png}\end{center}
+       ゆえに，この定在波の波長は
+       \[\lambda=\frac{2l}{n}\U{m}\]
+       である．また，音叉を横にして弦につないでいるので，弦に発生する定在波の振動数は音叉の固有振動数に一致する．よって$v=f_0\lambda$が成立し，これを解いて，
+       \[f_0=\frac{n}{2l}\sqrt{\frac{mg}{\rho}}\U{Hz}\Ans\]
+\ko{2} おもりを質量$M\U{kg}$のものに取り替えると弦の張力が変化し，弦を伝わる波の速さが，
+       \[v_2=\sqrt{\frac{Mg}{\rho}}\U{m/s}\]
+       に変化する．また，このときの定在波の波長$\lambda_2\U{m}$と弦の長さとの関係式は，
+       \begin{center}\includegraphics[keepaspectratio,width=52mm]{fig/n16_a24_len1.png}\end{center}
+       \[l=\frac{\lambda_2}{2}\]
+       であるから，このときの定在波の波長は，
+       \[\lambda_2=2l\U{m}\]
+       である．音叉を横にして弦につないでいるので，弦に発生する定在波の振動数は音叉の振動数$f_0$に一致する．よって
+       \[v_2=f_0\lambda_2\]
+       が成立し，この式に上の各値を代入すると，
+       \[\sqrt{\frac{Mg}{\rho}}=\frac{n}{2l}\sqrt{\frac{mg}{\rho}}\cdot 2l\]
+       となる．これを解くと，
+       \[M=n^2m\U{kg}\Ans\]
+\ko{3} おもりを元に戻したので，このときに弦を伝わる波の速さは，
+       \[v=\sqrt{\frac{mg}{\rho}}\U{m/s}\]
+       である．また，このときの定在波の波長$\lambda_3\U{m}$と弦の長さとの関係式は，
+       \begin{center}\includegraphics[keepaspectratio,width=52mm]{fig/n16_a24_len2.png}\end{center}
+       \[L=\frac{\lambda_3}{2}\]
+       であるから，このときの定在波の波長は，
+       \[\lambda_3=2L\U{m}\]
+       である．音叉を横にして弦につないでいるので，弦に発生する定在波の振動数は音叉の振動数$f_0$に一致する．よって
+       \[v=f_0\lambda_3\]
+       が成立し，この式に上の各値を代入すると，
+       \[\sqrt{\frac{mg}{\rho}}=\frac{n}{2l}\sqrt{\frac{mg}{\rho}}\cdot 2L\]
+       となる．これを解くと，
+       \[L=\frac{l}{n}\U{m}\Ans\]
+\ko{4} おもりは$m\U{kg}$のままであるから，このときに弦を伝わる波の速さは，
+       \[v=\sqrt{\frac{mg}{\rho}}\U{m/s}\]
+       である．また，このときの定在波の波長$\lambda_4\U{m}$と弦の長さとの関係式は，
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n16_a24_Ld.png}\end{center}
+       \[L^\prime=\frac{\lambda_4}{2}\times n\]
+       であるから，このときの定在波の波長は，
+       \[\lambda_4=\frac{2L^\prime}{n}\U{m}\]
+       である．音叉を立てて弦につないでいるので，弦に発生する定在波の振動数は音叉の振動数$f_0$の半分の$\dfrac{f_0}{2}\U{Hz}$になる．よって
+       \[v=\frac{f_0}{2}\cdot\lambda_4\]
+       が成立し，この式に上の各値を代入すると，
+       \[\sqrt{\frac{mg}{\rho}}=\frac{1}{2}\cdot\frac{n}{2l}\sqrt{\frac{mg}{\rho}}\cdot\frac{2L^\prime}{n}\]
+       となる．これを解くと，
+       \[L^\prime=2l\U{m}\Ans\]
+\end{komon}
+
+\MonN{25}{開管の振動}\par\nopagebreak
+\begin{sisin}
+気柱振動の問題についても考え方は同じで，定在波の波形を描き，波長と管の長さの関係式$\left(\text{節−節間隔は}\dfrac{\lambda}{2}\text{，腹−節間隔は}\dfrac{\lambda}{4}\right)$から波長を求め，$v=f\lambda$の関係式に代入すればよい．
+
+気柱振動では，開端は腹，閉端は節となる．波の形を書くと直観的にはなんとなくこのようになるのは分かるだろうが，なぜそうなるのかの理由も覚えておくこと．開端は媒質が大きく動けるので腹，閉端は媒質が動けないので節となる．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} 気柱には開端を腹とするような定在波を生じる．腹−腹の区間の数が多いほど波長は短くなるから，気柱に発生しうる定在波の横波表示は波長の長いほうから順に次図の三つとなる．
+       \begin{center}\includegraphics[keepaspectratio,width=64mm]{fig/n16_a25_123.png}\end{center}
+       \hspace*{\fill}\Ans
+\ko{2} 気柱に生じる定在波のうち，腹−腹の区間が$n$個あるものの波長を$\lambda_n\U{m}$，その定在波の振動数を$f_n\U{Hz}$とする．定在波の腹−腹間隔は$\dfrac{\lambda_n}{2}$であることに注意すると，(1)の図を参照して，
+       \[\frac{\lambda_n}{2}\cdot n=l\]
+       が成立し，この式を満たさない波長は上図のように両端を腹とすることができない．よって，これを解いて，
+       \[\lambda_n=\frac{2l}{n}\U{m}\Ans\]
+\ko{3} $v$, $f_n$, $\lambda_n$の間には$v=f_n\cdot\lambda_n$の関係が成立するので，
+       \[f_n=\frac{v}{\lambda_n}=\frac{nv}{2l}\U{Hz}\Ans\]
+\ko{4} (1)の三つの振動は，それぞれ$n=1$, $2$, $3$の場合に対応する．また，$n=1$の場合の\MARU{1}の振動が波長が最も長く，振動数が最小であるから，これが基本振動である．(3)の式を変形すると，
+       \[f_n=n\times\frac{v}{2l}=n\cdot f_1\U{Hz}\]
+       と変形できるので，$f_n$は$n$倍振動である．よって，
+       \[\MARU{1}\text{：基本振動}\]
+       \[\MARU{2}\text{：2倍振動}\]
+       \[\MARU{3}\text{：3倍振動}\]
+       である．\hspace*{\fill}\Ans
+\end{komon}
+
+\MonN[\Sitei]{26}{共鳴管と開口端補正}\par\nopagebreak
+\begin{sisin}
+開口端補正をする場合には，開端にできる腹を少しはみ出させた図を描けばよい．はみ出し距離は管の長さが変わっても変化しないことに注意し，音が大きくなっている，すなわち共鳴が起きているときについて定在波の様子を作図して考えよう．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} 管の長さが$l_1$, $l_2$, $l_3$の共鳴のときの定在波の様子を横波表示にして図示する．開口端補正距離および波長が同じ（音速，スピーカーの振動数が同じため）であることに注意すれば次図のようになる．
+       \begin{center}\includegraphics[keepaspectratio,width=68mm]{fig/n16_a26_1.png}\end{center}
+       よって，1回目と2回目の共鳴点の差分は，ちょうど定在波の節−節間隔に対応し，この長さが$\dfrac{\lambda}{2}$である．よって，
+       \[l_2-l_1=\frac{\lambda}{2}\]
+       これより，
+       \[\lambda=2(l_2-l_1)=80.4\U{cm}\Ans\]
+       また開口端補正距離は，腹−節間隔が$\dfrac{\lambda}{4}$であることに注意して，上図より
+       \[\varepsilon=\frac{\lambda}{4}-l_1=1.2\U{cm}\Ans\]
+\ko{2} この定在波の振動数はスピーカーの音の振動数$f_1=423\U{Hz}$であるから，音速は
+       \[\begin{aligned}f_1\cdot\lambda&=34009.2\,[\mathrm{cm/s}]\\&\fallingdotseq340\U{m/s}\Ans\end{aligned}\]
+\ko{3} 3回目の共鳴点は，2回目の共鳴点からさらに下へ$\dfrac{\lambda}{2}$だけ下がった点であるから，
+       \[l_3=l_2+\frac{\lambda}{2}=99.3\U{cm}\Ans\]
+\ko{4} 開口端補正距離が音の振動数によらないとされていることに注意すると，(1)の図より，結局，
+       \[l_2+\varepsilon=60.3\U{cm}\]
+       の長さの部分に定在波が出来ることになる．
+
+       音の振動数を大きくしていくということは，（音速は変わらないから）波長を短くしていくということである．(1)の$l_2=59.1\U{cm}$の状態から波長を短くしていって再び開口が腹，閉口が節となって定在波が生じるのは，次図のような場合である．
+       \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n16_a26_4.png}\end{center}
+       よってこの定在波の波長を$\lambda_2$とすると，腹−節間隔が$\dfrac{\lambda_2}{4}$，節−節間隔が$\dfrac{\lambda_2}{2}$であることに注意して，
+       \[\frac{\lambda_2}{4}+\frac{\lambda_2}{2}\times2=l_2+\varepsilon\]
+       が成立する．これを解いて，
+       \[\lambda_2=48.24\U{cm}\]
+       である．音速と波長・振動数の関係より，
+       \[f_2\cdot\lambda_2=34009.2\,[\mathrm{cm/s}]\]
+       が成立するので，これを解くと，
+       \[\begin{aligned}f_2&=704.99\U{Hz}\\&\fallingdotseq705\U{Hz}\Ans\end{aligned}\]
+\end{komon}
+\begin{chuu}
+一般的には開口端補正距離は音波の波長に依存するので，本問のような仮定がない限りは(4)を解くことはできない．
+\end{chuu}
+
+\Rank{C問題}
+\MonN{27}{弦の振動}\par\nopagebreak
+\begin{sisin}
+定在波の波形を描き，波長を求めてから$v=f\lambda$の関係式に代入する，という方針は本問でも同じであるが，本問の場合には，以下の点に注意せよ．
+
+結び目の点に着目すると，結び目の点は左向きに弦$\mathrm{A}$の張力を受け，右向きに弦$\mathrm{B}$の張力を受けてつり合って静止している．よって，弦$\mathrm{A}$, $\mathrm{B}$の張力の大きさは等しい．
+
+結び目の点に着目すると，弦$\mathrm{A}$, $\mathrm{B}$の振動周期が一致していないと結び目の点が折れ曲がってしまうことになる．よって，弦$\mathrm{A}$, $\mathrm{B}$の振動周期，ひいては振動数は一致している．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} おもりに作用する力のつり合いより，弦$\mathrm{B}$の張力の大きさは
+       \[T=mg\U{N}\]
+       である．また，結び目の点に着目すると，弦$\mathrm{A}$, $\mathrm{B}$の張力がつり合って結び目の点が静止しているので，弦$\mathrm{A}$の張力の大きさも
+       \[T=mg\U{N}\]
+       である．以上より，弦$\mathrm{A}$, $\mathrm{B}$に発生する波の速さは，
+       \[v_1=\sqrt{\frac{mg}{\rho_1}},\hspace{4mm}v_2=\sqrt{\frac{mg}{\rho_2}}\U{m/s}\]
+       となるので，この二つの比を取ると，
+       \[\frac{v_2}{v_1}=\sqrt{\frac{\rho_1}{\rho_2}}\Ans\]
+\ko{2} 弦$\mathrm{A}$, $\mathrm{B}$のつなぎ目，および$\mathrm{A}$の左端，$\mathrm{B}$の右端のみを節とするような定在波とは，次図のような定在波である．
+       \begin{center}\includegraphics[keepaspectratio,width=58mm]{fig/n16_a27_2.png}\end{center}
+       よって，このとき弦$\mathrm{A}$に生じている定在波の波長を$\lambda_1$，弦$\mathrm{B}$に生じている定在波の波長を$\lambda_2$とすると，弦の長さと波長との間の関係は，
+       \[l_1=\frac{\lambda_1}{2},\hspace{4mm}l_2=\frac{\lambda_2}{2}\]
+       である．これより，
+       \[\lambda_1=2l_1,\hspace{4mm}\lambda_2=2l_2\U{m}\]
+       また，弦$\mathrm{A}$, $\mathrm{B}$に発生する定在波の振動数は共通であるからこれを$f\U{Hz}$とおくと，波の速さと波長・振動数の関係より，
+       \[v_1=f\lambda_1,\hspace{4mm}v_2=f\lambda_2\]
+       が成立する．この二つの式の比を取ると，
+       \[\frac{v_2}{v_1}=\frac{\lambda_2}{\lambda_1}=\frac{l_2}{l_1}\]
+       となるので，(1)の結果を用いて，
+       \[l_2=l_1\sqrt{\frac{\rho_1}{\rho_2}}\U{m}\Ans\]
+\end{komon}
+\begin{chuu}
+本問では$l_1$, $l_2$の間に成り立つ関係しか要求されていないが，実際に題意にあるような振動を発生させるためにはこの条件に加えて，おもりの質量$m$に関する条件が必要になる．
+\end{chuu}
+
+\MonN{28}{気柱振動の特徴}\par\nopagebreak
+\begin{sisin}
+気柱振動とはそもそも，縦波である音波による定在波であるから，問題で与えられた図は，縦波を横波表示して表したものである．また，ある瞬間における定在波の波形は，2本の曲線のうちの片方であることにも注意せよ．例えば(2)では，実際の定在波は，破線と実線の波形を半周期ごとに交互に取っている．縦波の定在波については詳しくは第14回・第15回を復習せよ．
+\end{sisin}
+\KaiHead
+\begin{komon}
+\ko{1} \MARU{1}$\sim$\MARU{3}における定在波の波長を$\lambda_1\sim\lambda_3$であるとすると，与えられた定在波の図より，波長と管の長さとの関係は，
+       \[\frac{\lambda_1}{4}=l,\hspace{3mm}\frac{\lambda_2}{4}+\frac{\lambda_2}{2}=l,\]
+       \[\frac{\lambda_3}{4}+\frac{\lambda_3}{2}=3l\]
+       である．これを解いて，
+       \[\lambda_1=4l,\hspace{3mm}\lambda_2=\frac{4}{3}l,\hspace{3mm}\lambda_3=4l\]
+       と分かる．また，このときの音速を$v$とするとこれは\MARU{1}$\sim$\MARU{3}について共通であり，$v$を用いて各気柱振動の振動数を表すと，
+       \[f_1=\frac{v}{\lambda_1}=\frac{v}{4l},\hspace{3mm}f_2=\frac{v}{\lambda_2}=\frac{3v}{4l},\]
+       \[f_3=\frac{v}{\lambda_3}=\frac{v}{4l}\]
+       である．ここで，$f_1=100\U{Hz}$であるから，これと比較して，
+       \[\MARU{2}\text{の振動：}f_2=3f_1=300\U{Hz}\]
+       \[\MARU{3}\text{の振動：}f_3=f_1=100\U{Hz}\Ans\]
+\end{komon}
+\begin{chuu}
+閉管について，作られる定在波が1倍，3倍，5倍$\cdots$と奇数倍の振動しかないということを覚えていれば\MARU{2}についてはすぐに分かるが，\MARU{3}については管の長さが違うため，上の解答のように原則に立ち返って考えなければならない．
+\end{chuu}
+\begin{komon}
+\ko{2} 与えられたグラフにおいて，定在波が実線の波形を取るときには$\mathrm{A}$は密点，$\mathrm{C}$は疎点である．これに対して，定在波が破線の波形を取るときには$\mathrm{A}$は疎点，$\mathrm{C}$は密点となる．ゆえに，最も圧力変化が激しいのは$\mathrm{A}$および$\mathrm{C}$点である．\hspace*{\fill}\Ans
+
+       横波表示にした際に最も振れ幅の大きい点は$\mathrm{B}$および$\mathrm{D}$点であるが，横波表示での上下方向の振動は実際の媒質の左右方向の振動を表すので，$\mathrm{B}$および$\mathrm{D}$点が最も大きな振幅で左右方向（管の方向）に振動していると言える．よって，最も大きな振幅で振動しているのは$\mathrm{B}$および$\mathrm{D}$点である．\hspace*{\fill}\Ans
+\end{komon}
+\begin{chuu}
+実際には，気柱振動は次図のように空気の層が管の軸方向に平行に振動するものであるから，最大振幅で振れている点，および管内の圧力が最も激しく変動している点は，$\mathrm{A}\sim\mathrm{D}$の中心点だけでなく，これらの点を含む面全体である．
+\begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/n16_a28_chu.png}\end{center}
+よって，厳密には，
+\begin{description}
+\item[] 最も大きな振幅で振動している点：\\ \hspace*{2zw}$\mathrm{B}$, $\mathrm{D}$点を含み管底に平行な面に属する点
+\item[] 圧力が最も激しく変動している点：\\ \hspace*{2zw}$\mathrm{A}$, $\mathrm{C}$点を含み管底に平行な面に属する点
+\end{description}
+となる．
+\end{chuu}
+
+\end{multicols}

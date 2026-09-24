@@ -1,0 +1,101 @@
+\section{荷電粒子の運動}
+
+\subsection{ローレンツ力}
+電流の流れている導線は，周りの磁場から力を受けるが，これは電流の担い手として導線の中を{\bf 移動している電子が磁場から力を受ける}からである．
+磁場中を運動する荷電粒子が，磁場から受ける力を{\bf ローレンツ力}という．
+
+ \begin{wrapfigure}[6]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p66_fig1.png}
+\end{wrapfigure}
+電気量の大きさが$q$[C]の荷電粒子が，大きさ$B$[T]の{\bf 磁束密度に対して垂直な速度成分}\mbox{\boldmath$v$} {\bf [m/s]}を持っているとき，この荷電粒子は大きさが
+\[ \mbox{\boldmath$F=qvB$} \hspace{2mm} {\bf [N]} \]
+のローレンツ力を受ける．
+ローレンツ力の作用する向きは，{\bf 電荷の移動を電流に置き換えてフレミング左手の法則を利用}する．
+すなわち，正電荷であれば正電荷の移動する向きを電流の向きだと考えてフレミングの左手の法則を用い，負電荷であれば負電荷の移動する向きと逆向きに電流が流れていると考えてこれに対してフレミング左手の法則を用いればよい．
+
+\begin{itembox}[l]{【ローレンツ力】}
+ \hspace{3mm} 磁場中を運動する荷電粒子は，磁場からローレンツ力を受ける．\\
+ \hspace{3mm} 大きさ \hspace{5mm} $qvB$\hspace{2mm} [N] \hspace{10mm} 向き$\Rightarrow$ 電流に置き換えてからフレミング左手の法則
+ \end{itembox}
+ 
+ ローレンツ力は常に速度ベクトルに対して垂直に作用するため，{\bf 速度ベクトルの向きは変えるがその大きさは変えない}．
+ そのため，磁場中を運動する荷電粒子は，直線軌道，円軌道，もしくはらせん軌道を描くことになる．
+ 
+ 一様磁場中での荷電粒子の運動は以下のようにまとめられる．
+ 
+\begin{itembox}[l]{【定常波の表式】}
+\begin{description}
+\item[\MARU{1}] 磁場に垂直な面内での運動：\\
+磁場に垂直な速度成分に対してはローレンツ力が面内方向に作用し，その結果，{\bf 面内で等速円運動}を行う．
+回転半径は運動方程式より求められる．
+\item[\MARU{2}] 磁場に平行な速度成分：\\
+ローレンツ力が作用しないので，{\bf 磁場に平行な速度成分は不変}．
+\end{description}
+以上より，{\bf 初速が磁場に対して平行な場合は等速直線運動，垂直な場合は等速円運動，斜めをなす場合はらせん運動}を行う．
+\end{itembox}
+
+   \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p39.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p40.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p41.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p138.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p139.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p140.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p141.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

@@ -1,0 +1,7051 @@
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.11.21)  5 SEP 2026 08:24
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**入試物理基礎演習.tex
+(./入試物理基礎演習.tex
+pLaTeX2e <2023-02-14u04>+1, based on
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/local/texlive/2025/texmf-dist/tex/platex/jsclasses/jsarticle.cls
+Document Class: jsarticle 2023/02/23 jsclasses (okumura, texjporg)
+Class jsarticle Info: Autodetected engine: upLaTeX on input line 217.
+\jsc@mpt=\dimen157
+\jsc@mmm=\dimen158
+\jsc@smallskipamount=\skip49
+LaTeX Info: Redefining \textmc on input line 511.
+LaTeX Info: Redefining \textgt on input line 513.
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY2/mc/m/n --> JY2/gt/m/n on input line 575.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 769.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 769.
+\fullwidth=\dimen159
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 7.39746pt on input line 922.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 7.39746pt on input line 922.
+\c@part=\count195
+\c@section=\count196
+\c@subsection=\count197
+\c@subsubsection=\count198
+\c@paragraph=\count199
+\c@subparagraph=\count266
+\@abstractbox=\box69
+\c@figure=\count267
+\c@table=\count268
+\abovecaptionskip=\skip50
+\belowcaptionskip=\skip51
+\jsc@tocl@width=\dimen160
+\@lnumwidth=\dimen161
+\bibindent=\dimen162
+(/usr/local/texlive/2025/texmf-dist/tex/platex/jsclasses/jslogo.sty
+Package: jslogo 2019/07/25 okumura, texjporg
+LaTeX Info: Redefining \TeX on input line 82.
+LaTeX Info: Redefining \LaTeX on input line 135.
+LaTeX Info: Redefining \LaTeXe on input line 188.
+)
+\heisei=\count269
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 106.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2022/09/22 v5.0m Graphics/color driver for dvipdfmx
+))
+\Gin@req@height=\dimen163
+\Gin@req@width=\dimen164
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen165
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen166
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count270
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count271
+\leftroot@=\count272
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count273
+\DOTSCASE@=\count274
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box70
+\strutbox@=\box71
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen167
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count275
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count276
+\dotsspace@=\muskip17
+\c@parentequation=\count277
+\dspbrk@lvl=\count278
+\tag@help=\toks20
+\row@=\count279
+\column@=\count280
+\maxfields@=\count281
+\andhelp@=\toks21
+\eqnshift@=\dimen168
+\alignsep@=\dimen169
+\tagshift@=\dimen170
+\tagwidth@=\dimen171
+\totwidth@=\dimen172
+\lineht@=\dimen173
+\@envbody=\toks22
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/ascmac/ascmac.sty
+Package: ascmac 2020/01/15 v2.1 ascmac wrapper (community edition) 
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/ascmac/tascmac.sty
+Package: tascmac 2020/01/15 v2.1 ascmac package (community edition) 
+\@savetbaselineshift=\dimen174
+\@saveybaselineshift=\dimen175
+\scb@x=\box72
+\scscb@x=\box73
+\@bw=\dimen176
+\@nbox=\box74
+\@nbody=\box75
+\@scw=\dimen177
+\ascmac@hoboxa=\box76
+\ascmac@hoboxb=\box77
+\@itemh=\dimen178
+\@iboxpos=\toks24
+\@iboxstr=\box78
+\@bwsp=\box79
+\@@bwsp=\box80
+\@bcal=\count282
+\shaderule=\dimen179
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
+\c@tracingmulticols=\count283
+\mult@box=\box81
+\multicol@leftmargin=\dimen180
+\c@unbalance=\count284
+\c@collectmore=\count285
+\doublecol@number=\count286
+\multicoltolerance=\count287
+\multicolpretolerance=\count288
+\full@width=\dimen181
+\page@free=\dimen182
+\premulticols=\dimen183
+\postmulticols=\dimen184
+\multicolsep=\skip55
+\multicolbaselineskip=\skip56
+\partial@page=\box82
+\last@line=\box83
+\mc@boxedresult=\box84
+\maxbalancingoverflow=\dimen185
+\mult@rightbox=\box85
+\mult@grightbox=\box86
+\mult@firstbox=\box87
+\mult@gfirstbox=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\c@minrows=\count289
+\c@columnbadness=\count290
+\c@finalcolumnbadness=\count291
+\last@try=\dimen186
+\multicolovershoot=\dimen187
+\multicolundershoot=\dimen188
+\mult@nat@firstbox=\box125
+\colbreak@box=\box126
+\mc@col@check@num=\count292
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/multenum/multienum.sty
+\usedx=\skip57
+\remainx=\skip58
+\usedxx=\skip59
+\remainxx=\skip60
+\usedxxx=\skip61
+\remainxxx=\skip62
+\usedxxxx=\skip63
+\remainxxxx=\skip64
+\remainxox=\skip65
+\remainxoxx=\skip66
+\remainxxxxx=\skip67
+\usedxxxxx=\skip68
+\c@multienumdepth=\count293
+\c@multienum=\count294
+\c@multienumi=\count295
+\c@multienumii=\count296
+\c@multienumiii=\count297
+\c@multienumiv=\count298
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen189
+\WF@size=\dimen190
+\c@WF@wrappedlines=\count299
+\WF@box=\box127
+\WF@everypar=\toks25
+Package: wrapfig 2003/01/31  v 3.6
+)
+(./eclbkbox.sty
+\bk@bxb=\box128
+\bk@bxa=\box129
+\bk@lcnt=\count300
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2024/06/23 v1.3e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: dvipdfmx.def on input line 149.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(./butsuri_style.sty
+Package: butsuri_style 2026/08/31 v4 入試物理基礎演習 紙面デザイ
+ン
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip69
+\fb@frw=\dimen191
+\fb@frh=\dimen192
+\FrameRule=\dimen193
+\FrameSep=\dimen194
+)
+\bsAnaBox=\box130
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2024-05-08 L3 backend support: dvips
+\l__pdf_internal_box=\box131
+\l__pdf_backend_content_box=\box132
+\l__pdf_backend_model_box=\box133
+\g__pdf_backend_annotation_int=\count301
+\g__pdf_backend_link_int=\count302
+\g__pdf_backend_link_sf_int=\count303
+)
+(./入試物理基礎演習.aux (./physics_ch1.aux) (./physics_ch2.aux)
+(./physics_ch3.aux) (./physics_ch4.aux) (./physics_ch5.aux) (./physics_ch6.aux)
+(./physics_ch7.aux) (./physics_ch8.aux) (./physics_ch9.aux) (./physics_ch10.aux
+) (./physics_ch11.aux) (./physics_ch12.aux) (./physics_ch13.aux)
+(./physics_ch14.aux) (./physics_ch15.aux) (./physics_ch16.aux)
+(./physics_ch17.aux) (./physics_ch18.aux) (./physics_ch19.aux)
+(./physics_ch20.aux) (./physics_ch21.aux) (./physics_ch22.aux)
+(./physics_ch23.aux) (./physics_ch24.aux) (./physics_ch25.aux)
+(./physics_ch26.aux) (./physics_ch27.aux) (./physics_ch28.aux)
+(./physics_ch29.aux) (./physics_ch30.aux) (./physics_ch31.aux)
+(./physics_ch32.aux) (./physics_ch33.aux) (./physics_ch34.aux)
+(./physics_ch35.aux) (./physics_ch36.aux) (./physics_ch37.aux)
+(./physics_ch38.aux) (./physics_ch39.aux) (./physics_ch40.aux)
+(./physics_ch41.aux) (./physics_ch42.aux) (./physics_ch43.aux)
+(./physics_ch44.aux) (./physics_ch45.aux) (./physics_ch46.aux))
+\openout1 = `入試物理基礎演習.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+\c@nombre=\count304
+\c@nomber=\count305
+\c@qno=\count306
+\zuw=\skip70
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 19.17792pt on input line 135.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 19.17792pt on input line 135.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 138.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 138.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 138.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 138.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 6.47278pt on input line 160.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 4.62341pt on input line 160.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 160
+.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 160
+.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 16
+0.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+
+[1
+
+]
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 13.31541pt on input line 201.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 13.31541pt on input line 201.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 13.31541pt on input line 201.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 13.31541pt on input line 201.
+ (./入試物理基礎演習.toc
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 6.47278pt on input line 3.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 4.62341pt on input line 3.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 3.
+
+
+[2]
+
+[3]
+
+[4]
+
+[5]
+
+[6])
+\tf@toc=\write3
+\openout3 = `入試物理基礎演習.toc'.
+
+
+
+[7]
+
+[8]
+\openout2 = `physics_ch1.aux'.
+
+ (./physics_ch1.tex
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 23.0061pt on input line 2.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 23.0061pt on input line 2.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <24.88> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 23.0061pt on input line 2.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <24.88> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 23.0061pt on input line 2.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 11.09619pt on input line 7.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 11.09619pt on input line 7.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 11.09619pt on input line 7.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 11.09619pt on input line 7.
+File: img/text/text_p4_fig1.png Graphic file (type bmp)
+<img/text/text_p4_fig1.png>
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 8.32214pt on input line 27.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 8.32214pt on input line 27.
+
+
+[9
+
+]
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 7.39746pt on input line 62.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 5.5481pt on input line 62.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 62.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 62.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 5.5481pt on input line 62.
+File: img/text/text_p5_fig1.png Graphic file (type bmp)
+<img/text/text_p5_fig1.png>
+File: img/text/text_p5_fig2.png Graphic file (type bmp)
+<img/text/text_p5_fig2.png>
+
+Overfull \hbox (11.6528pt too wide) in paragraph at lines 93--94
+\JY2/mc/m/n/10 よ って ， それらを総和することにより ， []．
+ 
+ []
+
+File: img/text/text_p5_fig3.png Graphic file (type bmp)
+<img/text/text_p5_fig3.png>
+
+
+[10]
+
+[11]
+File: img/text/text_p7_fig1.png Graphic file (type bmp)
+<img/text/text_p7_fig1.png>
+
+
+[12]
+
+[13]
+File: fig/ch1_p3_vt.png Graphic file (type bmp)
+<fig/ch1_p3_vt.png>
+
+
+[14]
+File: fig/ch1_p3_boat.png Graphic file (type bmp)
+<fig/ch1_p3_boat.png>
+File: fig/ch1_p3_river.png Graphic file (type bmp)
+<fig/ch1_p3_river.png>
+File: fig/ch1_p4_vt.png Graphic file (type bmp)
+<fig/ch1_p4_vt.png>
+
+
+[15]
+
+[16]
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 15.9785pt on input line 379.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 15.9785pt on input line 379.
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
+[]\JY2/mc/m/n/10 よ って初速度と逆向きに大きさ
+ []
+
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 6.47278pt on input line 398.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 4.62341pt on input line 398.
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
+[]\JY2/mc/m/n/10 鉛直成分 ： $\OT1/cmr/m/n/10 200 [] 60[] = 100[] \U/msa/m
+/n/10 ;
+ []
+
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 8.32214pt on input line 431.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 8.32214pt on input line 431.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 5.5481pt on input line 432.
+File: fig/ch1_p64_at.png Graphic file (type bmp)
+<fig/ch1_p64_at.png>
+[17] [18]
+File: fig/ch1_p65_river.png Graphic file (type bmp)
+<fig/ch1_p65_river.png>
+ [19] [20])
+
+[21]
+\openout2 = `physics_ch2.aux'.
+
+ (./physics_ch2.tex
+File: img/text/text_p10_fig1.png Graphic file (type bmp)
+<img/text/text_p10_fig1.png>
+File: img/text/text_p11_fig1.png Graphic file (type bmp)
+<img/text/text_p11_fig1.png>
+File: img/text/text_p11_fig2.png Graphic file (type bmp)
+<img/text/text_p11_fig2.png>
+
+Underfull \vbox (badness 10000) detected at line 106
+ []
+
+
+
+[22
+
+
+
+]
+File: img/text/text_p12_fig1.png Graphic file (type bmp)
+<img/text/text_p12_fig1.png>
+
+
+[23]
+File: fig/ch2_p5_up.png Graphic file (type bmp)
+<fig/ch2_p5_up.png>
+File: fig/ch2_p5_hor.png Graphic file (type bmp)
+<fig/ch2_p5_hor.png>
+
+
+[24]
+File: fig/ch2_p6_obl.png Graphic file (type bmp)
+<fig/ch2_p6_obl.png>
+File: fig/ch2_p6_bldg.png Graphic file (type bmp)
+<fig/ch2_p6_bldg.png>
+File: fig/ch2_p7_cart.png Graphic file (type bmp)
+<fig/ch2_p7_cart.png>
+
+
+[25]
+File: fig/ch2_p7_monkey.png Graphic file (type bmp)
+<fig/ch2_p7_monkey.png>
+
+
+[26] [27] [28] [29] [30] [31])
+
+[32]
+
+[33
+
+
+]
+\openout2 = `physics_ch3.aux'.
+
+ (./physics_ch3.tex
+File: img/text/text_p14_fig1.png Graphic file (type bmp)
+<img/text/text_p14_fig1.png>
+
+
+[34
+
+]
+
+[35]
+File: img/text/text_p16_fig1.png Graphic file (type bmp)
+<img/text/text_p16_fig1.png>
+File: img/text/text_p16_fig2.png Graphic file (type bmp)
+<img/text/text_p16_fig2.png>
+File: img/text/text_p16_fig3.png Graphic file (type bmp)
+<img/text/text_p16_fig3.png>
+File: img/text/text_p16_fig4.png Graphic file (type bmp)
+<img/text/text_p16_fig4.png>
+
+
+[36]
+File: img/text/text_p18_fig1.png Graphic file (type bmp)
+<img/text/text_p18_fig1.png>
+File: img/text/text_p19_fig1.png Graphic file (type bmp)
+<img/text/text_p19_fig1.png>
+
+
+[37]
+
+[38]
+
+[39]
+File: fig/ch3_p8_19a.png Graphic file (type bmp)
+<fig/ch3_p8_19a.png>
+File: fig/ch3_p8_19b.png Graphic file (type bmp)
+<fig/ch3_p8_19b.png>
+File: fig/ch3_p8_19c.png Graphic file (type bmp)
+<fig/ch3_p8_19c.png>
+File: fig/ch3_p8_20.png Graphic file (type bmp)
+<fig/ch3_p8_20.png>
+File: fig/ch3_p8_21.png Graphic file (type bmp)
+<fig/ch3_p8_21.png>
+File: fig/ch3_p8_22.png Graphic file (type bmp)
+<fig/ch3_p8_22.png>
+File: fig/ch3_p9_23.png Graphic file (type bmp)
+<fig/ch3_p9_23.png>
+
+
+[40]
+File: fig/ch3_p9_24.png Graphic file (type bmp)
+<fig/ch3_p9_24.png>
+File: fig/ch3_p9_25.png Graphic file (type bmp)
+<fig/ch3_p9_25.png>
+File: fig/ch3_p10_26.png Graphic file (type bmp)
+<fig/ch3_p10_26.png>
+
+
+[41]
+File: fig/ch3_p10_27.png Graphic file (type bmp)
+<fig/ch3_p10_27.png>
+
+
+[42]
+File: fig/ch3_p72_19a.png Graphic file (type bmp)
+<fig/ch3_p72_19a.png>
+File: fig/ch3_p72_19b.png Graphic file (type bmp)
+<fig/ch3_p72_19b.png>
+File: fig/ch3_p72_19c.png Graphic file (type bmp)
+<fig/ch3_p72_19c.png>
+File: fig/ch3_p73_20.png Graphic file (type bmp)
+<fig/ch3_p73_20.png>
+ [43]
+File: fig/ch3_p73_21.png Graphic file (type bmp)
+<fig/ch3_p73_21.png>
+File: fig/ch3_p73_22.png Graphic file (type bmp)
+<fig/ch3_p73_22.png>
+File: fig/ch3_p74_23a.png Graphic file (type bmp)
+<fig/ch3_p74_23a.png>
+ [44]
+File: fig/ch3_p74_23b.png Graphic file (type bmp)
+<fig/ch3_p74_23b.png>
+File: fig/ch3_p74_24.png Graphic file (type bmp)
+<fig/ch3_p74_24.png>
+ [45]
+File: fig/ch3_p75_25.png Graphic file (type bmp)
+<fig/ch3_p75_25.png>
+File: fig/ch3_p75_26.png Graphic file (type bmp)
+<fig/ch3_p75_26.png>
+ [46]
+File: fig/ch3_p75_27a.png Graphic file (type bmp)
+<fig/ch3_p75_27a.png>
+File: fig/ch3_p76_27b.png Graphic file (type bmp)
+<fig/ch3_p76_27b.png>
+
+
+[47])
+
+[48
+
+
+]
+\openout2 = `physics_ch4.aux'.
+
+ (./physics_ch4.tex
+File: img/text/text_p21_fig1.png Graphic file (type bmp)
+<img/text/text_p21_fig1.png>
+File: img/text/text_p22_fig1.png Graphic file (type bmp)
+<img/text/text_p22_fig1.png>
+
+
+[49
+
+]
+File: img/scan/prob_p11.png Graphic file (type bmp)
+<img/scan/prob_p11.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 132--133
+ [] 
+ []
+
+
+
+[50]
+File: img/scan/prob_p12.png Graphic file (type bmp)
+<img/scan/prob_p12.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 140--141
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p13.png Graphic file (type bmp)
+<img/scan/prob_p13.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 148--150
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 65.66502pt on input line 151.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p76_2.png Graphic file (type bmp)
+<img/scan/prob_p76_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 157--158
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 56.85748pt on input line 159.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p77.png Graphic file (type bmp)
+<img/scan/prob_p77.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 165--166
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 7.2048pt on input line 167.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p78.png Graphic file (type bmp)
+<img/scan/prob_p78.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 173--174
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 19.56926pt on input line 175.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p79.png Graphic file (type bmp)
+<img/scan/prob_p79.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 181--182
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 26.8796pt on input line 183.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p80.png Graphic file (type bmp)
+<img/scan/prob_p80.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 189--190
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 32.31984pt on input line 191.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p81_1.png Graphic file (type bmp)
+<img/scan/prob_p81_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 197--198
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 20.7698pt on input line 199.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[51]
+
+[52]
+
+[53]
+
+[54]
+
+[55]
+
+[56]
+
+[57]
+
+[58]
+\openout2 = `physics_ch5.aux'.
+
+ (./physics_ch5.tex
+File: img/text/text_p24_fig1.png Graphic file (type bmp)
+<img/text/text_p24_fig1.png>
+
+
+[59
+
+
+
+]
+File: img/text/text_p26_fig2.png Graphic file (type bmp)
+<img/text/text_p26_fig2.png>
+File: img/text/text_p27_fig1.png Graphic file (type bmp)
+<img/text/text_p27_fig1.png>
+
+
+[60]
+
+[61]
+File: img/scan/prob_p14.png Graphic file (type bmp)
+<img/scan/prob_p14.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 237--238
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p15.png Graphic file (type bmp)
+<img/scan/prob_p15.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 245--246
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 20.43307pt on input line 247.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p16.png Graphic file (type bmp)
+<img/scan/prob_p16.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 253--255
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 91.01488pt on input line 256.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p81_2.png Graphic file (type bmp)
+<img/scan/prob_p81_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 262--263
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 20.7698pt on input line 264.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p82.png Graphic file (type bmp)
+<img/scan/prob_p82.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 270--271
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 19.4779pt on input line 272.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p83.png Graphic file (type bmp)
+<img/scan/prob_p83.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 278--279
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 16.37349pt on input line 280.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p84.png Graphic file (type bmp)
+<img/scan/prob_p84.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 286--287
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 37.33203pt on input line 288.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[62]
+
+[63]
+
+[64]
+
+[65]
+
+[66]
+
+[67]
+
+[68]
+\openout2 = `physics_ch6.aux'.
+
+ (./physics_ch6.tex
+File: img/text/text_p29_fig1.png Graphic file (type bmp)
+<img/text/text_p29_fig1.png>
+File: img/text/text_p29_fig2.png Graphic file (type bmp)
+<img/text/text_p29_fig2.png>
+
+
+[69
+
+
+
+]
+File: img/text/text_p30_fig2.png Graphic file (type bmp)
+<img/text/text_p30_fig2.png>
+
+
+[70]
+File: img/text/text_p31_fig2.png Graphic file (type bmp)
+<img/text/text_p31_fig2.png>
+
+Overfull \hbox (39.65594pt too wide) in paragraph at lines 151--154
+\JY2/mc/m/n/10 が成立する ． また ， 図のように $\OML/cmm/m/it/10
+ x; y$ \JY2/mc/m/n/10 軸をと って成分分解して考えると ， []
+ []
+
+
+
+[71]
+File: img/scan/prob_p17.png Graphic file (type bmp)
+<img/scan/prob_p17.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 195--196
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p18.png Graphic file (type bmp)
+<img/scan/prob_p18.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 203--205
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p85.png Graphic file (type bmp)
+<img/scan/prob_p85.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 214--215
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 23.71727pt on input line 216.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p86.png Graphic file (type bmp)
+<img/scan/prob_p86.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 222--223
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 23.49332pt on input line 224.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p87.png Graphic file (type bmp)
+<img/scan/prob_p87.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 230--231
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 22.3322pt on input line 232.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p88_1.png Graphic file (type bmp)
+<img/scan/prob_p88_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 238--239
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 39.43167pt on input line 240.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[72]
+
+[73]
+
+[74]
+
+[75]
+
+[76]
+
+[77]
+
+[78]
+\openout2 = `physics_ch7.aux'.
+
+ (./physics_ch7.tex
+File: img/text/text_p33_fig1.png Graphic file (type bmp)
+<img/text/text_p33_fig1.png>
+
+
+[79
+
+
+
+]
+File: img/text/text_p35_fig1.png Graphic file (type bmp)
+<img/text/text_p35_fig1.png>
+
+
+[80]
+File: img/scan/prob_p19.png Graphic file (type bmp)
+<img/scan/prob_p19.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 142--143
+ [] 
+ []
+
+
+
+[81]
+File: img/scan/prob_p20.png Graphic file (type bmp)
+<img/scan/prob_p20.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 150--151
+ [] 
+ []
+
+
+
+[82]
+File: img/scan/prob_p88_2.png Graphic file (type bmp)
+<img/scan/prob_p88_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 160--161
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 39.43167pt on input line 162.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p89.png Graphic file (type bmp)
+<img/scan/prob_p89.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 168--169
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 20.00362pt on input line 170.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p90.png Graphic file (type bmp)
+<img/scan/prob_p90.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 176--177
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 31.78247pt on input line 178.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p91.png Graphic file (type bmp)
+<img/scan/prob_p91.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 184--185
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 28.56432pt on input line 186.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p92_1.png Graphic file (type bmp)
+<img/scan/prob_p92_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 192--193
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 25.48882pt on input line 194.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[83]
+
+[84]
+
+[85]
+
+[86]
+
+[87]
+
+[88]
+\openout2 = `physics_ch8.aux'.
+
+ (./physics_ch8.tex
+File: img/text/text_p36_fig1.png Graphic file (type bmp)
+<img/text/text_p36_fig1.png>
+File: img/text/text_p36_fig2.png Graphic file (type bmp)
+<img/text/text_p36_fig2.png>
+
+
+[89
+
+
+
+]
+File: img/text/text_p37_fig1.png Graphic file (type bmp)
+<img/text/text_p37_fig1.png>
+
+
+[90]
+File: img/scan/prob_p21.png Graphic file (type bmp)
+<img/scan/prob_p21.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 146--147
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p22.png Graphic file (type bmp)
+<img/scan/prob_p22.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 154--156
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p92_2.png Graphic file (type bmp)
+<img/scan/prob_p92_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 165--166
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 25.48882pt on input line 167.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p93.png Graphic file (type bmp)
+<img/scan/prob_p93.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 173--174
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 24.41246pt on input line 175.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p94.png Graphic file (type bmp)
+<img/scan/prob_p94.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 181--182
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 26.75003pt on input line 183.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[91]
+
+[92]
+
+[93]
+
+[94]
+
+[95]
+
+[96
+
+
+]
+\openout2 = `physics_ch9.aux'.
+
+ (./physics_ch9.tex
+File: img/text/text_p39_fig1.png Graphic file (type bmp)
+<img/text/text_p39_fig1.png>
+
+
+[97
+
+]
+File: img/text/text_p41_fig1.png Graphic file (type bmp)
+<img/text/text_p41_fig1.png>
+
+
+[98]
+
+[99]
+File: img/scan/prob_p23.png Graphic file (type bmp)
+<img/scan/prob_p23.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 212--213
+ [] 
+ []
+
+
+
+[100]
+File: img/scan/prob_p24.png Graphic file (type bmp)
+<img/scan/prob_p24.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 220--222
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 245.00854pt on input line 223.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p25.png Graphic file (type bmp)
+<img/scan/prob_p25.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 231--233
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 34.13007pt on input line 234.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p95.png Graphic file (type bmp)
+<img/scan/prob_p95.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 240--241
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p96.png Graphic file (type bmp)
+<img/scan/prob_p96.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 248--249
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 18.68785pt on input line 250.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p97.png Graphic file (type bmp)
+<img/scan/prob_p97.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 256--257
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 35.50984pt on input line 258.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p98.png Graphic file (type bmp)
+<img/scan/prob_p98.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 264--265
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 29.34673pt on input line 266.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p99.png Graphic file (type bmp)
+<img/scan/prob_p99.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 272--273
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 27.24928pt on input line 274.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[101]
+
+[102]
+
+[103]
+
+[104]
+
+[105]
+
+[106]
+
+[107]
+
+[108
+
+
+]
+\openout2 = `physics_ch10.aux'.
+
+ (./physics_ch10.tex
+File: img/text/text_p44_fig1.png Graphic file (type bmp)
+<img/text/text_p44_fig1.png>
+File: img/text/text_p45_fig1.png Graphic file (type bmp)
+<img/text/text_p45_fig1.png>
+
+
+[109
+
+]
+File: img/text/text_p45_fig2.png Graphic file (type bmp)
+<img/text/text_p45_fig2.png>
+
+
+[110]
+File: img/text/text_p47_fig1.png Graphic file (type bmp)
+<img/text/text_p47_fig1.png>
+
+
+[111]
+
+[112]
+File: img/scan/prob_p26.png Graphic file (type bmp)
+<img/scan/prob_p26.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 249--250
+ [] 
+ []
+
+
+
+[113]
+File: img/scan/prob_p27.png Graphic file (type bmp)
+<img/scan/prob_p27.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 257--259
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 325.93228pt on input line 260.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p28.png Graphic file (type bmp)
+<img/scan/prob_p28.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 268--270
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 56.77629pt on input line 271.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p100.png Graphic file (type bmp)
+<img/scan/prob_p100.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 277--278
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 14.68504pt on input line 279.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p101.png Graphic file (type bmp)
+<img/scan/prob_p101.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 285--286
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 27.2781pt on input line 287.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p102.png Graphic file (type bmp)
+<img/scan/prob_p102.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 293--294
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 26.04002pt on input line 295.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p103.png Graphic file (type bmp)
+<img/scan/prob_p103.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 301--302
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 35.50984pt on input line 303.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p104.png Graphic file (type bmp)
+<img/scan/prob_p104.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 309--310
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 45.6914pt on input line 311.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p105_1.png Graphic file (type bmp)
+<img/scan/prob_p105_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 317--318
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 19.85925pt on input line 319.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[114]
+
+[115]
+
+[116]
+
+[117]
+
+[118]
+
+[119]
+
+[120]
+
+[121]
+
+[122
+
+
+]
+\openout2 = `physics_ch11.aux'.
+
+ (./physics_ch11.tex
+File: img/text/text_p50_fig1.png Graphic file (type bmp)
+<img/text/text_p50_fig1.png>
+File: img/text/text_p51_fig1.png Graphic file (type bmp)
+<img/text/text_p51_fig1.png>
+
+
+[123
+
+]
+File: img/text/text_p51_fig2.png Graphic file (type bmp)
+<img/text/text_p51_fig2.png>
+
+
+[124]
+File: img/scan/prob_p29.png Graphic file (type bmp)
+<img/scan/prob_p29.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 165--166
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p30.png Graphic file (type bmp)
+<img/scan/prob_p30.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 173--175
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 51.62503pt on input line 176.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p105_2.png Graphic file (type bmp)
+<img/scan/prob_p105_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 184--186
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 604.91437pt on input line 187.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p106.png Graphic file (type bmp)
+<img/scan/prob_p106.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 193--194
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 24.80516pt on input line 195.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p107.png Graphic file (type bmp)
+<img/scan/prob_p107.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 201--202
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 12.11404pt on input line 203.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p108.png Graphic file (type bmp)
+<img/scan/prob_p108.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 209--210
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 22.3768pt on input line 211.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p109.png Graphic file (type bmp)
+<img/scan/prob_p109.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 217--218
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 31.06288pt on input line 219.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[125]
+
+[126]
+
+[127]
+
+[128]
+
+[129]
+
+[130]
+
+[131]
+
+[132
+
+
+]
+\openout2 = `physics_ch12.aux'.
+
+ (./physics_ch12.tex
+File: img/text/text_p54_fig1.png Graphic file (type bmp)
+<img/text/text_p54_fig1.png>
+
+
+[133
+
+]
+File: img/text/text_p56_fig1.png Graphic file (type bmp)
+<img/text/text_p56_fig1.png>
+File: img/text/text_p56_fig2.png Graphic file (type bmp)
+<img/text/text_p56_fig2.png>
+File: img/text/text_p56_fig3.png Graphic file (type bmp)
+<img/text/text_p56_fig3.png>
+
+
+[134]
+! Undefined control sequence.
+l.132  \hspace{2mm} {\bf・
+                            剛体に作用する力の三要素＝力の大...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.133  \hspace{2mm} {\bf・
+                            剛体に作用する力の合成}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+File: img/text/text_p57_fig1.png Graphic file (type bmp)
+<img/text/text_p57_fig1.png>
+
+
+[135]
+File: img/text/text_p58_fig1.png Graphic file (type bmp)
+<img/text/text_p58_fig1.png>
+File: img/text/text_p58_fig2.png Graphic file (type bmp)
+<img/text/text_p58_fig2.png>
+
+
+[136]
+File: img/scan/prob_p31.png Graphic file (type bmp)
+<img/scan/prob_p31.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 247--248
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p32.png Graphic file (type bmp)
+<img/scan/prob_p32.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 255--257
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 85.42622pt on input line 258.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p110.png Graphic file (type bmp)
+<img/scan/prob_p110.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 266--268
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 600.14021pt on input line 269.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p111.png Graphic file (type bmp)
+<img/scan/prob_p111.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 275--276
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 13.24544pt on input line 277.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p112.png Graphic file (type bmp)
+<img/scan/prob_p112.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 283--284
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 10.95761pt on input line 285.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p113_1.png Graphic file (type bmp)
+<img/scan/prob_p113_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 291--292
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 15.86057pt on input line 293.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[137]
+
+[138]
+
+[139]
+
+[140]
+
+[141]
+
+[142]
+\openout2 = `physics_ch13.aux'.
+
+ (./physics_ch13.tex
+File: img/text/text_p60_fig1.png Graphic file (type bmp)
+<img/text/text_p60_fig1.png>
+File: img/text/text_p60_fig2.png Graphic file (type bmp)
+<img/text/text_p60_fig2.png>
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+45.
+
+File: img/text/text_p61_fig1.png Graphic file (type bmp)
+<img/text/text_p61_fig1.png>
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 52
+.
+
+
+
+[143
+
+
+
+]
+
+[144]
+File: img/scan/prob_p33.png Graphic file (type bmp)
+<img/scan/prob_p33.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 121--122
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p34.png Graphic file (type bmp)
+<img/scan/prob_p34.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 129--131
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 160.02182pt on input line 132.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p113_2.png Graphic file (type bmp)
+<img/scan/prob_p113_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 140--142
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 600.91568pt on input line 143.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p114.png Graphic file (type bmp)
+<img/scan/prob_p114.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 149--150
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 13.78777pt on input line 151.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p115.png Graphic file (type bmp)
+<img/scan/prob_p115.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 157--158
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 27.97821pt on input line 159.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p116.png Graphic file (type bmp)
+<img/scan/prob_p116.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 165--166
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 24.41246pt on input line 167.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[145]
+
+[146]
+
+[147]
+
+[148]
+
+[149]
+
+[150]
+\openout2 = `physics_ch14.aux'.
+
+ (./physics_ch14.tex
+File: img/text/text_p63_fig1.png Graphic file (type bmp)
+<img/text/text_p63_fig1.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--19
+[]
+ []
+
+
+
+[151
+
+
+
+]
+File: fig/ch14_ex1_cyl.png Graphic file (type bmp)
+<fig/ch14_ex1_cyl.png>
+File: fig/ch14_ex1_water.png Graphic file (type bmp)
+<fig/ch14_ex1_water.png>
+
+
+[152]
+
+[153]
+File: fig/ch14_ex2_cock.png Graphic file (type bmp)
+<fig/ch14_ex2_cock.png>
+
+
+[154]
+File: img/text/text_p66_fig1.png Graphic file (type bmp)
+<img/text/text_p66_fig1.png>
+
+
+[155]
+
+[156]
+File: img/text/text_p67_fig1.png Graphic file (type bmp)
+<img/text/text_p67_fig1.png>
+
+
+[157]
+
+[158]
+File: img/text/text_p68_fig1.png Graphic file (type bmp)
+<img/text/text_p68_fig1.png>
+
+
+[159]
+File: fig/ch14_p35_cyl.png Graphic file (type bmp)
+<fig/ch14_p35_cyl.png>
+
+
+[160]
+File: fig/ch14_p36_flask.png Graphic file (type bmp)
+<fig/ch14_p36_flask.png>
+
+
+[161] [162] [163] [164]
+File: fig/ch14_p119_dU1.png Graphic file (type bmp)
+<fig/ch14_p119_dU1.png>
+File: fig/ch14_p119_dU2.png Graphic file (type bmp)
+<fig/ch14_p119_dU2.png>
+ [165])
+
+[166]
+\openout2 = `physics_ch15.aux'.
+
+ (./physics_ch15.tex
+
+[167
+
+
+
+]
+Underfull \hbox (badness 1184) in paragraph at lines 68--69
+[] \JY2/mc/m/n/10 今 ， 気体分子の \OT1/cmr/m/n/10 1 \JY2/mc/m/n/10 つ
+に着目し ， この気体分子の持つ速度が
+ []
+
+File: fig/ch15_ex5_cube.png Graphic file (type bmp)
+<fig/ch15_ex5_cube.png>
+File: fig/ch15_ex5_hane.png Graphic file (type bmp)
+<fig/ch15_ex5_hane.png>
+File: fig/ch15_ex5_Ft.png Graphic file (type bmp)
+<fig/ch15_ex5_Ft.png>
+
+Underfull \vbox (badness 10000) detected at line 105
+ []
+
+
+Overfull \vbox (37.1953pt too high) detected at line 105
+ []
+
+
+
+[168]
+
+[169]
+
+[170]
+
+[171]
+File: fig/ch15_ex6_cock.png Graphic file (type bmp)
+<fig/ch15_ex6_cock.png>
+
+
+[172]
+File: img/text/text_p73_fig1.png Graphic file (type bmp)
+<img/text/text_p73_fig1.png>
+File: fig/ch15_ex7_pt.png Graphic file (type bmp)
+<fig/ch15_ex7_pt.png>
+
+
+[173]
+File: fig/ch15_ex7_pv.png Graphic file (type bmp)
+<fig/ch15_ex7_pv.png>
+
+
+[174]
+File: fig/ch15_p37_cube.png Graphic file (type bmp)
+<fig/ch15_p37_cube.png>
+
+
+[175]
+File: fig/ch15_p38_box.png Graphic file (type bmp)
+<fig/ch15_p38_box.png>
+File: fig/ch15_p38_tv.png Graphic file (type bmp)
+<fig/ch15_p38_tv.png>
+File: fig/ch15_p39_sphere.png Graphic file (type bmp)
+<fig/ch15_p39_sphere.png>
+
+
+[176]
+
+[177] [178] [179] [180] [181]
+File: fig/ch15_p124_pv.png Graphic file (type bmp)
+<fig/ch15_p124_pv.png>
+ [182]
+File: fig/ch15_p125_pv.png Graphic file (type bmp)
+<fig/ch15_p125_pv.png>
+ [183])
+
+[184]
+
+[185
+
+
+]
+\openout2 = `physics_ch16.aux'.
+
+ (./physics_ch16.tex
+File: img/text/text_p74_fig1.png Graphic file (type bmp)
+<img/text/text_p74_fig1.png>
+File: img/text/text_p75_fig1.png Graphic file (type bmp)
+<img/text/text_p75_fig1.png>
+
+
+[186
+
+]
+File: fig/ch16_ex8_cyl.png Graphic file (type bmp)
+<fig/ch16_ex8_cyl.png>
+
+
+[187]
+File: fig/ch16_ex8_pv.png Graphic file (type bmp)
+<fig/ch16_ex8_pv.png>
+
+
+[188]
+File: fig/ch16_ex9_cyl.png Graphic file (type bmp)
+<fig/ch16_ex9_cyl.png>
+
+
+[189]
+File: fig/ch16_ex9_pv.png Graphic file (type bmp)
+<fig/ch16_ex9_pv.png>
+File: fig/ch16_ex10_cyl.png Graphic file (type bmp)
+<fig/ch16_ex10_cyl.png>
+
+
+[190]
+File: fig/ch16_ex10_pv.png Graphic file (type bmp)
+<fig/ch16_ex10_pv.png>
+
+
+[191]
+
+[192]
+File: fig/ch16_p40_pv6.png Graphic file (type bmp)
+<fig/ch16_p40_pv6.png>
+File: fig/ch16_p40_cyl.png Graphic file (type bmp)
+<fig/ch16_p40_cyl.png>
+
+
+[193]
+File: fig/ch16_p41_cyl.png Graphic file (type bmp)
+<fig/ch16_p41_cyl.png>
+File: fig/ch16_p41_vcyl.png Graphic file (type bmp)
+<fig/ch16_p41_vcyl.png>
+
+
+[194]
+File: fig/ch16_p42_vcyl.png Graphic file (type bmp)
+<fig/ch16_p42_vcyl.png>
+
+
+[195]
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 15.9785pt on input line 374.
+File: fig/ch16_a18_1.png Graphic file (type bmp)
+<fig/ch16_a18_1.png>
+File: fig/ch16_a18_2.png Graphic file (type bmp)
+<fig/ch16_a18_2.png>
+File: fig/ch16_a18_4.png Graphic file (type bmp)
+<fig/ch16_a18_4.png>
+File: fig/ch16_a18_5.png Graphic file (type bmp)
+<fig/ch16_a18_5.png>
+ [196]
+File: fig/ch16_a18_6.png Graphic file (type bmp)
+<fig/ch16_a18_6.png>
+ [197]
+File: fig/ch16_a19_pv.png Graphic file (type bmp)
+<fig/ch16_a19_pv.png>
+File: fig/ch16_a20_pv.png Graphic file (type bmp)
+<fig/ch16_a20_pv.png>
+ [198]
+File: fig/ch16_a21_pv.png Graphic file (type bmp)
+<fig/ch16_a21_pv.png>
+File: fig/ch16_a22_f1.png Graphic file (type bmp)
+<fig/ch16_a22_f1.png>
+ [199]
+File: fig/ch16_a22_f2.png Graphic file (type bmp)
+<fig/ch16_a22_f2.png>
+File: fig/ch16_a22_pv.png Graphic file (type bmp)
+<fig/ch16_a22_pv.png>
+ [200]
+File: fig/ch16_a23_f1.png Graphic file (type bmp)
+<fig/ch16_a23_f1.png>
+ [201])
+
+[202]
+\openout2 = `physics_ch17.aux'.
+
+ (./physics_ch17.tex
+File: fig/ch17_ex11_cyl.png Graphic file (type bmp)
+<fig/ch17_ex11_cyl.png>
+
+
+[203
+
+
+
+]
+File: fig/ch17_ex11_pv.png Graphic file (type bmp)
+<fig/ch17_ex11_pv.png>
+
+
+[204]
+File: img/text/text_p79_fig1.png Graphic file (type bmp)
+<img/text/text_p79_fig1.png>
+
+
+[205]
+File: img/text/text_p80_fig1.png Graphic file (type bmp)
+<img/text/text_p80_fig1.png>
+File: fig/ch17_ex13_cyl.png Graphic file (type bmp)
+<fig/ch17_ex13_cyl.png>
+
+
+[206]
+File: fig/ch17_ex13_pv.png Graphic file (type bmp)
+<fig/ch17_ex13_pv.png>
+
+
+[207]
+File: fig/ch17_ex14_box1.png Graphic file (type bmp)
+<fig/ch17_ex14_box1.png>
+File: fig/ch17_ex14_box2.png Graphic file (type bmp)
+<fig/ch17_ex14_box2.png>
+
+
+[208]
+
+[209]
+File: fig/ch17_p43_cyl.png Graphic file (type bmp)
+<fig/ch17_p43_cyl.png>
+File: fig/ch17_p44_cyl.png Graphic file (type bmp)
+<fig/ch17_p44_cyl.png>
+
+
+[210]
+File: fig/ch17_p44_ab.png Graphic file (type bmp)
+<fig/ch17_p44_ab.png>
+File: fig/ch17_p44_valve.png Graphic file (type bmp)
+<fig/ch17_p44_valve.png>
+File: fig/ch17_p45_spring.png Graphic file (type bmp)
+<fig/ch17_p45_spring.png>
+
+
+[211]
+
+[212]
+File: fig/ch17_a25_pv.png Graphic file (type bmp)
+<fig/ch17_a25_pv.png>
+ [213]
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+[][]$[]$[] []$[]$[] []$[]$[] []$[]$[] []$[]$[]
+ []
+
+[214]
+File: fig/ch17_a27_pv.png Graphic file (type bmp)
+<fig/ch17_a27_pv.png>
+ [215]
+Underfull \hbox (badness 10000) in paragraph at lines 560--562
+[]$[]$[] []$[]$[] []$[]$[] []$[]$[] []$[]$[]
+ []
+
+File: fig/ch17_a29_1.png Graphic file (type bmp)
+<fig/ch17_a29_1.png>
+[216]
+File: fig/ch17_a29_2.png Graphic file (type bmp)
+<fig/ch17_a29_2.png>
+File: fig/ch17_a29_3.png Graphic file (type bmp)
+<fig/ch17_a29_3.png>
+File: fig/ch17_a29_4.png Graphic file (type bmp)
+<fig/ch17_a29_4.png>
+File: fig/ch17_a29_ref.png Graphic file (type bmp)
+<fig/ch17_a29_ref.png>
+ [217])
+
+[218]
+\openout2 = `physics_ch18.aux'.
+
+ (./physics_ch18.tex
+File: img/text/text_p84_fig1.png Graphic file (type bmp)
+<img/text/text_p84_fig1.png>
+
+
+[219
+
+
+
+]
+File: img/scan/prob_p46.png Graphic file (type bmp)
+<img/scan/prob_p46.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 30--31
+ [] 
+ []
+
+
+
+[220]
+File: img/scan/prob_p47.png Graphic file (type bmp)
+<img/scan/prob_p47.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 38--39
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p136_2.png Graphic file (type bmp)
+<img/scan/prob_p136_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 46--47
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 22.48392pt on input line 48.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p137.png Graphic file (type bmp)
+<img/scan/prob_p137.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 54--55
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 34.94794pt on input line 56.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p138.png Graphic file (type bmp)
+<img/scan/prob_p138.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 63--64
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 62.9719pt on input line 65.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p139.png Graphic file (type bmp)
+<img/scan/prob_p139.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 71--72
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 31.83226pt on input line 73.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p140.png Graphic file (type bmp)
+<img/scan/prob_p140.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 79--80
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 27.99472pt on input line 81.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p141.png Graphic file (type bmp)
+<img/scan/prob_p141.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 87--88
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 22.84541pt on input line 89.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p142_1.png Graphic file (type bmp)
+<img/scan/prob_p142_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 95--96
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 41.52444pt on input line 97.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[221]
+
+[222]
+
+[223]
+
+[224]
+
+[225]
+
+[226]
+
+[227]
+
+[228]
+\openout2 = `physics_ch19.aux'.
+
+ (./physics_ch19.tex
+File: img/text/text_p85_fig1.png Graphic file (type bmp)
+<img/text/text_p85_fig1.png>
+File: img/text/text_p85_fig2.png Graphic file (type bmp)
+<img/text/text_p85_fig2.png>
+
+
+[229
+
+
+
+]
+File: img/text/text_p87_fig1.png Graphic file (type bmp)
+<img/text/text_p87_fig1.png>
+
+
+[230]
+File: img/text/text_p89_fig1.png Graphic file (type bmp)
+<img/text/text_p89_fig1.png>
+
+
+[231]
+
+[232]
+File: img/scan/prob_p48.png Graphic file (type bmp)
+<img/scan/prob_p48.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 152--153
+ [] 
+ []
+
+
+
+[233]
+File: img/scan/prob_p49.png Graphic file (type bmp)
+<img/scan/prob_p49.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 160--161
+ [] 
+ []
+
+
+
+[234]
+File: img/scan/prob_p142_2.png Graphic file (type bmp)
+<img/scan/prob_p142_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 169--170
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 41.52444pt on input line 171.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p143.png Graphic file (type bmp)
+<img/scan/prob_p143.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 177--178
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 33.55142pt on input line 179.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p144.png Graphic file (type bmp)
+<img/scan/prob_p144.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 185--186
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 14.02242pt on input line 187.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p145.png Graphic file (type bmp)
+<img/scan/prob_p145.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 193--194
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 41.72723pt on input line 195.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p146.png Graphic file (type bmp)
+<img/scan/prob_p146.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 201--202
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 55.54657pt on input line 203.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p147.png Graphic file (type bmp)
+<img/scan/prob_p147.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 209--210
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 39.23593pt on input line 211.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p148.png Graphic file (type bmp)
+<img/scan/prob_p148.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 217--218
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 58.28143pt on input line 219.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[235]
+
+[236]
+
+[237]
+
+[238]
+
+[239]
+
+[240]
+
+[241]
+
+[242
+
+
+]
+\openout2 = `physics_ch20.aux'.
+
+ (./physics_ch20.tex
+File: img/text/text_p91_fig1.png Graphic file (type bmp)
+<img/text/text_p91_fig1.png>
+File: img/text/text_p91_fig2.png Graphic file (type bmp)
+<img/text/text_p91_fig2.png>
+
+
+[243
+
+]
+File: img/text/text_p92_fig1.png Graphic file (type bmp)
+<img/text/text_p92_fig1.png>
+File: img/text/text_p92_fig2.png Graphic file (type bmp)
+<img/text/text_p92_fig2.png>
+File: img/text/text_p93_fig1.png Graphic file (type bmp)
+<img/text/text_p93_fig1.png>
+File: img/text/text_p93_fig2.png Graphic file (type bmp)
+<img/text/text_p93_fig2.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[244]
+File: img/text/text_p93_fig3.png Graphic file (type bmp)
+<img/text/text_p93_fig3.png>
+
+
+[245]
+File: img/text/text_p95_fig1.png Graphic file (type bmp)
+<img/text/text_p95_fig1.png>
+File: img/text/text_p96_fig1.png Graphic file (type bmp)
+<img/text/text_p96_fig1.png>
+
+
+[246]
+File: img/scan/prob_p50.png Graphic file (type bmp)
+<img/scan/prob_p50.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 162--163
+ [] 
+ []
+
+
+
+[247]
+File: img/scan/prob_p51.png Graphic file (type bmp)
+<img/scan/prob_p51.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 169--170
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p52.png Graphic file (type bmp)
+<img/scan/prob_p52.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 176--178
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p149.png Graphic file (type bmp)
+<img/scan/prob_p149.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 186--187
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 25.84079pt on input line 188.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p150.png Graphic file (type bmp)
+<img/scan/prob_p150.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 193--194
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 33.44087pt on input line 195.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p151.png Graphic file (type bmp)
+<img/scan/prob_p151.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 200--201
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 20.58205pt on input line 202.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p152.png Graphic file (type bmp)
+<img/scan/prob_p152.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 208--209
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 21.0671pt on input line 210.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p153.png Graphic file (type bmp)
+<img/scan/prob_p153.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 215--216
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 36.11147pt on input line 217.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[248]
+
+[249]
+
+[250]
+
+[251]
+
+[252]
+
+[253]
+
+[254]
+\openout2 = `physics_ch21.aux'.
+
+ (./physics_ch21.tex
+File: img/text/text_p97_fig1.png Graphic file (type bmp)
+<img/text/text_p97_fig1.png>
+
+Overfull \hbox (30.93295pt too wide) in paragraph at lines 18--20
+[][][]
+ []
+
+File: img/text/text_p97_fig2.png Graphic file (type bmp)
+<img/text/text_p97_fig2.png>
+
+Overfull \hbox (40.17978pt too wide) in paragraph at lines 35--38
+[][][]
+ []
+
+
+
+[255
+
+
+
+]
+File: img/text/text_p99_fig1.png Graphic file (type bmp)
+<img/text/text_p99_fig1.png>
+
+
+[256]
+
+[257]
+File: img/scan/prob_p53.png Graphic file (type bmp)
+<img/scan/prob_p53.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 91--93
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 186.67616pt on input line 94.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p54.png Graphic file (type bmp)
+<img/scan/prob_p54.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 100--102
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 433.95001pt on input line 103.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p154.png Graphic file (type bmp)
+<img/scan/prob_p154.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 109--111
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 463.90904pt on input line 112.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p155.png Graphic file (type bmp)
+<img/scan/prob_p155.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 118--120
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 473.76698pt on input line 121.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p156.png Graphic file (type bmp)
+<img/scan/prob_p156.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 127--129
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 469.80319pt on input line 130.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p157.png Graphic file (type bmp)
+<img/scan/prob_p157.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 136--138
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 479.92543pt on input line 139.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p158.png Graphic file (type bmp)
+<img/scan/prob_p158.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 145--147
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 493.80429pt on input line 148.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p159_1.png Graphic file (type bmp)
+<img/scan/prob_p159_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 154--156
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 478.48041pt on input line 157.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[258]
+
+[259]
+
+[260]
+
+[261]
+
+[262]
+
+[263]
+
+[264]
+
+[265]
+
+[266
+
+
+]
+\openout2 = `physics_ch22.aux'.
+
+ (./physics_ch22.tex
+File: img/text/text_p101_fig1.png Graphic file (type bmp)
+<img/text/text_p101_fig1.png>
+
+
+[267
+
+]
+File: img/text/text_p103_fig1.png Graphic file (type bmp)
+<img/text/text_p103_fig1.png>
+
+
+[268]
+File: img/text/text_p103_fig2.png Graphic file (type bmp)
+<img/text/text_p103_fig2.png>
+File: img/text/text_p104_fig1.png Graphic file (type bmp)
+<img/text/text_p104_fig1.png>
+
+
+[269]
+File: img/scan/prob_p55.png Graphic file (type bmp)
+<img/scan/prob_p55.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 114--116
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 228.4098pt on input line 117.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p56.png Graphic file (type bmp)
+<img/scan/prob_p56.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 123--125
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 379.85258pt on input line 126.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p57.png Graphic file (type bmp)
+<img/scan/prob_p57.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 132--134
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 106.46463pt on input line 135.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p159_2.png Graphic file (type bmp)
+<img/scan/prob_p159_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 141--143
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 478.48041pt on input line 144.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p160.png Graphic file (type bmp)
+<img/scan/prob_p160.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 151--153
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 462.96895pt on input line 154.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p161.png Graphic file (type bmp)
+<img/scan/prob_p161.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 160--162
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 484.78592pt on input line 163.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p162.png Graphic file (type bmp)
+<img/scan/prob_p162.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 169--171
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 475.15659pt on input line 172.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p163.png Graphic file (type bmp)
+<img/scan/prob_p163.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 178--180
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 463.61357pt on input line 181.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p164.png Graphic file (type bmp)
+<img/scan/prob_p164.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 187--189
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 490.29715pt on input line 190.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[270]
+
+[271]
+
+[272]
+
+[273]
+
+[274]
+
+[275]
+
+[276]
+
+[277]
+
+[278]
+\openout2 = `physics_ch23.aux'.
+
+ (./physics_ch23.tex
+File: img/text/text_p106_fig1.png Graphic file (type bmp)
+<img/text/text_p106_fig1.png>
+
+
+[279
+
+
+
+]
+File: img/text/text_p108_fig1.png Graphic file (type bmp)
+<img/text/text_p108_fig1.png>
+
+
+[280]
+File: img/text/text_p109_fig1.png Graphic file (type bmp)
+<img/text/text_p109_fig1.png>
+
+
+[281]
+File: img/text/text_p112_fig1.png Graphic file (type bmp)
+<img/text/text_p112_fig1.png>
+
+
+[282]
+File: img/scan/prob_p58.png Graphic file (type bmp)
+<img/scan/prob_p58.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 155--157
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 397.46869pt on input line 158.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p59.png Graphic file (type bmp)
+<img/scan/prob_p59.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 164--166
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 335.50972pt on input line 167.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p60.png Graphic file (type bmp)
+<img/scan/prob_p60.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 173--175
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 423.96376pt on input line 176.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p165.png Graphic file (type bmp)
+<img/scan/prob_p165.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 182--184
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 456.0697pt on input line 185.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p166.png Graphic file (type bmp)
+<img/scan/prob_p166.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 191--193
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 447.63513pt on input line 194.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p167.png Graphic file (type bmp)
+<img/scan/prob_p167.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 200--202
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 470.29576pt on input line 203.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p168.png Graphic file (type bmp)
+<img/scan/prob_p168.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 209--211
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 473.85641pt on input line 212.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p169.png Graphic file (type bmp)
+<img/scan/prob_p169.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 218--220
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 479.30833pt on input line 221.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p170.png Graphic file (type bmp)
+<img/scan/prob_p170.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 227--229
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 474.14287pt on input line 230.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[283]
+
+[284]
+
+[285]
+
+[286]
+
+[287]
+
+[288]
+
+[289]
+
+[290]
+
+[291]
+
+[292
+
+
+]
+\openout2 = `physics_ch24.aux'.
+
+ (./physics_ch24.tex
+File: img/text/text_p113_fig1.png Graphic file (type bmp)
+<img/text/text_p113_fig1.png>
+File: img/text/text_p115_fig1.png Graphic file (type bmp)
+<img/text/text_p115_fig1.png>
+
+
+[293
+
+]
+File: img/text/text_p116_fig1.png Graphic file (type bmp)
+<img/text/text_p116_fig1.png>
+File: img/text/text_p117_fig1.png Graphic file (type bmp)
+<img/text/text_p117_fig1.png>
+
+
+[294]
+File: img/text/text_p118_fig1.png Graphic file (type bmp)
+<img/text/text_p118_fig1.png>
+File: img/text/text_p118_fig2.png Graphic file (type bmp)
+<img/text/text_p118_fig2.png>
+File: img/text/text_p118_fig3.png Graphic file (type bmp)
+<img/text/text_p118_fig3.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[295]
+File: img/text/text_p119_fig1.png Graphic file (type bmp)
+<img/text/text_p119_fig1.png>
+
+
+[296]
+File: img/scan/prob_p61.png Graphic file (type bmp)
+<img/scan/prob_p61.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 179--181
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 412.66716pt on input line 182.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p62.png Graphic file (type bmp)
+<img/scan/prob_p62.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 188--190
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 340.44662pt on input line 191.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p63.png Graphic file (type bmp)
+<img/scan/prob_p63.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 197--199
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 290.44408pt on input line 200.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p171.png Graphic file (type bmp)
+<img/scan/prob_p171.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 206--208
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 466.5172pt on input line 209.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p172.png Graphic file (type bmp)
+<img/scan/prob_p172.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 215--217
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 482.6841pt on input line 218.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p173.png Graphic file (type bmp)
+<img/scan/prob_p173.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 224--226
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 465.77545pt on input line 227.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p174.png Graphic file (type bmp)
+<img/scan/prob_p174.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 233--235
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 481.5983pt on input line 236.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob_p175.png Graphic file (type bmp)
+<img/scan/prob_p175.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 242--244
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 470.21591pt on input line 245.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[297]
+
+[298]
+
+[299]
+
+[300]
+
+[301]
+
+[302]
+
+[303]
+
+[304]
+\openout2 = `physics_ch25.aux'.
+
+ (./physics_ch25.tex
+File: img/text/text2_p4_fig1.png Graphic file (type bmp)
+<img/text/text2_p4_fig1.png>
+File: img/text/text2_p4_fig2.png Graphic file (type bmp)
+<img/text/text2_p4_fig2.png>
+
+
+[305
+
+
+
+]
+File: fig/ch25_ex21_young.png Graphic file (type bmp)
+<fig/ch25_ex21_young.png>
+
+
+[306]
+
+[307]
+File: img/text/text2_p6_fig1.png Graphic file (type bmp)
+<img/text/text2_p6_fig1.png>
+
+
+[308]
+
+[309]
+File: img/text/text2_p8_fig1.png Graphic file (type bmp)
+<img/text/text2_p8_fig1.png>
+
+
+[310]
+File: img/text/text2_p8_fig2.png Graphic file (type bmp)
+<img/text/text2_p8_fig2.png>
+
+
+[311]
+File: fig/ch25_ex22_grating.png Graphic file (type bmp)
+<fig/ch25_ex22_grating.png>
+
+
+[312]
+
+[313]
+File: fig/ch25_p2_young1.png Graphic file (type bmp)
+<fig/ch25_p2_young1.png>
+File: fig/ch25_p2_young2.png Graphic file (type bmp)
+<fig/ch25_p2_young2.png>
+File: fig/ch25_p3_glass.png Graphic file (type bmp)
+<fig/ch25_p3_glass.png>
+
+
+[314]
+File: fig/ch25_p3_grating.png Graphic file (type bmp)
+<fig/ch25_p3_grating.png>
+File: fig/ch25_p4_lloyd.png Graphic file (type bmp)
+<fig/ch25_p4_lloyd.png>
+
+
+[315]
+File: fig/ch25_p4_foucault.png Graphic file (type bmp)
+<fig/ch25_p4_foucault.png>
+File: fig/ch25_p5_young.png Graphic file (type bmp)
+<fig/ch25_p5_young.png>
+
+
+[316]
+File: fig/ch25_p5_int.png Graphic file (type bmp)
+<fig/ch25_p5_int.png>
+
+
+[317] [318]
+File: fig/ch25_a47_1.png Graphic file (type bmp)
+<fig/ch25_a47_1.png>
+File: fig/ch25_a47_2.png Graphic file (type bmp)
+<fig/ch25_a47_2.png>
+ [319]
+File: fig/ch25_a49_1.png Graphic file (type bmp)
+<fig/ch25_a49_1.png>
+File: fig/ch25_a49_2.png Graphic file (type bmp)
+<fig/ch25_a49_2.png>
+ [320]
+File: fig/ch25_a50_1.png Graphic file (type bmp)
+<fig/ch25_a50_1.png>
+File: fig/ch25_a51_1.png Graphic file (type bmp)
+<fig/ch25_a51_1.png>
+ [321]
+File: fig/ch25_a51_2.png Graphic file (type bmp)
+<fig/ch25_a51_2.png>
+
+
+[322])
+
+[323
+
+
+]
+\openout2 = `physics_ch26.aux'.
+
+ (./physics_ch26.tex
+File: img/text/text2_p10_fig1.png Graphic file (type bmp)
+<img/text/text2_p10_fig1.png>
+
+
+[324
+
+]
+File: img/text/text2_p12_fig1.png Graphic file (type bmp)
+<img/text/text2_p12_fig1.png>
+File: img/text/text2_p12_fig2.png Graphic file (type bmp)
+<img/text/text2_p12_fig2.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[325]
+File: img/text/text2_p13_fig1.png Graphic file (type bmp)
+<img/text/text2_p13_fig1.png>
+
+
+[326]
+
+[327]
+File: img/scan/prob2_p6.png Graphic file (type bmp)
+<img/scan/prob2_p6.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 127--129
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 314.9749pt on input line 130.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p7.png Graphic file (type bmp)
+<img/scan/prob2_p7.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 136--138
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 368.54106pt on input line 139.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p8.png Graphic file (type bmp)
+<img/scan/prob2_p8.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 145--147
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 295.64207pt on input line 148.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p9.png Graphic file (type bmp)
+<img/scan/prob2_p9.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 154--156
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 328.56866pt on input line 157.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p10.png Graphic file (type bmp)
+<img/scan/prob2_p10.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 163--165
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 399.00018pt on input line 166.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p75.png Graphic file (type bmp)
+<img/scan/prob2_p75.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 172--174
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 466.51567pt on input line 175.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p76.png Graphic file (type bmp)
+<img/scan/prob2_p76.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 181--183
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 470.04062pt on input line 184.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p77.png Graphic file (type bmp)
+<img/scan/prob2_p77.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 190--192
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 468.4016pt on input line 193.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p78.png Graphic file (type bmp)
+<img/scan/prob2_p78.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 199--201
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 475.75444pt on input line 202.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p79.png Graphic file (type bmp)
+<img/scan/prob2_p79.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 208--210
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 455.22028pt on input line 211.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p80.png Graphic file (type bmp)
+<img/scan/prob2_p80.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 217--219
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 479.48787pt on input line 220.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p81.png Graphic file (type bmp)
+<img/scan/prob2_p81.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 226--228
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 456.77286pt on input line 229.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p82.png Graphic file (type bmp)
+<img/scan/prob2_p82.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 235--237
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 471.9721pt on input line 238.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p83_1.png Graphic file (type bmp)
+<img/scan/prob2_p83_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 244--246
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 458.05481pt on input line 247.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[328]
+
+[329]
+
+[330]
+
+[331]
+
+[332]
+
+[333]
+
+[334]
+
+[335]
+
+[336]
+
+[337]
+
+[338]
+
+[339]
+
+[340]
+
+[341]
+
+[342
+
+
+]
+\openout2 = `physics_ch27.aux'.
+
+ (./physics_ch27.tex
+File: img/text/text2_p15_fig1.png Graphic file (type bmp)
+<img/text/text2_p15_fig1.png>
+File: img/text/text2_p15_fig2.png Graphic file (type bmp)
+<img/text/text2_p15_fig2.png>
+
+
+[343
+
+]
+File: img/text/text2_p16_fig1.png Graphic file (type bmp)
+<img/text/text2_p16_fig1.png>
+File: img/text/text2_p17_fig1.png Graphic file (type bmp)
+<img/text/text2_p17_fig1.png>
+
+
+[344]
+File: img/text/text2_p19_fig1.png Graphic file (type bmp)
+<img/text/text2_p19_fig1.png>
+File: img/text/text2_p19_fig2.png Graphic file (type bmp)
+<img/text/text2_p19_fig2.png>
+
+
+[345]
+File: img/text/text2_p21_fig1.png Graphic file (type bmp)
+<img/text/text2_p21_fig1.png>
+
+
+[346]
+File: img/scan/prob2_p11.png Graphic file (type bmp)
+<img/scan/prob2_p11.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 153--155
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 326.46976pt on input line 156.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p12.png Graphic file (type bmp)
+<img/scan/prob2_p12.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 162--164
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 346.22337pt on input line 165.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p13.png Graphic file (type bmp)
+<img/scan/prob2_p13.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 171--173
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 382.58496pt on input line 174.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p83_2.png Graphic file (type bmp)
+<img/scan/prob2_p83_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 180--182
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 458.05481pt on input line 183.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p84.png Graphic file (type bmp)
+<img/scan/prob2_p84.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 189--191
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 445.9509pt on input line 192.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p85.png Graphic file (type bmp)
+<img/scan/prob2_p85.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 198--200
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 461.07527pt on input line 201.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p86.png Graphic file (type bmp)
+<img/scan/prob2_p86.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 207--209
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 453.74266pt on input line 210.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[347]
+
+[348]
+
+[349]
+
+[350]
+
+[351]
+
+[352]
+
+[353]
+
+[354
+
+
+]
+\openout2 = `physics_ch28.aux'.
+
+ (./physics_ch28.tex
+File: img/text/text2_p22_fig1.png Graphic file (type bmp)
+<img/text/text2_p22_fig1.png>
+File: img/text/text2_p22_fig2.png Graphic file (type bmp)
+<img/text/text2_p22_fig2.png>
+
+
+[355
+
+]
+
+[356]
+File: img/text/text2_p25_fig1.png Graphic file (type bmp)
+<img/text/text2_p25_fig1.png>
+
+
+[357]
+File: img/scan/prob2_p14.png Graphic file (type bmp)
+<img/scan/prob2_p14.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 136--138
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 438.31323pt on input line 139.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p15.png Graphic file (type bmp)
+<img/scan/prob2_p15.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 145--147
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 479.15039pt on input line 148.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p16.png Graphic file (type bmp)
+<img/scan/prob2_p16.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 154--156
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 379.29219pt on input line 157.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p17.png Graphic file (type bmp)
+<img/scan/prob2_p17.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 163--165
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 386.78282pt on input line 166.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p87.png Graphic file (type bmp)
+<img/scan/prob2_p87.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 172--174
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 452.0811pt on input line 175.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p88.png Graphic file (type bmp)
+<img/scan/prob2_p88.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 181--183
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 466.51567pt on input line 184.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p89.png Graphic file (type bmp)
+<img/scan/prob2_p89.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 190--192
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 470.17628pt on input line 193.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p90.png Graphic file (type bmp)
+<img/scan/prob2_p90.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 199--201
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 444.27716pt on input line 202.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p91.png Graphic file (type bmp)
+<img/scan/prob2_p91.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 208--210
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 461.49998pt on input line 211.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p92.png Graphic file (type bmp)
+<img/scan/prob2_p92.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 217--219
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 453.93066pt on input line 220.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p93.png Graphic file (type bmp)
+<img/scan/prob2_p93.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 225--227
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 486.34703pt on input line 228.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p94.png Graphic file (type bmp)
+<img/scan/prob2_p94.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 234--236
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 465.33876pt on input line 237.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p95_1.png Graphic file (type bmp)
+<img/scan/prob2_p95_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 243--245
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 468.37244pt on input line 246.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[358]
+
+[359]
+
+[360]
+
+[361]
+
+[362]
+
+[363]
+
+[364]
+
+[365]
+
+[366]
+
+[367]
+
+[368]
+
+[369]
+
+[370]
+\openout2 = `physics_ch29.aux'.
+
+ (./physics_ch29.tex
+File: img/text/text2_p26_fig1.png Graphic file (type bmp)
+<img/text/text2_p26_fig1.png>
+
+
+[371
+
+
+
+]
+File: img/text/text2_p28_fig1.png Graphic file (type bmp)
+<img/text/text2_p28_fig1.png>
+File: img/text/text2_p28_fig2.png Graphic file (type bmp)
+<img/text/text2_p28_fig2.png>
+File: img/text/text2_p29_fig1.png Graphic file (type bmp)
+<img/text/text2_p29_fig1.png>
+
+
+[372]
+File: img/text/text2_p30_fig1.png Graphic file (type bmp)
+<img/text/text2_p30_fig1.png>
+
+
+[373]
+File: img/scan/prob2_p18.png Graphic file (type bmp)
+<img/scan/prob2_p18.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 155--157
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 404.297pt on input line 158.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p19.png Graphic file (type bmp)
+<img/scan/prob2_p19.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 164--166
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 326.91132pt on input line 167.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p95_2.png Graphic file (type bmp)
+<img/scan/prob2_p95_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 173--175
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 468.37244pt on input line 176.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p96.png Graphic file (type bmp)
+<img/scan/prob2_p96.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 182--184
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 440.26772pt on input line 185.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p97.png Graphic file (type bmp)
+<img/scan/prob2_p97.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 191--193
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 466.42087pt on input line 194.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p98.png Graphic file (type bmp)
+<img/scan/prob2_p98.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 200--202
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 465.2554pt on input line 203.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p99.png Graphic file (type bmp)
+<img/scan/prob2_p99.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 209--211
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 468.4016pt on input line 212.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p100_1.png Graphic file (type bmp)
+<img/scan/prob2_p100_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 218--220
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 459.94144pt on input line 221.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[374]
+
+[375]
+
+[376]
+
+[377]
+
+[378]
+
+[379]
+
+[380]
+
+[381]
+
+[382
+
+
+]
+\openout2 = `physics_ch30.aux'.
+
+ (./physics_ch30.tex
+File: img/text/text2_p31_fig1.png Graphic file (type bmp)
+<img/text/text2_p31_fig1.png>
+File: img/text/text2_p32_fig1.png Graphic file (type bmp)
+<img/text/text2_p32_fig1.png>
+
+
+[383
+
+]
+File: img/text/text2_p32_fig2.png Graphic file (type bmp)
+<img/text/text2_p32_fig2.png>
+
+
+[384]
+File: img/text/text2_p35_fig1.png Graphic file (type bmp)
+<img/text/text2_p35_fig1.png>
+File: img/text/text2_p35_fig2.png Graphic file (type bmp)
+<img/text/text2_p35_fig2.png>
+
+
+[385]
+File: img/scan/prob2_p20.png Graphic file (type bmp)
+<img/scan/prob2_p20.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 122--124
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 411.60316pt on input line 125.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p21.png Graphic file (type bmp)
+<img/scan/prob2_p21.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 131--133
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 414.17833pt on input line 134.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p100_2.png Graphic file (type bmp)
+<img/scan/prob2_p100_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 140--142
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 459.94144pt on input line 143.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p101.png Graphic file (type bmp)
+<img/scan/prob2_p101.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 149--151
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 463.96043pt on input line 152.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p102.png Graphic file (type bmp)
+<img/scan/prob2_p102.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 158--160
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 446.92084pt on input line 161.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p103.png Graphic file (type bmp)
+<img/scan/prob2_p103.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 167--169
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 465.2554pt on input line 170.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p104.png Graphic file (type bmp)
+<img/scan/prob2_p104.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 176--178
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 456.71255pt on input line 179.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p105_1.png Graphic file (type bmp)
+<img/scan/prob2_p105_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 185--187
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 471.9721pt on input line 188.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[386]
+
+[387]
+
+[388]
+
+[389]
+
+[390]
+
+[391]
+
+[392]
+
+[393]
+
+[394
+
+
+]
+\openout2 = `physics_ch31.aux'.
+
+ (./physics_ch31.tex
+File: img/text/text2_p36_fig1.png Graphic file (type bmp)
+<img/text/text2_p36_fig1.png>
+File: img/text/text2_p36_fig2.png Graphic file (type bmp)
+<img/text/text2_p36_fig2.png>
+
+
+[395
+
+]
+File: img/text/text2_p37_fig1.png Graphic file (type bmp)
+<img/text/text2_p37_fig1.png>
+
+
+[396]
+File: img/text/text2_p38_fig1.png Graphic file (type bmp)
+<img/text/text2_p38_fig1.png>
+File: img/text/text2_p38_fig2.png Graphic file (type bmp)
+<img/text/text2_p38_fig2.png>
+
+
+[397]
+File: img/scan/prob2_p22.png Graphic file (type bmp)
+<img/scan/prob2_p22.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 113--115
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 410.66785pt on input line 116.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p23.png Graphic file (type bmp)
+<img/scan/prob2_p23.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 122--124
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 406.91885pt on input line 125.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p24.png Graphic file (type bmp)
+<img/scan/prob2_p24.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 131--133
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 359.93463pt on input line 134.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p105_2.png Graphic file (type bmp)
+<img/scan/prob2_p105_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 140--142
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 471.9721pt on input line 143.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p106.png Graphic file (type bmp)
+<img/scan/prob2_p106.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 149--151
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 463.64645pt on input line 152.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p107.png Graphic file (type bmp)
+<img/scan/prob2_p107.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 158--160
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 468.8813pt on input line 161.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p108.png Graphic file (type bmp)
+<img/scan/prob2_p108.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 167--169
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 474.56783pt on input line 170.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p109.png Graphic file (type bmp)
+<img/scan/prob2_p109.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 176--178
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 464.8027pt on input line 179.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p110.png Graphic file (type bmp)
+<img/scan/prob2_p110.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 185--187
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 456.92035pt on input line 188.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p111_1.png Graphic file (type bmp)
+<img/scan/prob2_p111_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 194--196
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 466.42087pt on input line 197.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[398]
+
+[399]
+
+[400]
+
+[401]
+
+[402]
+
+[403]
+
+[404]
+
+[405]
+
+[406]
+
+[407]
+
+[408
+
+
+]
+\openout2 = `physics_ch32.aux'.
+
+ (./physics_ch32.tex
+File: img/text/text2_p40_fig1.png Graphic file (type bmp)
+<img/text/text2_p40_fig1.png>
+File: img/text/text2_p40_fig2.png Graphic file (type bmp)
+<img/text/text2_p40_fig2.png>
+
+Overfull \vbox (4.88666pt too high) detected at line 47
+ []
+
+
+
+[409
+
+]
+File: img/text/text2_p42_fig1.png Graphic file (type bmp)
+<img/text/text2_p42_fig1.png>
+File: img/text/text2_p42_fig2.png Graphic file (type bmp)
+<img/text/text2_p42_fig2.png>
+File: img/text/text2_p43_fig1.png Graphic file (type bmp)
+<img/text/text2_p43_fig1.png>
+File: img/text/text2_p43_fig2.png Graphic file (type bmp)
+<img/text/text2_p43_fig2.png>
+
+
+[410]
+File: img/scan/prob2_p25.png Graphic file (type bmp)
+<img/scan/prob2_p25.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 87--89
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 393.11458pt on input line 90.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p26.png Graphic file (type bmp)
+<img/scan/prob2_p26.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 96--98
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 401.12842pt on input line 99.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p27.png Graphic file (type bmp)
+<img/scan/prob2_p27.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 105--107
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 360.83934pt on input line 108.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p111_2.png Graphic file (type bmp)
+<img/scan/prob2_p111_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 114--116
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 466.42087pt on input line 117.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p112.png Graphic file (type bmp)
+<img/scan/prob2_p112.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 123--125
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 456.71689pt on input line 126.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p113.png Graphic file (type bmp)
+<img/scan/prob2_p113.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 132--134
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 456.5791pt on input line 135.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p114.png Graphic file (type bmp)
+<img/scan/prob2_p114.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 141--143
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 459.81462pt on input line 144.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p115.png Graphic file (type bmp)
+<img/scan/prob2_p115.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 150--152
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 470.06944pt on input line 153.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p116.png Graphic file (type bmp)
+<img/scan/prob2_p116.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 159--161
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 466.41605pt on input line 162.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p117.png Graphic file (type bmp)
+<img/scan/prob2_p117.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 168--170
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 487.20929pt on input line 171.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p118.png Graphic file (type bmp)
+<img/scan/prob2_p118.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 177--179
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 455.64484pt on input line 180.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p119.png Graphic file (type bmp)
+<img/scan/prob2_p119.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 186--188
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 460.32436pt on input line 189.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[411]
+
+[412]
+
+[413]
+
+[414]
+
+[415]
+
+[416]
+
+[417]
+
+[418]
+
+[419]
+
+[420]
+
+[421]
+
+[422]
+\openout2 = `physics_ch33.aux'.
+
+ (./physics_ch33.tex
+File: img/text/text2_p44_fig1.png Graphic file (type bmp)
+<img/text/text2_p44_fig1.png>
+File: img/text/text2_p44_fig2.png Graphic file (type bmp)
+<img/text/text2_p44_fig2.png>
+
+
+[423
+
+
+
+]
+File: img/text/text2_p45_fig1.png Graphic file (type bmp)
+<img/text/text2_p45_fig1.png>
+File: img/text/text2_p47_fig1.png Graphic file (type bmp)
+<img/text/text2_p47_fig1.png>
+File: img/text/text2_p47_fig2.png Graphic file (type bmp)
+<img/text/text2_p47_fig2.png>
+
+
+[424]
+File: img/text/text2_p48_fig1.png Graphic file (type bmp)
+<img/text/text2_p48_fig1.png>
+File: img/text/text2_p48_fig2.png Graphic file (type bmp)
+<img/text/text2_p48_fig2.png>
+File: img/text/text2_p48_fig3.png Graphic file (type bmp)
+<img/text/text2_p48_fig3.png>
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 140--142
+ [][] 
+ []
+
+
+
+[425]
+File: img/text/text2_p49_fig1.png Graphic file (type bmp)
+<img/text/text2_p49_fig1.png>
+File: img/text/text2_p50_fig1.png Graphic file (type bmp)
+<img/text/text2_p50_fig1.png>
+
+
+[426]
+
+[427]
+File: img/scan/prob2_p28.png Graphic file (type bmp)
+<img/scan/prob2_p28.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 178--180
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 266.71674pt on input line 181.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p29.png Graphic file (type bmp)
+<img/scan/prob2_p29.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 187--189
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 435.82063pt on input line 190.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p30.png Graphic file (type bmp)
+<img/scan/prob2_p30.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 196--198
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 371.40987pt on input line 199.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p120.png Graphic file (type bmp)
+<img/scan/prob2_p120.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 205--207
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 453.35019pt on input line 208.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p121.png Graphic file (type bmp)
+<img/scan/prob2_p121.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 214--216
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 463.43817pt on input line 217.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p122.png Graphic file (type bmp)
+<img/scan/prob2_p122.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 223--225
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 459.94144pt on input line 226.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p123.png Graphic file (type bmp)
+<img/scan/prob2_p123.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 232--234
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 478.28539pt on input line 235.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[428]
+
+[429]
+
+[430]
+
+[431]
+
+[432]
+
+[433]
+
+[434]
+
+[435
+
+
+]
+\openout2 = `physics_ch34.aux'.
+
+ (./physics_ch34.tex
+File: img/text/text2_p51_fig1.png Graphic file (type bmp)
+<img/text/text2_p51_fig1.png>
+File: img/text/text2_p52_fig1.png Graphic file (type bmp)
+<img/text/text2_p52_fig1.png>
+File: img/text/text2_p52_fig2.png Graphic file (type bmp)
+<img/text/text2_p52_fig2.png>
+
+
+[436
+
+]
+File: img/text/text2_p53_fig1.png Graphic file (type bmp)
+<img/text/text2_p53_fig1.png>
+
+
+[437]
+File: img/text/text2_p53_fig2.png Graphic file (type bmp)
+<img/text/text2_p53_fig2.png>
+File: img/text/text2_p55_fig1.png Graphic file (type bmp)
+<img/text/text2_p55_fig1.png>
+
+
+[438]
+File: img/scan/prob2_p31.png Graphic file (type bmp)
+<img/scan/prob2_p31.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 136--138
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 479.0475pt on input line 139.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p32.png Graphic file (type bmp)
+<img/scan/prob2_p32.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 145--147
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 350.77255pt on input line 148.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p124.png Graphic file (type bmp)
+<img/scan/prob2_p124.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 154--156
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 459.20856pt on input line 157.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p125.png Graphic file (type bmp)
+<img/scan/prob2_p125.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 163--165
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 475.09715pt on input line 166.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p126.png Graphic file (type bmp)
+<img/scan/prob2_p126.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 172--174
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 473.3261pt on input line 175.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p127.png Graphic file (type bmp)
+<img/scan/prob2_p127.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 181--183
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 458.63316pt on input line 184.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[439]
+
+[440]
+
+[441]
+
+[442]
+
+[443]
+
+[444]
+
+[445
+
+
+]
+\openout2 = `physics_ch35.aux'.
+
+ (./physics_ch35.tex
+File: img/text/text2_p59_fig1.png Graphic file (type bmp)
+<img/text/text2_p59_fig1.png>
+
+
+[446
+
+]
+File: img/text/text2_p59_fig2.png Graphic file (type bmp)
+<img/text/text2_p59_fig2.png>
+
+
+[447]
+File: img/scan/prob2_p33.png Graphic file (type bmp)
+<img/scan/prob2_p33.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 64--66
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 389.83076pt on input line 67.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p34.png Graphic file (type bmp)
+<img/scan/prob2_p34.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 73--75
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 443.57414pt on input line 76.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p35.png Graphic file (type bmp)
+<img/scan/prob2_p35.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 82--84
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 476.3392pt on input line 85.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p128.png Graphic file (type bmp)
+<img/scan/prob2_p128.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 91--93
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 452.80261pt on input line 94.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p129.png Graphic file (type bmp)
+<img/scan/prob2_p129.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 100--102
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 468.3668pt on input line 103.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p130.png Graphic file (type bmp)
+<img/scan/prob2_p130.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 109--111
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 448.83342pt on input line 112.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p131.png Graphic file (type bmp)
+<img/scan/prob2_p131.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 118--120
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 466.42087pt on input line 121.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p132.png Graphic file (type bmp)
+<img/scan/prob2_p132.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 126--128
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 454.33714pt on input line 129.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p133_1.png Graphic file (type bmp)
+<img/scan/prob2_p133_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 135--137
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 458.05481pt on input line 138.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[448]
+
+[449]
+
+[450]
+
+[451]
+
+[452]
+
+[453]
+
+[454]
+
+[455]
+
+[456]
+
+[457
+
+
+]
+\openout2 = `physics_ch36.aux'.
+
+ (./physics_ch36.tex
+File: img/text/text2_p60_fig1.png Graphic file (type bmp)
+<img/text/text2_p60_fig1.png>
+File: img/text/text2_p61_fig1.png Graphic file (type bmp)
+<img/text/text2_p61_fig1.png>
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 44--46
+ [][] 
+ []
+
+
+
+[458
+
+]
+File: img/text/text2_p61_fig2.png Graphic file (type bmp)
+<img/text/text2_p61_fig2.png>
+File: img/text/text2_p62_fig1.png Graphic file (type bmp)
+<img/text/text2_p62_fig1.png>
+File: img/text/text2_p62_fig2.png Graphic file (type bmp)
+<img/text/text2_p62_fig2.png>
+File: img/text/text2_p62_fig3.png Graphic file (type bmp)
+<img/text/text2_p62_fig3.png>
+
+
+[459]
+File: img/text/text2_p64_fig1.png Graphic file (type bmp)
+<img/text/text2_p64_fig1.png>
+File: img/text/text2_p64_fig2.png Graphic file (type bmp)
+<img/text/text2_p64_fig2.png>
+File: img/text/text2_p64_fig3.png Graphic file (type bmp)
+<img/text/text2_p64_fig3.png>
+
+
+[460]
+File: img/scan/prob2_p36.png Graphic file (type bmp)
+<img/scan/prob2_p36.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 160--162
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 414.98817pt on input line 163.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p37.png Graphic file (type bmp)
+<img/scan/prob2_p37.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 169--171
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 445.4349pt on input line 172.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p38.png Graphic file (type bmp)
+<img/scan/prob2_p38.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 178--180
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 359.46333pt on input line 181.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p133_2.png Graphic file (type bmp)
+<img/scan/prob2_p133_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 187--189
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 458.05481pt on input line 190.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p134.png Graphic file (type bmp)
+<img/scan/prob2_p134.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 196--198
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 469.6331pt on input line 199.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p135.png Graphic file (type bmp)
+<img/scan/prob2_p135.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 205--207
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 454.26897pt on input line 208.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p136.png Graphic file (type bmp)
+<img/scan/prob2_p136.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 214--216
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 458.06831pt on input line 217.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p137.png Graphic file (type bmp)
+<img/scan/prob2_p137.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 222--224
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 482.53343pt on input line 225.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[461]
+
+[462]
+
+[463]
+
+[464]
+
+[465]
+
+[466]
+
+[467]
+
+[468]
+
+[469
+
+
+]
+\openout2 = `physics_ch37.aux'.
+
+ (./physics_ch37.tex
+File: img/text/text2_p66_fig1.png Graphic file (type bmp)
+<img/text/text2_p66_fig1.png>
+
+
+[470
+
+]
+File: img/scan/prob2_p39.png Graphic file (type bmp)
+<img/scan/prob2_p39.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 44--46
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 440.85506pt on input line 47.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p40.png Graphic file (type bmp)
+<img/scan/prob2_p40.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 53--55
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 480.4797pt on input line 56.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p41.png Graphic file (type bmp)
+<img/scan/prob2_p41.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 62--64
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 460.48334pt on input line 65.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p138.png Graphic file (type bmp)
+<img/scan/prob2_p138.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 71--73
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 450.46893pt on input line 74.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p139.png Graphic file (type bmp)
+<img/scan/prob2_p139.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 80--82
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 462.35643pt on input line 83.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p140.png Graphic file (type bmp)
+<img/scan/prob2_p140.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 89--91
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 464.58208pt on input line 92.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p141.png Graphic file (type bmp)
+<img/scan/prob2_p141.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 98--100
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 468.46574pt on input line 101.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[471]
+
+[472]
+
+[473]
+
+[474]
+
+[475]
+
+[476]
+
+[477]
+\openout2 = `physics_ch38.aux'.
+
+ (./physics_ch38.tex
+File: img/text/text2_p70_fig1.png Graphic file (type bmp)
+<img/text/text2_p70_fig1.png>
+File: img/text/text2_p70_fig2.png Graphic file (type bmp)
+<img/text/text2_p70_fig2.png>
+
+
+[478
+
+
+
+]
+File: img/text/text2_p71_fig1.png Graphic file (type bmp)
+<img/text/text2_p71_fig1.png>
+File: img/text/text2_p71_fig2.png Graphic file (type bmp)
+<img/text/text2_p71_fig2.png>
+
+
+[479]
+File: img/text/text2_p72_fig1.png Graphic file (type bmp)
+<img/text/text2_p72_fig1.png>
+
+
+[480]
+File: img/scan/prob2_p42.png Graphic file (type bmp)
+<img/scan/prob2_p42.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 128--130
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 455.19725pt on input line 131.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p43.png Graphic file (type bmp)
+<img/scan/prob2_p43.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 137--139
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 473.12227pt on input line 140.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p44.png Graphic file (type bmp)
+<img/scan/prob2_p44.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 146--148
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 452.42323pt on input line 149.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p142.png Graphic file (type bmp)
+<img/scan/prob2_p142.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 155--157
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 465.2554pt on input line 158.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p143.png Graphic file (type bmp)
+<img/scan/prob2_p143.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 164--166
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 478.71817pt on input line 167.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p144.png Graphic file (type bmp)
+<img/scan/prob2_p144.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 173--175
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 464.89091pt on input line 176.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p145.png Graphic file (type bmp)
+<img/scan/prob2_p145.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 182--184
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 483.73578pt on input line 185.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p146.png Graphic file (type bmp)
+<img/scan/prob2_p146.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 190--192
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 466.4251pt on input line 193.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p147.png Graphic file (type bmp)
+<img/scan/prob2_p147.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 199--201
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 462.92621pt on input line 202.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[481]
+
+[482]
+
+[483]
+
+[484]
+
+[485]
+
+[486]
+
+[487]
+
+[488]
+
+[489]
+\openout2 = `physics_ch39.aux'.
+
+ (./physics_ch39.tex
+File: img/text/text2_p74_fig1.png Graphic file (type bmp)
+<img/text/text2_p74_fig1.png>
+
+
+[490
+
+
+
+]
+File: img/text/text2_p77_fig1.png Graphic file (type bmp)
+<img/text/text2_p77_fig1.png>
+
+
+[491]
+
+[492]
+File: img/scan/prob2_p45.png Graphic file (type bmp)
+<img/scan/prob2_p45.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 98--100
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 466.04686pt on input line 101.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p46.png Graphic file (type bmp)
+<img/scan/prob2_p46.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 107--109
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 404.55753pt on input line 110.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p148.png Graphic file (type bmp)
+<img/scan/prob2_p148.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 116--118
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 455.22028pt on input line 119.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p149.png Graphic file (type bmp)
+<img/scan/prob2_p149.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 125--127
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 475.09715pt on input line 128.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p150.png Graphic file (type bmp)
+<img/scan/prob2_p150.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 134--136
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 480.80643pt on input line 137.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p151.png Graphic file (type bmp)
+<img/scan/prob2_p151.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 143--145
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 465.22021pt on input line 146.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p152.png Graphic file (type bmp)
+<img/scan/prob2_p152.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 152--154
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 467.71584pt on input line 155.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[493]
+
+[494]
+
+[495]
+
+[496]
+
+[497]
+
+[498]
+
+[499]
+\openout2 = `physics_ch40.aux'.
+
+ (./physics_ch40.tex
+File: img/text/text2_p80_fig1.png Graphic file (type bmp)
+<img/text/text2_p80_fig1.png>
+File: img/text/text2_p82_fig1.png Graphic file (type bmp)
+<img/text/text2_p82_fig1.png>
+
+
+[500
+
+
+
+]
+File: img/text/text2_p82_fig2.png Graphic file (type bmp)
+<img/text/text2_p82_fig2.png>
+File: img/text/text2_p83_fig1.png Graphic file (type bmp)
+<img/text/text2_p83_fig1.png>
+
+
+[501]
+File: img/text/text2_p84_fig1.png Graphic file (type bmp)
+<img/text/text2_p84_fig1.png>
+
+
+[502]
+File: img/text/text2_p86_fig1.png Graphic file (type bmp)
+<img/text/text2_p86_fig1.png>
+
+
+[503]
+File: img/text/text2_p87_fig1.png Graphic file (type bmp)
+<img/text/text2_p87_fig1.png>
+
+
+[504]
+File: img/scan/prob2_p47.png Graphic file (type bmp)
+<img/scan/prob2_p47.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 209--211
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 443.15707pt on input line 212.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p48.png Graphic file (type bmp)
+<img/scan/prob2_p48.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 218--220
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 416.59383pt on input line 221.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p49.png Graphic file (type bmp)
+<img/scan/prob2_p49.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 227--229
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 381.0624pt on input line 230.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p153.png Graphic file (type bmp)
+<img/scan/prob2_p153.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 236--238
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 456.77286pt on input line 239.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p154.png Graphic file (type bmp)
+<img/scan/prob2_p154.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 245--247
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 488.34286pt on input line 248.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p155.png Graphic file (type bmp)
+<img/scan/prob2_p155.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 254--256
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 482.05116pt on input line 257.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p156.png Graphic file (type bmp)
+<img/scan/prob2_p156.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 263--265
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 473.85422pt on input line 266.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p157.png Graphic file (type bmp)
+<img/scan/prob2_p157.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 271--273
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 461.49998pt on input line 274.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p158.png Graphic file (type bmp)
+<img/scan/prob2_p158.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 280--282
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 477.53632pt on input line 283.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p159.png Graphic file (type bmp)
+<img/scan/prob2_p159.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 289--291
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 459.16483pt on input line 292.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p160.png Graphic file (type bmp)
+<img/scan/prob2_p160.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 298--300
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 475.75111pt on input line 301.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[505]
+
+[506]
+
+[507]
+
+[508]
+
+[509]
+
+[510]
+
+[511]
+
+[512]
+
+[513]
+
+[514]
+
+[515]
+\openout2 = `physics_ch41.aux'.
+
+ (./physics_ch41.tex
+File: img/text/text2_p88_fig1.png Graphic file (type bmp)
+<img/text/text2_p88_fig1.png>
+File: img/text/text2_p88_fig2.png Graphic file (type bmp)
+<img/text/text2_p88_fig2.png>
+
+
+[516
+
+
+
+]
+File: img/text/text2_p93_fig1.png Graphic file (type bmp)
+<img/text/text2_p93_fig1.png>
+
+
+[517]
+File: img/text/text2_p93_fig2.png Graphic file (type bmp)
+<img/text/text2_p93_fig2.png>
+
+
+[518]
+File: img/scan/prob2_p50.png Graphic file (type bmp)
+<img/scan/prob2_p50.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 120--122
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 459.63469pt on input line 123.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p51.png Graphic file (type bmp)
+<img/scan/prob2_p51.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 129--131
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 473.78673pt on input line 132.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p52.png Graphic file (type bmp)
+<img/scan/prob2_p52.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 138--140
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 409.82237pt on input line 141.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p53.png Graphic file (type bmp)
+<img/scan/prob2_p53.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 147--149
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 448.82002pt on input line 150.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p54.png Graphic file (type bmp)
+<img/scan/prob2_p54.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 156--158
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 389.14418pt on input line 159.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p55.png Graphic file (type bmp)
+<img/scan/prob2_p55.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 165--167
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 299.45271pt on input line 168.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p161.png Graphic file (type bmp)
+<img/scan/prob2_p161.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 174--176
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 455.03427pt on input line 177.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p162.png Graphic file (type bmp)
+<img/scan/prob2_p162.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 182--184
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 472.01549pt on input line 185.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p163.png Graphic file (type bmp)
+<img/scan/prob2_p163.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 191--193
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 454.26897pt on input line 194.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p164.png Graphic file (type bmp)
+<img/scan/prob2_p164.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 200--202
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 487.97258pt on input line 203.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p165.png Graphic file (type bmp)
+<img/scan/prob2_p165.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 208--210
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 466.4251pt on input line 211.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p166.png Graphic file (type bmp)
+<img/scan/prob2_p166.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 217--219
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 472.08136pt on input line 220.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p167.png Graphic file (type bmp)
+<img/scan/prob2_p167.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 226--228
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 455.42851pt on input line 229.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p168.png Graphic file (type bmp)
+<img/scan/prob2_p168.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 234--236
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 470.84645pt on input line 237.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p169.png Graphic file (type bmp)
+<img/scan/prob2_p169.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 243--245
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 466.35854pt on input line 246.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p170.png Graphic file (type bmp)
+<img/scan/prob2_p170.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 252--254
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 455.64484pt on input line 255.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p171.png Graphic file (type bmp)
+<img/scan/prob2_p171.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 260--262
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 470.7636pt on input line 263.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p172.png Graphic file (type bmp)
+<img/scan/prob2_p172.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 269--271
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 468.89806pt on input line 272.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p173.png Graphic file (type bmp)
+<img/scan/prob2_p173.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 278--280
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 459.91849pt on input line 281.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p174.png Graphic file (type bmp)
+<img/scan/prob2_p174.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 286--288
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 467.71584pt on input line 289.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p175_1.png Graphic file (type bmp)
+<img/scan/prob2_p175_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 295--297
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 468.89806pt on input line 298.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[519]
+
+[520]
+
+[521]
+
+[522]
+
+[523]
+
+[524]
+
+[525]
+
+[526]
+
+[527]
+
+[528]
+
+[529]
+
+[530]
+
+[531]
+
+[532]
+
+[533]
+
+[534]
+
+[535]
+
+[536]
+
+[537]
+
+[538]
+
+[539]
+\openout2 = `physics_ch42.aux'.
+
+ (./physics_ch42.tex
+File: img/text/text2_p94_fig1.png Graphic file (type bmp)
+<img/text/text2_p94_fig1.png>
+File: img/text/text2_p95_fig1.png Graphic file (type bmp)
+<img/text/text2_p95_fig1.png>
+
+
+[540
+
+
+
+]
+File: img/text/text2_p95_fig2.png Graphic file (type bmp)
+<img/text/text2_p95_fig2.png>
+
+
+[541]
+
+[542]
+File: img/scan/prob2_p56.png Graphic file (type bmp)
+<img/scan/prob2_p56.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 112--114
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 379.07646pt on input line 115.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p57.png Graphic file (type bmp)
+<img/scan/prob2_p57.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 121--123
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 438.56917pt on input line 124.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p175_2.png Graphic file (type bmp)
+<img/scan/prob2_p175_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 130--132
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 464.07997pt on input line 133.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p176.png Graphic file (type bmp)
+<img/scan/prob2_p176.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 139--141
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 458.06831pt on input line 142.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p177_1.png Graphic file (type bmp)
+<img/scan/prob2_p177_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 148--150
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 472.63185pt on input line 151.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[543]
+
+[544]
+
+[545]
+
+[546]
+
+[547]
+\openout2 = `physics_ch43.aux'.
+
+ (./physics_ch43.tex
+File: img/text/text2_p98_fig1.png Graphic file (type bmp)
+<img/text/text2_p98_fig1.png>
+File: img/text/text2_p98_fig2.png Graphic file (type bmp)
+<img/text/text2_p98_fig2.png>
+File: img/text/text2_p99_fig1.png Graphic file (type bmp)
+<img/text/text2_p99_fig1.png>
+
+
+[548
+
+
+
+]
+
+[549]
+File: img/scan/prob2_p58.png Graphic file (type bmp)
+<img/scan/prob2_p58.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 93--95
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 440.17766pt on input line 96.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p59.png Graphic file (type bmp)
+<img/scan/prob2_p59.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 102--104
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 426.43117pt on input line 105.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p60.png Graphic file (type bmp)
+<img/scan/prob2_p60.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 111--113
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 436.89558pt on input line 114.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p177_2.png Graphic file (type bmp)
+<img/scan/prob2_p177_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 120--122
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 472.63672pt on input line 123.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p178.png Graphic file (type bmp)
+<img/scan/prob2_p178.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 129--131
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 450.38495pt on input line 132.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p179.png Graphic file (type bmp)
+<img/scan/prob2_p179.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 138--140
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 472.08772pt on input line 141.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p180_1.png Graphic file (type bmp)
+<img/scan/prob2_p180_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 147--149
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 456.54657pt on input line 150.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[550]
+
+[551]
+
+[552]
+
+[553]
+
+[554]
+
+[555]
+
+[556]
+
+[557
+
+
+]
+\openout2 = `physics_ch44.aux'.
+
+ (./physics_ch44.tex
+File: img/text/text2_p102_fig1.png Graphic file (type bmp)
+<img/text/text2_p102_fig1.png>
+File: img/text/text2_p102_fig2.png Graphic file (type bmp)
+<img/text/text2_p102_fig2.png>
+
+
+[558
+
+]
+File: img/text/text2_p103_fig1.png Graphic file (type bmp)
+<img/text/text2_p103_fig1.png>
+File: img/text/text2_p103_fig2.png Graphic file (type bmp)
+<img/text/text2_p103_fig2.png>
+File: img/text/text2_p104_fig1.png Graphic file (type bmp)
+<img/text/text2_p104_fig1.png>
+
+
+[559]
+File: img/text/text2_p104_fig2.png Graphic file (type bmp)
+<img/text/text2_p104_fig2.png>
+File: img/text/text2_p105_fig1.png Graphic file (type bmp)
+<img/text/text2_p105_fig1.png>
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 98--102
+ [] 
+ []
+
+
+
+[560]
+File: img/text/text2_p106_fig1.png Graphic file (type bmp)
+<img/text/text2_p106_fig1.png>
+
+
+[561]
+File: img/scan/prob2_p61.png Graphic file (type bmp)
+<img/scan/prob2_p61.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 173--175
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 436.47136pt on input line 176.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p62.png Graphic file (type bmp)
+<img/scan/prob2_p62.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 182--184
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 443.18887pt on input line 185.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p180_2.png Graphic file (type bmp)
+<img/scan/prob2_p180_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 191--193
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 456.54657pt on input line 194.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p181.png Graphic file (type bmp)
+<img/scan/prob2_p181.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 200--202
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 478.74823pt on input line 203.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p182_1.png Graphic file (type bmp)
+<img/scan/prob2_p182_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 209--211
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 451.23235pt on input line 212.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[562]
+
+[563]
+
+[564]
+
+[565]
+
+[566]
+
+[567
+
+
+]
+\openout2 = `physics_ch45.aux'.
+
+ (./physics_ch45.tex
+File: img/text/text2_p107_fig1.png Graphic file (type bmp)
+<img/text/text2_p107_fig1.png>
+File: img/text/text2_p108_fig1.png Graphic file (type bmp)
+<img/text/text2_p108_fig1.png>
+
+
+[568
+
+]
+File: img/text/text2_p108_fig2.png Graphic file (type bmp)
+<img/text/text2_p108_fig2.png>
+File: img/text/text2_p109_fig1.png Graphic file (type bmp)
+<img/text/text2_p109_fig1.png>
+
+
+[569]
+File: img/text/text2_p110_fig1.png Graphic file (type bmp)
+<img/text/text2_p110_fig1.png>
+File: img/text/text2_p111_fig1.png Graphic file (type bmp)
+<img/text/text2_p111_fig1.png>
+
+
+[570]
+
+[571]
+File: img/text/text2_p113_fig1.png Graphic file (type bmp)
+<img/text/text2_p113_fig1.png>
+
+
+[572]
+File: img/text/text2_p114_fig1.png Graphic file (type bmp)
+<img/text/text2_p114_fig1.png>
+File: img/text/text2_p114_fig2.png Graphic file (type bmp)
+<img/text/text2_p114_fig2.png>
+File: img/text/text2_p114_fig3.png Graphic file (type bmp)
+<img/text/text2_p114_fig3.png>
+
+
+[573]
+File: img/scan/prob2_p63.png Graphic file (type bmp)
+<img/scan/prob2_p63.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 243--245
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 424.13956pt on input line 246.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p64.png Graphic file (type bmp)
+<img/scan/prob2_p64.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 252--254
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 442.82373pt on input line 255.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p65.png Graphic file (type bmp)
+<img/scan/prob2_p65.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 261--263
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 446.42264pt on input line 264.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p182_2.png Graphic file (type bmp)
+<img/scan/prob2_p182_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 270--272
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 451.23235pt on input line 273.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p183.png Graphic file (type bmp)
+<img/scan/prob2_p183.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 279--281
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 463.6502pt on input line 282.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p184.png Graphic file (type bmp)
+<img/scan/prob2_p184.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 288--290
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 454.14084pt on input line 291.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p185_1.png Graphic file (type bmp)
+<img/scan/prob2_p185_1.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 297--299
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 455.2804pt on input line 300.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[574]
+
+[575]
+
+[576]
+
+[577]
+
+[578]
+
+[579]
+
+[580]
+
+[581
+
+
+]
+\openout2 = `physics_ch46.aux'.
+
+ (./physics_ch46.tex
+File: img/text/text2_p116_fig1.png Graphic file (type bmp)
+<img/text/text2_p116_fig1.png>
+
+
+[582
+
+]
+
+[583]
+File: img/text/text2_p121_fig1.png Graphic file (type bmp)
+<img/text/text2_p121_fig1.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[584]
+File: img/text/text2_p121_fig2.png Graphic file (type bmp)
+<img/text/text2_p121_fig2.png>
+
+
+[585]
+File: img/scan/prob2_p66.png Graphic file (type bmp)
+<img/scan/prob2_p66.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 177--179
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 443.44057pt on input line 180.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p67.png Graphic file (type bmp)
+<img/scan/prob2_p67.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 186--188
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 456.5791pt on input line 189.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p68.png Graphic file (type bmp)
+<img/scan/prob2_p68.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 195--197
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 429.78969pt on input line 198.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p69.png Graphic file (type bmp)
+<img/scan/prob2_p69.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 204--206
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 432.8138pt on input line 207.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p70.png Graphic file (type bmp)
+<img/scan/prob2_p70.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 213--215
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 449.37311pt on input line 216.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p185_2.png Graphic file (type bmp)
+<img/scan/prob2_p185_2.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 222--224
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 455.2804pt on input line 225.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p186.png Graphic file (type bmp)
+<img/scan/prob2_p186.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 231--233
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 435.76118pt on input line 234.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p187.png Graphic file (type bmp)
+<img/scan/prob2_p187.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 240--242
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 467.79762pt on input line 243.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p188.png Graphic file (type bmp)
+<img/scan/prob2_p188.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 249--251
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 459.16483pt on input line 252.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p189.png Graphic file (type bmp)
+<img/scan/prob2_p189.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 258--260
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 460.08899pt on input line 261.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/scan/prob2_p190.png Graphic file (type bmp)
+<img/scan/prob2_p190.png>
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 267--269
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 470.17628pt on input line 270.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[586]
+
+[587]
+
+[588]
+
+[589]
+
+[590]
+
+[591]
+
+[592]
+
+[593]
+
+[594]
+
+[595]
+
+[596]
+
+[597
+
+
+] (./入試物理基礎演習.aux (./physics_ch1.aux) (./physics_ch2.aux)
+(./physics_ch3.aux) (./physics_ch4.aux) (./physics_ch5.aux) (./physics_ch6.aux)
+(./physics_ch7.aux) (./physics_ch8.aux) (./physics_ch9.aux) (./physics_ch10.aux
+) (./physics_ch11.aux) (./physics_ch12.aux) (./physics_ch13.aux)
+(./physics_ch14.aux) (./physics_ch15.aux) (./physics_ch16.aux)
+(./physics_ch17.aux) (./physics_ch18.aux) (./physics_ch19.aux)
+(./physics_ch20.aux) (./physics_ch21.aux) (./physics_ch22.aux)
+(./physics_ch23.aux) (./physics_ch24.aux) (./physics_ch25.aux)
+(./physics_ch26.aux) (./physics_ch27.aux) (./physics_ch28.aux)
+(./physics_ch29.aux) (./physics_ch30.aux) (./physics_ch31.aux)
+(./physics_ch32.aux) (./physics_ch33.aux) (./physics_ch34.aux)
+(./physics_ch35.aux) (./physics_ch36.aux) (./physics_ch37.aux)
+(./physics_ch38.aux) (./physics_ch39.aux) (./physics_ch40.aux)
+(./physics_ch41.aux) (./physics_ch42.aux) (./physics_ch43.aux)
+(./physics_ch44.aux) (./physics_ch45.aux) (./physics_ch46.aux))
+ ***********
+pLaTeX2e <2023-02-14u04>+1, based on
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 126 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 9395 strings out of 473836
+ 210407 string characters out of 5731189
+ 528065 words of memory out of 5000000
+ 31615 multiletter control sequences out of 15000+600000
+ 585507 words of font info for 166 fonts, out of 8000000 for 9000
+ 934 hyphenation exceptions out of 8191
+ 57i,19n,65p,1216b,645s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on 入試物理基礎演習.dvi (597 pages, 1391124 bytes).

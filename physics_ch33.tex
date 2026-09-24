@@ -1,0 +1,235 @@
+\section{電流・電気回路}
+
+\subsection{電流}
+\begin{wrapfigure}[4]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text2_p44_fig1.png}
+\end{wrapfigure}
+コンデンサー回路で見られたような，電荷が移動する現象のことを{\bf 電流}と呼ぶ．
+電流の大きさは，導線のある点（断面）を，単位時間あたりに通過する電気量として定義されている．
+すなわち，図のa点を微小時間$dt$[s]の間に微小電荷$dQ$[C]が通過するとき，この点を流れる電流を，図の矢印の向きに
+\[  \mbox{\boldmath $I=\dfrac{dQ}{dt}$} \hspace{2mm} [{\bf A}] \]
+として定義する．
+
+電気量の単位は[A]（アンペア）であるが，この定義より，[A]は[A]=[C/s]と等しいことがわかる．
+
+電流の定義からわかるように，電流の向きは回路中を正電荷が動いていく向きを表しているが，電荷は電子の過不足から生じる，ということからわかるように，実際に導線中を動いていくのは電子である．
+電子の持つ電荷は$-e$[C]，すなわち負であるから，電流が図の向きに流れているということは，電子がそれと逆向きに動いているということを意味する．
+
+\begin{wrapfigure}[10]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text2_p44_fig2.png}
+\end{wrapfigure}
+導体中（金属中）では，金属結晶を構成する陽イオンの中を，自由電子が自由に動き回っているが，これに対して図のように電池を接続して電場を生じさせると，電子は陽イオンに衝突しながらも全体として高電位側へと移動していく．
+導体中の自由電子の単位体積あたりの個数を$n[{\rm m^3}]$，導線の断面積を$S[{\rm m^2}]$，自由電子の平均移動速度を$\overline{v}$[m/s]とすると，電流の定義より流れる電流$I$[A]は
+\[ \mbox{\boldmath $I=en\overline{v} S $} \hspace{2mm}[{\bf A}] \]
+で与えられる．\\[7mm]
+
+\begin{matome}{電流}
+ \hspace{3mm} 電流$I=en\overline{v} S$\hspace{2mm}[A]
+ \end{matome}
+ 
+\subsection{オームの法則}
+導線の両端に電圧をかけると，これにより電場が生じて電流が発生するが，一般に，発生する電流の大きさ$I$[A]とかける電圧$V$[V]との間には比例関係が成立する．
+\[  \mbox{\boldmath $V=RI$}\]
+ 
+ これをオームの法則といい，比例定数$R$を{\bf 抵抗値（電気抵抗）}と呼ぶ．
+ 抵抗値の単位は上式より[V/A]であるが，これを[\mbox{\boldmath$\Omega$}]{\bf （オーム）}と書く．
+ この抵抗値は{\bf 電流の流れにくさ}を表す定数であり，その材質，長さ，太さ，温度により決まる定数である．
+ 
+ 通常の材質は多かれ少なかれ抵抗を持つが，この電気抵抗が非常に大きなものを{\bf 絶縁体（誘電体）}，中程度のものを{\bf 半導体}，小さいものを{\bf 導体}と呼ぶ．
+ 通常，単に抵抗という場合は半導体~導体の中間程度のものを指し，また金属（導線）は抵抗が0[$\Omega$]だと考えてよい．
+ 
+ \begin{wrapfigure}[14]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p45_fig1.png}
+\end{wrapfigure}
+ 例えば図のように，抵抗値$R [\Omega]$の抵抗に起電力$V$[V]の電池を接続すると，オームの法則$V=RI$を満たすような電流$I$[A]が流れるが，このとき抵抗内の電位は電流が流れる向きに低くなっていくことになる．
+ すなわち，抵抗値$R[\Omega]$の抵抗を電流$I$[A]が流れるとき，{\bf 電流の流れる向きに沿って電位が下がっていき，抵抗の前後では} \mbox{\boldmath $RI$}{\bf [V]だけ電位が変化している}ということが言える．
+ この電位変化を抵抗による{\bf 電圧降下}という．
+ 電気抵抗を組み合わせて作られる回路は，この電圧降下とキルヒホッフの法則を組み合わせて考えていく．
+ 
+ 電流が流れている抵抗からは{\bf ジュール熱}と呼ばれる熱が発生する．
+ その熱量は，1[s]あたり
+ \[P=RI^2=VI=\dfrac{V^2}{R} \hspace{2mm} [{\rm J/s}] \]
+ である．
+ これを抵抗で消費される{\bf 電力}という．
+ また，単位[J/s]をワット[W]と書く．
+ 
+ また，電気抵抗$R [\Omega]$は，導線の長さ$l$[m]に比例し，導線の断面積$S [{\rm m^2}]$には反比例することが知られている．
+ よって，比例定数を$\rho [{\rm \Omega \cdot m}]$として
+ \[ R=\rho \dfrac{l}{S} \hspace{2mm} [{\rm \Omega}] \]
+ と書くことができる．
+ 比例定数$\rho [{\rm \Omega \cdot m}]$は導線の材質によって決まる定数で，これを{\bf 抵抗率}とよぶ．
+ 
+ \begin{matome}{電気抵抗}
+ \hspace{3mm} $V=RI$\hspace{2mm}[V] \hspace{10mm} $P=RI^2=VI=\dfrac{V^2}{R}$ \hspace{2mm} [W] \hspace{10mm} $R=\rho \dfrac{l}{S}$\hspace{2mm} [$\Omega$]
+ \end{matome}
+ 
+ \subsection{抵抗の温度係数}
+ \begin{wrapfigure}[6]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=70mm]
+  {text2_p47_fig1.png}
+\end{wrapfigure}
+ 電気抵抗の抵抗値$R[\Omega]$および抵抗率$\rho [\rm \Omega \cdot m]$の値は一定ではなく，温度によって変化することが知られている．
+ 例えば金属抵抗の場合，電子は図のように陽イオンと衝突を繰り返しつつ移動していくが，抵抗の温度が高くなると原子核の熱振動が大きくなり，電子との衝突確率が高くなり，抵抗値が高くなる．
+ 温度が0[$^\circ$C]における抵抗値，抵抗率をそれぞれ$R_0[\Omega]$，$\rho_0 [\Omega \cdot {\rm m}]$，温度が$t [^\circ{\rm C}]$における抵抗値，抵抗率をそれぞれ$R[\Omega]$，$\rho [\Omega \cdot {\rm m}]$とすると，
+ \[R=R_0(1+\alpha t) \hspace{2mm} [\Omega] \]
+ \[ \rho =\rho_0 (1+\alpha t) \hspace{2mm} [{\rm \Omega \cdot m}] \]
+ が成立する．
+ $\alpha$[/K]を抵抗値（抵抗率）の{\bf 温度係数}という．
+ 温度係数は金属では正の値，半導体（ケイ素，ゲルマニウムなど）では負の値となる．
+ 
+ \begin{wrapfigure}[6]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text2_p47_fig2.png}
+\end{wrapfigure}
+ 金属抵抗にかける電圧を高くするとジュール熱は多くなり，抵抗の温度が上昇するため電流はより流れにくくなる．
+ そのため，通常の金属抵抗ではオームの法則は厳密には成立せず，$I-V$特性曲線は図のようになる．
+ オームの法則が完全に成立する理想的な抵抗のことを{\bf オーム抵抗}と呼び，この図のようなオームの法則に従わない抵抗を{\bf 非オーム抵抗}と呼ぶ．
+ 通常，断りのない限りは抵抗はオーム抵抗として取り扱って良い．
+ 
+  \begin{matome}{抵抗値・抵抗率の温度依存性}
+   \[R=R_0(1+\alpha t) \hspace{2mm} [\Omega] \hspace{10mm} \rho =\rho_0 (1+\alpha t) \hspace{2mm} [{\rm \Omega \cdot m}] \]
+ \hspace{3mm} ただし，$R_0[\Omega]$，$\rho_0 [\Omega \cdot {\rm m}]$は温度$0 [^\circ{\rm C}]$における値，$R[\Omega]$，$\rho [\Omega \cdot {\rm m}]$は温度$t [^\circ{\rm C}]$における値\\
+\hspace{3mm} $\alpha $[/K]：温度係数 \hspace{5mm} 金属導体では正値，半導体では負値
+ \end{matome}
+ 
+ \subsection{半導体} 
+ \begin{wrapfigure}[12]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p48_fig1.png}
+\end{wrapfigure}
+ 14族の元素SiやGeの結晶は共有結合による結合からなる．
+ 実際には3次元的に結合しているが，便宜上2次元的に表している．
+ 
+ 十分に低温であれば，価電子は全て共有結合に使われていて，自由に動ける荷電粒子はなく，電荷の担い手が結晶内にないので，電流は流れない．
+ 
+ しかし，温度が高くなると電子は高いエネルギーを持つようになり，この束縛を振り切って自由になる電子ができる．
+ このように自由電子ができる際，その電子がなくなることによって電子の穴ができ，この穴を{\bf 正孔（ホール）}という．
+ このようにできた自由電子は金属中の自由電子と同じように電流の担い手（これを{\bf キャリア}と呼ぶ）となり得るが，正孔も周りにある電子がこの穴に落ち込むことによって位置を自由に変えることができるようになり，自由電子同様，半導体内を自由に動けるキャリアとなることができる．
+ このように，{\bf 自由電子は負の電荷を運ぶキャリア，正孔は正の電荷を運ぶキャリア}と考えてよい．
+ 
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=130mm]{text2_p48_fig2.png}
+\end{center}
+\end{figure}
+
+ 温度が高いほど，半導体内にある自由電子と正孔の数は増える．
+ その結果，{\bf 半導体では温度が高いほど抵抗値が小さくなる}ことが多い．
+ 
+ 金属抵抗の場合は温度が上昇しても電子の密度は温度で変化せず，格子の振動により抵抗値は増加する．
+ もちろん半導体であっても格子振動の影響はあるので，温度上昇に伴い抵抗値が必ず下がるとは限らない．
+ 
+  \begin{wrapfigure}[8]{r}[5mm]{35mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text2_p48_fig3.png}
+\end{wrapfigure}
+ 純正の半導体は常温では電子，正孔ともにあまり発生しないが，半導体に不純物を少し混ぜることによってキャリアが発生しやすくなる．
+ このような半導体を{\bf 不純物半導体}といい，混入する不純物の種類によってN型半導体，P型半導体に分けられる．
+ 
+ 15族の元素（例えばPやAs）を混入すると，SiやGeと同じように結晶内に置かれたとき，共有結合の際に電子が1つ余る．
+ この余った電子は，不純物の周りで電気的に引きつけられているが，この束縛はそれほど強くなく（共有結合に使われている電子の束縛に比べて），電子は容易に自由電子となる．
+ このような半導体は{\bf N型半導体}（NはnegativeのN）といい，不純物を{\bf ドナー}と呼ぶ．
+ N型半導体のキャリアは主に電子となる．
+ 
+ 一方，13族の元素（例えばAlやGa）を混入すると，SiやGeと同じように結晶内に置かれたとき，共有結合の際に電子が1つ足りなくなるので，負に帯電した不純物の周りに正孔が束縛され，自由に動ける正孔が作られやすい．
+ このような半導体を{\bf P型半導体}（PはpositiveのP）といい，不純物を{\bf アクセプター}と呼ぶ．
+ P型半導体のキャリアは主に正孔となる．
+  \begin{figure}[h]
+\begin{center}
+\includegraphics[width=120mm]{text2_p49_fig1.png}
+\end{center}
+\end{figure}
+
+ \subsection{電池の内部抵抗} 
+  \begin{wrapfigure}[8]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text2_p50_fig1.png}
+\end{wrapfigure}
+電池は金属などのイオン化傾向の違いを利用して電圧を発生させるものであるが，その内部に電解質溶液などを用いているため電池自身がごくわずかではあるが抵抗を持つ．  
+これを電池の内部抵抗という．
+そのため，電池が電流を流し出すとその端子間電圧は小さくなる．
+電流を流していない状態における電池の端子間電圧を，その電池の{\bf 起電力}と呼ぶ．
+
+内部抵抗は一般には小さいため無視してよいことが多いが，無視できない場合には{\bf 電池を内部抵抗と起電力分の電圧を持つ電池とに分けて書き直して考えればよい．}
+
+  \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p28.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p29.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p30.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p120.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p121.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p122.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p123.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

@@ -1,0 +1,165 @@
+\section{気体の状態変化(1)}
+
+\subsection{定積モル比熱と定圧モル比熱}
+通常の物質に加えるべき熱量は，その物質の比熱を$c$[cal/g・K]，物質を$m$[g]，上昇させる温度を$\Delta T$[K]として$Q=mc\Delta T$[J]で与えられるが，気体を加熱するときに加える熱を考える際，気体の量は[g]ではなく[mol]で，また加える熱量も[cal]ではなく[J]を用いた方が便利である．
+{\bf そこで，気体の比熱を，1[mol]の気体を1[K]だけ温度上昇させるのに必要な熱量として定義}する．
+これを{\bf モル比熱}という，
+モル比熱が$C$[J/mol・K]のとき，$n$[mol]の気体の温度を$\Delta T$[K]だけ上昇させるのに必要な熱量$Q$[J]は
+\[Q=nC\Delta T \hspace{2mm} [{\rm J}]\]
+で与えられる．
+
+比熱はその物体に対してどのように熱を与えるかによって変化する．
+気体の場合，
+\Kou{1}{体積を一定に保ったまま温度を上げる（定積変化）}
+\Kou{2}{圧力を一定に保ったまま温度を上げる（定圧変化）}
+の2つの熱の与え方が特に重要で，これらの場合の気体のモル比熱をそれぞれ{\bf 定積モル比熱} \mbox{\boldmath $C_V$} {\bf [J/mol・K]，定圧モル比熱}\mbox{\boldmath $C_P$}{\bf [J/mol・K]}という．
+
+$C_V$と$C_P$は気体の種類によって値が違うが，理想気体の場合は必ず
+\[\mbox{\boldmath $C_P-C_V=R$}\]
+の関係式を満たす．
+これを{\bf マイヤーの関係式}という．
+
+\begin{matome}{定積モル比熱・定圧モル比熱}
+ \hspace{3mm} 定積条件で温度を$\Delta T$[K]上昇させるのに必要な熱\hspace{5mm} $Q=nC_V\Delta T $[J]\\
+ \hspace{3mm} 定圧条件で温度を$\Delta T$[K]上昇させるのに必要な熱\hspace{5mm} $Q=nC_P\Delta T $[J]\\
+ \hspace{3mm}  理想気体であれば気体の種類によらずマイヤーの関係式$C_P-C_V=R$が成立
+ \end{matome}
+
+\subsection{気体が外界に対してする仕事}
+\begin{wrapfigure}[10]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text_p74_fig1.png}
+\end{wrapfigure}
+
+断面積が$S[{\rm m^3}]$のシリンダーに閉じ込められている気体の圧力を$P$[Pa]とする．
+このピストンが微小距離$dl$[m]だけ移動し，シリンダー内の体積が広がるときについて考える．
+
+このとき，気体は外界に対して仕事をしている．
+ピストンの移動距離が微小であれば気体が外界に対してなした仕事も微小である．
+これを$dW$[J]とすれば，仕事の定義より
+\[dW=(PS)・dl \hspace{2mm} [{\rm J}] \]
+となる．このときの気体の体積は$dV=S・dl [{\rm m^3}]$だけ増加したから，
+\[ \mbox{\boldmath $dW=PdV$}\]
+で成立する．
+
+\begin{wrapfigure}[5]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p75_fig1.png}
+\end{wrapfigure}
+この気体がなした仕事を$P-V$図で捉えると，$dW$[J]は図の微小短冊の面積として表される．
+よって，気体が図の曲線上をたどって体積$V:V_1\rightarrow V_2$へと変化するまでに，気体が外界に対してする仕事$W_{out}$[J]は，
+\[W_{out}=\int^{V=V_2}_{V=V_1}dW=\int^{V_2}_{V_1}PdV\]
+として求めることができる．
+
+\begin{matome}{気体が外界に対してする仕事}
+ \hspace{3mm} $W_{out}=\displaystyle \int^{V_2}_{V_1}PdV$
+ \end{matome}
+ 
+ 逆に気体が圧縮されるときは，気体は外界から仕事をされている．
+ ピストンを十分ゆっくりと動かし，外圧と内圧がほぼつりあいを保ったまま変化させると（これを{\bf 準静的過程}と呼ぶ）外圧は内圧$P$[Pa]と等しく，体積が$-dV[{\rm m^3}]$だけ縮んだとすると気体がなされた仕事$dW$[J]は
+ \[dW=P・(-dV)\hspace{2mm}[{\rm J}] \]
+ で与えられる．
+ よって，準静的過程において気体のやりとりした仕事を考える際には気体の内圧を用いて考えればよく，膨張したときには外界に仕事をし，圧縮されたときには外界から仕事をされている．
+ 
+\subsection{熱力学第一法則と内部エネルギーの変化(1)}
+気体の出入りがない（モル数が一定）場合の状態変化を考えよう．
+この場合に重要となる物理量は，初めの状態および終わりの状態での{\bf 圧力，体積，温度}と，エネルギーに関しては変化中の{\bf 吸熱量，仕事，内部エネルギー変化}となる．
+圧力，体積，温度は状態方程式により，これらのうち2つが分かっていれば残りの1つも決定される．
+エネルギーについても，熱力学第一法則より3つの値のうち2つが分かれば残りの1つを求めることができる．
+
+体積一定のまま変化させる{\bf 定積変化}，圧力一定のまま変化させる{\bf 定圧変化}，温度一定のまま変化させる{\bf 等温変化}，熱のやりとりを遮断して変化させる{\bf 断熱変化}の代表的な4つの状態変化について実際に議論してみたい．
+解く上で必要な知識をまとめておくと以下のようになる．
+
+\begin{matome}{気体の状態変化}
+ \hspace{3mm} \underline{状態方程式}\\
+ \hspace{20mm} $PV=nRT$\\
+ \hspace{3mm} \underline{熱力学第一法則}\\
+ \hspace{20mm} $Q_{in}=\Delta U+W_{out}$ \\
+ \hspace{10mm} $\underline{\Delta U[{\rm J}]：内部エネルギー変化}$ \\
+ \hspace{25mm} $\Delta U=nC_V\Delta T$ \\
+ \hspace{20mm} 状態変化の種類にかかわらずこの表記で表せる． \\ 
+ \hspace{20mm} $C_V$[J/mol・K]；定積モル比熱 $\rightarrow$単原子分子理想気体の場合，$C_V=\dfrac{3}{2}R$\\
+  \hspace{10mm} $\underline{W_{out}[{\rm J}]：気体が外界にした仕事}$ \\
+ \hspace{25mm} $W_{out}=\displaystyle \int^{V_2}_{V_1} PdV$ \\
+ \hspace{20mm} $P-V$図における符号付き面積と等しい．\\ 
+ \hspace{20mm} 膨張過程において$W_{out}>0$，圧縮過程において$W_{out}<0$\\
+  \hspace{10mm} $\underline{Q_{in}[{\rm J}]：吸熱量}$ \\
+ \hspace{20mm} 断熱変化：$Q=0$ \\
+ \hspace{20mm} 定積変化：$Q=nC_V\Delta T$ \\ 
+ \hspace{20mm} 定圧変化：$Q=nC_P\Delta T$\hspace{10mm}（$C_P$[J/mol・K]：定圧モル比熱）
+ \end{matome}
+
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p40.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p41.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\vspace{-80mm}
+\includegraphics[width=170mm]{prob_p42.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p126_2.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p127.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p128.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p129.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p130.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p131.png}
+\end{center}
+\end{figure}

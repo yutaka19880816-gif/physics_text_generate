@@ -1,0 +1,275 @@
+\section{単振動}
+
+\subsection{単振動}
+
+\begin{wrapfigure}[18]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text_p39_fig1.png}
+\end{wrapfigure}
+
+質点が図のように半径$A$[m]，角速度$\omega$[rad/s]の等速円運動を行っているとき，図の方向から光を当ててその影の運動を観察すると，影は図の$x$軸上の$O$点を中心として，$B$点と$C$点の間を往復運動する．
+
+簡単のため，質点が図の$D$点を通過した時刻を$t=0$[s]として円運動をパラメータ表示すると，
+\[(x,y)=(A\sin \omega t,A\cos \omega t) \]
+であり，時刻$t$[s]におけるこの質点の投影点は
+\[x=A\sin \omega t\]
+となる．
+今は質点が$D$点を通過した時刻を$t=0$[s]としたが，より一般には時刻$t=0$[s]における位置を考慮して，
+\[ x=A\sin (\omega t+\varphi_0)\]
+と書ける．
+物体の位置がこのような形の式で書ける運動を{\bf 単振動}という．
+単振動の中心からの振れ幅$A$[m]を単振動の{\bf 振幅}，$\omega$[rad/s]をその単振動の{\bf 角振動数}，時刻$t=0$[s]に物体がいた位置を表す$\varphi_0$を{\bf 初期位相}，三角関数の中身の部分$\omega t+\varphi_0$を{\bf 位相}という．
+
+物体が単振動を行う典型例はバネに取り付けた物体の振動現象である．
+
+ 
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜単振動＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{60mm}
+%  \centering
+%%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=53mm]
+%  {text_p39_fig2.png}
+%\end{wrapfigure}
+%\hspace{5mm}物体が$x$軸上において単振動を行っている．
+%時刻$t$[s]における物体の位置が
+%\[ x=A\sin \omega t\]
+%で与えられるとき，以下の問いに答えよ．
+%ただし，$A$[m]および$\omega$[rad/s]は定数である．
+%\begin{description}
+%\item[(1)] この物体の時刻$t$[s]における速度および加速度を求めよ．
+%\item[(2)] 物体の速さおよび加速度の大きさが最も大きくなる位置およびその値を求めよ．
+%\item[(3)] 物体の速さが0[m/s]となる位置，および加速度の大きさが0${\rm [m/s^2]}$となる位置を求めよ．
+%\item[(4)] この単振動の周期$T$[s]を求めよ．
+%\item[(5)] 物体の加速度をその瞬間における物体の位置$x$[m]を用いて表せ．
+%\item[(6)] 弾性定数$k$[N/m]のバネの先に図のように質量$m$[kg]の物体を取り付け，これをなめらかな床面の上で運動させる．この物体の運動方程式を書き，(5)と同じ形をしていることを示せ．
+%\item[(7)] (5)と比較することで，(6)の単振動の角振動数$\omega'$[rad/s]および周期$T'$[s]を$m,k$を用いて表せ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+ 
+バネに取り付けた物体のように，運動方程式が
+\[ma=-kx\hspace{3mm}（ただしkは正の定数）\]
+なる関係にまとめられるとき，その物体は単振動することが知られている．
+
+\begin{matome}{単振動と運動方程式}
+ \hspace{5mm} 『運動方程式が$ma=-kx\hspace{5mm}(k>0)で表せる$』\\
+ \hspace{12mm} $\Leftrightarrow $\hspace {1mm} 『$x=A\sin (\omega t+\varphi_0)$で表される単振動を行う』\\
+ \hspace{5mm} 振動中心$x=0$\hspace {5mm}角振動数$\omega=\sqrt{\dfrac{k}{m}} $\hspace{5mm}周期$T=\dfrac{2\pi}{\omega}$
+ \end{matome}
+ 
+% 【端点ー振動中心ー端点】
+% \begin{figure}[h]
+%\begin{center}
+%\includegraphics[width=80mm]{text_p40_fig1.png}
+%\end{center}
+%\end{figure}
+
+
+ 
+なお，単振動の式$x=A\sin (\omega t+\varphi_0) $の$A,\varphi_0$はどのような定数値でも元の運動方程式$ma=-kx$を満たすことができる．
+また逆に，物体の運動方程式が$ma=-kx$の形になる場合の物体の座標$x(t)$は，必ず$x=A\sin (\omega t+\varphi_0)$の形にまとめられることが知られている．
+すなわち，{\bf 運動方程式}\mbox{\boldmath $ma=-kx\hspace{3mm}(k>0)$}{\bf を満たすことと，運動が}\mbox{\boldmath $x=A\sin (\omega t+\varphi_0)\hspace{3mm} \left( \omega=\sqrt{\dfrac{k}{m}} \right)$}{\bf で表されることは数学的に等価である．}
+ 
+ よって，運動方程式が$ma=-kx$の形になる物体の座標$x(t)$の式を決めるには，$x=A\sin (\omega t+\varphi_0) $の式の$A,\varphi_0$の値を決めてやればよく，これらは問題文で与えられた条件（初期条件という）によって決める．
+ 
+ また，運動方程式$ma=-kx$に対して，$x=A\sin (\omega t+\varphi_0) $を加法定理で分解した$x=B\sin \omega t+C\cos \omega t \hspace{2mm}（ただしB,Cは任意の定数）$を解として用いて，$BとC$を決定したほうが求めやすい．
+ 
+ \ 
+ 
+ \subsection{重力下における単振動}
+ 
+ \begin{wrapfigure}[18]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=70mm]
+  {text_p41_fig1.png}
+\end{wrapfigure}
+
+ 天井から鉛直につるしたバネ定数$k$[N/m]に取り付けた質量$m$[kg]の物体の運動について考える．
+ バネが自然長のとき，の物体の位置を原点とし，鉛直下向きに$x$軸をとる．
+ バネの弾性力は自然長からの変位に比例することに注意すると，物体が位置$x$[m]にいるときの運動方程式は$x$軸方向（下向き）を正として
+ \[ ma=mg-kx\]
+ で与えられる．
+ これを変形すると，
+ \[ ma=-k\left( x-\dfrac{mg}{k} \right)\]
+ となるが，ここで$y=x-\dfrac{mg}{k}$なる座標軸$y$を設定すると，上の式は
+ \[ ma=-ky\]
+ とまとめられる．
+ また，$a=\dfrac{d^2x}{dt^2}=\dfrac{d^2y}{dt^2}$であるから，$y$軸上で見ても加速度は$a$である．
+ よって，
+ \[a=-\dfrac{k}{m}y\]
+ より，この物体は$y=0$[m]を中心とし，角振動数$\omega =\sqrt{\dfrac{k}{m}}$[rad/s]の単振動を行うことがわかる．
+ この単振動の中心位置$y=0$[m]とは$x=\dfrac{mg}{k}$[m]であり，これは{\bf 物体に作用する重力とバネの弾性力とがつりあう点}である．
+ 
+ \begin{matome}{重力下での単振動}
+ \hspace{5mm} 自然長の位置を基準とした運動方程式を変形して
+ \[ ma=-k(x-x_0) \]
+ \hspace{5mm} の形にまとめ，振動中心$x=x_0$[m]（力のつり合いの位置），角振動数$\omega=\sqrt{\dfrac{k}{m}}$[rad/s]を求める．
+ \end{matome}
+ 
+  
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜重力下における単振動＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{50mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=40mm]
+%  {text_p42_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}天井から鉛直につるしたばね定数$k$[N/m]のバネに取り付けた質量$m$[kg]の物体の運動について考える．
+%バネが自然長のときの位置を$x$軸の原点とし，鉛直下向きに正の向きをとる．
+%今，物体を自然長位置で軽く支えておき，時刻$t=0$[s]にそっと手を離した．
+%重力加速度の大きさを$g {\rm [m/s^2]}$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 物体が位置$x$[m]にあるときの物体の運動方程式を示せ．
+%\item[(2)] この単振動の中心位置$x_0$[m]および角振動数$\omega$[rad/s]を求めよ．
+%\item[(3)] この単振動の振幅$A$[m]を求めよ．
+%\item[(4)] 物体が達する最下点の座標$x_1$[m]を求めよ．
+%\item[(5)] 物体が振動中心を通過する速さ$v_0$[m/s]を求めよ．
+%\item[(6)] この物体の任意の時刻$t$[s]における位置を，時刻$t$の関数として表せ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+ 
+%  \newpage
+ \subsection{単振動のまとめ}
+ 
+ 単振動の特徴をまとめると以下のようになる．
+ 
+ \begin{matome}{単振動のまとめ}
+ \hspace{5mm} ・『運動方程式$ma=-k(x-x_0)\hspace{3mm} (k>0)$で表せる』\\
+ \hspace{20mm} $\Leftrightarrow 『x=x_0+A\sin (\omega t+\varphi_0) で表される単振動を行う』$\\
+ \hspace{5mm} ・振動中心$x=x_0$\hspace{3mm} 角振動数$\omega =\sqrt{\dfrac{k}{m}}$ \hspace{3mm} 周期$T=\dfrac{2\pi}{\omega}$\\
+  \hspace{5mm} ・単振動の振動中心は力のつり合いの位置となる．\\
+  \hspace{5mm} ・振動中心で速さが最大となり，$v_{max}=A\omega$[m/s]\\
+  \hspace{5mm} ・加速度が最大となるのは振動端点．
+ \end{matome} 
+ 
+重力下に限らず，つり合いの位置からの変位に比例して復元力（つり合いの位置に戻そうとする力）が作用する場合には単振動を行う．
+一般に単振動についての解き方をまとめると以下の通りとなる．
+
+ 
+ \begin{matome}{単振動の解法}
+ \hspace{3mm} $\MARU{1}$\hspace{2mm}位置$x$\hspace{1mm}[m]において物体に作用している力を描き出し，運動方程式を立てる．\\
+ \hspace{10mm} $\underline{ポイント}$ ・特定の位置ではなく，任意の位置$x$[m]で考える．\\
+  \hspace{24mm}  ・加速度$a=\dfrac{d^2x}{dt^2} \hspace{1mm} {\rm [m/s^2]}$の向きは$x$軸と同じ向きに設定する．\\
+  \hspace{24mm}  ・複数物体がある場合は各物体ごとに別々に立てればよい．\\
+ \hspace{3mm} $\MARU{2}$\hspace{2mm}式変形して$ma=-k(x-x_0)$の形を作り，角振動数$\omega=\sqrt{\dfrac{k}{m}}$\hspace{1mm}[rad/s]，振動中心$x_0$[m]を求める．\\
+ \hspace{10mm} $\underline{ポイント}$ ・$k$および$x_0$は時刻や位置によらない定数になるように変形する．\\
+  \hspace{24mm}  ・$k$が正の場合のみ単振動となる．\\
+  \hspace{24mm}  ・複数物体があり，垂直抗力や張力など未知数が含まれる場合には連立して未知数を\\ \hspace{28mm}消去してこの形を目指す．\\
+   \hspace{3mm} $\MARU{3}$\hspace{2mm}必要に応じて初期条件から振幅$A$\hspace{1mm}[m]および初期位相$\varphi$を求める．\\
+ \hspace{10mm} $\underline{ポイント}$ ・速度が0\hspace{1mm}[m/s]の位置が与えられていれば（そっと手を離した，など），\\ \hspace{28mm}その位置が端点なので，端点と振動中心の距離が振幅となる．\\
+  \hspace{24mm}  ・振動中心での速度が与えられていれば$v_{max}=A\omega $を利用して振幅を求める\\ \hspace{28mm}ことができる．\\
+  \hspace{24mm}  ・それ以外の位置での速度が与えられている場合はエネルギー保存則を利用して\\ \hspace{28mm}計算して振幅を求める．\\
+  \hspace{24mm}  ・時刻$t$における位置を求める場合は，物体の時間変化をグラフに描いた上で\\ \hspace{28mm}数式化するとよい．
+ \end{matome} 
+ 
+
+ \ 
+ 
+%\begin{breakbox}
+%\ex＜鉛直方向のバネによる単振動＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{70mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=60mm]
+%  {text_p43_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}軽いバネの一端を地面に固定して鉛直に立て，他端に質量$M$[kg]の板を取り付け，板の上に質量$m$[kg]の小球を乗せたところ，板は自然長の位置から距離$d$[m]だけ縮んだ位置でつり合った．
+%バネをさらに$2d$[m]だけ押し縮めてそっと手を離した．
+%この後の運動について以下の問いに答えよ．
+%ただし重力加速度の大きさを$g {\rm [m/s^2]}$とする．
+%\begin{description}
+%\item[(1)] このバネの弾性定数$k$[N/m]を求めよ．
+%\item[(2)] 小球と板とが接触している間について，この単振動の周期$T$[s]を求めよ．
+%\item[(3)] 手を離してから小球と板がつり合いの位置に戻るのにかかる時間を求めよ．
+%\item[(4)] つり合いの位置を通過する瞬間の小球と板の速さを求めよ．
+%\item[(5)] 小球が板から離れる位置を求めよ．
+%\item[(6)] 手を離してから小球が板から離れるまでにかかる時間を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+ 
+ 
+  \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p23.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p24.png}
+\vspace{10cm}
+\end{center}
+\end{figure}
+
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p25.png}
+\vspace{10cm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p95.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p96.png}
+\end{center}
+\end{figure}
+ 
+ \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p97.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p98.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p99.png}
+\end{center}
+\end{figure}
+ 

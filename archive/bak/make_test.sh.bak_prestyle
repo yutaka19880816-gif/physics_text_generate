@@ -1,0 +1,230 @@
+#!/bin/bash
+# 指定した例題・練習問題から確認テストを作る（問題用紙＋解答解説用紙）
+#
+#   使い方:
+#     ./make_test.sh 14 --rei 1,3 --ren 2,5 \
+#         --title "第14回　確認テスト" --sub "気体の状態方程式・熱力学第一法則" \
+#         --time 30 --score 25,25,25,25 --height 60,50,45,55
+#
+#     --rei    例題番号（カンマ区切り）
+#     --ren    練習問題番号（カンマ区切り）
+#     --title  問題用紙のタイトル（既定「第N回　確認テスト」）
+#     --sub    副題（省略可）
+#     --time   試験時間（分・省略可）
+#     --score  各問の配点（カンマ区切り・省略可）．満点は自動合計
+#     --height 各問の解答欄の高さ（mm・カンマ区切り）
+#              省略すると解答欄を紙面の残りいっぱいまで広げる（実質1問1ページ）
+#
+#   指定した順に第1問・第2問…と番号を振り直す（--rei が先，--ren が後）．
+#
+#   出力: 「第N回確認テスト_問題.pdf」「第N回確認テスト_解答.pdf」
+#
+# 問題文・指針・解答は physics_chN_new.tex から**読み取るだけ**で，教材側は
+# 一切変更しない．本体プリアンブルをコピーしたラッパを /tmp に作って組むので，
+# \U \Cel \Ans \ko komon zuright などの既存マクロがそのまま効く．
+# ※ .tex を作業フォルダに残さない（VS Code が root と誤認するのを避ける）
+set -e
+N=${1:?章番号を指定してください（例: ./make_test.sh 14 --rei 1 --ren 2）}
+shift
+REI=""; REN=""; TITLE=""; SUB=""; TIME=""; SCORE=""; HEIGHT=""
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --rei)    REI="$2";    shift 2;;
+    --ren)    REN="$2";    shift 2;;
+    --title)  TITLE="$2";  shift 2;;
+    --sub)    SUB="$2";    shift 2;;
+    --time)   TIME="$2";   shift 2;;
+    --score)  SCORE="$2";  shift 2;;
+    --height) HEIGHT="$2"; shift 2;;
+    *) echo "不明なオプション: $1"; exit 1;;
+  esac
+done
+[ -z "$REI" ] && [ -z "$REN" ] && { echo "--rei か --ren のどちらかを指定してください"; exit 1; }
+
+SRC="physics_ch${N}_new.tex"
+[ -f "$SRC" ] || SRC="physics_ch${N}.tex"
+[ -f "$SRC" ] || { echo "physics_ch${N}_new.tex も physics_ch${N}.tex もありません"; exit 1; }
+
+python3 - "$N" "$SRC" "$REI" "$REN" "$TITLE" "$SUB" "$TIME" "$SCORE" "$HEIGHT" <<'PY'
+import sys, re, os
+n, src, rei, ren, title, sub, time_, score, height = sys.argv[1:10]
+s = open(src, encoding='utf-8').read()
+
+# ---------------------------------------------------------------- 小道具
+def read_group(t, i):
+    """t[i] が '{' のとき，対応する '}' までの中身と，その次の位置を返す"""
+    assert t[i] == '{', t[i:i+20]
+    d = 0
+    k = i
+    while k < len(t):
+        c = t[k]
+        if c == '\\':          # \{ \} はエスケープなので飛ばす
+            k += 2; continue
+        if c == '{': d += 1
+        elif c == '}':
+            d -= 1
+            if d == 0:
+                return t[i+1:k], k+1
+        k += 1
+    raise ValueError('括弧が閉じていません')
+
+def env_body(t, name, start=0):
+    b, e = '\\begin{%s}' % name, '\\end{%s}' % name
+    i = t.find(b, start)
+    if i < 0: return None
+    j = t.index(e, i)
+    return t[i+len(b):j]
+
+def strip_env(t, name):
+    return re.sub(r'\\begin\{%s\}.*?\\end\{%s\}' % (name, name), '', t, flags=re.S)
+
+# ---------------------------------------------------------------- 例題の抽出
+reidai = {}          # 番号 -> dict(theme, mondai, sisin, key, kaitou)
+pos, k = 0, 0
+while True:
+    i = s.find('\\begin{reidaiunit}', pos)
+    if i < 0: break
+    j = s.index('\\end{reidaiunit}', i)
+    unit = s[i:j]
+    k += 1
+    m = re.search(r'\\begin\{reidai\}', unit)
+    theme, after = read_group(unit, m.end())
+    mondai = unit[after:unit.index('\\end{reidai}', after)]
+    mk = re.search(r'\\Key', unit)
+    key = read_group(unit, mk.end())[0] if mk else ''
+    reidai[k] = dict(theme=theme, mondai=mondai.strip(),
+                     sisin=(env_body(unit, 'sisinE') or '').strip(),
+                     key=key,
+                     kaitou=(env_body(unit, 'kaitou') or '').strip())
+    pos = j
+
+# ---------------------------------------------------------------- 練習の抽出
+# 問題編：\setcounter{qno}{0} 以降，解答編（\KaiTitle）より前
+q0 = s.index('\\setcounter{qno}{0}')
+q1 = s.index('\\KaiTitle')
+qzone = s[q0:q1]
+STOPQ = ('\\Mon', '\\Rank', '\\newpage')
+lines = qzone.split('\n')
+renshu = {}
+cur = None
+for ln in lines:
+    m = re.match(r'^\\Mon(\[[^\]]*\])?\{(.+)\}\s*$', ln)
+    if m:
+        cur = dict(theme=m.group(2), sitei=bool(m.group(1)), mondai=[])
+        renshu[len(renshu)+1] = cur
+        continue
+    if cur is not None:
+        if ln.startswith(('\\Rank', '\\newpage')):
+            cur = None; continue
+        cur['mondai'].append(ln)
+for v in renshu.values():
+    v['mondai'] = '\n'.join(v['mondai']).strip()
+
+# 解答編：multicols の中
+a0 = s.index('\\begin{multicols}{2}')
+a1 = s.index('\\end{multicols}', a0)
+azone = s[a0:a1]
+cur = None
+for ln in azone.split('\n'):
+    m = re.match(r'^\\MonN(\[[^\]]*\])?\{(\d+)\}\{(.+)\}\s*$', ln)
+    if m:
+        cur = renshu[int(m.group(2))]
+        cur['ans'] = []
+        continue
+    if cur is not None:
+        if ln.startswith('\\Rank'):
+            cur = None; continue
+        cur['ans'].append(ln)
+for v in renshu.values():
+    body = '\n'.join(v.get('ans', [])).strip()
+    body = strip_env(body, 'saikei')          # 要旨の再掲は使わない（全文を再掲する）
+    v['sisin']  = (env_body(body, 'sisin') or '').strip()
+    rest = re.sub(r'\\begin\{sisin\}.*?\\end\{sisin\}', '', body, count=1, flags=re.S)
+    v['kaitou'] = rest.strip()                # kaitou と，あれば chuu をそのまま
+
+# ---------------------------------------------------------------- 出題リスト
+def nums(x): return [int(v) for v in x.split(',') if v.strip()]
+items = []
+for r in nums(rei):
+    assert r in reidai, '例題%d が見つかりません' % r
+    d = reidai[r]
+    items.append(dict(src='例題%d' % r, theme=d['theme'], mondai=d['mondai'],
+                      sisin=d['sisin'], key=d['key'], kaitou=d['kaitou']))
+for r in nums(ren):
+    assert r in renshu, '練習%d が見つかりません' % r
+    d = renshu[r]
+    items.append(dict(src='練習%d' % r, theme=d['theme'], mondai=d['mondai'],
+                      sisin=d['sisin'], key='', kaitou=d['kaitou']))
+
+sc = nums(score) if score else []
+hs = nums(height) if height else []
+assert not sc or len(sc) == len(items), '--score の個数が問題数と合いません'
+assert not hs or len(hs) == len(items), '--height の個数が問題数と合いません'
+total = str(sum(sc)) if sc else ''
+title = title or ('第%s回　確認テスト' % n)
+
+# ---------------------------------------------------------------- ラッパ生成
+m = open('入試物理基礎演習.tex', encoding='utf-8').read()
+i = m.index('\\begin{document}'); body = m[i:]
+j = body.index('\\newpage\n\n{\\huge 入試物理基礎演習}')   # 表紙以降を捨て，マクロ定義だけ残す
+pre = m[:i].replace('\\usepackage[dvipdfmx]{color}',
+                    '\\usepackage[dvipdfmx]{color}\n'
+                    '\\usepackage{butsuri_style}\n\\usepackage{butsuri_test}', 1)
+assert '\\usepackage{butsuri_test}' in pre, 'butsuri_test の挿入に失敗'
+macro = '\\begin{document}' + body[len('\\begin{document}'):j] + '\n\\ButsuriApply\n'
+
+def esc(x):   # \TestHeader などの引数に素通しする
+    return x
+
+# --- 問題用紙 -------------------------------------------------------
+out = [macro,
+       '\\pagestyle{plain}\n',
+       '\\TestHeader{%s}{%s}{%s}{%s}\n' % (title, sub, time_, total)]
+for k, it in enumerate(items, 1):
+    out.append('\\ToiHead{%d}{%s}{%s}\n' % (k, it['theme'], sc[k-1] if sc else ''))
+    out.append(it['mondai'] + '\n')
+    # --height を書かなければ紙面の残りいっぱいまで広げる
+    out.append('\\AnswerBox{%dmm}\n' % hs[k-1] if hs else '\\AnswerBoxFill\n')
+out.append('\\end{document}\n')
+open('/tmp/_test_q.tex', 'w', encoding='utf-8').write(pre + ''.join(out))
+
+# --- 解答解説用紙 ---------------------------------------------------
+out = [macro,
+       '\\pagestyle{plain}\n',
+       '\\SolTitle{%s　解答・解説}\n' % title]
+for k, it in enumerate(items, 1):
+    tag = it['src'] + ('／%d点' % sc[k-1] if sc else '')
+    out.append('\\SolHead{%d}{%s}{%s}\n' % (k, it['theme'], tag))
+    out.append('\\begin{mondaibun}\n' + it['mondai'] + '\n\\end{mondaibun}\n')
+    if it['sisin']:
+        out.append('\\begin{sisinE}\n' + it['sisin'] + '\n\\end{sisinE}\n')
+    if it['key']:
+        out.append('\\Key{%s}\n' % it['key'])
+    if it['kaitou'].lstrip().startswith('\\begin{kaitou}'):
+        out.append(it['kaitou'] + '\n')          # 練習：kaitou（＋chuu）がそのまま入っている
+    else:
+        out.append('\\begin{kaitou}\n' + it['kaitou'] + '\n\\end{kaitou}\n')
+out.append('\\end{document}\n')
+open('/tmp/_test_a.tex', 'w', encoding='utf-8').write(pre + ''.join(out))
+
+print('出題: ' + '，'.join('第%d問=%s（%s）' % (k, it['src'], it['theme'])
+                          for k, it in enumerate(items, 1)))
+PY
+
+build () {   # $1=ラッパ  $2=ジョブ名
+  rm -f "$2.aux"
+  for i in 1 2; do platex -interaction=nonstopmode -jobname="$2" "\\input{$1}" >/dev/null 2>&1; done
+  echo -n "  エラー        : "; grep -c '^!' "$2.log" || true
+  echo -n "  Overfull      : "; grep -c -i 'overfull' "$2.log" || true
+  echo -n "  Underfull     : "; grep -c -i 'underfull' "$2.log" || true
+  echo -n "  wrapfig警告   : "; grep -c -i 'wrapfig warning\|Collision between wrapping' "$2.log" || true
+  grep "Output written" "$2.log" | sed 's/^/  /'
+  dvipdfmx "$2.dvi" 2>&1 | grep -c 'unparsed' | xargs -I{} echo "  未解釈special : {} 件（0なら図が正しく埋め込まれている）"
+  cp "$2.log" "/tmp/$2.log"
+  rm -f "$2.dvi" "$2.aux" "$2.log" "$2.synctex.gz"
+}
+
+echo "── 問題用紙 ──"; build /tmp/_test_q.tex "第${N}回確認テスト_問題"
+echo "── 解答解説 ──"; build /tmp/_test_a.tex "第${N}回確認テスト_解答"
+rm -f /tmp/_test_q.tex /tmp/_test_a.tex
+ls -la "第${N}回確認テスト_問題.pdf" "第${N}回確認テスト_解答.pdf" | awk '{printf "→ %s  %.2f MB\n",$9,$5/1000000}'

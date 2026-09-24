@@ -1,0 +1,130 @@
+\section{気体の状態変化(2)}
+
+\subsection{断熱変化}
+外部との熱の出入りを遮断して気体を状態変化させることを断熱変化という．
+断熱変化では圧力，体積，温度の全てが変化する．
+この断熱変化における変化後の圧力や体積は以下に示す{\bf ポアソンの法則}を利用して求める．
+
+\begin{itembox}[l]{【ポアソンの法則】}
+ \hspace{3mm} 断熱変化中は比熱比$\gamma =\dfrac{C_P}{C_V}$を用いて
+ \[PV^\gamma =（一定）　TV^{\gamma-1}=（一定）\]
+ が成立する．
+ \end{itembox}
+
+この法則を微小変化に注目して導出してみよう．
+
+\begin{wrapfigure}[17]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text_p79_fig1.png}
+\end{wrapfigure}
+体積$V[{\rm m^3}]$のときの圧力を$P$[Pa]として，微小体積$\Delta V[{\rm m^3}]$分の気体を断熱膨張させると，この間に気体が外にした微小仕事は
+\[\Delta W=P\Delta V\]
+となる．
+この変化の前後で圧力が$\Delta P$[Pa]，温度が$\Delta T$[K]だけ変化したとすると，断熱変化なので，熱力学第一法則より，
+\[0=nC_V\Delta T+\Delta W \hspace{5mm} \Leftrightarrow \hspace{5mm} nC_V\Delta T=-P\Delta V\]
+
+ここで，断熱膨張前後の状態方程式より
+\[PV=nRT\]
+\[(P+\Delta P)(V+\Delta V)=nR(T+\Delta T)\]
+
+第2式において二次の微小量$\Delta P\Delta V$を無視して第1式を利用すれば
+\[PV+P\Delta V +\Delta PV=nRT+nR\Delta T\]
+\[\Leftrightarrow P\Delta V +\Delta PV=nR\Delta T\]
+熱力学第一法則の式に代入して
+\[\dfrac{C_V}{R}(P\Delta V+\Delta PV)=-P\Delta V \hspace{5mm} \Leftrightarrow \hspace{5mm} \dfrac{C_V+R}{C_V}・\dfrac{\Delta V}{V}=-\dfrac{\Delta P}{P}\]
+
+マイヤーの関係式より$C_P=C_V+R$なので，$\dfrac{C_V+R}{C_V}=\gamma$と置き換えられる．
+これを両辺積分すると，積分定数を$D$として
+\[\gamma \log V=-\log P+D \hspace{5mm} \Leftrightarrow \hspace{5mm} \log PV^\gamma =D \hspace{5mm} \Leftrightarrow \hspace{5mm} PV^\gamma =e^D\]
+
+$e^D$は定数なので，$PV^\gamma =（一定）$が成立する．
+
+また，$PV^\gamma =（一定）$と状態方程式$PV=nRT$を合わせて
+\[\dfrac{nRT}{V}V^\gamma =（一定）\hspace{5mm} \Leftrightarrow \hspace{5mm} TV^{\gamma -1}=（一定）\]
+も示すことができる．
+
+\begin{wrapfigure}[5]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p80_fig1.png}
+\end{wrapfigure}
+等温変化では，状態方程式より$PV=（一定）$が成立するので，等温変化と断熱変化を比較すると，変化中の$P-V$図の曲線（それぞれ等温曲線，断熱曲線と呼ぶ）は{\bf 断熱曲線の方が等温曲線より傾きが大きい}曲線となることがわかる．
+
+\subsection{自由膨張}
+気体が真空中に拡散していく際には，左右の部屋の圧力が異なる状態を経て気体が真空側へと流れていき，最終的には両方の部屋の気体の圧力が等しくなったところで気体の流れが止まる．
+このような真空中への気体の膨張を{\bf 自由膨張}といい，特に熱を遮断した状態で真空中へ膨張させることを{\bf 断熱自由膨張}という．
+
+断熱自由膨張では，もともと気体の入っていた部屋から気体が出ていき，片方の部屋に注目すると気体のモル数が変化していくため，準静的な断熱変化で議論した場合と異なる．
+そのため，断熱変化ではあるものの，ポアソンの式$PV^\gamma=（一定）$を用いて考えてはいけない．
+このような場合は，箱全体に着目し熱力学第一法則を適用する．箱全体の体積は変わらず，また断熱変化なら箱の内外の熱のやりとりが0[J]である．
+よって，箱内部の内部エネルギー変化が0[J]となることがわかる．
+
+\begin{itembox}[l]{【断熱自由膨張】}
+ \hspace{3mm} 熱を遮断した状態で真空中へ理想気体を膨張させるときは箱全体に対して熱力学第一法則を考える．
+ \end{itembox}
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p43.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p44.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p45.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p132.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p133.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p134.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p135.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p136_1.png}
+\end{center}
+\end{figure}

@@ -1,0 +1,320 @@
+\section{慣性力}
+
+\subsection{単振り子}
+
+\begin{wrapfigure}[6]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text_p44_fig1.png}
+\end{wrapfigure}
+
+右図のように長さ$l$[m]の軽い糸の一端を天井に固定し，これに質量$m$[kg]のおもりをつるし，つり合いの位置$O$からほんの少しだけおもりを横に引いて手を離すと，おもりは$O$点を中心として振動する．
+おもりの振れ幅が微小であれば，おもりは円弧に沿って単振動を行うことが知られている．
+この振り子を単振り子という．
+
+
+ \ \\[5mm]
+ 
+%\begin{breakbox}
+%\ex＜単振り子運動＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{50mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=40mm]
+%  {text_p44_fig2.png}
+%\end{wrapfigure}
+%\hspace{5mm}長さ$l$[m]の軽い糸の一端を天井に固定し，これに質量$m$[kg]のおもりをつるす．
+%図のように糸の鉛直線から右方向へ振れ角を$\theta$とし，最下点を原点として円弧に沿って$x$軸をとる．
+%おもりを微小角$\theta_0$まで持ち上げてそっと手を離したときの運動について以下の問いに答えよ．
+%ただし重力加速度の大きさを$g {\rm [m/s^2]}$とする．
+%また，$|\theta | \ll1$のとき成り立つ近似式$\sin \theta \fallingdotseq \theta$を用いてよい．
+%\begin{description}
+%\item[(1)] 物体が座標$x$にあるときについて，物体の円弧に沿った運動方程式を示せ．加速度は$\dfrac{d^2x}{dt^2} [{\rm m/s^2}]$を用いよ．
+%\item[(2)] (1)の運動方程式から，振れ角$\theta$が微小であることを用いておもりが単振動を行うことを示し，その周期を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+ 
+
+\begin{matome}{単振り子}
+ \hspace{2mm} 大きさ$g[{\rm m/s^2}]$の重力加速度下において長さ$l$[m]の糸に取り付けた物体を微小振れ角で振動させると，物体は円弧に沿って単振動を行う．
+ その周期$T$[s]は
+ \[ T=2\pi \sqrt{\dfrac{l}{g}} \hspace{1mm}[s]\]
+ \hspace{5mm} であり，物体の質量に依存しない．
+ \end{matome}
+ 
+% \newpage
+ \subsection{静止系と運動系}
+ 
+地面に対して動いている電車内に置かれている物体Aを観測するとき，電車内に座っている人から観察すると物体Aは静止しているように観察されるが，地面に対して静止している人は物体Aは運動しているように見える．
+このように，{\bf 物体の運動状態はそれを観察する人の立場（運動を記述する座標系）によって変化する．} 
+
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=120mm]{text_p45_fig1.png}
+\end{center}
+\end{figure}
+
+これまで見てきたように，物体の運動を表すためにはまず座標軸を設定するが，その座標軸は地面に固定したものであってもよいし，地面に対して動いている電車内の床に固定したものであってもよい．
+しかし，その座標軸（これを{\bf 座標系}という）の選び方により物体の運動は異なって観察される．
+
+運動方程式を含め，ニュートンの運動の法則は今まで考えてきたような地面に固定した座標系において成立する．
+ここで，運動の法則が成立する座標系のことを{\bf 慣性系}という（静止している場合は特に静止系という）．
+慣性系は，運動の第一法則である「慣性の法則」が成立する座標系ということである．
+一方，地面に対して加速度を持つ乗り物に固定した座標系のように運動の法則が成立しない座標系のことを{\bf 非慣性系}という．
+
+\newpage
+\begin{wrapfigure}[17]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text_p45_fig2.png}
+\end{wrapfigure}
+
+地面に対する加速度（これを真の加速度と呼ぶことにする）が$\overrightarrow{a} \hspace{1mm} {\rm [m/s^2]}$の物体を，地面に対して加速度$\overrightarrow{a_0} \hspace{1mm} {\rm [m/s^2]}$で運動する乗り物に乗って観測するときについて考える．
+この観測者から見た物体の加速度を$\overrightarrow{a'} \hspace{1mm} {\rm [m/s^2]}$とすると，乗り物そのものが運動しているため，この観測者は物体の真の加速度を観測することができず，見かけの加速度$\overrightarrow{a'} \hspace{1mm} {\rm [m/s^2]}$を観測する．
+この見かけの加速度とは観測者に対する物体の相対加速度であるから
+\[ \overrightarrow{a'\mathstrut} = \overrightarrow{a\mathstrut}-\overrightarrow{a_0\mathstrut}\]
+なる関係が成立する．
+静止系から見たときの運動方程式$m\overrightarrow{a}=\overrightarrow{F}$は確かに成立しているので，これに上の関係式を代入してまとめると，
+\[m\overrightarrow{a'\mathstrut}=\overrightarrow{F\mathstrut}+(-m\overrightarrow{a_0\mathstrut})\]
+となる．
+よって，運動系から見たときの相対加速度に対して運動方程式を成り立たせるためには，静止系から見たときに物体に作用する力の他に，\mbox{\boldmath $-m\overrightarrow{a_0} {\rm [N]}$}という力，すなわち{\bf 観測者の加速度とは逆向きに大きさ}\mbox{\boldmath $ma_0{\rm [N]}$} {\bf の力が余分に作用している}と考えなければいけない．
+この$-m\overrightarrow{a_0}$の力を{\bf 慣性力}という．
+
+慣性力は，運動方程式の加速度に見かけの加速度を用いたために出てきた項であるから，実在する力ではなく，{\bf 見かけの力}である．
+よって慣性力を及ぼした主体は存在せず，また慣性力の反作用も存在しない．
+
+
+\begin{matome}{慣性力}
+ \hspace{2mm} 静止系に対して加速度$\overrightarrow{a_0\mathstrut} {\rm [m/s^2]}$で運動する観測者から見ると，観測者の加速度とは逆向きに大きさ$ma_0$[N]の慣性力が余分に作用しているように見える．
+ \end{matome}
+ 
+  \ 
+ 
+%\begin{breakbox}
+%\ex＜慣性力による見かけのつり合い＞\\
+%\begin{wrapfigure}[5]{r}[5mm]{70mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=60mm]
+%  {text_p46_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}なめらかな水平面上に，傾斜角$\theta$のなめらかな斜面を持つ質量$M$[kg]の三角台を置き，その斜面上に質量$m$[kg]の物体を乗せる．
+%両方を手で押さえておき，三角台を図のように水平右向きに押し始めると同時にそっと手を離したところ，物体は斜面に対して静止したままだった．
+%重力加速度の大きさを$g {\rm [m/s^2]}$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 静止系に対する三角台の右向きの加速度を$a_0 [{\rm m/s^2}]$とする．床面に対して静止している観測者から見たときの物体の水平方向および鉛直方向の運動方程式もしくは力のつり合いの式を立て，$a_0$を求めよ．
+%\item[(2)] 三角台に乗った観測者から見たときの物体の水平方向および鉛直方向のつり合いの式を立て，$a_0$を求めよ．
+%\item[(3)] 物体の斜面方向のつり合いの式を立て，それをもとに$a_0$を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+ 
+ \subsection{見かけの重力}
+ 
+ 物体に作用する重力は，位置によらず常に同じ向き，同じ大きさで作用する．
+ もし観測者が一定の加速度で運動するのなら，この観測者から見たときに物体に作用する慣性力もまた重力と同様に，常に同じ向きに一定の大きさで作用する．
+ そこで，このような場合は物体に作用する重力と慣性力とをベクトル合成し，1つの力としてまとめてしまった方が力を数えやすい．
+ これを{\bf 見かけの重力}と呼ぶ．
+  
+  \ 
+% 
+%\begin{breakbox}
+%\ex＜見かけの重力＞\\
+%\begin{wrapfigure}[5]{r}[5mm]{40mm}
+%  \centering
+%  \vspace{-15mm}
+%  \includegraphics[keepaspectratio,width=30mm]
+%  {text_p46_fig2.png}
+%\end{wrapfigure}
+%\hspace{5mm}エレベーターの天井から質量$m$[kg]の物体を長さ$l$[m]の軽い糸でつり下げ，これを微小振動させる場合を考える．
+%重力加速度の大きさを$g {\rm [m/s^2]}$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] エレベーターが静止している場合の単振り子の周期$T_0$[s]はいくらか．
+%\item[(2)] このエレベーターを鉛直上向きに一定加速度$a [{\rm m/s^2}]$で上昇させる．
+%エレベーター内の観測者から見たときの，この単振り子の周期$T_1$[s]を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+% \ 
+ \newpage
+  \subsection{遠心力}
+ 
+ \begin{wrapfigure}[15]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text_p47_fig1.png}
+\end{wrapfigure}
+
+半径$r$[m]，速さ$v$[m/s]で等速円運動を行う質量$m$[kg]の物体について考える．
+この物体を静止系から観察すると，物体は何らかの力$f$[N]を向心力として受けており，それによって円の中心に向かう向きに大きさ$\dfrac{v^2}{r}{\rm [m/s^2]}$の加速度を持って等速円運動をしている．
+
+この物体に乗った観測者から物体の運動を見ると，物体は自分の足元で全く動かないように見える．
+これは観測者自身が等速円運動を行っているため，物体には円の外向きに大きさ$m\dfrac{v^2}{r} $[N]の慣性力が作用し，この慣性力と力$f$[N]とがつり合って見えるからである．
+
+特に，等速円運動を行う物体の上に乗ったときに見える大きさ$m\dfrac{v^2}{r} $[N]の慣性力のことを{\bf 遠心力}という．
+
+静止系から見たときの運動方程式も，物体に乗って見たときのつり合いの式もいずれも
+\[ m\dfrac{v^2}{r}=f\]
+であり，数学的には全く同一の式であるが，物理的な意味は異なる．
+静止系から見た場合には，左辺は質量$m$と加速度の大きさ$\dfrac{v^2}{r}$の積である．
+これに対し，等速円運動している観測者から見る場合は，$m\dfrac{v^2}{r}$は遠心力である．
+
+\begin{matome}{遠心力}
+ \hspace{2mm} 等速円運動を行う物体に乗って観測すると，物体には半径方向外向きに大きさ$m\dfrac{v^2}{r}$[N]の遠心力が作用しているように見える．
+ \end{matome}
+ 
+ 
+遠心力を導入するのは，例えば等速円運動している筒の中でばねが単振動している場合など，静止系で考えると簡単に解けない場合に限ってである．
+遠心力を導入するためには，座標系の設定を論述せねばならず，かえって面倒なことになるので，問題で特に指定のない場合は静止系で考えること．
+
+%  \ 
+% 
+%\begin{breakbox}
+%\ex＜遠心力＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{60mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=50mm]
+%  {text_p47_fig2.png}
+%\end{wrapfigure}
+%\hspace{5mm}内面のなめらかな直円錐が，中心軸を鉛直にして逆向きに固定されている．
+%その最下点から高さ$h$[m]の内面に質量$m$[kg]の小球を置き，水平方向の初速度を与えて水平面内で等速円運動を行わせることを考える．
+%円錐の母線が水平面となす角を$\theta$，重力加速度の大きさを$g {\rm [m/s^2]}$として以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 静止系からこの小球の運動を観測するときの運動方程式を示し，それをもとに与えるべき初速度の大きさ$v_0$[m/s]を求めよ．
+%\item[(2)] 物体の上に乗った観測者から見ることにより，与えるべき初速度の大きさ$v_0$[m/s]を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+% \newpage
+  \subsection{単位系と単位チェック}
+
+種々の物理量を測るためには，どの大きさを1とするのかという基準が必要である．
+この基準を{\bf 単位}という．
+ここまでいろいろな物理量を測る単位としてm,kg,s,Nなどといった単位を用いてきたが，例えば長さの単位はm以外にもcm,$\mu$m,インチなどまた質量の単位としてもkg以外にもg，ポンドといったように種々の単位がある．
+高校物理では長さの単位として{\bf m（メートル）}，質量の単位として{\bf kg（キログラム）}，時間の単位として{\bf s（セカンド）}，これらに加えて電流の単位として{\bf A（アンペア）}の4つを基本として用いる{\bf MKSA単位}を用いるのが普通である．
+
+これら以外にも物理量の単位としては力の単位であるNや仕事の単位であるJなどといったものがあるが，こういった単位は必ず上に述べた4つの単位の組み合わせによって得ることができる．
+上に挙げた4つの単位を{\bf 基本単位}と呼び，これらの組み合わせによって得られる単位を{\bf 誘導単位（組立単位）}と呼ぶ．基本単位と誘導単位を合わせて{\bf 単位系}と呼ぶ．
+
+通常の物理ではこれに加えて温度の単位として{\bf K（ケルビン）}，光度の単位として{\bf cd（カンデラ）}，物質量の単位として{\bf mol（モル）}の7つを基本単位として扱う．
+この単位系を{\bf SI単位系}と呼ぶ．
+
+さて，3[m]+5[m]という足し算は可能だが，3[m]+5[kg]という計算は明らかに不可能である．
+このように，{\bf 物理では異なる単位（次元）を持つ物理量同士を$\MARU{1}$ 足し合わせる，$\MARU{2}$差し引く，$\MARU{3}$等号で結ぶことは決してない}（掛け合わせる，割り算することは可能）．
+このことを用いると，ある誘導単位を基本単位によって表したり，また得られた計算結果が正しいかどうかの簡単なチェック{\bf 単位チェック}を行うことができる．
+
+ 
+ \begin{matome}{単位チェック}
+ \hspace{2mm} 異なる単位を持つ物理量同士を$\MARU{1}$ 足し合わせる，$\MARU{2}$差し引く，$\MARU{3}$等号で結ぶことは決してない．（掛け合わせる，割り算することは可能）
+ \end{matome}
+ 
+   \ 
+ 
+%\begin{breakbox}
+%\ex＜単位系と単位チェック＞\\
+%
+%単位に関する以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 次のSI誘導単位を，SI基本単位によって表せ．\\
+%\hspace{10mm} $\MARU{1}$ \hspace{2mm} [N] \hspace{40mm} $\MARU{2}$ \hspace{2mm} [J]\\[-5mm]
+%\item[(2)] 次の物理量の単位を，SI基本単位によって表せ．\\
+%\hspace{10mm} $\MARU{1}$ \hspace{2mm} 運動量$p$ \hspace{20mm} $\MARU{2}$ \hspace{2mm} バネの弾性定数$k$ \hspace{20mm} $\MARU{3}$ \hspace{2mm} 静止摩擦係数$\mu$\\[-5mm]
+%\item[(3)] ある問題を解いて以下のような答えが得られた．このうち，次元を考えることにより，明らかに間違っているものはどれか．ただし，$R,r,h$は長さ，$V,v$は速度，$\Delta t$は時間，$k$は弾性定数，$m,M$は質量，$a,g$は加速度，$f,F$は力，$W$は仕事，$U$は位置エネルギーを表すものとする．\\[2mm]
+%\hspace{10mm} $\MARU{1}$ \hspace{2mm} $f=\dfrac{2mgR}{r}$ \hspace{33mm} $\MARU{2}$ \hspace{2mm} $v=\sqrt{2gh\dfrac{2a+M}{M+m}}$\\[1mm]
+%\hspace{10mm} $\MARU{3}$ \hspace{2mm} $a=\dfrac{V^2-3v}{\Delta t}$ \hspace{30mm} $\MARU{4}$ \hspace{2mm} $W=\dfrac{(Mg\sin \theta)^2}{k}$\\[1mm]
+%\hspace{10mm} $\MARU{5}$ \hspace{2mm} $U=\dfrac{mgr^2}{R}\sqrt{\dfrac{M+3m}{2M+5m}}$ \hspace{14mm} $\MARU{6}$ \hspace{2mm} $F=2\pi \sqrt{\dfrac{1}{g} \left( \dfrac{h}{\tan \theta} +a\cos \theta \right)}$
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+
+ 
+  \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p26.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p27.png}
+\vspace{10cm}
+\end{center}
+\end{figure}
+
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p28.png}
+\vspace{20cm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p100.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p101.png}
+\end{center}
+\end{figure}
+ 
+ \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p102.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p103.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p104.png}
+\end{center}
+\end{figure}
+ 
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p105_1.png}
+\end{center}
+\end{figure}
+ 

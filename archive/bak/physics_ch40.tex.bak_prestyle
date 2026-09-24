@@ -1,0 +1,301 @@
+\section{振動回路・交流回路(1)}
+
+\subsection{電気振動}
+以下のようなコンデンサーとコイルをループ状につないだ回路では交流電流が発生し，コンデンサー上の電荷と回路に流れる電流とが周期的に変化する．
+この現象を{\bf 電気振動} という．
+電気振動が起こるのは，下図のようにコンデンサーから電荷が流出して電流となり，これによりコンデンサー極盤上の電荷が周期的に逆転することによる．
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=120mm]{text2_p80_fig1.png}
+\end{center}
+\end{figure}
+
+上記の回路で発生する交流電流の周波数は，
+\[  \mbox{\boldmath$f=\dfrac{1}{2\pi \sqrt{LC}} \hspace{2mm} [{\rm Hz}]$} \]
+で与えられる．
+
+\subsection{交流電圧・交流電流}
+一般に家庭用電源として送電されているのは電池のような直流電圧ではなく，{\bf 交流電圧}と呼ばれるものである．
+これは，電池のような直流電圧と違って端子間の電圧が一定値ではなく，{\bf 時間に対して三角関数的に変化する}ような電圧であり，例えば時刻$t$[s]における端子間の電圧が
+\[V(t)=V_0\sin (\omega t+\varphi) \hspace{2mm} [{\rm V}] \]
+のような形で表される電圧のことを指す．
+
+\begin{wrapfigure}[8]{r}[5mm]{60mm}
+  \centering
+  \vspace{-10mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p82_fig1.png}
+\end{wrapfigure}
+このような交流電圧は，図のように磁場中に置いたコイルを一定の角速度で回転させることにより発生させることができる．
+今，時刻$t$[s]に，一様な磁束密度$B$[T]の磁場に対して垂直に置かれた面積$S[{\rm m^2}]$のコイルが角速度$\omega$[rad/s]で回転する場合について考える．
+このとき，時刻$t$[s]においてコイルを貫く磁束$\Phi$[Wb]は
+\[\Phi =BS\cos \omega t \hspace{2mm} [{\rm Wb}] \]
+で与えられる．
+よってコイルに発生する誘導起電力$V$[V]は，
+\[V=-\dfrac{d\Phi}{dt}=BS\omega \sin \omega t \hspace{2mm} [{\rm V}]\]
+となり，三角関数的に時間変化する電圧が得られる．
+
+\begin{wrapfigure}[8]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p82_fig2.png}
+\end{wrapfigure}
+このようにして発生させた交流電圧は，右図のような時間変化をし，必ず
+\[V(t)=V_0\sin (\omega t+\varphi) \hspace{2mm} [{\rm V}] \]
+の形にまとめることができ（ただし，$V_0,\omega ,\varphi$は定数），$V_0$[V]$(>0)$を交流電圧の{\bf 最大値}，$\omega$[rad/s]を{\bf 角周波数}，$\varphi$を{\bf 初期位相}，$V(t)$[V]を交流電圧の{\bf 瞬時値}と呼ぶ．
+
+このような交流電圧を，抵抗やコンデンサー，コイルといった素子に接続すると，素子には三角関数的な時間変化をする交流電流が流れることが知られている．
+\[ I(t)=I_0\sin (\omega t +\varphi ^\prime) \hspace{2mm} [{\rm A}] \]
+
+\begin{itembox}[l]{【交流電圧・交流電流】}
+ \hspace{3mm} 時刻$t$[s]における電圧や電流が
+ \[V(t)=V_0\sin (\omega t+\varphi) \hspace{2mm} [{\rm V}] \hspace{10mm}  I(t)=I_0\sin (\omega t +\varphi ^\prime) \hspace{2mm} [{\rm A}]\]
+ \hspace{3mm} というように三角関数的に時間変化するものを，交流電圧・交流電流と呼ぶ．
+  \end{itembox}
+  
+ \subsection{抵抗にかかる交流電圧と流れる交流電流の関係}
+ \begin{wrapfigure}[21]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p83_fig1.png}
+\end{wrapfigure}
+ 抵抗にかかる交流電圧と，それに流れる交流電流の関係を調べる．
+ 抵抗の両端に交流電圧$V(t)=V_0\sin (\omega t+\varphi )$[V]がかかった場合，抵抗にはオームの法則より
+ \[V(t)=RI(t)\]
+ を満たす電流$I(t)$が流れる．
+ これより，抵抗に流れる電流は
+ \[I(t)=\dfrac{V_0}{R} \sin (\omega t+\varphi ) \hspace{2mm} [{\rm A}] \]
+ と求められる．
+ 抵抗を流れる電流の最大値$I_0=\dfrac{V_0}{R}$[A]であるから，かかる交流電圧の最大値と流れる交流電流の最大値との間には
+ \[\mbox{\boldmath$V_0=RI_0$}\]
+ の関係がある．
+ また，位相（三角関数の中身）は全く同一であるから，図に示すように電圧，電流がその最大値をとる時刻は一致する．
+ これを{\bf 電圧と電流に位相差がない}と表現する．
+ 
+ 時刻$t$[s]において抵抗で消費される電力$P(t)$[W]は
+\begin{eqnarray*}
+P(t)&=&V(t)\cdot I(t)\\
+&=&V_0I_0\sin ^2(\omega t+\varphi)\\
+&=&\dfrac{V_0I_0}{2}\{ 1-\cos 2(\omega t+\varphi)\} \hspace{2mm} [{\rm W}]
+\end{eqnarray*}
+となり，上図のグラフのように時間変動するが，これは平均すると$\overline{P}=\dfrac{V_0I_0}{2} $[W]となる．
+交流で単に「電力」と呼ぶ場合は，この平均値を考える．
+ここで，
+\[V_e=\dfrac{V_0}{\sqrt 2}, \hspace{2mm} I_e=\dfrac{I_0}{\sqrt 2}\]
+と定義すると，
+\[\overline{P}=V_e\cdot I_e=RI_e^2=\dfrac{V_e^2}{R} \hspace{2mm} [{\rm W}]\]
+などのように書けるので便利である．
+そこで，電圧，電流の最大値の$\dfrac{1}{\sqrt2}$倍の値$V_e=\dfrac{V_0}{\sqrt2}$，$I_e=\dfrac{I_0}{\sqrt2}$を電圧，電流の{\bf 実効値}と定義する．
+交流において単に「電流」「電圧」という場合は実効値を指すこととなり，各家庭に配電されている交流電圧の100[V]という値も実効値で表されているのである．
+
+\begin{itembox}[l]{【実効値】}
+ \hspace{3mm} 電圧・電流の実効値：最大値の$\dfrac{1}{\sqrt2}$倍のこと　　$V_e=\dfrac{V_0}{\sqrt2}$\hspace{2mm}[V]，　$I_e=\dfrac{I_0}{\sqrt2}$\hspace{2mm}[A]\\
+ \hspace{3mm} 交流の消費電力：時間平均値のこと　　$\overline{P}=\dfrac{V_0I_0}{2} =V_e I_e＝RI_e^2=\dfrac{V_e^2}{R}$\hspace{2mm}[W]
+\end{itembox}
+
+\begin{itembox}[l]{【抵抗にかかる交流電圧と交流電流】}
+ \hspace{3mm} ・最大値の間には$V_0=RI_0$が成立し，実効値間には$V_e=RI_e$が成立．\\
+ \hspace{3mm} ・交流電圧と交流電流の位相は一致する．
+\end{itembox}
+
+\subsection{コイルにかかる交流電圧と流れる交流電流の関係}
+ \begin{wrapfigure}[21]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p84_fig1.png}
+\end{wrapfigure}
+コイルにかかる交流電圧と，それに流れる交流電流の関係を調べる．
+コイルに流れる電流を$I(t)$[A]とすると，コイルの両端には自己誘導により，誘導起電力が発生する．
+よって，コイルの両端に交流電圧$V(t)=V_0\sin (\omega t+\varphi)$[V]をかけている場合は，キルヒホッフの第二法則より，
+\[V_0\sin (\omega t+\varphi)+\left( -L\dfrac{dI(t)}{dt} \right)=0\]
+の式を満たすような電流$I(t)$[Aが流れていると言える．
+この式を変形すると，
+\[\dfrac{dI(t)}{dt}=\dfrac{V_0}{L}\sin (\omega t+\varphi)\]
+であり，両辺を積分すると，
+\begin{eqnarray*}
+I(t)&=&-\dfrac{V_0}{\omega L}\cos (\omega t+\varphi)+C\\
+&=&\dfrac{V_0}{\omega L}\sin \left(\omega t+\varphi -\dfrac{\pi}{2}\right)+C
+\end{eqnarray*}
+ となる．
+ 積分定数$C$は時間変動しない電流量を表すが，今は時間変動する交流電流のみを考えるのでこれを0とおくと，
+ \[I(t)=\dfrac{V_0}{\omega L} \sin \left(\omega t+\varphi -\dfrac{\pi}{2}\right) \]
+ で表される電流が流れていることがわかる．
+ 
+ これより，コイルを流れる電流の最大値は$I_0=\dfrac{V_0}{\omega L}$[A]と求められ，かかる交流電圧の最大値と流れる交流電流の最大値との間に
+ \[\mbox{\boldmath$V_0=\omega LI_0$}\]
+ の関係があることがわかる．
+ 
+ また，コイルの両端の交流電圧と流れる交流電流の時間変化をグラフに表すと上図のようになるが，このグラフの凹凸にのみ着目すると，$V(t)$の凹凸の変化が$\dfrac{T}{4}$[s]だけ遅れて$I(t)$の変化として現れている．
+ この$\dfrac{T}{4}$[s]は，位相に直すと$\dfrac{\pi}{2}$[rad]に対応するので，このことを，
+ {\bf コイルを流れる交流電流}\mbox{\boldmath$I(t)$}{\bf の位相は，コイルの両端にかかる交流電流}\mbox{\boldmath$V(t)$}{\bf の位相に対して} \mbox{\boldmath$\dfrac{\pi}{2}$}{\bf [rad]だけ遅れている}
+ と表現する．
+ {\bf コイルは電流の急激な変化を嫌う素子}であるため，電圧を変化させた途端にすぐに電流が変化するのではなく，{\bf 電流が遅れて変化が現れる}と解釈できる．
+ 
+ 交流電圧・交流電流の最大値の間には$V_0=\omega LI_0$の関係が成立するが，これはちょうどオームの法則と同じ形をしているので，その比例定数をコイルの{\bf 誘導リアクタンス}\mbox{\boldmath$X_L$}と呼ぶ．
+ \[\mbox{\boldmath$X_L=\omega L \hspace{2mm} [\Omega]$}\]
+ 
+ この$V_0=\omega LI_0$の関係式は最大値の間に成立する関係式であり，任意の時刻$t$[s]について$V(t)=\omega LI(t)$が成立するのではないことに注意せよ．
+ 
+ \begin{itembox}[l]{【コイルにかかる交流電圧と交流電流】}
+ \hspace{3mm} ・最大値の間には$V_0=\omega LI_0$が成立する．\\
+ \hspace{3mm} ・交流電流$I(t)$[A]の位相は，交流電圧$V(t)$[V]の位相に対して$\dfrac{\pi}{2}$[rad]だけ遅れている．
+\end{itembox}
+
+\subsection{コンデンサーにかかる交流電圧と流れる交流電流の関係}
+ \begin{wrapfigure}[21]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p86_fig1.png}
+\end{wrapfigure}
+コンデンサーにかかる交流電圧と，それに流れる交流電流の関係を調べる．
+時刻$t$[s]のときにコンデンサーに流れる電流を$I(t)$[A]とし，電流が流れ込む極板上の電荷を$Q(t)$[C]とする．
+コンデンサーの両端の電圧が交流電圧$V(t)=V_0\sin (\omega T+\varphi)$[V]になる場合は，
+\[Q(t)=CV(t)\]
+の式を満たすような電荷$Q(t)$[C]が蓄えられる．
+右の図では，$I(t)$[A]が流れ込むと$Q(t)$[C]が増加するので，
+\[I(t)=\dfrac{dQ(t)}{dt}\]
+の関係がある．
+よって，コンデンサーに流れ込む電流は
+\begin{eqnarray*}
+I(t)&=&C\dfrac{dV(t)}{dt}\\
+&=&\omega CV_0\cos (\omega T+\varphi )\\
+&=&\omega CV_0\sin \left( \omega t+\varphi +\dfrac{\pi}{2} \right) \hspace{2mm} [{\rm A}]
+\end{eqnarray*}
+であることがわかる．
+
+よって，コンデンサーを流れる電流の最大値は$I_0=\omega CV_0$[A]であるから，かかる交流電圧の最大値と流れる交流電流の最大値との間には
+ \[\mbox{\boldmath$V_0=\dfrac{1}{\omega C} I_0$}\]
+ の関係がある．
+ 
+
+ また，コンデンサーの両端の交流電圧と流れる交流電流の時間変化をグラフに表すと図のようになるが，このグラフの凹凸にのみ着目すると，$V(t)$の凹凸の変化が$\dfrac{T}{4}$[s]だけ早く$I(t)$の変化として現れている．
+ この$\dfrac{T}{4}$[s]は，位相に直すと$\dfrac{\pi}{2}$[rad]に対応するので，このことを {\bf コンデンサーを流れる交流電流}\mbox{\boldmath$I(t)$}{\bf の位相は，コンデンサーの両端にかかる交流電流}\mbox{\boldmath$V(t)$}{\bf の位相に対して} \mbox{\boldmath$\dfrac{\pi}{2}$}{\bf [rad]だけ進んでいる}
+ と表現する．
+ {\bf 電流が流れ込むことによって極板上に電荷がたまってから電圧が変化する}ので，{\bf 電流の変化に対して遅れて電圧の変化が現れる}と解釈できる．
+ 
+ 交流電圧・電流の最大値の間には$V_0=\dfrac{1}{\omega C} I_0$の関係が成立するが，これはちょうどオームの法則と同じ形をしているので，その比例定数をコンデンサーの{\bf 容量リアクタンス}\mbox{\boldmath$X_C$}と呼ぶ．
+ \[ \mbox{\boldmath$X_C=\dfrac{1}{\omega C} \hspace{2mm} [\Omega ]$}\]
+ 
+ この$V_0=\dfrac{1}{\omega C} I_0$の関係式は最大値の間に成立する関係式であり，任意の時刻$t$[s]に$V(t)=\dfrac{1}{\omega C} I(t)$の関係式が成立するのではないことに注意せよ．
+ 
+   \begin{wrapfigure}[6]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text2_p87_fig1.png}
+\end{wrapfigure}
+ また，コンデンサーの左右極板には正負逆，大きさが同じ電荷が溜まるので，交流電流$I(t)$[A]の流入により左側極板の電荷$+Q(t)$[C]が変化すると，右側極板の電荷$-Q(t)$[C]も変化する．
+ このとき，右側極板からの電荷の流出量は，右側極板の電荷の減少量であるから，
+ \[-\dfrac{d(-Q)}{dt}=I(t)\hspace{2mm} [{\rm A}]\]
+ の電流が流出していくことになる．
+ そのため，見かけ上，電流$I(t)$[A]がコンデンサーを通過していることになる．
+ 実際には，左側から流れてきた電荷がコンデンサーを飛び越えているわけではなく，左側極板の電荷の変化によって，右側極板の別の電荷が流出していっているわけだが，交流の取り扱いの上では電流$I(t)$[A]がコンデンサーを通過していると考えて解けばよい．
+ 
+  \begin{itembox}[l]{【コンデンサーにかかる交流電圧と交流電流】}
+ \hspace{3mm} ・最大値の間には$V_0=\dfrac{1}{\omega C}I_0$が成立する．\\
+ \hspace{3mm} ・交流電流$I(t)$[A]の位相は，交流電圧$V(t)$[V]の位相に対して$\dfrac{\pi}{2}$[rad]だけ進んでいる．
+\end{itembox}
+
+
+   \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p47.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p48.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p49.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p153.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p154.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p155.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p156.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p157.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p158.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p159.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p160.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

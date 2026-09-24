@@ -1,0 +1,219 @@
+\begin{center}
+{\Huge \bf 第3章　波動}
+\end{center}
+
+\section{正弦波の表式}
+
+\subsection{波長・周期・振動数・波の速さ}
+\begin{wrapfigure}[6]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text_p85_fig1.png}
+\end{wrapfigure}
+壁に糸の一端をくくりつけ，もう一端を手で持ち，壁から離れて上下に振ると，右図のように糸の各部分が上下に振動し，振動の様子が右側に伝播していく．
+このように何かしらの物理量が空間的に伝播していく現象を{\bf 波動}，または単に{\bf 波}と呼び，波を伝える物質を{\bf 媒質}と呼ぶ．
+媒質はその場で振動し，振動の方向が波の伝播方向と垂直な波を{\bf 横波}と呼び，伝播方向と平行な波を{\bf 縦波}と呼ぶ．
+先ほどの例は糸が媒質となっている横波である．
+まずは横波について考えていこう．
+
+\begin{wrapfigure}[20]{r}[5mm]{90mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=90mm]
+  {text_p85_fig2.png}
+\end{wrapfigure}
+伝播していく波の形が三角関数（$\sin$カーブ）である波を{\bf 正弦波}と呼ぶ．
+伝播方向を$x$軸と設定し，ある時刻における$x$軸上の各点の変位を$y$[m]で表した$y-x$グラフは右図の実線のように表現できる．
+$\sin$カーブ1つ分の長さを{\bf 波長}と呼び，変位の最大の大きさを{\bf 振幅}と呼ぶ．
+
+各媒質は単振動をしていて，この単振動の周期と波の形が元の形に戻るまでの周期は一致する．
+各媒質が単位時間あたりに何回振動するかを{\bf 振動数}と呼び，単位は{\bf [/s]=[Hz]（ヘルツ）}で表す．
+周期を$T$[s]とすれば，振動数$f$[Hz]と$T$の間には
+\[\mbox{\boldmath $f=\dfrac{1}{T}$}\]
+が成立する．
+また，波長を$\lambda$[m]とすれば，振動1回あたり$\lambda$[m]だけ波形が移動するので，波の伝播速度$v$[m/s]は
+\[\mbox{\boldmath $v=f\lambda $}\]
+となる．これを波の基本式という．
+
+\begin{matome}{正弦波}
+ \hspace{3mm} 正弦波：各質点が単振動をしており，$\sin$カーブの波形が伝わっていく波動\\
+\hspace{3mm} 媒質：波動を伝える物質．その点で上下振動しているのみで，波形のみがずれていく．\\
+\hspace{3mm} 波長：ある瞬間に波の形を見た際に，同一変異が現れる距離\\
+\hspace{3mm} 周期：ある媒質の上下振動に着目したときに媒質が同じ状態に戻るまでの時間，もしくは波形が一波長分ずれるのに要する時間\\
+\hspace{4mm} 波の伝播速度\hspace{5mm}$v=f\lambda$\hspace{2mm}[m/s] \hspace{10mm} 波の振動数\hspace{5mm} $f=\dfrac{1}{T}$\hspace{2mm}[Hz]
+ \end{matome}
+
+
+
+\subsection{$y-x$グラフによる正弦波の一般式の導出}
+ある波動の変位を式で表す場合には，どの場所の，いつの時刻の変位かの指定が必要であるから，波の変位$y$[m]は{\bf 位置} \mbox{\boldmath $x$}{\bf [m]と時刻}\mbox{\boldmath $t$} {\bf [s]の2変数関数}\mbox{\boldmath $y(x,t)$} {\bf[m]}となる．
+そのため，この正弦波の方程式を直接立てることは非常に難しい．
+
+そこで，正弦波の表式$y(x,t)$を得るには，まず片方の変数を固定したとき（通常は0とした場合）の表式を作り，その後，もう片方の変数を動かして，任意の$x,t$に対する変位を決定する．
+
+どちらの変数を固定するかで2通りあるが，ここではまず，時刻$t$[s]を先に固定した場合を考える．
+例えば時刻$t$[s]を$t=0$[s]に固定した場合，$y(x,0)$が表すものは時刻$t=0$[s]における波形である．
+よって，与えられた時刻$t=0$[s]における波形グラフを具体的数式で表せば，$y(x,0)$が得られる．
+
+\begin{wrapfigure}[12]{r}[5mm]{100mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=100mm]
+  {text_p87_fig1.png}
+\end{wrapfigure}
+この波が右方向に速さ$v$[m/s]で進んでいる場合について，任意の$t$[s]に対する変位$y(x,t)$を得ることを考えてみる．
+時刻$t$[s]に位置$x$[m]にいる波は，時刻$t=0$[s]には距離$vt$[m]だけ手前の位置，すなわち$x-vt$[m]の場所にあったはずである．
+よって，{\bf 時刻} \mbox{\boldmath $t$} {\bf [s]の位置} \mbox{\boldmath $x$} {\bf [m]の変位は，時刻} \mbox{\boldmath $t=0$} {\bf [s]の位置} \mbox{\boldmath $x-vt$} {\bf [m]の変位と一致していなければならない}から，
+\[ \mbox{\boldmath $y(x,t)=y(x-vt,0)$}\]
+が成立する．
+すなわち，先ほど表した$y(x,0)$の式の$x$を$x-vt$に取り替えればよい．
+
+利用できる波形のグラフが時刻$t=0$[s]のものでない場合や，波が左方向に進んでいる場合などはどのように置き換えるかはその都度考える必要があるが，その基本は，
+\begin{matome}{波形グラフからの正弦波の一般表式の導出}
+ \hspace{3mm} $\MARU{1} \hspace{2mm} 与えられたある時刻の波形グラフを数式で表す．（通常はt=0[{\rm s}]で考える）$\\
+  \hspace{3mm} $\MARU{2} \hspace{2mm} 一般の時刻t[{\rm s}]における変位は，\MARU{1} の時刻ではどの位置にあったものかを計算する．$\\
+   \hspace{3mm} $\MARU{3} \hspace{2mm} \MARU{2} を元に，y(x,t)を\MARU{1} の式から導く．右方向へ進むならy(x,t)=y(x-vt,0)$
+ \end{matome}
+である．
+
+
+\subsection{$y-x$グラフと$y-t$グラフ}
+波動の方程式は$x,t$の2変数関数であるから，ある波動の変位をグラフで表そうとした場合，どちらの変位を固定してグラフにするかでその方法は2通りある．
+\begin{matome}{波動のグラフ化}
+ \hspace{3mm} $・y-xグラフ$\\
+  \hspace{5mm} ある瞬間における波の波形を，横軸に位置$x$[m]，縦軸に変位$y$[m]をとって表したグラフ\\
+ \hspace{3mm} $・y-tグラフ$\\
+  \hspace{5mm} ある1点の上下振動を，横軸に時間$t$[s]，縦軸に変位$y$[m]をとって表したグラフ
+ \end{matome}
+
+いずれのグラフでも$\sin$カーブが現れるが，それらが意味するところは全く異なることに注意せよ．
+またこれらのグラフは相互変換することができる．
+
+\subsection{$y-t$グラフによる正弦波の一般式の導出}
+ある瞬間における波形$y-x$グラフから正弦波の一般式を導出する方法を前々節で学んだが，問題文で与えられる波のグラフが，ある1点（通常は原点）の上下振動を$y-t$グラフとして表したものであることもしばしばある．
+ここでは，与えられた$y-t$グラフから任意の時刻，位置における変位$y(x,t)$[m]を求める方法を学ぶ．
+与えられた$y-t$グラフが原点$x=0$[m]における振動を表した$y-t$であり，波が右方向に速さ$v$[m/s]で進んでいる場合を考えよう．
+まず，与えられた$y-t$グラフを具体的数式で表せば，$y(0,t)$[m]が得られる．
+
+\begin{wrapfigure}[12]{r}[5mm]{100mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=100mm]
+  {text_p89_fig1.png}
+\end{wrapfigure}
+これを元に任意の$t$[s]に対する変位$y(x,t)$[m]を得るためには，時刻$t$[s]に位置$x$[m]にいる波が，原点をいつ通過したかを考えればよい．
+位置$x$[m]に来るためには原点から$\dfrac{x}{v}$[s]だけかかるから，時刻$t$[s]に位置$x$[m]にある波は原点を$t-\dfrac{x}{v}$[s]に通過した波である．
+よって，{\bf 時刻} \mbox{\boldmath $t$} {\bf [s]における位置} \mbox{\boldmath $x$} {\bf [m]の変位は，原点における時刻} \mbox{\boldmath $t-\dfrac{x}{v}$} {\bf [s]の変位と一致していなければならない}ので，
+\[\mbox{\boldmath $y(x,t)=y\left( 0,t-\dfrac{x}{v}\right)$}\]
+が成立する．
+すなわち，先ほど表した$y(0,t)$の式の$t$を，$t-\dfrac{x}{v}$に取り替えれば$y(x,t)$が得られる．
+
+利用できる$y-t$グラフが原点のものでない場合や，波が左方向に進んでいる場合などはどのように置き換えるかをその都度考える必要があるが，その基本は次の通りである．
+
+\begin{matome}{振動グラフからの正弦波の一般表式の導出}
+ \hspace{3mm} $\MARU{1} \hspace{2mm} 与えられたある点の振動グラフを数式で表す．（通常はx=0[{\rm m}]で考える）$\\
+  \hspace{3mm} $\MARU{2} \hspace{2mm} 一般のx[{\rm m}]における変位は，\MARU{1} の点をどの時刻に通過したものかを計算する．$\\
+   \hspace{3mm} $\MARU{3} \hspace{2mm} \MARU{2} を元に，y(x,t)を\MARU{1} の式から導く．右方向へ進むならy(x,t)=y\left(0,t-\dfrac{x}{v}\right)$
+ \end{matome}
+
+\subsection{正弦波の一般式の一般形}
+以上で求めてきた正弦波の任意の時刻，任意の位置の変位$y(x,t)$[m]は必ず
+\[ y(x,t)=A\sin \left\{ 2\pi \left( \dfrac{t}{T}\pm \dfrac{x}{\lambda} \right) +\varphi_0 \right\}  \hspace{5mm} (A,\varphi_0 は定数) \]
+の形にまとめることができる．
+この式を覚えておく必要はないが，正弦波がグラフではなく数式で与えられた場合はこの三角関数の中身の部分に着目して考えるとよい．
+
+三角関数の角度部分を{\bf 位相}と呼ぶ．
+\[\varphi (x,t)=2\pi \left( \dfrac{t}{T}\pm \dfrac{x}{\lambda} \right) +\varphi_0\]
+
+この位相が同じ値であれば変位$y(x,t)$は同じになる．
+ゆえに，波が進行していくということは同一位相の点が右もしくは左へずれていくということを意味する．
+これより，位相部分の$x,t$の係数が{\bf 異符号であれば波は右方向へ，同符号であれば波は左方向へ進行する}ということが言える．
+
+また，位相は$2\pi$ずれても同じ変位になることに注意すると，ある時刻$t$[s]において位置$x$[m]が$\lambda$[m]だけずれると位相が$2\pi$だけずれるので同一変位となる．
+よって，同一時刻において位置のずれを位相のずれに換算するなら，{\bf 1波長のずれが位相} \mbox{\boldmath $2\pi$} {\bf のずれに対応する．}
+
+またある位置において時刻$t$[s]が変化していくと，時刻が$T$[s]だけずれると位相が$2\pi$だけずれて再び同一変位となる．よって，ある位置において時刻のずれを位相のずれに換算するなら，{\bf 1周期}\mbox{\boldmath $T$}{\bf [s]のずれが位相} \mbox{\boldmath $2\pi$}{\bf のずれに対応する．}
+
+また，{\bf 位相が}\mbox{\boldmath $\pi$}{\bf ずれているとその変位がちょうど正負逆}となる．
+このような2つの位相を{\bf 互いに逆位相である}という．
+\begin{matome}{正弦波のまとめ}
+ \hspace{3mm} $・三角関数の角度の部分を位相と呼ぶ．この位相が2\pi ずれても同じ変位になる．$\\
+ \hspace{3mm} $・位相部分のx，tが異符号なら右方向へ，同符号なら左方向へ進行する波である．$\\
+ \hspace{3mm} $・ある時刻において，位置が\lambda [{\rm m}]ずれると位相は2\pi ずれる．$\\ 
+ \hspace{3mm} $・ある位置において，時刻がT[{\rm s}]ずれると位相は2\pi ずれる．$\\ 
+ \hspace{3mm} $・位相が\pi ずれると変位は上下逆となる．$\end{matome}
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p48.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p49.png}
+\end{center}
+\end{figure}
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p142_2.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p143.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p144.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p145.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p146.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p147.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p148.png}
+\end{center}
+\end{figure}

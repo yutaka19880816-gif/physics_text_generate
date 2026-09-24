@@ -1,0 +1,300 @@
+\section{X線・放射壊変}
+
+\subsection{水素原子の発光スペクトル}
+すでに述べたとおり，ボーアの水素原子模型が提唱される以前から，水素原子の発光スペクトルには特定の系列が存在することが知られていた．
+ボーアの水素原子模型から導出されるエネルギーの準位の式はこれらの発光スペクトル系列に関する説明を与える．
+
+量子数$n^\prime \to n$の軌道（ただし$n^\prime >n$とする）へ電子が遷移する場合について考えよう．
+$n^\prime >n$のときは$E_{n^\prime}>E_n$であり，電子が失った分に相当するエネルギーが光子として放出されるから，
+$$h\nu =E_{n^\prime}-E_n$$
+
+\begin{wrapfigure}[12]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p107_fig1.png}
+\end{wrapfigure}
+
+これに$E_n$の式を代入し，波長$\lambda$の逆数を計算すると，
+$$\dfrac{1}{\lambda}=\dfrac{2\pi^2k^2me^4}{ch^3}\left( \dfrac{1}{n^2}-\dfrac{1}{n^{\prime 2}}\right)$$
+が得られる．
+この式において$n=1,2,3$とおき，任意の$n^\prime$を代入して波長を計算すると，それぞれライマン系列，バルマー系列，パッシェン系列の波長と一致する．
+
+すなわち，ライマン系列は$n=1$の軌道へ電子が遷移するときに放出される光子，バルマー系列は$n=2$の軌道へ電子が遷移するときに放出される光子，パッシェン系列は$n=3$の軌道へ電子が遷移するときに放出される光子であるとまとめることができる．
+
+以上のようにして，ボーアはラザフォード模型の問題点を解決すると同時に，原子の放出する電磁波の波長を完全に説明することに成功した．
+
+\subsection{X線}
+真空容器内にフィラメントFとターゲット金属Tを置き，図のように回路を接続すると，フィラメントに電流が流れて発熱し，電子が飛び出す（ジュール熱のエネルギーによって飛び出した電子なので，これを熱電子という）．発生した熱電子は高圧電源によってかけられた電圧により，電位の高い陽極に向かって加速されてターゲットの金属に衝突する．
+この衝突に際して，短い波長の電磁波が発生する．
+これをX線という．
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=60mm]{text2_p108_fig1.png}
+\end{center}
+\end{figure}
+
+X線が発生するのは以下のような理由による．
+高圧電源の電圧により電子が加速されてターゲットに衝突して急に止められると，{\bf 電子の運動エネルギーは，金属ターゲットの熱エネルギー}\mbox{\boldmath$\varepsilon$} {\bf と，X線（=光子）のエネルギー}\mbox{\boldmath$h\nu$}{\bf の
+2つに転化する}（実際にはほとんどのエネルギーが熱としてターゲット金属を加熱することになるため，X線の発生装置は実験上冷却が重要になる）．
+高圧電源の電圧を$V$[V]とし，フィラメントで発生した直後の熱電子の運動エネルギーは小さいのでこれを無視すると，フィラメントからターゲットへ向かう間に$eV$[J]の運動エネルギーが得られるので，
+$$eV=h\nu +\varepsilon$$
+なる関係式が得られる．
+
+\begin{wrapfigure}[14]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=70mm]
+  {text2_p108_fig2.png}
+\end{wrapfigure}
+熱エネルギー$\varepsilon$と光子のエネルギー$h\nu$へのエネルギーの分配は確率的に決まるため，X線はおおざっぱには右図のような波長分布を持つ．
+
+$\varepsilon =0$のとき，すなわち電子の運動エネルギーがすべて光子のエネルギーとなるとき，X線のエネルギーが最大，すなわちX線の振動数が最大，波長が最小となる．
+このときのエネルギー保存則より，
+$$eV=h\nu_{\rm max}=\dfrac{hc}{\lambda_{ \rm min}}$$
+
+よって最短波長は，
+$$\lambda_{\rm min}=\dfrac{hc}{eV}\hspace{1mm}[\rm m]$$
+となり，{\bf フィラメント，ターゲット金属の種類によらず，加速電圧}\mbox{\boldmath$V$}{\bf のみで最短波長}\mbox{\boldmath$\lambda_{\rm min}$}{\bf が決まる．}
+
+\begin{itembox}[l]{【X線の最短波長】}
+電子のエネルギーがすべて光子のエネルギーとなるとき，発生するX線の波長は最小で，エネルギー保存則より，
+$$eV=\dfrac{hc}{\lambda_{\rm min}}$$
+が成立する．最短波長は加速電圧$V$のみで決まり，物質によらない．
+\end{itembox}
+
+\begin{wrapfigure}[10]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text2_p109_fig1.png}
+\end{wrapfigure}
+実際の物質でX線を測定すると，すでに述べたようななだらかなカーブを持つ分布の他に，ある特定の波長で急激に強度が強くなるピークがいくつか見られる．
+なだらかなカーブの部分を連続X線（制動X線）といい，ピーク部分を特性X線（固有X線）という．
+このピークは，ターゲット物質内の電子が熱電子によって弾き飛ばされ，それよりも上の準位にあった電子が空いたエネルギー準位への遷移を起こすことによって生じるものである．
+エネルギー準位間のエネルギー差は物質によって決まっているため，このピークの位置は加速電圧Vにかかわらず必ず同じ波長にできるが，ターゲットの物質によって波長が異なる．
+
+\newpage
+\subsection{ブラッグの条件}
+
+\begin{wrapfigure}[15]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text2_p110_fig1.png}
+\end{wrapfigure}
+
+X線は電磁波であるから，光と同様に回折や干渉といった現象を起こす．
+結晶の格子定数とほぼ同じ程度の大きさのX線（銅の特性X線の1つである$K_\alpha$）線の波長は$0.154$[nm]程度）を用いて，回折・干渉現象を利用すると結晶の格子定数を精密に測定できる．
+
+図のように規則正しく配列した結晶を考える．
+平行な原子面の集合（格子面群）は$\MARU{1}$や$\MARU{2}$，$\MARU{3}$など様々なものが考えられるが，このうち$\MARU{1}$の原子面に着目し，この原子面に対して図のような角度$\theta$で電子を入射する．
+このとき図に描いた2つの光の経路差は，面間隔$d$[m]を用いて$2d\sin \theta$であるので，X線の波長$\lambda$との間に，
+$$2d\sin \theta =m\lambda \hspace{2mm}(m\in \mathbb{N})$$
+の関係式が成立するような角度$\theta$でX線の強めあいが起こる．
+この条件式を{\bf ブラッグの条件式}という．
+逆に，強めあいの角度$\theta$を調べることにより，原子面の間隔（格子定数）を求めることができる．
+
+\begin{itembox}[l]{【ブラッグの条件式】}
+$2d\sin \theta =m\lambda \hspace{2mm}(m\in \mathbb{N})$
+\end{itembox}
+
+\subsection{原子核の構成・同位体・原子質量単位}
+原子は原子核と電子から構成されているが，さらに細かく分解すると，原子は$+e$[C]の正電荷を持つ陽子（プロトン，$^1_1$p）と電気的に中性な中性子（ニュートロン，$^1_0$n）とが核力と呼ばれる力で結合して作られている．
+この陽子と中性子をまとめて核子と呼ぶ．
+
+\begin{wrapfigure}[8]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text2_p111_fig1.png}
+\end{wrapfigure}
+
+原子ごとにその陽子数と中性子数は異なるが，原子番号が$Z$の原子核は$Z$個の陽子を持つ．
+原子核が$N$個の中性子を持つ場合，陽子数と中性子数の和$Z+N$を質量数$A$と呼ぶ．
+また，原子番号が$Z$の原子の元素記号を$X$とすると，原子番号$Z$，質量数$A$の原子核を持つ原子$X$を，$^A_Z X$と表す．
+すなわち電気的に中性な原子$^A_Z X$の構造は，右図にあるように，$Z$個の陽子と$A-Z$個の中性子とからなる原子核のまわりを，$Z$個の電子が回っていることになる．
+化学などで${\rm Cu^{2+}}$などのように表す右肩の数は，この状態に対する電子の過不足による相対電荷を表す．
+
+\begin{itembox}[l]{【原子核の構成】}
+原子番号$Z$，質量数$A$の原子核$^A_Z X$は，$Z$個の陽子，$A-Z$個の中性子を持つ．
+\end{itembox}
+
+陽子の数（$=$原子番号$Z$）は等しいが，中性子の数$N=A-Z$が異なる原子のことを同位体（アイソトープ）という．
+言い換えると，同位体とは原子核の電荷は同じだが原子核の質量が異なるもの，とも言える．
+
+一般に，化学反応は電荷によってその反応が決まり，質量は大きな影響を及ぼさない．
+そのため，同位体同士では化学反応の差はほとんどない．
+通常，我々が扱う元素はいくつかの同位体の混合物であるが，その化学的反応性に差がないため，混合物であることを意識せずに用いることができる．
+しかし，敢えて同位体を分離したい場合には，質量分析器と呼ばれる装置などを用いて，質量の違いによって粒子を選別する．
+
+\begin{itembox}[l]{【同位体】}
+同位体$=$陽子数$Z$は等しいが，中性子数$N$が異なる原子．化学的反応は同じ．
+\end{itembox}
+
+また，原子1個の質量数は極めて小さいので，kgを単位とするのは面倒である．
+そこで，炭素の同位体の1つである${\rm ^{12}_6 C}$の質量を$12$[amu]([u])とし，これとの相対質量として質量をはかる．
+この単位を原子質量単位（atomic\ mass \ unit\ ,amu）と呼ぶ．
+
+原子質量単位とkg単位との換算は以下のようにして行えばよい．
+物質量の定義より，${\rm ^{12}_6 C}$が1[mol]($6.02\times 10^{23}$個)あるときの質量は12[g]であるから，
+$$1[{\rm u}]=\dfrac{12\times 10^3 [\rm kg]}{6.02\times 10^{23} [{\rm /mol}]}\times \dfrac{1}{12}\fallingdotseq 1.66\times 10^{-27}[{\rm kg}]$$
+と換算できる．
+
+原子を構成する陽子，中性子，電子の質量$m_p$，$m_n$，$m_e$は，大まかに
+$$m_p\fallingdotseq m_n \fallingdotseq 1[{\rm u}]\hspace{2mm} m_e\fallingdotseq \dfrac{1}{1800}[{\rm u}]$$
+であり，陽子と中性子はほぼ同質量，電子はこれらに比べて極めて軽い．
+これより，原子${\rm ^A_Z X}$の質量は，
+$$原子{\rm ^A_Z X}の質量\fallingdotseq A[{\rm u}]\fallingdotseq A\cdot m_p[{\rm kg}]$$
+である．
+また，大半の元素には複数の同位体が存在するが，元素の原子量は，各同位体の質量（[u]単位）に天然の同位体組成比（=存在度）をかけて足し合わせた加重平均として定義されている．
+
+\begin{itembox}[l]{【原子質量単位[u]】}
+$m_p\fallingdotseq m_n \fallingdotseq 1[{\rm u}]\hspace{2mm} m_e\fallingdotseq \dfrac{1}{1800}[{\rm u}]\hspace{2mm} 原子{\rm ^A_Z X}の質量\fallingdotseq A[{\rm u}]\fallingdotseq A\cdot m_p[{\rm kg}]$
+\end{itembox}
+
+\newpage
+\subsection{放射壊変と変位法則}
+
+原子において，電子に安定状態（基底状態）と不安定状態（励起状態）があったように，原子核にも安定な状態と不安定な状態とがある．
+不安定な原子核は，放射線と呼ばれるものを放出することで過剰なエネルギーを放出し，安定な状態へと変化していく．
+この現象を放射壊変といい，放射線を出すことができる性質を放射能，放射能を持つ物質のことを放射性物質という．
+
+放射壊変の際に放出される放射線には$\alpha$線，$\beta$線，$\gamma$線の3種類があり，この3種類はその正体が異なる．
+その正体は，
+\begin{itembox}[l]{【放射線の正体】}
+$\MARU{1} \hspace{2mm} \alpha $線：ヘリウム原子核$^4_2{\rm He}$の流れ（電子は持っていない）
+$\MARU{2} \hspace{2mm} \beta $線：高速な電子${\rm e^-}$の流れ
+$\MARU{3} \hspace{2mm} \gamma $線：波長の極めて短い電磁波（荷電粒子ではなく，光子）
+\end{itembox}
+
+である．表としてその性質をまとめる．
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=160mm]{text2_p113_fig1.png}
+\end{center}
+\end{figure}
+
+$\alpha$線，$\beta$線，$\gamma$線を出すような放射壊変のことを，それぞれ$\alpha$崩壊，$\beta$崩壊，$\gamma$崩壊という．
+
+\newpage
+\begin{wrapfigure}[18]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=35mm]
+  {text2_p114_fig1.png}
+\end{wrapfigure}
+
+$\MARU{1}$ \hspace{2mm} $\alpha$崩壊
+
+${\rm ^{238}_{92}U}$や${\rm ^{232}_{90}Th}$などは，質量数$A$が大きすぎるため，表面付近にいる陽子pや中性子nの結合が弱い．
+そのため，これらがひとかたまりとなって外れる．
+その安定性から，${\rm ^1_1 p^+}$2個，${\rm ^1_0 n}$2個が取れて，${\rm ^4_2 He^{2+}}$原子核が放出される．
+
+この$\alpha$崩壊の結果，
+$$中性子数　2個減少　（\Delta N=-2）$$
+$$陽子数　　2個減少　（\Delta Z=-2）$$
+$$質量数　　4 減少　　（\Delta A=-4 ）$$
+と変化する．
+反応式で
+$$^A_Z {\rm X}\to ^{A^\prime}_{Z^\prime}{\rm Y}+^4_2{\rm He}$$
+となるとき，$A=A^\prime +4$，$Z=Z^\prime +2$が成立する．\\[5mm]
+
+\begin{wrapfigure}[18]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=35mm]
+  {text2_p114_fig2.png}
+\end{wrapfigure}
+$\MARU{2}$ \hspace{2mm} $\beta$崩壊
+
+通常，原子番号$Z$が小さい範囲では$N\fallingdotseq Z$ぐらいの中性子数が，また$Z$が大きい範囲では$N\fallingdotseq 1.6Z$程度の中性子数のときに原子核は安定であるが，中性子数$N$が陽子数$Z$に比べて多すぎるときには原子核中の中性子が電子を放出して陽子に変化する．
+
+この$\beta$崩壊の結果，
+$$中性子数　1個減少　（\Delta N=-1）$$
+$$陽子数　　1個増加　（\Delta Z=+1）$$
+$$質量数　　不変　　（\Delta A=\pm 0 ）$$
+と変化する．
+反応式で
+$$^A_Z {\rm X}\to ^{A^\prime}_{Z^\prime}{\rm Y}+e^-$$
+となるとき，$A=A^\prime $，$Z=Z^\prime -1$が成立する．\\[5mm]
+
+\begin{wrapfigure}[18]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=35mm]
+  {text2_p114_fig3.png}
+\end{wrapfigure}
+
+$\MARU{3}$ \hspace{3mm} $\gamma$崩壊
+
+$\alpha$崩壊，$\beta$崩壊した直後の原子核は高いエネルギーを持った不安定な状態にある．
+これが安定な状態になるとき，その差分のエネルギーが光子として放出される（核異性体転位という）．
+このとき，{\bf 荷電粒子の放出はなく，光子（電磁波）が放出される}ので，$\gamma$線放出の結果，中性子数，陽子数，質量数のいずれも不変である．
+
+（参考：反応式では原子励起状態を$^mX$と書いて，$^m{\rm X}\to {\rm X}+h\nu$などと表す）
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p63.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p64.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p65.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p182_2.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p183.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p184.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p185_1.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

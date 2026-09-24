@@ -1,0 +1,197 @@
+\section{コンデンサー}
+
+\subsection{平行平板コンデンサー}
+
+面積$S$[${\rm m^2}$]の2枚の金属板を，小さな間隔$d$[m]だけ離して平行に置き，これに電圧をかけると金属板に電気が蓄えられる．
+これを{\bf 平行平板コンデンサー}という．
+
+  \begin{wrapfigure}[6]{r}[5mm]{65mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=65mm]
+  {text2_p36_fig1.png}
+\end{wrapfigure}
+この平行平板コンデンサーに図のように電圧$V$[V]の電池を接続すると，図の極板Aから電子が流出し，電池を通って極板Bへと移動し，その結果，向かい合った面上に正負同じ量の電荷が一様に分布し，高電位側の極板Aが正に，低電位側の極板Bが負に帯電する．
+この帯電量をそれぞれ$+Q$[C]，$-Q$[C]とおくことができる．
+
+  \begin{wrapfigure}[15]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text2_p36_fig2.png}
+\end{wrapfigure}
+
+ガウスの法則より真空の誘電率$\varepsilon_0[{\rm C^2/N\cdot m^2}]$を用いて，極板Aからは上下に合計$\dfrac{Q}{\varepsilon_0}$本の電気力線が出て行き，また極板Bからは上下から合計$\dfrac{Q}{\varepsilon_0}$本の電気力線が吸い込まれていく．
+よって，極板A,Bの外側では電気力線が打ち消しあうため電場が存在せず，極板間のみに一様に電場が発生する．
+単位面積当たりの電気力線の本数が電場の強さなので，極板間の電場の強さは$E=\dfrac{Q}{\varepsilon_0 S}$[N/C]である．
+一様電場では$V=Ed$が成り立つので，かけられた電圧$V$[V]と蓄えられる電荷$Q$[C]との間には
+\[Q=\varepsilon_0 \dfrac{S}{d} \cdot V \hspace{2mm} [{\rm C}] \]
+なる関係式が成立する．
+すなわち，蓄えられる電気量はかけた電圧に比例するので，その比例定数$\varepsilon_0 \dfrac{S}{d}$を$C$とおき，これを{\bf 電気容量}（または{\bf 静電容量}）という．
+電気容量の単位は定義より[C/V]であるが，これを{\bf [F]（ファラッド）}と書く．
+
+\begin{itembox}[l]{【平行平板コンデンサー】}
+ \hspace{3mm} 面積$S[{\rm m^2}]$，間隔$d$[m]の平行平板コンデンサーの電気容量は
+ \[ C=\varepsilon_0 \dfrac{S}{d} \hspace{2mm} [{\rm F}]\]
+ 電気容量$C$[F]のコンデンサーに電圧$V$[V]をかけると極板間に一様電場が発生し，
+ \[Q=CV \hspace{2mm} [{\rm C}]\]
+ の電荷が蓄えられる．
+ 高電位側には$+Q$[C]，低電位側には$-Q$[C]が蓄えられる．
+ \end{itembox}
+ 
+ \newpage
+\subsection{コンデンサーに蓄えられるエネルギー}
+電気容量$C$[F]のコンデンサーに電圧$V$[V]の電池を接続し，十分時間が経つと$Q=CV$[C]の電荷が蓄えられるが，実際には$Q=CV$[C]の電荷がいきなり蓄積するのではなく，極板Bから極板Aへ少しずつ電荷が移動して最終的に$Q=CV$[C]が蓄えられて安定化する．
+
+  \begin{wrapfigure}[5]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text2_p37_fig1.png}
+\end{wrapfigure}
+その途中状態として，極板A上の電荷が$+q$[C]，極板B上が$-q$[C]の状態を考え，Bから微小電荷$\Delta q$[C]が電池を通って極板Aへと運ばれるときを考える．
+このとき，極板間の電位差は$\dfrac{q}{C}$[V]であるから$\Delta q$がBからAへ移動することは$\Delta q \times \dfrac{q}{C}$[J]のエネルギーが蓄えられることを意味する．
+よって，$q=0$[C]の状態から$q=Q$[J]となるまでに蓄えられるエネルギーは
+\[ U=\displaystyle \int _0^Q \dfrac{q}{C} dq=\dfrac{Q^2}{2C} \hspace{2mm} [{\rm J}]\]
+と表される．
+$Q=CV$であるから，
+\[U=\dfrac{Q^2}{2C}=\dfrac{1}{2}QV=\dfrac{1}{2}CV^2 \hspace{2mm} [{\rm J}] \]
+がコンデンサーに蓄えられているエネルギーである．
+
+また，この間に電池を負極側から正極側に通過した全電気量は$+Q$[C]であり，電池はこれだけの電気量を電位差$V$[V]だけ高いところに持ち上げたことになるから，電池のした仕事は
+\[W_E=Q\cdot V \hspace{2mm}[{\rm J}] \]
+である．
+
+電池のした仕事とコンデンサーに蓄えられるエネルギーは$W_E>U$であるが，この差分のエネルギーは導線の持つわずかな抵抗から熱エネルギーとして発散され，コンデンサーには蓄積されない．
+
+\begin{itembox}[l]{【コンデンサーに蓄えられるエネルギー】}
+ \hspace{3mm} 電気容量$C$[F]，極板間電圧$V$[V]，蓄えられている電荷$Q$[C]のコンデンサーの持つ静電エネルギーは
+ \[U=\dfrac{Q^2}{2C}=\dfrac{1}{2}QV=\dfrac{1}{2}CV^2 \hspace{2mm} [{\rm J}]\]
+ \end{itembox} 
+ 
+ \newpage
+\subsection{誘電体}
+  \begin{wrapfigure}[8]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text2_p38_fig1.png}
+\end{wrapfigure}
+コンデンサーの電気容量を増やすためには極板面積を大きく，極板間隔を小さくすればよいが，そのほかに，コンデンサーの極板間に絶縁体（{\bf 誘電体}とも呼ぶ）を入れることによっても電気容量を増やすことができる．\\[2mm]
+
+誘電体は，金属などと異なり，電子がその原子核に比較的強く束縛されている．
+通常の，外部電場の存在しない状態では電子の重心位置と核の位置とは一致しているが，これに外部から電場をかけるとその電場により原子核と電子の重心がずれ，その結果，元の状態と比較して微小電荷が生じた状態となる．
+この現象を{\bf 誘電分極}という．\\[2mm]
+
+  \begin{wrapfigure}[12]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text2_p38_fig2.png}
+\end{wrapfigure}
+このため，誘電体を挟み込んだコンデンサーに電圧$V$[V]の電池を接続した場合，誘電分極により生じた電荷によって極板上の電荷が見かけ上少なくなる．
+これを補うために，より多くの電荷を蓄えることが可能となる．
+極板間が真空の場合の電気容量を$C_0$[F]，極板間を誘電体で満たした場合の電気容量を$C^\prime$[F]とするとき，その容量比を{\bf 比誘電率}と呼ぶ．
+\[ \varepsilon_r=\dfrac{C^\prime}{C_0}\]
+
+ここで，比誘電率$\varepsilon_r$は必ず1より大きな値となる．
+比誘電率が$\varepsilon_r$のコンデンサーの電気容量は
+\[C^\prime =\varepsilon_r \varepsilon_0 \dfrac{S}{d} \hspace{2mm} [{\rm F}] \]
+と書けるので，この$\varepsilon =\varepsilon_r \cdot  \varepsilon_0 [{\rm C^2/N\cdot m^2}]$をその誘電体の{\bf 誘電率}と呼ぶ．\\[5mm]
+
+\begin{itembox}[l]{【誘電体の挿入】}
+ \hspace{3mm} 比誘電率$\varepsilon_r$の誘電体の誘電率は
+ \[\varepsilon =\varepsilon_r \cdot  \varepsilon_0 \hspace{2mm} [{\rm C^2/N\cdot m^2}]\]
+ 誘電率$\varepsilon [{\rm C^2/N\cdot m^2}]$のコンデンサーの電気容量は
+ \[ C^\prime =\varepsilon \dfrac{S}{d}  \hspace{2mm} [{\rm F}]\]
+ \end{itembox} 
+ 
+  \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p22.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p23.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p24.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p105_2.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p106.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p107.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p108.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p109.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p110.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p111_1.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

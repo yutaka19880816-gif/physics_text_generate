@@ -1,0 +1,248 @@
+\section{光波の干渉(2)}
+
+\subsection{くさびガラス}
+\begin{wrapfigure}[13]{r}[5mm]{75mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=75mm]
+  {text2_p10_fig1.png}
+\end{wrapfigure}
+右図のように平面ガラスIの上に平面ガラスIIをのせ，その一端に厚さ$d$[m]の薄い紙を挟むと2つのガラスの間にはくさび状のすき間ができる．
+（右図は説明のため$d$を誇張して書いてあるが，上のガラスIIの傾斜角$\alpha$は0に限りなく近い）
+
+この重ねたガラスの上から垂直に波長$\lambda$[m]の単色光を当て，図のOP面およびOQ面から反射されてくる光を上から観察すると，ガラスには図のような明暗の縞模様が観察される．
+
+OQ間の距離を$L$[m]，O点を原点として図の向きに$x$軸を設定する．
+頂角$\angle $POQ$=\alpha$とおくと，$\tan \alpha =\dfrac{d}{L}$である．
+
+O点から距離$x$[m]の位置における強め合い・弱め合いを決定する．
+ガラスIIの傾斜角はほぼ0であるから，B点で反射する際も光は図のようにOQに対して垂直に入射・反射すると近似してよいことに注意すると，
+
+\begin{description}
+\item[\MARU{1}] {\bf 反射による位相のずれ}\\
+空気の屈折率はほぼ1，ガラスの屈折率は約1.5である．\\
+A$\rightarrow$B$\rightarrow$A\hspace{14mm} と進み，Bで反射する光波は，$1.5>1より，反射しても位相はずれない．$\\
+A$\rightarrow$B$\rightarrow$C$\rightarrow$B$\rightarrow$A\hspace{2mm} と進み，Cで反射する光波は，$1<1.5より，反射のため位相は\pi ずれる．$\\
+よって，反射により合計して位相が$\pi$ずれる．
+\item[\MARU{2}] {\bf 経路差による位相のずれ}\\
+位置$x$[m]における空気層の厚み$y=x\tan \alpha =x\dfrac{d}{L}$[m]であり，2つの経路差は往復分であるから$\Delta D=2y$[m]となる．
+
+よって，$2x\dfrac{d}{L}=m\lambda \hspace{15mm} $のとき位相はずれない．\\
+\hspace{11mm} $2x\dfrac{d}{L}=\left( m-\dfrac{1}{2}\right) \lambda$ \hspace{2mm} のとき位相は$\pi$ずれる．
+\end{description}
+
+以上を総合すると，\\
+\hspace{5mm}$2x\dfrac{d}{L}=m\lambda $のとき位相のずれは全体で$\pi$\\
+\hspace{20mm} $\Rightarrow x=m\dfrac{L\lambda}{2d}$の位置で弱め合い（暗線）\\
+\hspace{5mm}$2x\dfrac{d}{L}=\left( m-\dfrac{1}{2} \right) \lambda $のとき位相のずれは全体で0\\
+\hspace{20mm} $\Rightarrow x=\left( m-\dfrac{1}{2} \right) \dfrac{L\lambda}{2d}$の位置で強め合い（明線）\\
+とまとめられる．
+
+反射波による位相のずれは問題条件ごとに異なるため，強め合い・弱め合いを考える際には$\MARU{1},\MARU{2}$の両方をその都度考えねばならないことに注意せよ．
+
+  \begin{itembox}[l]{【くさびガラス】}
+・OP面およびOQ面から反射されてくる光による干渉縞が観測される．\\
+・頂角を$\alpha$とすると，位置$x$[m]における空気層の厚さ$y=x\tan \alpha$\\
+・経路差$\Delta D=2y$（往復分）\\
+・干渉縞の明線間隔は$\Delta x=\dfrac{L\lambda}{2d}$\hspace{2mm}[m]
+ \end{itembox}
+
+\subsection{ニュートンリング}
+\begin{wrapfigure}[10]{r}[5mm]{95mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=95mm]
+  {text2_p12_fig1.png}
+\end{wrapfigure}
+平面ガラスの上に大きな曲率半径$R$[m]をもつ平凸レンズを図のように重ね，上から単色光を当てて上からレンズを覗き込むと同心円上に明暗の環の模様ができる．
+この模様を{\bf ニュートンリング}という．
+
+半径$x$[m]の位置（ただし，$x\ll R$とする）のすき間の厚さ$d$[m]（図におけるABの長さ）が求まれば，くさびガラスと同様，明暗は反射による位相のずれと，経路差を波長と比較することで議論できる．
+
+なお，ニュートンリングでは強め合い・弱め合いとなる位置が環状になるため，それぞれ{\bf 明環，暗環}と呼ぶ．\vspace{5mm}\\
+$\underline{\mbox {\boldmath $d$}{\bf の求め方\MARU{1}}}$
+
+図のようにHをとると，三平方の定理より，OH$=\sqrt{r^2-x^2}$なので，$|x|\ll 1$の際に成立する$(1+x)^{\alpha}\fallingdotseq 1+\alpha x$の近似を用いて
+\[d={\rm AB=O^\prime H} =R-\sqrt{R^2-x^2}=R-R\left( 1-\dfrac{x^2}{R^2} \right)^{1/2}\fallingdotseq R-R\left( 1-\dfrac{x^2}{2R^2} \right)=\dfrac{x^2}{2R} \]
+$\underline{\mbox {\boldmath $d$}{\bf の求め方\MARU{2}}}$
+
+図のようにC,Hをとると，${\rm O^\prime C}$は円の直径なので，$\angle {\rm CAO^\prime} =\angle R$．
+この結果を用いて角度を調べれば，二角相等で$\triangle {\rm AHO^\prime} ∽\triangle {\rm CHA}$なので，${\rm O^\prime H:AH=AH:CH} \Leftrightarrow {\rm O^\prime H=\dfrac{AH^2}{CH},CH=}2R-d\fallingdotseq 2R$より
+\[d={\rm O^\prime H} ={\rm \dfrac{AH^2}{CH}} \fallingdotseq \dfrac{x^2}{2R} \]
+$\underline{\mbox {\boldmath $d$}{\bf の求め方\MARU{3}}}$
+
+図のようにC,D,Hをとると，${\rm AH=DH=}x$，${\rm O^\prime H}=d$，${\rm CH}=2R-d\fallingdotseq 2R$より，方べきの定理から
+\[{\rm AH\cdot DH=CH\cdot O^\prime H} \hspace{2mm} ∴d={\rm O^\prime H} ={\rm \dfrac{AH\cdot DH}{CH}} \fallingdotseq \dfrac{x^2}{2R} \]
+ \begin{figure}[h]
+\begin{center}
+\vspace{-8mm}
+\includegraphics[width=120mm]{text2_p12_fig2.png}
+\end{center}
+\end{figure}
+\newpage
+
+\subsection{平行薄膜による干渉}
+\begin{wrapfigure}[14]{r}[5mm]{82mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=82mm]
+  {text2_p13_fig1.png}
+\end{wrapfigure}
+シャボン玉のようなごく薄い平行薄膜層が空気に挟まれており，この厚さ$d$[m]の薄膜層（屈折率を$n$とする）に図のような角度$i$で入射してくる真空中での波長が$\lambda$[m]の光波について考える．
+簡単のため，空気の屈折率を1とする．
+
+図の${\rm A_1\rightarrow B_1}$へ入射してきた光波の一部分は反射され，残りは図のように屈折角$r$で薄膜層に入る．D点に達した光の一部は空気層へ出るが，残りは反射されて図の${\rm C_2}$点へ向かい，${\rm C_2}$点でも同様に一部はQの方向へ屈折して出ていき，一部は層内部へ反射される．
+
+反射されてくる光を$\overrightarrow{{\rm QC_2}}$の方向から観測する場合，上で述べたような経路をたどってくる光と，${\rm A_2 \rightarrow B_2 \rightarrow C_2 \rightarrow Q}$というように直接${\rm C_2}$点で反射する光とが重なって観測される．
+この2つの光の干渉について考える．
+
+層内部でのこの光波の波長は$\lambda^\prime =\dfrac{\lambda}{n}$[m]となる．
+まず，経路差によりどれだけの位相のずれが生じるのかを考えてみよう．
+
+入射してくる光は平行波なので進行方向に垂直な面が波面となる．
+ゆえに$({\rm A_1,A_2})$および$({\rm B_1,B_2})$は同一波面上にあり，常に位相が一致している．
+よって，経路差は${\rm B_1 \rightarrow D \rightarrow C_2}$と${\rm B_2 \rightarrow C_2}$の差である．
+しかし空気中と層内部とでは光波の波長が異なるため，単純に距離の差をとって$\lambda$[m]で割ったのでは正しく何波長分ずれるかが計算できない．
+そのため，光路長の差として
+\[ n(\overline{{\rm B_1D}} +\overline{\rm DC_2}) -\overline{\rm B_2C_2}\]
+を計算し，この長さと真空中の波長$\lambda$[m]を比較することになる．
+
+さらに，ホイヘンスの原理を用いると，光路差による位相のずれをより簡単にまとめることができる．
+${\rm C_2}$から直線${\rm B_1D}$に下ろした垂線の足の点をHとすると，ホイヘンスの原理より$C_2$点とH点は同一波面上にある（屈折の法則参照）．
+よって，光路差による位相のずれは${\rm H\rightarrow D\rightarrow C_2}$の部分によるずれのみを考えればよい．
+さらに，${\rm C_2}$点を下側の境界面に対称に折り返した点を${\rm C_2^\prime}$とすると，
+\[ {\rm HD+DC_2=HD+DC_2^\prime =HC_2^\prime}=2d\cos r\]
+となり，この幾何学的距離を光路長に換算することにより，
+\[ 光路差　\Delta D^\prime =2nd\cos r\]
+と簡単に求められる．
+
+  \begin{itembox}[l]{【平行薄膜による干渉】}
+\hspace{5mm} 2つの経路の光路差　$\Delta D^\prime =2nd\cos r$
+ \end{itembox}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p6.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p7.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p8.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p9.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p10.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p75.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p76.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p77.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p78.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p79.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p80.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p81.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p82.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p83_1.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+

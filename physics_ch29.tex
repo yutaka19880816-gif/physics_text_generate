@@ -1,0 +1,221 @@
+\begin{center}
+{\Huge \bf 第4章　電磁気学}
+\end{center}
+
+\section{クーロンの法則・電場}
+
+\subsection{クーロンの法則}
+
+物体は種々の原子が組み合わさって作られているが，その原子は正の電気量を持つ原子核と，負の電気量を持つ電子から構成されており，原子核は正の電気量を持つ陽子と電気量を持たない中性子とからできている．
+この陽子と電子の電気量の絶対値は等しく，この値を{\bf 電気素量} \mbox{\boldmath $e$}で表す．
+電気量は{\bf クーロン[C]}を単位として用いる．
+この単位を用いると，電気素量は$e\fallingdotseq 1.60\times 10^{-19}$[C]である．
+
+通常の物体は陽子の数と電子の数が等しいため，正負の電気量が打ち消しあって電気的に中性の状態になっているが，電子は原子核に比べて圧倒的に軽いため，物質によっては容易に引き抜いたり，逆に付け加えたりすることができる．
+そのため，物体に余分に電子を与えると物体は負に帯電し，逆に物体から電子を取り去ると物体は正に帯電する．
+すなわち，{\bf 電子の過不足により物体は帯電する．}
+帯電体の持つ電気を{\bf 電荷}という．
+
+\begin{wrapfigure}[10]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p26_fig1.png}
+\end{wrapfigure}
+一般に，電荷を持った物体同士は互いに力を及ぼしあうことが知られている．
+電気量の大きさが$q_1$[C]，$q_2$[Cの物体が距離$r$[m]だけ隔てて置かれているとき，2つの電荷が同符号の場合は斥力を，異符号の場合は引力を及ぼしあう．
+その大きさ$f$[N]は，
+\[ f=k\dfrac{|q_1q_2|}{r^2} \hspace{2mm} [{\rm N}]\]
+で表される．
+この力のことを{\bf クーロン力}と呼ぶ．
+比例定数$k$[${\rm N \cdot m^2/C^2}$]をクーロンの法則の比例定数といい，真空中での値は$k\fallingdotseq 8.9876\times 10^9$[${\rm N \cdot m^2/C^2}$]である．
+
+\begin{matome}{クーロンの法則}
+ \hspace{3mm} 電荷は互いに力を及ぼしあう．
+ 電荷の符号が同符号なら斥力，異符号なら引力
+ \[ f=k\dfrac{|q_1q_2|}{r^2} \hspace{2mm}[{\rm N}] \]
+ \end{matome}
+ 
+ クーロンの法則の比例定数は，後で述べる真空の誘電率$\varepsilon_0[{\rm C^2/N\cdot m^2}]$と
+ \[k=\dfrac{1}{4\pi \varepsilon_0}\]
+ の関係がある．
+ $\varepsilon_0 \fallingdotseq 8.854 \times 10^{-12} [{\rm C^2/N\cdot m^2}]$である．
+ 
+ \subsection{電場}
+ 
+ ある電荷が別の電荷に対して直接クーロン力を作用すると考えるのではなく，電荷を配置することによりその周辺の空間が他の電荷に力を及ぼすような状態に変化し，他の電荷はその変化した空間から力を受けると考えると便利なことが多い．
+ 電荷が力を受けるような空間状態を{\bf 電場（電界）}と呼ぶ．
+ 
+ クーロンの法則からわかるように電荷が受ける力は自身の電気量に比例するので，電場を，その地点に{\bf +1[C]の電荷を置いたときに受ける力（ベクトル）}として定義し，これを$\overrightarrow{E}$と書く．
+ 電場が$\overrightarrow{E}$である地点に$q$[C]の電荷を置いたときに受ける力はその定義より
+ \[ \overrightarrow{F}=q\overrightarrow{E} \hspace{2mm} [{\rm N}]\]
+ となる．
+ 
+ 電場$\overrightarrow{E}$の大きさ$|\overrightarrow{E}|$を電場の強さと呼ぶ．
+ 電場の単位はその定義より[N/C]である．
+ 
+ 電場の強さが$E$[N/C]の点に電気量の大きさが$q$[C]の電荷を置くとき，電場から受ける力の大きさは
+ \[F=qE\hspace{2mm} [{\rm N}]\]
+ で与えられるが，その向きは{\bf 正電荷であれば電場と同じ向き，負電荷であれば電場と逆向き}である．
+ 
+ \begin{matome}{電場}
+ \hspace{2mm} 電場：その地点に+1[C]の電荷を置いたときに受ける力，ベクトル量
+ 
+電場の力$E$[N/C]の点に電気量の大きさが$q$[C]の電荷を置くとき電場から受ける力の大きさは
+ \[ F=qE \hspace{2mm}[{\rm N}] \]
+ その向きは正電荷であれば電場と同じ向き，負電荷であれば電場と逆向き
+ \end{matome}
+ 
+ \begin{wrapfigure}[6]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p28_fig1.png}
+\end{wrapfigure}
+ 電場の定義より，$q$[C]の点電荷が距離$r$[m]の点に作る電場の強さ$E$[N/C]は
+ \[E=k\dfrac{|q|}{r^2} \hspace{2mm} [{\rm N/C}]\]
+ で与えられる．
+ 電場の向きは，正電荷であれば外向き，負電荷であれば内向きである．
+ 
+  \begin{matome}{点電荷の作る電場}
+ \hspace{2mm} $q$[C]の点電荷が距離$r$[m]の点に作る電場の強さは
+ \[E=k\dfrac{|q|}{r^2} \hspace{2mm} [{\rm N/C}]\]
+ 正電荷であれば外向き，負電荷であれば内向き
+ \end{matome}
+ 
+  \subsection{電気力線とガウスの法則}
+空気中の電場の様子を表す方法として，その接線の向きが電場の向きに一致するようになめらかに引いた曲線群を用いるという方法がある．
+この曲線のことを{\bf 電気力線}という．
+電気力線は正電荷から出て，負電荷に入る（もしくは無限遠方へ出入りする）．  
+
+ \begin{wrapfigure}[8]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p28_fig2.png}
+\end{wrapfigure}
+
+さらに，{\bf 電場の強さが} \mbox{\boldmath $E$}{\bf [N/C] のとき電場の方向に垂直な断面の単位面積1} ${ \rm \bf [ m^2]}${\bf を貫く電気力線の本数が} \mbox{\boldmath $E$}{\bf 本になるように電気力線の本数を定義する．}
+この電気力線を用いると，電場の向きと同時に，その本数密度によって電場の強さも表すことができる．
+すなわち，電気力線が密のところほど電場は強く，また疎のところほど電場は弱い．
+
+また，電気力線は交わったり，折れ曲がったり，何もないところで途中で消えたりしない．
+
+ \begin{wrapfigure}[12]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p29_fig1.png}
+\end{wrapfigure}
+
+$+q$[C]の電荷を中心とする半径$r$[m]の球面を考えると，球面における電場の強さは$k\dfrac{q}{r^2}$[N/C]，表面積は$4\pi r^2 [{\rm m^2}]$であるから，この球面から出ていく電気力線の本数は
+\[k\dfrac{q}{r^2} \times 4\pi r^2 =4\pi kq\]
+である．
+負電荷などについても同様に考えることができ，まとめると
+\[+q[{\rm C}] の正電荷からは4\pi kq 本の電気力線が出ていく\]
+\[-q[{\rm C}] の負電荷には4\pi kq 本の電気力線が入っていく\]
+ということが言え，これを{\bf ガウスの法則}という．
+
+また真空の誘電率$\varepsilon_0[\rm C^2/N\cdot m^2]$を用いると$k=\dfrac{1}{4\pi \varepsilon_0}$であるから，$4\pi kq=\dfrac{q}{\varepsilon_0}$と書き換えることもできる．
+
+  \begin{matome}{電気力線}
+ \hspace{2mm}電気力線：接線方向は電場の向きを，線の本数密度は電場の強さを表す．
+\[+q[{\rm C}] の正電荷からは4\pi kq 本の電気力線が出ていく\]
+\[-q[{\rm C}] の負電荷には4\pi kq 本の電気力線が入っていく\]
+電気力線は途中で交わったり，折れ曲がったり，途中で消えたりしない．
+ \end{matome}
+ 電気力線のおおまかな様子は慣れると直感的にわかり，電場の様子を簡単に把握できる．
+ 
+\subsection{静電誘導}
+
+ \begin{wrapfigure}[6]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p30_fig1.png}
+\end{wrapfigure}
+電子の移動・過不足により電気量を持つ電荷が生じるが，同種の殿下同士はクーロンの法則により互いに反発しあうため，帯電体の電荷はなるべく拡散するように物質中もしくは物質表面に分布する．
+
+また，逆にそばに異種の電荷がある場合はそれになるべく近づくように分布する．
+（ただし，実際には同種の電荷同士の反発もあるため，電荷が一点に集中することはない．）
+
+金属は，金属結合により自由電子が内部で自由に動ける性質を持つ．
+そのため，金属に正の帯電体を近づけると，帯電体に近い側には電子が集まって負に帯電し，逆に帯電体から遠い側では電子が不足して正に帯電する．
+また，金属に負の帯電体を近づけると，帯電体に近い側からは電子が逃げて正に帯電し，逆に帯電体から遠い側では電子が集まって負に帯電する．
+このような現象を{\bf 静電誘導}と呼ぶが，これは以上で述べたように，電荷同士の斥力・引力および電荷分布を考えることにより説明できる
+\begin{matome}{電荷の振る舞い}
+同種の電荷同士は反発しあい，可能な限り拡散しようとする．\\
+異種の電荷同士は引き合い，なるべく近づこうとする．
+ \end{matome}
+ 
+ \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p18.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p19.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p95_2.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p96.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p97.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p98.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p99.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p100_1.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

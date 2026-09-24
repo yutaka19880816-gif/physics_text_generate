@@ -1,0 +1,230 @@
+\section{ドップラー効果(1)}
+
+\subsection{ドップラー効果を考えるための基礎知識}
+波源，もしくは観測者が動くときには，波源が本来出している振動数とは異なる振動数の波が観測される．
+この現象を{\bf ドップラー効果}という．
+波源が動くか，観測者が動くかによって起こる現象および観測される振動数は異なる．
+この現象を，まずは一直線上で波源と観測者が運動する場合について考える．
+
+ドップラー効果を考えていくために必要となる基礎知識をまとめておく．
+
+\begin{matome}{ドップラー効果を考えるための基礎知識}
+ \begin{description}
+\item[\MARU{1}] 振動数とは，単位時間あたりにやりとりする波の数のことである．すなわち，\\
+\hspace{3mm}  {\bf 波源の振動数\hspace{18mm} =\hspace{2mm} 波源が単位時間あたりに出す波の数}\\
+\hspace{3mm}  {\bf 観測者が受け取る振動数\hspace{2mm} =\hspace{2mm} 観測者が単位時間あたりに受け取る波の数}
+\item[\MARU{2}] 波長とは，$\sin$カーブひとつ分の長さ（=山-山の間隔）のことである．
+\item[\MARU{3}] 空間中を伝わる波が固有に持っているのは，{\bf 波の伝わる速度と波の波長である．}振動数は，空間中を伝わる波に固有の量ではなく，{\bf 波を受け取る・発するときにのみ問題となる物理量}である．
+\item[\MARU{4}] いかなる場合でも，{\bf 波の伝わる速度は媒質に対して不変である．観測者，波源が動いたとしても媒質中を伝わる波の速度は変わらない．}
+  ただし，媒質が動くとき（音の場合は風があるとき）は媒質そのものが移動するため，地面に対する波の速度は変化する．  
+\end{description}
+ \end{matome}
+ 
+これらの知識を利用して，波源や観測者が動いた場合に空間中を伝わる波がどのように変化するのか考えていく．
+ 
+ \subsection{波源が媒質に対して動く場合}
+\begin{wrapfigure}[15]{r}[5mm]{100mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=100mm]
+  {text_p106_fig1.png}
+\end{wrapfigure}
+ 振動数$f$[Hz]の波源が図のように右向きに速度$v$[m/s]で進んでいる場合について考える．
+ このときの波の速さを$c$[m/s]とし，$v<c$であるとする．
+ 
+ 今，時刻$t=0$[s]に波源がA点にいたとすると，時刻$t=0$[s]にA点から出た波は，$\Delta T$[s]後にはA点から左右両方向に$c\Delta t$[m]だけ進んでいる．
+ 一方，波源自身はこの$\Delta t$[s]の間に距離$v\Delta t$[m]だけ右方向へ移動してB点に達している．
+ 
+この$\Delta t$[s]の間に波源は左右両方向に$f\Delta t$個の波を出しているわけなので，波源の進行方向には距離$c\Delta t-v\Delta t$[m]の区間に$f\Delta t$個の波が，また波源の進行の逆方向には距離$c\Delta t+v\Delta t$[m]の区間に$f\Delta t$個の波が存在していることになる．
+波ひとつあたりの長さが波長であるから，
+\[ {\bf 波の進行方向に出た波の波長}\hspace{8mm} \mbox{\boldmath $\lambda_1=\dfrac{c\Delta t-v\Delta t}{f\Delta t} =\dfrac{c-v}{f}$} \hspace{2mm}[{\rm {\bf m}}] \hspace{20mm}\]
+\[ {\bf その逆方向に出た波の波長}\hspace{10mm} \mbox{\boldmath $\lambda_2=\dfrac{c\Delta t+v\Delta t}{f\Delta t} =\dfrac{c+v}{f} $}\hspace{2mm}[{\rm {\bf m}}] \hspace{20mm}\]
+ となっていることがわかる．
+ 静止している波源から出てくる場合の波長は$\lambda =\dfrac{c}{f}$[m]であるから，{\bf 波源の進行方向では空間を伝わる波は圧縮されて波長が短くなり，その逆方向では波は伸ばされて波長が長くなる}ことが言える．
+ 
+ \begin{matome}{動く波源から出る波}
+ \hspace{3mm} 波源が媒質に対して動くときの効果=空間（媒質）を伝わる波の波長が変化する\\
+ \hspace{10mm} 波の進行方向 \hspace{5mm} 波長が$\lambda_1=\dfrac{c-v}{f}$\hspace{2mm}[m]に圧縮\\
+ \hspace{10mm} その逆方向 \hspace{8mm} 波長が$\lambda_2=\dfrac{c+v}{f}$\hspace{2mm}[m]に伸長\\
+ \hspace{3mm} 波の速さは$c$[m/s]のまま不変 
+ \end{matome}
+   
+ \subsection{観測者が媒質に対して動く場合}
+  \begin{wrapfigure}[18]{r}[5mm]{100mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=100mm]
+  {text_p108_fig1.png}
+\end{wrapfigure}
+ 空間中を，波長$\lambda$[m]の波が速さ$c$[m/s]で伝わってくるとき，これを波の伝わる方向と同じ向きに速さ$u$[m/s]$(u<c)$で動いている観測者が受け取るときに観測する振動数を求める．
+ 
+ 今，時刻$t=0$[s]にちょうどA点にて観測者と重なった波は，$\Delta t$[s]後には距離$c\Delta t$[m]だけ進んでD点に達する．
+ 一方，観測者はこの$\Delta t$[s]の間に距離$y\Delta t$[m]だけ進んだB点にいる．
+ 
+ この$\Delta t$[s]の間に{\bf 観測者は自分自身を通過していった（追い越していった）波を受け取っている．}
+ 観測者を追い越していったのはBからDの区間にある波，すなわち距離$c\Delta t-u\Delta t$[m]の区間に存在する波である．
+よって，観測者が聞く振動数，つまり1[s]あたりに受け取る波の個数$f'$[Hz]は
+\[f'\Delta t=\dfrac{c\Delta t -u\Delta t}{\lambda} \hspace{5mm} \Leftrightarrow \hspace{5mm}f'=\dfrac{c-u}{\lambda} \hspace{2mm}[{\rm Hz}] \]
+ で与えられる．
+ 
+{\bf  観測者が動いていても，空間（媒質）を伝わる波の波長・速度は不変であることに注意せよ．}
+ 観測者が動く場合は，観測される振動数のみが変化するため，$c=f'\lambda$の式を立てて観測者の聞く振動数を求めることはできない．
+ 
+  \begin{matome}{観測者が動く場合}
+ \hspace{3mm} 観測者が媒質に対して動くときの効果\\
+ \hspace{10mm} $\Rightarrow$ \hspace{2mm} 観測される振動数のみ変化，他のすべての物理量は変化せず．\\
+ \hspace{3mm} 観測者の速度を$u$[m/s]（波の進行方向と同じ向きを正）とすると，\\
+ \hspace{10mm} 観測者が聞く振動数\hspace{5mm}$f'=\dfrac{c-u}{\lambda}$\hspace{2mm}[Hz]
+ \end{matome}
+ 
+  \subsection{波源・観測者の両方が媒質に対して動く場合}
+  以上の考え方，すなわち，
+ \begin{description}  
+  \item[\MARU{1}] まず空気中を伝わる波の波長$\lambda'$[m]を求める．
+\item[\MARU{2}] 観測者が単位時間あたりに受け取る波の数を数える．
+\end{description}
+という2段階を踏めば，波源・観測者の両方が動く場合も含めたすべての場合について観測者が聞く振動数を求めることが原理的に可能である．
+しかしこれは2段階を踏むため計算が面倒であること，また波長については問われず振動数のみが問われることが多いため，この2段階を合体させて途中の$\lambda'$を求める過程を省いたものが，ここで述べるドップラー効果の関係式である．
+
+ \begin{wrapfigure}[6]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p109_fig1.png}
+\end{wrapfigure}
+観測者と波源が右図のような位置関係で，各々が図のような速度で動いている場合，波源の振動数を$f$[Hz]とすれば，波源から観測者に向かって空間を伝わる波長$\lambda'$[m]は
+\[\lambda'=\dfrac{c-v}{f} \hspace{2mm} [{\rm m}]  \]
+である．
+これを観測者が受け取ったときの振動数$f'$[Hz]は
+\[f'=\dfrac{c-u}{\lambda'} \hspace{2mm} [{\rm Hz}] \]
+であり，上の式を代入して整理すると，
+\[f'=\dfrac{c-u}{c-v}f \hspace{2mm} [{\rm Hz}]  \]
+となる．
+しかしこの式は観測者と波源の左右関係および速度ベクトルの向きによって，見かけ上さまざまに変化する．
+そこで次のようにして立てるとよい．
+
+\begin{matome}{ドップラー効果の関係式}
+ \begin{description}
+\item[\MARU{1}] 波の進行方向を速度の正方向とする．
+\item[\MARU{2}] 分数部分は波源の上に観測者が乗る形で，
+\[ 観測される振動数=\dfrac{波の速さ-観測者の速度}{波の速さ-波源の速度} \times 波源の振動数\]
+として振動数を求める． 
+\end{description}
+ \end{matome}
+   
+ただし，この式を用いて計算した振動数$f'$[Hz]はあくまで観測者が聞く振動数であって，空間を伝わる波そのものが持っている振動数ではない．
+
+また，この関係式からでは空間を伝わる波の波長$\lambda'$[m]を求めることはできない．
+$\lambda'$[m]を求めたい場合は，波源が動く場合の波長の変化を原理に立ち戻って求めよ． 
+
+ \subsection{風がある場合のドップラー効果}
+ ドップラー効果は媒質に対する波源・観測者の移動が原因となって起こるため，本質的には媒質の立場に立ち，それに対する波源・観測者の相対速度を利用してドップラー効果の式を立てる必要がある．
+ しかし，地面を基準にとって考えて，波を伝える媒質そのものが動くことにより波が加速されたり減速されたりすると考えればよい．
+ 
+ 音の場合，波を伝える媒質は空気なので，風が吹いている場合はその風速の分だけ媒質が地面に対して速度をもって移動していると考えればよい．
+ 結果，地面から見た場合は音速が風速の分だけ増減したものとしてドップラー効果の関係式に代入すればよい．
+ 
+   \begin{matome}{風がある場合の音波の速さ}
+ \hspace{3mm} 音速を$c$[m/s],風速を$w$[m/s]とするとき，\\
+ \hspace{5mm} $ ・風下側に音波が伝わるとき \hspace{2mm} \Rightarrow$ \hspace{2mm} 音波は風に押されて$c+w$\hspace{2mm}[m/s]に加速される\\
+ \hspace{5mm} $ ・風上側に音波が伝わるとき \hspace{2mm} \Rightarrow$ \hspace{2mm} 音波は風に押し戻されて$c-w$\hspace{2mm}[m/s]に減速される
+ \end{matome}
+ 
+ \subsection{壁による反射波の取り扱い}
+ 反射壁による反射波のドップラー効果は，壁で反射して送り出される波の数が壁が受け取った波の数と等しいことを利用して，次のように2段階で考えればよい．
+ 
+ \begin{matome}{壁による反射波の取り扱い}
+ \begin{description}
+\item[\MARU{1}] まず壁と共に運動する観測者を考え，この観測者が受け取る振動数$f'$[Hz]を求める．
+\item[\MARU{2}] 壁を振動数$f'$[Hz]を発しながら動く波源だと考えて，真の観測者が受け取る振動数$f''$[Hz]を求める．
+\end{description}
+\vspace{20mm}
+ \end{matome}
+     \begin{figure}[h]
+     \vspace{-35mm}
+\begin{center}
+\includegraphics[width=120mm]{text_p112_fig1.png}
+\end{center}
+\end{figure}
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p58.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p59.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p60.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p165.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p166.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p167.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p168.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p169.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p170.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

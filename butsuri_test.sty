@@ -1,0 +1,287 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% butsuri_test.sty  ---  入試物理基礎演習 確認テストの体裁
+%%   2026-08-31 作成
+%%
+%% 教材（butsuri_style.sty）の意匠語彙をそのまま使い，確認テストの
+%% 問題用紙・解答解説用紙に必要な部品だけを足す．
+%%
+%% 部品名は tex-format-library（public_tex_format_library）の
+%% FORMAT 07「試験問題・解答用紙型」に合わせてある：
+%%   \TestHeader … \KPubExamHeader 相当（タイトル・試験時間・満点・氏名欄）
+%%   \AnswerBox  … \KPubAnswerBlock 相当（解答欄）
+%%   \ToiHead    … 問題用紙の大問見出し
+%%   \SolHead    … 解答解説用紙の大問見出し（出典と配点を併記）
+%% ライブラリ本体は LuaLaTeX + jlreq + TeX64 の kk.sty に依存していて
+%% pLaTeX の教材からは読めないので，考え方だけを借りている．
+%%
+%% 使い方（プリアンブルで butsuri_style の後に読む）
+%%   \usepackage{butsuri_style}
+%%   \usepackage{butsuri_test}
+%% 本文側は \begin{document} 後のマクロ定義の直後に \ButsuriApply を呼ぶ．
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NeedsTeXFormat{pLaTeX2e}
+\ProvidesPackage{butsuri_test}[2026/08/31 v1 入試物理基礎演習 確認テスト]
+\RequirePackage{butsuri_style}
+%% 作図欄の円を描くのに pict2e を使う（picture 環境の \circle が任意の
+%% 大きさで描けるようになる）．**TikZ は使わないこと**：pgf を読み込むと
+%% \includegraphics の image special が壊れ（dvipdfmx: Unparsed material …），
+%% 教材の png が1枚も出なくなる（実際に踏んだ）．
+\RequirePackage[dvipdfmx]{pict2e}
+
+% 引数が空かどうか（e-pTeX の \detokenize を使う）
+\newcommand{\bsIfEmpty}[3]{\if\relax\detokenize{#1}\relax #2\else #3\fi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  得点欄  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \ScoreBox{満点}   満点が空なら「／100」を出さない
+\newcommand{\ScoreBox}[1]{%
+  {\fboxsep=0pt\fboxrule=0.5pt
+   \fbox{\parbox{26mm}{%
+     \colorbox{bsTile}{\makebox[26mm][c]{\gtfamily\small\strut 得点}}\par
+     \makebox[26mm][r]{\rule{0pt}{10mm}%
+       \bsIfEmpty{#1}{}{{\small ／\,#1\,}}}}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%  問題用紙のヘッダ  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \TestHeader{タイトル}{副題}{試験時間}{満点}
+%   副題・試験時間・満点は空にできる．
+%   組・番号・氏名の欄と得点欄は必ず出る．
+\newcommand{\TestHeader}[4]{%
+  \par\noindent
+  \begin{minipage}[b]{\dimexpr\linewidth-30mm\relax}
+    {\gtfamily\LARGE #1}%
+    \bsIfEmpty{#2}{}{\par\vspace{1.2mm}{\gtfamily\large #2}}%
+    \bsIfEmpty{#3}{}{\par\vspace{1.5mm}{\gtfamily 試験時間　#3分}%
+      \bsIfEmpty{#4}{}{\hspace{2zw}{\gtfamily 満点　#4点}}}%
+    \bsIfEmpty{#3}{\bsIfEmpty{#4}{}{\par\vspace{1.5mm}{\gtfamily 満点　#4点}}}{}%
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[b]{28mm}\raggedleft\ScoreBox{#4}\end{minipage}%
+  \par\vspace{2.5mm}\bsHR{2.5pt}\vspace{2.5mm}\nobreak
+  \noindent\underline{\hspace{3zw}}組\hspace{1zw}%
+  \underline{\hspace{3zw}}番\hspace{1.5zw}%
+  氏名\underline{\hspace{16zw}}%
+  \par\vspace{1.5mm}\bsHR{0.5pt}\vspace{4.0mm}\nobreak\bsKeepNext}
+
+%%%%%%%%%%%%%%%%%%%%%%%%  解答解説用紙のヘッダ  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \SolTitle{タイトル}
+\newcommand{\SolTitle}[1]{%
+  \par\noindent{\gtfamily\LARGE #1}%
+  \par\nobreak\vspace{2.5mm}\bsHR{2.5pt}\vspace{4.0mm}\nobreak\bsKeepNext}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  大問の見出し  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \ToiHead{番号}{テーマ}{配点}     問題用紙用．配点は空にできる
+% \filbreak … 次の \ToiHead までを1ページに収める．これが無いと問題文の
+%   最後の1行だけが次ページへ送られ，解答欄との間が切れる（実際に起きた）．
+\newcommand{\ToiHead}[3]{%
+  \filbreak
+  \par\vspace{4.0mm}\noindent
+  \hbox to \linewidth{\bsChip{#1}\hspace{0.7zw}{\gtfamily\large #2}\hfil
+    \bsIfEmpty{#3}{}{{\gtfamily\small （#3点）}}}%
+  \par\nobreak\vspace{0.6mm}\bsHR{0.4pt}\vspace{1.5mm}\nobreak\bsKeepNext}
+
+% \SolHead{番号}{テーマ}{出典}     解答解説用紙用．出典は「例題1／25点」など
+\newcommand{\SolHead}[3]{%
+  \par\vspace{4.5mm}\noindent
+  \hbox to \linewidth{\bsChip{#1}\hspace{0.7zw}{\gtfamily\large #2}\hfil
+    \bsIfEmpty{#3}{}{{\gtfamily\small （#3）}}}%
+  \par\nobreak\vspace{0.6mm}\bsHR{0.4pt}\vspace{1.5mm}\nobreak\bsKeepNext}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  解答欄  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 枠だけ（無地・罫線なし）．図も式も自由な位置に書ける．
+% 中身の無い1つの箱なので分割できず，入らなければ自動で次ページへ送られる．
+
+% 解答欄の見出しタイル＋枠（共通部分）
+\newlength{\bsAnsH}
+\newcommand{\bs@ansframe}{%
+  \vspace{1.5mm}\nobreak
+  \noindent\bsTileO{解答欄}\par\vspace{0.8mm}\nobreak
+  \noindent{\fboxsep=0pt\fboxrule=0.5pt
+    \framebox[\dimexpr\linewidth-1pt\relax][l]{\rule{0pt}{\bsAnsH}}}%
+  \par}
+
+% \AnswerBox{高さ}   高さを明示する（例: \AnswerBox{60mm}）
+\newcommand{\AnswerBox}[1]{%
+  \par\setlength{\bsAnsH}{#1}\bs@ansframe\vspace{3.5mm}}
+
+% \AnswerBoxFill    紙面の残りいっぱいまで広げる（既定）
+%
+%   \pagegoal-\pagetotal が「そのページの残り」．ただし
+%   \pagetotal は直前の材料がページ本体へ渡ってからでないと更新されないので，
+%   \par のあとに \penalty0 を置いてページビルダを一度動かす（定石）．
+%   ページが空のときは \pagegoal が \maxdimen なので \textheight を使う．
+%   見出しタイル（「解答欄」）と前後の空きの分 13mm を引く．
+%   ここは実測値：10mm まで詰めると箱が入りきらず次ページへ送られ，
+%   2ページで済むはずのテストが3ページになる（実際に起きた）．
+%
+%   残りが 35mm を切ったら，そこに小さな箱を置いても書けないので改ページして
+%   1ページまるごとを解答欄にする．結果として実質「1問1ページ」になる．
+\newcommand{\AnswerBoxFill}{%
+  \par\penalty\z@
+  \ifdim\pagegoal=\maxdimen
+    \setlength{\bsAnsH}{\textheight}%
+  \else
+    \setlength{\bsAnsH}{\dimexpr\pagegoal-\pagetotal\relax}%
+  \fi
+  \addtolength{\bsAnsH}{-13mm}%
+  \ifdim\bsAnsH<35mm
+    \newpage
+    \setlength{\bsAnsH}{\dimexpr\textheight-13mm\relax}%
+  \fi
+  \bs@ansframe}
+%%%%%%%%%%%%%%%%%%%%%%  B4横・1問1面のレイアウト  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  make_test.sh --b4 で使う．B4横（JIS 364x257mm）の1面に1題だけを載せ，
+%  左半分に問題文，右半分に解答欄（問題用紙）／解答（解答解説用紙）を置く．
+%  左の幅を A4 の本文幅とほぼ同じ 160mm にしてあるので，教材側の
+%  \begin{zuright}{54mm} のような図幅の指定がそのまま通る．
+\newlength{\bsQw}\newlength{\bsAw}
+\newcommand{\bsSetCols}{%
+  \setlength{\bsQw}{160truemm}%
+  \setlength{\bsAw}{\dimexpr\linewidth-\bsQw-8truemm\relax}}
+
+% \ToiHeadT{番号}{テーマ}{配点}   \SolHeadT{番号}{テーマ}{出典}
+%   \ToiHead / \SolHead の「minipage の先頭に置く版」．前の材料との空き（4mm）と
+%   \filbreak を持たない（minipage[t] の上端合わせが 4mm ずれるのを防ぐ）．
+\newcommand{\bs@headT}[3]{%
+  \par\noindent
+  \hbox to \linewidth{\bsChip{#1}\hspace{0.7zw}{\gtfamily\large #2}\hfil
+    \bsIfEmpty{#3}{}{{\gtfamily\small （#3）}}}%
+  \par\nobreak\vspace{0.6mm}\bsHR{0.4pt}\vspace{1.5mm}\nobreak\bsKeepNext}
+\newcommand{\ToiHeadT}[3]{\bsIfEmpty{#3}{\bs@headT{#1}{#2}{}}{\bs@headT{#1}{#2}{#3点}}}
+\newcommand{\SolHeadT}[3]{\bs@headT{#1}{#2}{#3}}
+
+% \TestHeaderWide{タイトル}{副題}{試験時間}{満点}
+%   B4横用のヘッダ（csname に数字は使えないので名前は Wide）．A4 版（\TestHeader）は氏名欄が罫の下の1行に載っているが，
+%   B4 では横に余裕があるので **組・番号・氏名をタイトルの右**（得点欄の左）へ
+%   移し，記入幅を \large の 5zw／5zw／18zw まで広げてある．
+\newcommand{\TestHeaderWide}[4]{%
+  \par\noindent
+  \begin{minipage}[b]{\dimexpr\linewidth-190truemm\relax}
+    {\gtfamily\LARGE #1}%
+    \bsIfEmpty{#2}{}{\par\vspace{1.2mm}{\gtfamily\large #2}}%
+    \bsIfEmpty{#3}{}{\par\vspace{1.5mm}{\gtfamily 試験時間　#3分}%
+      \bsIfEmpty{#4}{}{\hspace{2zw}{\gtfamily 満点　#4点}}}%
+    \bsIfEmpty{#3}{\bsIfEmpty{#4}{}{\par\vspace{1.5mm}{\gtfamily 満点　#4点}}}{}%
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[b]{155truemm}\large
+    \underline{\hspace{5zw}}組\hspace{1zw}%
+    \underline{\hspace{5zw}}番\hspace{1.5zw}%
+    氏名\underline{\hspace{18zw}}%
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[b]{28truemm}\raggedleft\ScoreBox{#4}\end{minipage}%
+  \par\vspace{2.5mm}\bsHR{2.5pt}\vspace{4.0mm}\nobreak\bsKeepNext}
+
+% \TestHeaderMini{タイトル}{右肩の文字}   2面目以降の細いヘッダ
+\newcommand{\TestHeaderMini}[2]{%
+  \par\noindent
+  \hbox to \linewidth{{\gtfamily\LARGE #1}\hfil
+    \bsIfEmpty{#2}{}{{\gtfamily\large #2}}}%
+  \par\vspace{2.5mm}\bsHR{2.5pt}\vspace{4.0mm}\nobreak\bsKeepNext}
+
+% \SakuzuBox{一辺mm}{見出し}    解答欄の中に置く作図用の枠（中心に点と O）
+% \SakuzuMaru{一辺mm}{見出し}   同じ枠に**レンズの外周の円（グレー）**を入れた版
+%   「概形を描け」の小問があるとき，解答欄に描く場所を用意しておく．
+%   円は TikZ で描く（下の \pgfsysdriver の指定が要る）．案内線なので
+%   解答の実線・破線と紛れないようにグレーにしてある．
+\newcommand{\bs@sakuzu}[3]{%
+  \begin{minipage}[b]{#1mm}%
+    {\gtfamily\small #3}\par\vspace{0.8mm}%
+    {\fboxsep=0pt\fboxrule=0.4pt
+     \fbox{\setlength{\unitlength}{1mm}%
+      \begin{picture}(#1,#1)
+        #2%
+        \put(\fpeval{#1/2},\fpeval{#1/2}){\circle*{1}}%
+        \put(\fpeval{#1/2+1},\fpeval{#1/2}){\footnotesize O}%
+      \end{picture}}}%
+  \end{minipage}}
+\newcommand{\SakuzuBox}[2]{\bs@sakuzu{#1}{}{#2}}
+\newcommand{\SakuzuMaru}[2]{%
+  \bs@sakuzu{#1}{\put(\fpeval{#1/2},\fpeval{#1/2}){%
+      \color[gray]{0.55}\linethickness{0.4pt}\circle{\fpeval{#1*0.88}}}}{#2}}
+
+% \SakuzuZu{幅mm}{画像}{見出し}
+%   作図の問題は，問題文と同じ図をもう一度 解答欄に置いて描き込ませる．
+\newcommand{\SakuzuZu}[3]{%
+  \begin{minipage}[b]{#1mm}%
+    {\gtfamily\small #3}\par\vspace{0.8mm}%
+    \includegraphics[keepaspectratio,width=#1mm]{#2}%
+  \end{minipage}}
+
+% \begin{toipage}[解答欄に入れるもの]{番号}{テーマ}{配点} 問題文 \end{toipage}
+%                                                          … 問題用紙
+%   左＝問題文，右＝解答欄（そのページの残り全部）．
+%   解答欄の高さは \AnswerBoxFill と同じ要領で「そのページの残り」から取る．
+%   \par\penalty0 でページビルダを一度動かしてから \pagegoal-\pagetotal を読む
+%   （\pagetotal は材料がページ本体へ渡るまで更新されない）．
+%   右側は 見出し行＋0.4pt罫＋枠 で \bsAnsH+8mm ほど使うので，13mm 引いておく．
+\newenvironment{toipage}[4][]{%
+  \def\bs@ansextra{#1}%
+  \par\penalty\z@
+  \ifdim\pagegoal=\maxdimen
+    \setlength{\bsAnsH}{\textheight}%
+  \else
+    \setlength{\bsAnsH}{\dimexpr\pagegoal-\pagetotal\relax}%
+  \fi
+  \addtolength{\bsAnsH}{-13truemm}%
+  \bsSetCols
+  \noindent\begin{minipage}[t]{\bsQw}\vspace{0pt}%
+    \ToiHeadT{#2}{#3}{#4}%
+}{%
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{\bsAw}\vspace{0pt}%
+    \hbox to \linewidth{{\large\strut}\bsTileO{解答欄}\hfil}%
+    \par\nobreak\vspace{0.6mm}\bsHR{0.4pt}\vspace{1.5mm}%
+    \noindent{\fboxsep=0pt\fboxrule=0.5pt
+      \framebox[\dimexpr\linewidth-1pt\relax][l]{%
+        \parbox[b][\bsAnsH][b]{\dimexpr\linewidth-5mm\relax}{%
+          \hspace{2mm}\bs@ansextra\vspace{2mm}}}}%
+  \end{minipage}\par}
+
+% \begin{mondaibunC} … \end{mondaibunC}
+%   multicols の中に置ける問題文の再掲．mondaibun（bsBox＝framed）は
+%   multicols の中で使えないので，枠のかわりに「問題」の帯と下罫で挟む．
+\newenvironment{mondaibunC}{%
+  \par\nobreak\vspace{0.5mm}\nobreak
+  \noindent\hbox to \linewidth{\bsTileO{問題}\bsFillThin}%
+  \par\nobreak\vspace{0.8mm}\nobreak\bsKeepNext\ignorespaces}%
+ {\par\vspace{1.0mm}\bsHR{0.4pt}\vspace{1.5mm}}
+
+% \begin{toipagesol}{番号}{テーマ}{出典} 問題文・指針・解答 \end{toipagesol}
+%   解答解説用紙の1面．問題用紙と同じ「左→右」の2段組にする．ただし
+%   minipage で左右に割り付けると解答が段からあふれても次へ流せないので，
+%   ここは multicols で流す（左段が問題文と指針，右段が解答になるとは限らない）．
+%   framed を使う環境（mondaibun・まとめ枠）はこの中に置けない．
+%   1面に収めるため \small ＋ ディスプレイ数式の前後を詰めた設定にする
+%   （\small は \abovedisplayskip 等を書き換えるので，必ずその後で設定する）．
+%   \bsSolTight{0/1/2} で詰め具合を3段階に切り替える．make_test.sh が
+%   「解答が1問1面に収まらなかったら1段階詰めて組み直す」ために使う．
+%   図（\includegraphics）も同じ段階で縮める．解答の作図は1枚で100mmを超える
+%   ことがあり，行送りだけ詰めても段に入りきらないため（第20回の練習64）．
+\newcommand{\bs@solsize}{\small}
+\newcommand{\bs@solspread}{0.93}
+\newcommand{\bs@zuscale}{1}
+\let\bs@ig\includegraphics
+\renewcommand{\includegraphics}[2][]{\scalebox{\bs@zuscale}{\bs@ig[#1]{#2}}}
+\newcommand{\bsSolTight}[1]{%
+  \ifcase#1\relax
+    \renewcommand{\bs@solsize}{\small}\renewcommand{\bs@solspread}{0.93}%
+    \renewcommand{\bs@zuscale}{1}%
+  \or
+    \renewcommand{\bs@solsize}{\small}\renewcommand{\bs@solspread}{0.87}%
+    \renewcommand{\bs@zuscale}{0.85}%
+  \else
+    \renewcommand{\bs@solsize}{\footnotesize}\renewcommand{\bs@solspread}{0.92}%
+    \renewcommand{\bs@zuscale}{0.75}%
+  \fi}
+\newenvironment{toipagesol}[3]{%
+  \SolHead{#1}{#2}{#3}%
+  \begin{multicols}{2}%
+  % \linespread は文字サイズを選び直したときに反映されるので \small より前に置く
+  % （\small\linespread{..}\selectfont でも同じ結果になる）．
+  \linespread{\bs@solspread}\bs@solsize
+  \setlength{\abovedisplayskip}{4pt}\setlength{\belowdisplayskip}{4pt}%
+  \setlength{\abovedisplayshortskip}{2pt}\setlength{\belowdisplayshortskip}{2pt}%
+ }{%
+  \end{multicols}}
+\endinput

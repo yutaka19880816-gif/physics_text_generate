@@ -1,0 +1,157 @@
+\section{自由端反射と固定端反射}
+
+\subsection{自由端と固定端}
+糸を張り，この左端を上下に振って波を送る場合，壁面に達した波は反射されて逆方向に戻ってくる．
+この際，糸が壁面に固定されているか，それとも壁面に対して自由に動けるかで反射のされ方が異なる．
+媒質が反射点に固定されていて動けない反射点を{\bf 固定端}といい，媒質が反射点に固定されておらず，自由に動ける反射点を{\bf 自由端}という．
+
+一次元的に伝播する波で，入射した波が反射点ですべて反射される場合について考えてみよう．\\
+\\$\fbox{1} \hspace{2mm} {\bf 自由端反射}$
+
+\begin{wrapfigure}[11]{r}[5mm]{80mm}
+  \centering
+ % \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text_p97_fig1.png}
+\end{wrapfigure}
+
+ \mbox{\boldmath $反射点にある媒質が自由に動ける場合，自由端反射となる．$}
+反射点において入射波と反射波の変位は同じになり，{\bf 反射波の波形は入射波を反射点で折り返した波形となる．}
+
+図のように$x=l$[m]の位置に自由端反射する反射壁が置かれている場合，反射波の変位$y'(x,t)$[m]を考えてみよう．
+波の伝播する速さを$v$[m/s]とし，原点での時刻$t$[s]での変位を$y(0,t)$[m]とすると，位置$x$[m]における反射波は原点から$2l-x$[m]だけ伝播してきたことになるので，この位置まで伝播するのに$\dfrac{2l-x}{v}$[s]だけ時間がかかるから
+\[y'(x,t)=y\left( 0,t-\dfrac{2l-x}{v} \right) =y(2l-x,t)\]
+と計算できる．
+この変位は，入射波が反射壁で反射されずに$2l-x$[m]直進した場合の変位と等しく，このことは任意の位置，時刻で成立するから，{\bf 反射波の波形は入射波がそのまま直進した場合の波形を反射壁で折り返した波形と同じになる．}\\
+\\$\fbox{2} \hspace{2mm}{\bf 固定端反射}$
+
+\begin{wrapfigure}[11]{r}[5mm]{80mm}
+  \centering
+%  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text_p97_fig2.png}
+\end{wrapfigure}
+
+\mbox{\boldmath  $反射点にある媒質が固定されている場合，固定端反射となる．$}
+反射点が固定されているため，{\bf 入射波と反射波の合成波の変位は0[m]でなければならない．}
+そのため，反射点における反射波の変位は，入射波と変位が同じ大きさで逆向きとなり，{\bf 反射波の波形は入射波を反射点で折り返した波形をさらに正負を逆にした波形となる．}
+
+自由端反射の場合と同様に固定端反射された反射波の変位$y'(x,t)$[m]を考えてみよう．
+位置$x$[m]における反射波は原点から$2l-x$[m]だけ伝播してきたことは同じであるが，反射点において正負を逆にされているので，
+\[y'(x,t)=-y\left( 0,t-\dfrac{2l-x}{v} \right) =-y(2l-x,t)\]
+とマイナスをつけることで変位の一般式を求めることができる．
+{\bf 反射波の波形は入射波がそのまま直進した場合の波形を反射壁で折り返し，さらに正負を逆にした波形と同じになる．}\\
+
+いずれの反射波の場合でも，反射波は透過波を用いて議論するとよい．
+
+\begin{itembox}[l]{【反射波の方程式の考え方】}
+ \hspace{3mm} $\MARU{1}$\hspace{2mm} 反射壁を突き抜ける透過波を考える．\\
+ \hspace{3mm} $\MARU{2}$\hspace{2mm} 時刻$t$[s]，位置$x$[m]にいる反射波は，壁面を透過していたらその時刻にどこにいるかを考える．\\
+ \hspace{3mm} $\MARU{3}$\hspace{2mm} 反射壁で反射される際に，そのまま反射されるのか，上下反転されるのかを把握する．\\
+ \hspace{3mm} $\MARU{4}$\hspace{2mm} 方程式を立てる．
+ \end{itembox}
+
+\subsection{入射波と反射波によって作られる定常波}
+一直線上を進む正弦波が反射壁によって完全に反射する（＝減衰せずに反射する）場合，入射波と反射波は同一振幅・波長・振動数で互いに逆向きに進むから，この2つが重なってできる合成波は定常波となる．
+定常波は，腹・腹間隔＝節・節間隔$=\dfrac{\lambda}{2}$，腹・節間隔$=\dfrac{\lambda}{4}$なる間隔で，節と腹とが交互に並ぶものであるが，
+\begin{description}
+\item[・] {\bf 自由端反射の反射点}\\
+{\bf 入射波がそのまま反射}\hspace{2mm}$\Leftrightarrow$\hspace{2mm}{\bf 合成波の変位は常に入射波の変位の2倍}\hspace{2mm}$\Leftrightarrow$\hspace{2mm}{\bf 定常波の腹}
+\item[・] {\bf 固定端反射の反射点}\\
+{\bf 媒質は動けない}\hspace{2mm}$\Leftrightarrow$\hspace{2mm}{\bf 合成波の変位は常に0}\hspace{2mm}$\Leftrightarrow$\hspace{2mm}{\bf 定常波の節}
+\end{description}
+となっている．
+そのため，自由端反射，固定端反射によってできる定常波の波形は次の図のようになる．
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=140mm]{text_p99_fig1.png}
+\end{center}
+\end{figure}
+
+\subsection{定常波の表式}
+互いに逆向きに進む振幅$A$[m]，波長$\lambda$[m]，周期$T$[s]の正弦波が重なって作られる定常波は，
+\[y(x,t)=2A\sin\left( 2\pi \dfrac{x}{\lambda} +\varphi_1 \right) \sin \left( 2\pi\dfrac{t}{T} +\varphi_2 \right) \]
+の形に表すことができる．（ただし$\varphi_1,\varphi_2$は条件を満たすようにとる定数）
+
+この式の第2項の$\sin$部分である$\sin \left( 2\pi\dfrac{t}{T} +\varphi_2 \right)$は時刻$t$[s]の進行につれて$-1〜+1$の範囲で振動する．
+よって，位置$x$[m]におけるこの定常波の振幅$A(x)$[m]は
+\[A(x)=2A\left| \sin\left( 2\pi \dfrac{x}{\lambda} +\varphi_1 \right)\right|\]
+で与えられ，この位置では定常波は$-A(x)〜+A(x)$の範囲を振動する．
+また，時間変動をもたらす第2項の$ \sin \left( 2\pi\dfrac{t}{T} +\varphi_2 \right)$はすべての$x$に対して同等にかかるから，定常波は各点が同じ位相で上下に振動することになることもこの式から理解することができる．
+\begin{itembox}[l]{【定常波の表式】}
+ \hspace{3mm} 互いに逆向きに進む振幅$A$[m]，波長$\lambda$[m]，周期$T$[s]の正弦波が重なって作られる定常波は，
+ \[y(x,t)=2A\sin\left( 2\pi \dfrac{x}{\lambda} +\varphi_1 \right) \sin \left( 2\pi\dfrac{t}{T} +\varphi_2 \right) \]
+ の形に必ず表せ，位置による振幅を表す部分と時間変動して$-1〜+1$の範囲で振動する部分とに分けることができる．
+\end{itembox}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p53.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p54.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p154.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p155.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p156.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p157.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p158.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p159_1.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

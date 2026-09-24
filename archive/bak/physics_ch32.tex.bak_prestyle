@@ -1,0 +1,189 @@
+\section{コンデンサー回路}
+
+\subsection{キルヒホッフの第二法則}
+全セクションで学んだコンデンサーと電池およびスイッチを導線でつなぐと様々な回路を作ることができるが，スイッチを開閉したときにコンデンサーにどのように電荷が蓄えられるかを考えるためには，{\bf 電荷保存の法則}と{\bf キルヒホッフの第二法則}とを組み合わせて考えていけば良い．
+
+  \begin{wrapfigure}[12]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p40_fig1.png}
+\end{wrapfigure}
+電気回路において，導線中（導体中）の電位は必ず一定であるから，（急激な電荷の移動がなければ）{\bf 導線でつながっているところは必ず等電位になっている．}
+そして，{\bf 電池や回路中の素子（コンデンサーや抵抗など）で電位が高くなったり低くなったりする．}
+このとき，{\bf 回路中の任意の閉ループをひと回りした場合には，必ず同じ電位に戻ってくる．}
+これを{\bf キルヒホッフの第二法則}という．\\[5mm]
+
+回路のキルヒホッフの法則は，導線部分を平坦な道，素子を坂道に例えて捉えるとわかりやすい．
+
+コンデンサーを組み合わせて作られた回路で，各コンデンサーに蓄えられる電荷を求めるためには，各コンデンサーに蓄えられる電荷を文字で置き，回路のキルヒホッフ第二法則を立てればよい．
+
+\begin{itembox}[l]{【キルヒホッフの第二法則】}
+ \hspace{3mm} 回路上の任意の閉ループをひと回りした場合には，必ず同じ電位に戻ってくる．
+ \end{itembox}
+ 
+   \begin{wrapfigure}[7]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p40_fig2.png}
+\end{wrapfigure}
+また，電荷は電子の過不足により生じるものであるから，例えば図のように{\bf 他の回路から離れているような部分回路ではその内部で電子が移動するのみであるから，その全電気量は不変である．}
+これを{\bf 電荷保存の法則}という．
+
+コンデンサー回路を考えていくときは ，このような，他の回路から浮いている部分（孤立した部分）を発見し，その部分に電荷保存の法則を考えていくことが大切である．
+
+コンデンサーでは，{\bf 向かい合う極板には必ず正負逆，大きさが同じ電荷が蓄えられるが，正の電荷が蓄えられている側がより高電位}である．
+
+\subsection{コンデンサー回路}
+キルヒホッフ第二法則と電荷保存の法則を組み合わせると，様々なコンデンサー回路の電荷分布の変化を計算することができるが，その方針をここで再度まとめておく．
+
+\begin{itembox}[l]{【コンデンサー回路】}
+\begin{description}
+\item[\MARU{1}] 各コンデンサーの帯電量を文字$+q$\hspace{1mm}[C]，$-q$\hspace{1mm}[C]などでおく．
+\item[\MARU{2}] 回路の浮いている部分について，電荷保存の法則を適用する．
+\item[\MARU{3}] 帯電量$+q$\hspace{1mm}[C]側の極板の方が$\dfrac{q}{C}$\hspace{1mm}[V]だけ電位が高いことを利用して，キルヒホッフ第二法則を立てる．
+\end{description}
+ \end{itembox}
+
+\subsection{複合極板コンデンサー}
+今までは極板が2枚の平行平板コンデンサーを扱ってきたが，この極板間に導体を挟んだり，すき間の一部分にのみ誘電体を挿入するなどしたコンデンサーも存在する．
+このようなコンデンサーを扱う場合には，以下のようにコンデンサーを書き換えて扱えばよい．
+
+$\MARU{1}$\hspace{2mm} 導体を挟んだコンデンサー：{\bf 導体部を導線だとみなして}2つのコンデンサーを分解する
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=80mm]{text2_p42_fig1.png}
+\end{center}
+\end{figure}
+
+$\MARU{2}$\hspace{2mm} 誘電体を挟んだコンデンサー：{\bf 誘電体部分を別のコンデンサーだとみなす}
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=80mm]{text2_p42_fig2.png}
+\end{center}
+\end{figure}
+
+$\MARU{3}$\hspace{2mm} 多極板コンデンサー：{\bf 間に導線を仮想}して複数のコンデンサーに分解する
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=80mm]{text2_p43_fig1.png}
+\end{center}
+\end{figure}
+
+$\MARU{4}$\hspace{2mm} 並列型に挿入された誘電体：横に分けて{\bf 並列型コンデンサー}だとみなす
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=80mm]{text2_p43_fig2.png}
+\end{center}
+\end{figure}
+
+複雑なコンデンサーは単純なコンデンサーの合成だとみなして回路を書き換え，コンデンサー回路の考え方に従って電荷分布を求める．
+
+  \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p25.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p26.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p27.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p111_2.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p112.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p113.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p114.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p115.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p116.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p117.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p118.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p119.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

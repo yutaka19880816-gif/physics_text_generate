@@ -1,0 +1,155 @@
+\section{自己誘導・相互誘導}
+
+\subsection{自己誘導}
+ \begin{wrapfigure}[10]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p74_fig1.png}
+\end{wrapfigure}
+コイルに流れる電流が増加しようとする場合について考える．
+このとき，コイルを流れる電流が作る磁場が増加するので，コイルには電流とは逆向きの誘導起電力が生じ，これによって電流の増加を抑え込もうとする．
+この現象を{\bf 自己誘導}と呼ぶ．
+
+コイルを貫く磁束$\Phi$[Wb]は電流$I$[A]に比例し，また誘導起電力の大きさは磁束$\Phi$[Wb]の時間微分$\dfrac{d\Phi}{dt}$に比例する．
+よって，比例定数を$L$として，
+\[L\dfrac{dI}{dt} \hspace{2mm} [{\rm V}] \]
+であり，これを{\bf 自己誘導起電力}と呼ぶ．
+自己誘導起電力は，{\bf 必ず電流の変化を妨げる向きに誘導電流を流すような向きに発生する．}
+また，比例定数$L$を{\bf 自己インダクタンス}と呼び，これはコイルの形状によって決まる．
+その単位は{\bf [H]（ヘンリー）}で表す．
+
+\begin{itembox}[l]{【自己誘導】}
+ \hspace{3mm} コイルを流れる電流が時間変化するとき，電流と同じ向きに
+ \[V=--L\dfrac{dI}{dt} \hspace{2mm} [{\rm V}]\]
+  \hspace{3mm} の自己誘導起電力が発生する．
+ \end{itembox}
+ 
+ なお，電流が減少する場合には$\dfrac{dI}{dt}<0$となる．
+ この場合，$V>0$となるので，自己誘導起電力は，元の電流$I$と同じ向きとなる．
+ 
+ \begin{itembox}[l]{【自己誘導起電力の特徴】}
+ \hspace{3mm} 自己誘導起電力が発生するという現象は，コイルが自分自身に流れる電流の変化を緩和しようとする現象であり，流れていた電流の向きを正として，$-L\dfrac{dI}{dt}$[V]の起電力が発生する．
+ \end{itembox}
+ 
+ \subsection{コイルに蓄えられるエネルギー}
+ コンデンサーに電荷を与えると静電エネルギー$\dfrac{Q^2}{2C}$[J]が蓄えられたのと同様に，自己インダクタンスが$L$[H]のコイルに電流$I$[A]を流すと，コイルには，コイル内部に発生する磁場という形で，$\dfrac{1}{2} LI^2$[J]のエネルギーが蓄えられる．
+ 
+  \begin{itembox}[l]{【コイルに蓄えられるエネルギー】}
+ \hspace{3mm} コイルに電流が流れているとき，コイルには磁場という形でエネルギーが蓄えられる．
+ \[\mbox{\boldmath$U=\dfrac{1}{2}LI^2$} \hspace{2mm}{\bf [J]} \]
+ \end{itembox}
+ 
+このことは結論だけ覚えておけば良いが， 以下に簡単にその導出法を示す．\\[1mm]
+
+自己誘導により，コイルに大きさ$\left| -L\dfrac{di}{dt} \right|$[V]の誘導起電力が発生しているとき，これに逆らってさらに電流$i$[A]を増加させるためには外から誘導起電力に等しい電圧をかけてやらなければならない．
+このようにすれば，微小時間$dt$[s]の間に微小な電荷$dq=i\cdot dt$[C]が送り込まれるが，このために外からかけた電圧がする微小な仕事$dW$[J]は，電流が増加していることに注意して，
+\[dW=dq\cdot L\dfrac{di}{dt} =i\cdot dt \cdot L\dfrac{di}{dt} =Li\cdot di\]
+である．
+流れている電流が$i=0$[A]のときを基準として，ここから電流を増加させて$i=I$[A]まで増加させるまでに外からかけた電圧のする仕事$W$[J]は，
+\[W=\int^I_0 Li\cdot di =\dfrac{1}{2} LI^2\hspace{2mm} [{\rm J}] \]
+となり，これだけのエネルギーがコイルに磁場という形で蓄えられることになる．
+
+ \subsection{コイルを含む回路の過渡現象}
+ コイルは電流の変化を嫌う素子であることを述べたが，直流電気回路の中にコイルが入った場合，コイルが電流変化を嫌うためすぐさま電流変化が起こらないという現象が起こる．
+ この場合，キルヒホッフの法則を用いて回路を考えることにより，定常状態に至るまでの電流変化を定性的に説明することができる．
+ 
+ 直流回路にコイルが含まれている場合，{\bf コイルはスイッチを入れた直後に流れる電流は直前に流れていた電流と同じになり，すぎには電流変化が起こらない．}
+ また，{\bf スイッチを入れてから十分時間が経つとコイルに流れる電流は一定となり，電圧が生じない．}
+ 
+  \subsection{相互誘導}
+   \begin{wrapfigure}[7]{r}[5mm]{90mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=90mm]
+  {text2_p77_fig1.png}
+\end{wrapfigure}
+  自己誘導では，コイルが自分自身を貫く磁束の変化によって生じる誘導起電力を考えたが，図のように軸を共通にして配置した2つのコイル間でも同様の現象が生じる．
+  右図のように2つのコイルを配置して片方のコイル（{\bf 1次コイル}）に流す電流$I_1$[A]を変化させると，その変化$\dfrac{dI_1}{dt}$に応じてもう片方のコイル（{\bf 2次コイル}）に誘導起電力が生じる．
+  これを{\bf 相互誘導}と呼ぶ．
+  
+  両コイルを貫く磁束$\Phi$[Wb]は1次コイルに流れる電流$I_1$[A]に比例する．
+  2次コイルに発生する誘導起電力の大きさはこの磁束$\Phi$[Wb]の時間変化$\dfrac{d\Phi}{dt}$に比例するので，比例定数を$M$として，
+  \[M\dfrac{d\Phi}{dt} \hspace{2mm} [{\rm V}] \]
+  であり，これを{\bf 相互誘導起電力}と呼ぶ．
+  {\bf 相互誘導起電力の発生する向きは2つのコイルの配置の仕方によって決まる}ので，以下の手順でその向きを決める．
+  
+\begin{description}
+\item[\MARU{1}] 1次コイルに流れる電流$I_1$[A]によって生じる磁場の向きを考える．
+\item[\MARU{2}] $\MARU{1}$で考えた磁場と同じ向きの磁場を作る2次コイルの電流の向きを正の向きとする．
+\item[\MARU{3}] 正の向きに電流を流すような起電力の向きが相互誘導起電力の正の向きとなる．
+\end{description}  
+
+以上の手順で向きを決めた場合（上図のc$\rightarrow$dの向き），2次コイルに発生する起電力は
+  \[V=-M\dfrac{dI_1}{dt} \hspace{2mm} [{\rm V}] \]
+  となる．
+
+また，比例定数$M$を{\bf 相互インダクタンス}と呼び，これはコイルの形状および配置によって決まり，単位は自己インダクタンスと同様，[H]（ヘンリー）で表す．
+  
+\begin{itembox}[l]{【相互誘導起電力】}
+ \hspace{3mm} 一次コイルを流れる電流$I_1$[A]が時間変化するとき，2次コイルに発生する相互誘導起電力は，
+  \[V=-M\dfrac{dI_1}{dt} \hspace{2mm} [{\rm V}] \]
+ \end{itembox}
+ 
+    \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p45.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p46.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p148.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p149.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p150.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p151.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p152.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

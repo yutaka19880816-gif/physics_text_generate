@@ -1,0 +1,184 @@
+\section{キルヒホッフの法則}
+
+\subsection{キルヒホッフの第一法則}
+\begin{wrapfigure}[8]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p51_fig1.png}
+\end{wrapfigure}
+ここまでは回路に枝分かれのないものを取り扱ってきたが，枝分かれのある回路について扱うときには以下の{\bf キルヒホッフの第一法則}を考える必要がある．
+電流は電荷の流れであり，電荷はコンデンサー極板上にしか長時間滞在することはできない．
+そのため，{\bf 回路の導線の分岐点に流れ込む電流の総量と，その点から流れ出て行く電流の総量とは必ず等しくなる．}これを{\bf キルヒホッフの第一法則}という．
+
+このキルヒホッフの第一法則と，キルヒホッフの第二法則とを併用することにより，抵抗と電池により構成された回路に流れる電流を計算することができる．
+
+\begin{matome}{キルヒホッフの法則}
+ {\bf 第一法則}\\
+ \hspace{3mm} 回路の分岐点に流れ込む電気量と流れ出て行く電気量とは必ず等しくなる\\
+ {\bf 第二法則}\\
+\hspace{3mm} 回路の任意の閉ループにおいて，起電力の代数和は電圧降下の代数和に等しい
+ \end{matome}
+ 
+各導線を流れる電気量を未知数として設定していく際に，先にキルヒホッフ第一法則を適用することで，未知変数の数が減るので楽になることが多い．
+
+\subsection{抵抗の直列接続と並列接続} 
+複数の抵抗を連結させたものをあたかも1つの抵抗であるかのように扱うことができる．
+これを抵抗の合成といい，これをうまく用いると複雑なキルヒホッフの法則の式を計算せずに流れる電流を計算できる．\\[5mm]
+
+\begin{wrapfigure}[12]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p52_fig1.png}
+\end{wrapfigure}
+$\MARU{1}$\hspace{2mm} {\bf 抵抗の直列接続 $\cdots$すべての抵抗に\underline {同じ電流}が流れる}
+
+$R_1[\Omega],R_2[\Omega],R_3[\Omega]$の3つの抵抗を図のように直列に接続する．
+この抵抗の両端に電流$I$[A]が流れたとき，各抵抗には$R_1I$[V],$R_2I$[V],$R_3I$[V]の電位差が生じ，ab間の電位差は
+\[V_{\rm ab}=R_1I+R_2I+R_3I=(R_1+R_2+R_3)I \hspace{2mm} [{\rm V}] \]
+である．
+これを図のように1つの合成抵抗$R [\Omega]$であるとみなすと，
+\[V_{\rm ab}=RI\hspace{2mm} [{\rm V}] \]
+と書ける．
+これより，この3つの抵抗を直列接続した場合は，
+\[ \mbox{\boldmath$R=R_1+R_2+R_3 \hspace{2mm} [\Omega]$} \]
+の合成だとみなすことができる．
+また，各抵抗における電圧降下の比は
+\[ R_1I:R_2I:R_3I=R_1:R_2:R_3\]
+であり，抵抗値の比となる．\\[5mm]
+
+\begin{wrapfigure}[12]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p52_fig2.png}
+\end{wrapfigure}
+$\MARU{2}$\hspace{2mm} {\bf 抵抗の並列接続 $\cdots$すべての抵抗に\underline {同じ電圧}がかかる}
+
+$R_1[\Omega],R_2[\Omega],R_3[\Omega]$の3つの抵抗を図のように並列に接続する．
+この抵抗の両端ab間に電圧$V_{\rm ab}$[V]がかかっているとき，各抵抗には
+\[\dfrac{V_{\rm ab}}{R_1} [A],\hspace{3mm} \dfrac{V_{\rm ab}}{R_2} [A],\hspace{3mm} \dfrac{V_{\rm ab}}{R_3} [A]\]
+の電流が流れる．
+キルヒホッフの第一法則より，端子aに流れ込む電気量$I$[A]は
+\[I=\dfrac{V_{\rm ab}}{R_1}+\dfrac{V_{\rm ab}}{R_2}+\dfrac{V_{\rm ab}}{R_3}=\left( \dfrac{1}{R_1} +\dfrac{1}{R_2} +\dfrac{1}{R_3} \right) V_{\rm ab} \hspace{2mm} [{\rm A}]\]
+である．
+これを図のように1つの合成抵抗$R[\Omega]$であるとみなすと，
+\[ V_{\rm ab}=RI\hspace{2mm} [{\rm V}] \hspace{2mm}\Leftrightarrow \hspace{2mm}I=\dfrac{V_{\rm ab}}{R} \hspace{2mm}[{\rm A}] \]
+と書ける．
+これより，この3つの抵抗を並列接続した場合は，
+\[ \mbox{\boldmath$\dfrac{1}{R}=\dfrac{1}{R_1}+\dfrac{1}{R_2}+\dfrac{1}{R_3} $} \]
+を満たす$R[\Omega]$の合成抵抗だとみなすことができる．
+また，各抵抗に流れ込む電気量の比は
+\[ \dfrac{V_{\rm ab}}{R_1}:\dfrac{V_{\rm ab}}{R_2}:\dfrac{V_{\rm ab}}{R_3}=\dfrac{1}{R_1}:\dfrac{1}{R_2}:\dfrac{1}{R_3}\]
+であり，抵抗値の逆数の比となる．
+
+\begin{matome}{合成抵抗}
+ \hspace{3mm} 抵抗の{\bf 直列}接続：合成抵抗値は各抵抗値の{\bf 単純和} \hspace{18mm}$R=R_1+R_2+R_3$\\
+\hspace{3mm} 抵抗の{\bf 並列}接続：合成抵抗値の{\bf 逆数}は各抵抗値の{\bf 逆数の和} \hspace{5mm}$\dfrac{1}{R}=\dfrac{1}{R_1}+\dfrac{1}{R_2}+\dfrac{1}{R_3}$
+ \end{matome}
+
+\subsection{電流計・電圧計}
+\begin{wrapfigure}[8]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p53_fig1.png}
+\end{wrapfigure}
+
+$\MARU{1}$\hspace{2mm} {\bf 電流計}
+
+電流計は，電流の流れる導線が磁場中で電磁力と呼ばれる力を受けることを利用して電流の大きさを測定する装置であり，電流計を通過していく電流の大きさを測定することができる．
+電流計には多大な電流が流入すると電流計が破壊されるので，これを防ぐためにその内部に内部抵抗がメーターに対して直列に取り付けられている．
+電流計はAを$\bigcirc$で囲んだ記号で表すが，図のように{\bf 内部抵抗とメーターの2つに分けて書き直して考える}とよい．
+
+電流計を用いて図のa点を流れる電気量を測定したい場合にはa点に電流計を挿入すればよい．
+しかし，電流計の内部抵抗が大きいと通過していく電気量が変化してしまう．
+そのため，{\bf 電流計の内部抵抗は極めて小さくなければならない．}\\[5mm]
+
+$\MARU{2}$\hspace{2mm} {\bf 電圧計}
+
+電流計において，内部抵抗の値$r[\Omega]$が既知であれば，流れる電気量$I$[A]を用いて電流計にかかる電圧$V=rI$[V]を計算できるから，{\bf 電流計は電圧計として利用することができ，}電圧計と電流計とはほぼ同じ作りになっている．
+ただし，以下に述べるように，電流計と電圧計とではその測定方法および内部抵抗が異なる．
+
+\begin{wrapfigure}[5]{r}[5mm]{70mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=70mm]
+  {text2_p53_fig2.png}
+\end{wrapfigure}
+右図の回路において，図のab点間の電位差を測定したい場合には，ab点間に電圧計を接続すればよい．
+しかし，電圧計の内部抵抗が小さいと電圧計に電流が流れ込んでしまうため，電流分布が変化し，測定すべき電位差が変化してしまう．
+そのため，{\bf 電圧計の内部抵抗は極めて大きくなければならない．}
+
+\subsection{ホイートストンブリッジ}
+\begin{wrapfigure}[8]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text2_p55_fig1.png}
+\end{wrapfigure}
+
+未知抵抗の抵抗値を精密に測定するためには以下に述べるホイートストンブリッジや，これを応用したメートルブリッジが用いられる．
+ホイートストンブリッジは，抵抗値$R_1[\Omega]$，$R_2[\Omega]$，$R_3[\Omega]$，$R_4[\Omega]$の4つの抵抗を，検流計G，電池Eとともに図のように接続した回路である．
+{\bf 検流計Gに電流が流れない場合は，}
+\[R_1:R_2=R_3:R_4\]
+{{\bf の関係が成立する．}
+
+\begin{matome}{ホイートストンブリッジ}
+ \hspace{3mm} 検流計Gに電流が流れない場合は，$R_1:R_2=R_3:R_4$の関係が成立する．
+ \end{matome}
+ 
+   \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p31.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p32.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p124.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p125.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p126.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p127.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

@@ -1,0 +1,150 @@
+\section{光電効果(2)・コンプトン効果}
+
+\subsection{光電管}
+\begin{wrapfigure}[8]{r}[5mm]{60mm}
+  \centering
+  \vspace{-10mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text2_p98_fig1.png}
+\end{wrapfigure}
+
+実際に光電効果を起こし，電圧をかけて光電子を捕集して電流に変える装置がここで述べる光電管と呼ばれる装置である．
+
+この光電管に図のような回路をつなぎ，端子Dを動かすことにより，AとCに対してかける電圧を自由に変化させられるようにする．
+光を図の金属板Cにあてると，光子のエネルギー$h\nu$が金属の仕事関数$W$より大きい場合は光電子が放出されるが，この際にACに対して適当な電圧をかけると発生した光電子がAに取り込まれ，これが電流として測定される．
+この装置を用いると，光量や，飛び出た光電子の最大運動エネルギーなどを測定することができる．
+以下にその測定原理を述べる．
+
+AとCとの間にかける電圧を変えながらそのときに流れる電流量を測定すると，次図のようなグラフが得られる．
+このグラフを解釈するときは，AとCの間に電圧をかける方法により2通りに分けて考えるとよい．
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=80mm]{text2_p98_fig2.png}
+\end{center}
+\end{figure}
+
+\begin{description}
+\item[\MARU{1}] {\bf Cに対してAの方が高電位になるように電圧をかける}$(V_{AC}>0)$
+
+この場合，A$\rightarrow$C向きに電場が生じるので，ある一定以上の電圧をかけるとこの電場によってCを飛び出た電子をAの極に集められる．
+生じた電子すべてがAに集まるようになるとそれ以上は電流量は増加しなくなる．
+そのため，{\bf 飽和電流量はCで発生する光電子の数}
+\item[\MARU{2}] {\bf Cに対してAの方が低電位になるように電圧をかける}$(V_{AC}<0)$
+
+この場合，C$\rightarrow$A向きに電場が生じるので，Cを飛び出た電子はCに押し戻されるような力を受ける．
+そのため，{\bf ある一定以上の運動エネルギーを持った電子のみがAに達する．}
+特に，$V_{\rm AC}=-V$[V]の電圧をかける場合，電子の位置エネルギー差は$eV$[J]であるから，$eV$[J]以上の運動エネルギーを持った光電子のみがAに達する．
+
+\end{description}
+
+\begin{wrapfigure}[6]{r}[5mm]{60mm}
+  \centering
+  \vspace{-10mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p99_fig1.png}
+\end{wrapfigure}
+
+特に$\MARU{2}$の場合，さらに$V_{\rm AC}$を小さく（$V$を大きく）していき，もし$eV>K_{\rm max}$となったとすると，もはやどの光電子もAに達することができなくなる．
+そのため，その限界の電圧$V$（これを{\bf 阻止電圧}という）がわかれば，これから電子の最大運動エネルギー$K_{\rm max}$を計算することができる．
+様々な振動数の光を用いて実験をすると，右のようなグラフが得られる．
+
+\begin{matome}{光電管}
+電圧のかけ方に2通りある．
+\begin{description}
+\item[\MARU{1}] 受光板に対して集電子板を正電位にする　$\Rightarrow$　電流は飽和する．
+\item[\MARU{2}] 受光板に対して集電子板を負電位にする　$\Rightarrow$　電流は減少する．
+\end{description}
+特に，$\MARU{2}$で流れなくなる場合の電圧を阻止電圧といい，これから$K_{\rm max}$が求まる．
+\end{matome}
+
+なお，光電効果の現象を扱う際にはおおよそ$10^{-18}〜10^{-19}$[J]程度のエネルギーを扱うため，そのまま書くと指数が出てきて面倒である．
+そこで，電子が1[V]の電位差により得られるエネルギーを1[eV]（エレクトロンボルト）と定義する．
+定義より，
+\[1[{\rm eV}]=e[{\rm C}]\times 1[{\rm V}] \fallingdotseq 1.6\times 10^{-19}[{\rm J}]\]
+である．
+
+\subsection{コンプトン効果}
+コンプトン効果とは，光子が運動量を持つため，波長の短い電磁波（X線など）が電子と衝突する際に起こる現象である．
+通常の可視光がちりなどに衝突して散乱される場合，光の進行方向のみが変化するだけでその波長は変化しない．
+しかし，X線などの短波長の電磁波が電子に衝突して散乱される場合，光の進行方向が変わるとともにその波長も同時に変化し，しかも電子が動き出してしまう．
+この現象は，{\bf 光子が運動量}\mbox{\boldmath$p=\dfrac{h\nu }{c}=\dfrac{h}{\lambda}$} {\bf [kg・m/s]をもつ}と考えるとうまく説明できる．
+
+\subsection{物質波}
+振動数$\nu$[Hz]，波長$\lambda$[m]の光はエネルギー$E=h\nu$[J]，運動量$p=\dfrac{h}{\lambda} [{\rm kg\cdot m/s}]$の，光子と呼ばれる粒子の性質を持つと同時に，光波と呼ばれる波の性質を同時に併せ持つ．
+これと同様に，電子のような質量の小さい粒子もまた，それに対応する波としての性質を同時に併せ持っていることをド・ブロイは発見した．
+エネルギー$E$[J]，運動量$p[{\rm kg\cdot m/s}]$の物質に伴う波の振動数$\nu$[Hz]及び波長$\lambda$[m]は，
+\[\mbox{\boldmath$\nu=\dfrac{E}{h}　　\lambda=\dfrac{h}{p}$}\]
+で与えられる．
+これを{\bf ド・ブロイの関係}といい，$\lambda$をド・ブロイ波長という．
+特に，粒子の質量が$m$[kg]，速さが$v$[m/s]であるときは，$p=mv$であるから，
+\[\mbox{\boldmath$\lambda=\dfrac{h}{mv}$}\]
+である．
+なお，$v$は波の伝播速度ではないので，$v=\nu \cdot \lambda$の関係式は成立しない点に注意すること．
+
+\begin{matome}{ド・ブロイ波長}
+質量$m$[kg]，速さ$v$[m/s]の粒子は，波長$\lambda=\dfrac{h}{mv}$[m]の物質波を伴う．
+\end{matome}
+
+ \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p58.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p59.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p60.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p177_2.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p178.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p179.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p180_1.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

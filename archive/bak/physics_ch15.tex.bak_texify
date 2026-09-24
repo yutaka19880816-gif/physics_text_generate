@@ -1,0 +1,190 @@
+\section{気体分子運動論}
+
+\subsection{気体分子運動論}
+
+理想気体の状態方程式$PV=nRT$は実験によって経験的に導き出されたものであるが，実際には気体は分子から構成され，その分子が容器内で飛び回っている．
+この分子の運動を数式的に解析することにより，圧力や運動エネルギー，内部エネルギーを求めるというものがこの{\bf 気体分子運動論}である．
+
+最終的に得られる結論を先に示す．
+体積$V$[m$^3$]の容器内に分子1つあたりの質量が$m$[kg]の気体分子が$N$個あり，分子の速さの二乗の平均が$\overline{v^2} [{\rm m^2/s^2}]$であるなら，その気体の圧力は
+\[P=\dfrac{Nm\overline{v^2}}{3V} \]
+で与えられる．
+この式を{\bf ベルヌーイの式}と呼び，この式は容器の形状によらず成立する．
+
+さらにこの式を変形すると，
+\[PV=\dfrac{Nm\overline{v^2}}{3}\]
+であるが，気体のモル数$n$[mol]は気体1[mol]あたりの質量を$M$[kg/mol]，アボガドロ数を$N_A$とすれば，$N=nN_A$，$m=\dfrac{M}{N_A}$の関係が成り立つので
+\[ PV=\dfrac{nM\overline{v^2}}{3}\]
+となる．
+気体の状態方程式$PV=nRT$と比較すると，$nRT=n\dfrac{M\overline{v^2}}{3}$より，$T=\dfrac{M\overline{v^2}}{3R}$となる．
+すなわち，{\bf 気体の温度は分子の運動によって決まるものである．}
+また，この式より，温度が$T$[K]の気体分子がどの程度の速さで飛び回っているかを計算できる．
+気体分子の二乗平均速度$\sqrt{\overline{v^2}}$[m/s]は
+\[ \sqrt{\overline{v^2}} =\dfrac{3RT}{M} \]
+となる．
+
+ベルヌーイの式を一般の容器の形状の場合について示すのは非常に難しいが，入試で出題されるのはほとんどが立方体や直方体の場合である．
+
+\begin{itembox}[l]{【気体の分子運動論】}
+ \hspace{3mm} ベルヌーイの式\hspace{23mm} $P=\dfrac{Nm\overline{v^2}}{3V} $\\
+ \hspace{3mm} 気体分子の二乗平均速度\hspace{10mm} $\sqrt{\overline{v^2}}=\sqrt{\dfrac{3RT}{M}}$ 
+ \end{itembox}
+ 
+ 気体分子運動論の問題は圧力を求めるまでの流れが決まっている．
+ その道筋を把握しておくこと．
+ 
+ \begin{itembox}[l]{【気体の分子運動論の手順】}
+ \hspace{3mm} \MARU{1}\hspace{2mm} 1回あたりの衝突で壁面に与える力積を計算\\
+ \hspace{3mm} \MARU{2}\hspace{2mm} 時間$t$[s]内での衝突回数および与える力積を計算\\
+ \hspace{3mm} \MARU{3}\hspace{2mm} 力積と平均の力の関係から，1分子が与える平均の力を計算\\
+ \hspace{3mm} \MARU{4}\hspace{2mm} 気体分子運動の等方性より，\MARU{3} 式を$\overline{v^2}$で書き換える\\
+ \hspace{3mm} \MARU{5}\hspace{2mm} 気体分子総数より，壁面に及ぼす圧力を計算\\
+ \hspace{3mm} \MARU{6}\hspace{2mm} （必要があれば）状態方程式と比較して二乗平均速度を計算
+ \end{itembox}
+ 
+ この気体分子運動論で鍵となるのは$\MARU{4}$である．
+ 
+ \begin{itembox}[l]{【気体の分子運動の等方性】}
+ \hspace{3mm} 気体分子は容器内をランダムに飛び回るため，方向性を持たない．瞬間ごと，分子ごとには$x,y,z$各軸方向の速度は異なるが，平均をとると同じ値をとる．
+ \[ \overline{v_x^2}=\overline{v_y^2}=\overline{v_z^2} \hspace{2mm} \left(=\dfrac{1}{3} \overline{v^2} \right) \]
+ \end{itembox}
+ 
+ \subsection{単原子分子理想気体の内部エネルギー}
+ 
+ 実在する気体の中で，希ガス（=He,\hspace{1mm}Ne,\hspace{1mm}Arなど）のように原子そのものが単独で飛び回っているもの，すなわち分子=原子であるものを{\bf 単原子分子}という．
+ これに対して，窒素や酸素のように2つの原子によって1つの分子が構成されているものは{\bf 二原子分子}という．
+ ここでは気体のうち前者の単原子分子気体のみに着目する．
+ 
+ 単原子分子気体の代表は上で述べた希ガスだが，希ガスは閉殻構造をとるため原子間に作用する力が非常に小さい．
+ そのため，実在気体でも理想気体にかなり近いことが知られている．
+ ここでは単原子分子であり，かつ理想気体の条件を満たす単原子分子理想気体について考え，その内部エネルギーを分子運動に基づいて算出する．
+ 
+ 気体の内部エネルギーとは蓄えることのできるエネルギーのことをいう．
+ 気体の内部を微視的に見てみると，与えたエネルギーは気体分子が個々にもつ力学的エネルギー（=運動エネルギー+位置エネルギー）として蓄えられる．
+ よって，{\bf 気体のもつ内部エネルギーとは気体のもつ力学的エネルギーの総和のことを意味する．}
+ 
+ 気体の内部エネルギーを一般の気体すべてについて分子運動に基づいて求めることは不可能であるが，上で述べた単原子分子理想気体の場合は容易に求めることができる．
+ 理想気体であるなら前に述べたベルヌーイの式や気体の二乗平均速度の式，気体の状態方程式などをすべて適用できる．
+ さらに，単原子分子気体においては気体分子（=原子）のもつエネルギーは運動エネルギーのみであり，1分子あたりの平均運動エネルギーは
+ \[E=\dfrac{1}{2}mv^2\]
+ これと気体の二乗平均速度の式より
+ \[E=\dfrac{3}{2}\dfrac{R}{N_A}T\]
+ この式の$\dfrac{R}{N_A}$を{\bf ボルツマン定数} \mbox{\boldmath $k$}という．
+ ボルツマン定数は気体1分子あたりの気体定数を表すものである．
+ \[k=\dfrac{R}{N_A} \fallingdotseq 1.38\times10^{-23}[{\rm J/K}]\]
+ 気体の内部エネルギー$U$[J]はこの運動エネルギーの総和である．
+ 気体分子の総数は$nN_A$であるから，
+ \[ U=\dfrac{3}{2}kT\times nN_A =\mbox{\boldmath $\dfrac{3}{2}nRT$} \hspace{2mm}[{\rm J}]\]
+ と求められる．
+ 
+ \begin{itembox}[l]{【単原子分子理想気体】}
+ \hspace{3mm} 1分子あたりの平均運動エネルギー\hspace{11mm} $E=\dfrac{1}{2}m\overline{v^2}=\dfrac{3}{2}kT$\\
+ \hspace{3mm} ボルツマン定数\hspace{40mm} $k=\dfrac{R}{N_A}$\\
+ \hspace{3mm} 単原子分子理想気体の内部エネルギー\hspace{8mm} $U=\dfrac{3}{2}nRT$ 
+ \end{itembox}
+ 
+ ただし，内部エネルギーが$U=\dfrac{3}{2}nRT$となるのは{\bf 単原子分子理想気体の場合のみ}である．
+ 一般的には，理想気体の内部エネルギーは後に述べる定積モル比熱$C_V$[J/mol・K]を用いて
+ \[U=nC_VT\]
+ と表され，単原子分子理想気体ではこの定積モル比熱$C_V$が$C_V=\dfrac{3}{2}R$であるため上の式となる．
+ しかし，例えば窒素や酸素といった二原子分子であれば$C_V=\dfrac{5}{2}R$となり，内部エネルギーの式は
+ \[U=\dfrac{5}{2}nRT\]
+ となる．\mbox{\boldmath $U=\dfrac{3}{2}nRT$} {\bf が成立するのは単原子分子理想気体の場合のみ}であることに注意せよ．
+ 
+ \subsection{状態変化と$P-V$図}
+ 
+ 気体の状態を変化させる（=圧力，体積，温度などを変化させる）際，圧力$P$[Pa]を縦軸に，体積$V[{\rm m^3}]$を横軸に取ったグラフを用いてその変化の様子を表すと便利なことが多い．
+ この変化図を$P-V$図という．
+ 
+ \begin{wrapfigure}[4]{r}[5mm]{40mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text_p73_fig1.png}
+\end{wrapfigure}
+
+ $P-V$図上での特徴を以下にまとめる．\\
+ $\MARU{1} \hspace{2mm} 水平な直線上での変化は定圧変化を表す．$\\
+ $\MARU{2} \hspace{2mm} 鉛直な直線上での変化は定積変化を表す．$\\
+ $\MARU{3} \hspace{2mm} 等温変化はP=\dfrac{nRT}{V} \propto \dfrac{1}{V}であるから，直角双曲線（反比例グラフ）となる．$\\
+ $\MARU{4} \hspace{2mm} 上側にある双曲線上に乗っている点の方が温度が高い．$\\
+ $\MARU{5} \hspace{2mm} P-V図で囲む面積が気体のやりとりした仕事を表す．$\\
+ 
+ \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p37.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p38.png}
+\end{center}
+\end{figure}
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p39.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p120_2.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p121.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p122.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p123.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p124.png}
+\end{center}
+\end{figure}
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p125.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p126_1.png}
+\end{center}
+\end{figure}

@@ -1,0 +1,360 @@
+\documentclass[a4j,10pt]{jsarticle}
+\usepackage[dvipdfmx,hiresbb]{graphicx}
+% 画像は img/ 配下へ集約した（2026-09-05）。\includegraphics はファイル名だけで書いてよい。
+%   img/scan/ … 問題編のページスキャン（prob_p*, prob2_p*）
+%   img/text/ … 講義編から切った図（text_p*, text2_p*）
+%   fig/      … TeX化のときに切り出した図（こちらは fig/ 付きで参照している）
+\graphicspath{{./}{img/text/}{img/scan/}{fig/}}
+\usepackage{amsmath,amssymb}
+%\usepackage{fancybox}
+ \usepackage{ascmac}
+ \usepackage{multicol}
+ \usepackage{multicol,multienum}
+ \usepackage{latexsym}
+ \usepackage{wrapfig}
+% \usepackage{tcolorbox}
+\usepackage{eclbkbox}
+\usepackage[dvipdfmx]{color}
+\usepackage{butsuri_style}   % 紙面デザイン（2026-08-31 全章に適用）
+%
+% ######## measure #########
+% # mm = 1mm = 2.85pt      #
+% # cm = 10mm = 28.5pt     #
+% # in = 25.4mm = 72.27pt  #
+% # pt = 0.35mm = 1pt      #
+% # em = width of [M]      #
+% # ex = height of [x]     #
+% # zw = width of [Kanji]  #
+% # zh = height of [Kanji] #
+% ##########################
+% ##################### Portrait Setting #########################
+% # TOP = 1inch + \voffset + \topmargin + \headheight + \headsep #
+% #     = 1inch + 0pt + 4pt + 20pt + 18pt (default)              #
+% # BOTTOM = \paperheight - TOP -\textheight                     #
+% ################################################################
+\setlength{\textheight}{\paperheight}   % 紙面縦幅を本文領域にする（BOTTOM=-TOP）
+\setlength{\topmargin}{-5truemm}       % 上の余白を30mm（=1inch+4.6mm）に
+\addtolength{\topmargin}{-\headheight}  % 
+\addtolength{\topmargin}{-\headsep}     % ヘッダの分だけ本文領域を移動させる
+\addtolength{\textheight}{-50truemm}    % 下の余白も30mm（BOTTOM=-TOPだから+TOP+30mm）
+% #################### Landscape Setting #######################
+% # LEFT = 1inch + \hoffset + \oddsidemargin (\evensidemargin) #
+% #      = 1inch + 0pt + 0pt                                   #
+% # RIGHT = \paperwidth - LEFT - \textwidth                    #
+% ##############################################################
+\setlength{\textwidth}{\paperwidth}     % 紙面横幅を本文領域にする（RIGHT=-LEFT）
+\setlength{\oddsidemargin}{-0.4truemm}  % 左の余白を25mm(=1inch-0.4mm)に
+\setlength{\evensidemargin}{-0.4truemm} % 
+\addtolength{\textwidth}{-50truemm}     % 右の余白も25mm（RIGHT=-LEFT）
+\setlength{\footskip}{20truemm}        %ページ番号の位置を指定
+%
+%
+%%%%%%    TEXT START    %%%%%%
+\begin{document}
+\newcounter{nombre} %必須
+\renewcommand{\thenombre}{\arabic{nombre}} %任意
+\setcounter{nombre}{0} %任意
+
+\newcommand{\ex}[1][]{\refstepcounter{nombre}#1【例題 \thenombre】}
+
+\newcounter{nomber} %必須
+\renewcommand{\thenomber}{\arabic{nomber}} %任意
+\setcounter{nomber}{0} %任意
+
+\newcommand{\prob}[1][]{\refstepcounter{nomber}#1【問題 \thenomber】}
+
+\newcommand{\MARU}[1]{{\ooalign{\hfil#1\/\hfil\crcr\raise.167ex\hbox{\mathhexbox20D}}}}
+
+%%%%%%%%%% 練習問題・解答を TeX 化するためのマクロ（2026-08-29 追加）%%%%%%%%%%
+\newcounter{qno}                        % ［１］［２］… 問題の通し番号（章をまたいで連番）
+% A問題／B問題／C問題 の見出し
+\newcommand{\Rank}[1]{\par\medskip\noindent{\gtfamily #1}\par\nobreak\vspace{1mm}}
+% ［N】【タイトル】  第2引数を付けると「指定問題」バッジが出る
+\newcommand{\Mon}[1]{\filbreak\refstepcounter{qno}\MonN{\theqno}{#1}}
+% 解答側など，番号を明示して見出しを出す場合
+\newcommand{\MonN}[2]{\par\vspace{2mm}\noindent{\gtfamily ［#1］【#2】}}
+\newcommand{\Sitei}{\hspace{0.5zw}\colorbox[gray]{0.85}{\footnotesize 指定問題}}
+% 単位（数式モードで使う）  例: $200\U{m}$
+\newcommand{\U}[1]{\,[\mathrm{#1}]}
+% 摂氏温度（\U と同じ体裁。数式モードで使う）  例: $20\Cel$
+\newcommand{\Cel}{\,[{}^\circ\mathrm{C}]}
+% 「……答」マーク
+% 「……（答）」は途中で改行させない（\mbox で一塊にする）
+\newcommand{\Ans}{\ifmmode\ \cdots\text{(答)}\else\nobreak\hspace{0.25zw}\mbox{$\cdots$(答)}\fi}
+% 式番号（……①）も同様に一塊
+\newcommand{\Eq}[1]{\ifmmode\ \cdots\MARU{#1}\else\nobreak\hspace{0.25zw}\mbox{$\cdots$\MARU{#1}}\fi}
+% 小問 (1)(2)… のぶら下げリスト
+\newenvironment{komon}{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{2.2zw}\setlength{\labelwidth}{1.9zw}%
+    \setlength{\labelsep}{0.5zw}\setlength{\itemsep}{0pt}%
+    \setlength{\parsep}{0pt}\setlength{\topsep}{2pt}\setlength{\partopsep}{0pt}}%
+}{\end{list}}
+\newcommand{\ko}[1]{\item[{\makebox[1.9zw][r]{(#1)}}]}
+% 図を本文の右に置く（wrapfigure は連続使用で衝突するため minipage を使う）
+% 使い方: \begin{zuright}{図の幅} 本文 \zusep 図 \end{zuright}
+\newenvironment{zuright}[1]{%
+  \par\medskip\setlength{\zuw}{#1}%
+  \noindent\begin{minipage}[t]{\dimexpr\linewidth-\zuw-4mm\relax}%
+}{\end{minipage}\par\medskip}
+\newlength{\zuw}
+\newcommand{\zusep}{\end{minipage}\hfill\begin{minipage}[t]{\zuw}\vspace{0pt}\centering}
+
+% 【指針】は太枠，【別解】【注】は細枠
+\newenvironment{sisin}{\setlength{\fboxrule}{1.2pt}\begin{itembox}[l]{【指針】}}{\end{itembox}}
+\newenvironment{bekkai}{\begin{itembox}[l]{【別解】}}{\end{itembox}}
+\newenvironment{chuu}{\begin{itembox}[l]{【注】}}{\end{itembox}}
+
+%%%%%%%%%% 例題まわりの体裁（2026-08-29 追加）%%%%%%%%%%
+% 地の文＝枠なし／例題＝太枠／KEY・解答＝細枠、で役割が一目で分かるようにする
+% 例題の問題文（原本と同じ太枠＋左上に【例題 N】〈タイトル〉）
+\newenvironment{reidai}[1]{\par\medskip\setlength{\fboxrule}{1.2pt}%
+  \begin{itembox}[l]{\ex〈#1〉}}{\end{itembox}}
+% 例題の【指針】は枠なし（地の文と解答の中間の位置づけ）
+\newenvironment{sisinE}{\par\medskip\noindent{\gtfamily 【指針】}\par\nobreak
+  \begingroup\leftskip=1zw\noindent\ignorespaces}{\par\endgroup\medskip}
+% 【KEY】は原本どおり細枠
+\newenvironment{key}{\setlength{\fboxrule}{0.4pt}\begin{itembox}[l]{【KEY】}}{\end{itembox}}
+% 【解答】は長くなるので改ページできる breakbox を使う
+\newenvironment{kaitou}{\par\medskip\begin{breakbox}\noindent{\gtfamily 【解答】}\par\nobreak}{\end{breakbox}\par\medskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\heiko{\mathrel{\raise.3ex\hbox{\scalebox{.7}{%
+    \rotatebox[origin=c]{-7}{/}%
+    \kern-.35em\rotatebox[origin=c]{-7}{/}}}}}%
+
+%%%%% 紙面デザインを有効にする（2026-08-31）
+%%%%% \Rank \Mon reidai sisin kaitou … は上で \begin{document} の“後”に定義しているため，
+%%%%% butsuri_style の読み込み時には再定義できない．ここで \ButsuriApply を呼んで差し替える．
+\ButsuriApply
+
+\newpage
+
+{\huge 入試物理基礎演習}
+\vspace{5mm}
+
+{\bf【学習目標】}
+
+このプリントは，物理の全範囲を基礎から解説し，東大をはじめとする難関大学に現役合格するための基盤作りを目標としています．
+
+各単元ごとに重要事項や解き方のポイントをまとめ，その単元の練習問題と解答を載せてあります．一読してもよく分からない部分も出てくると思いますが，問題の解説を熟読し，場合によっては教科書などを参考にしてください．
+
+各単元の練習問題は繰り返し解き，必ず解けるようにしてください．
+A問題，B問題，C問題とレベル分けしてあります．
+
+A問題は，法則や基本事項を単純に用いるだけの問題です．この問題で躓くときは，講義部分の解説や参考書などを確認し，覚えるべき法則の再確認をしてください，
+
+B問題は，重要な典型問題です．答え合わせをする際は，答えのみがあっているかどうかを見るのではなく，途中の考え方まで含めてあっていたかどうか，掲載されている【指針】【解答】を熟読しましょう．
+
+C問題は，入試レベルの問題で現時点では独力で解答するのは難しいかもしれません．
+そうした際，すぐに諦めるのではなく，なんとか基本問題を応用して解けないか試行錯誤してみてください．
+こちらも詳しい【指針】【解答】がついているので，できる限り理解するよう努力することが重要です．
+
+なお，問題の中で，最も優先すべき問題を2題を選んで指定問題の印がついてあります．
+どうしても学習時間が確保できない場合は，この指定問題2問にしぼって取り組むと良いでしょう．
+
+問題に取り組む際は，以下の点に注意してください．
+\begin{description}
+\item[(1)] $物理法則・原理を正しく覚えること．$
+\item[(2)] $なぜその法則が成り立つのかを考えて問題を解くこと．$
+\end{description}
+
+物理という科目は，覚えることはほとんどありません．
+最低限の原理を覚えてしまえば，あとは数学的に導いていくことができます．
+そのため，問題の解き方を覚えるのではなく，なぜそのような現象が起こるのか，なぜそのように解けるのかを理解するように意識していきましょう．
+
+
+
+
+\vspace{5mm}
+%{\bf【宿題】}
+
+%（1）例題解き直し
+%
+%授業で解説した例題は，家に帰ってから必ずその日のうちに解き直しを行ってください．
+%解き直しは，解説を読まずに，問題を見て解答を作れるか自分でテストします．
+%もし解けなければ，解説を読んで，再度解いてみてください．
+%自力で解答が再現できるようになるまで繰り返すことが解き直しです．
+%
+%\vspace{1mm}
+%
+%（2）練習問題
+%
+%授業で解説した例題の練習問題を載せてあります．
+%授業では解説しませんが，習ったことが定着したか確認してください．
+%次回の授業までに行いましょう．
+
+{\bf【やり方】}
+
+%以下の点に注意して進めてください．
+
+・図や途中経過もできるだけノートに書く
+
+・丸付けも行う
+
+・間違えた問題は赤字で解き直す（間違えた答案は消さずに取っておく）
+
+・わからなかった問題は解答をよく読んで理解し，その上で赤で解答を写しておく
+\newpage
+\tableofcontents
+\newpage
+
+  \ 
+  
+\newpage
+\include{physics_ch1}
+\include{physics_ch2}
+ \ 
+ 
+\newpage
+\include{physics_ch3}
+ \ 
+ 
+\newpage
+\include{physics_ch4}
+\include{physics_ch5}
+\include{physics_ch6}
+\include{physics_ch7}
+\include{physics_ch8}
+ \ 
+ 
+\newpage
+\include{physics_ch9}
+ \ 
+ 
+\newpage
+\include{physics_ch10}
+ \ 
+ 
+\newpage
+\include{physics_ch11}
+ \ 
+ 
+\newpage
+\include{physics_ch12}
+\include{physics_ch13}
+\include{physics_ch14}
+\include{physics_ch15}
+ \ 
+ 
+\newpage
+\include{physics_ch16}
+\include{physics_ch17}
+\include{physics_ch18}
+\include{physics_ch19}
+ \ 
+ 
+\newpage
+\include{physics_ch20}
+\include{physics_ch21}
+ \ 
+ 
+\newpage
+\include{physics_ch22}
+\include{physics_ch23}
+ \ 
+ 
+\newpage
+\include{physics_ch24}
+
+\include{physics_ch25}
+ \ 
+ 
+\newpage
+\include{physics_ch26}
+ \ 
+ 
+\newpage
+\include{physics_ch27}
+ \ 
+ 
+\newpage
+\include{physics_ch28}
+\include{physics_ch29}
+ \ 
+ 
+\newpage
+\include{physics_ch30}
+ \ 
+ 
+\newpage
+\include{physics_ch31}
+ \ 
+ 
+\newpage
+\include{physics_ch32}
+\include{physics_ch33}
+ \ 
+ 
+\newpage
+\include{physics_ch34}
+ \ 
+ 
+\newpage
+\include{physics_ch35}
+ \ 
+ 
+\newpage
+\include{physics_ch36}
+ \ 
+ 
+\newpage
+\include{physics_ch37}
+\include{physics_ch38}
+\include{physics_ch39}
+\include{physics_ch40}
+\include{physics_ch41}
+
+\include{physics_ch42}
+\include{physics_ch43}
+ \ 
+ 
+\newpage
+\include{physics_ch44}
+ \ 
+ 
+\newpage
+\include{physics_ch45}
+ \ 
+ 
+\newpage
+\include{physics_ch46}
+ \ 
+ 
+\newpage
+
+ %\mbox{\boldmath$$}
+ 
+%\begin{itembox}[l]{【定常波の表式】}
+% \hspace{3mm} 互いに逆向きに進む振幅$A$[m]，波長$\lambda$[m]，周期$T$[s]の正弦波が重なって作られる定常波は，
+% \[y(x,t)=2A\sin\left( 2\pi \dfrac{x}{\lambda} +\varphi_1 \right) \sin \left( 2\pi\dfrac{t}{T} +\varphi_2 \right) \]
+% の形に必ず表せ，位置による振幅を表す部分と時間変動して$-1〜+1$の範囲で振動する部分とに分けることができる．
+%\end{itembox}
+
+%\begin{description}
+%\item[・] 自由端反射の反射点\\
+%入射波がそのまま反射\hspace{2mm}$\Leftrightarrow$\hspace{2mm}合成波の変位は常に入射波の変位の2倍\hspace{2mm}$\Leftrightarrow$\hspace{2mm}定常波の腹
+%\end{description}
+
+%\begin{eqnarray*}
+%d\dfrac{x}{l}=m\lambda \hspace{2mm} \Leftrightarrow \hspace{2mm} x=m\dfrac{l\lambda}{d} \hspace{27mm}の位置で強め合い（{\bf 明線}）\\
+%d\dfrac{x}{l}=\left(m-\dfrac{1}{2}\right) \lambda \hspace{2mm} \Leftrightarrow \hspace{2mm} x=\left(m-\dfrac{1}{2}\right) \dfrac{l\lambda}{d} \hspace{2mm}の位置で弱め合い（{\bf 暗線}）
+%\end{eqnarray*}
+
+
+%\begin{wrapfigure}[8]{r}[5mm]{60mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=60mm]
+%  {text_p67_fig1.png}
+%\end{wrapfigure}
+
+%\begin{figure}[h]
+%\begin{center}
+%\includegraphics[width=120mm]{text_p56_fig1.png}
+%\end{center}
+%\end{figure}
+
+\end{document}

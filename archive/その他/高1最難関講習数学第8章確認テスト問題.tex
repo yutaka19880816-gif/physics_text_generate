@@ -1,0 +1,118 @@
+\documentclass[b5paper]{jsarticle}
+
+\setlength{\columnseprule}{0.4pt}
+\setlength{\oddsidemargin}{-5mm}
+\setlength{\topmargin}{-20mm}
+\setlength{\textwidth}{140mm}
+\setlength{\textheight}{220mm}
+%\pagestyle{empty}
+%\usepackage{amsmath}
+\special{papersize=\the\paperwidth,\the\paperheight}
+
+
+
+\usepackage[dvipdfmx,hiresbb]{graphicx}
+\usepackage{amsmath,amssymb}
+%\usepackage{fancybox}
+ \usepackage{ascmac}
+ \usepackage{multicol}
+ \usepackage{multicol,multienum}
+ \usepackage{latexsym}
+  \usepackage{wrapfig}
+  
+\begin{document}
+\newcounter{nombre} %必須
+\renewcommand{\thenombre}{\arabic{nombre}} %任意
+\setcounter{nombre}{0} %任意
+
+\newcommand{\toi}[1][]{\refstepcounter{nombre}#1\fbox{\large\makebox[1ex]{\textbf{\thenombre}}} \hspace{1mm}}
+
+\newcommand{\MARU}[1]{{\ooalign{\hfil#1\/\hfil\crcr\raise.167ex\hbox{\mathhexbox20D}}}}
+
+\def\heiko{\mathrel{\raise.3ex\hbox{\scalebox{.7}{%
+    \rotatebox[origin=c]{-7}{/}%
+    \kern-.35em\rotatebox[origin=c]{-7}{/}}}}}%
+
+
+
+
+\vspace*{\stretch{1}}
+	\begin{flushleft}
+	\HUGE\textbf{4年\ 最難関講習\ 数学\\第8章「複素数と方程式」\\確認テスト}
+	\end{flushleft}
+
+	\begin{flushleft}
+	\LARGE\textbf{試験時間　30分}
+	\end{flushleft}
+\vspace{20mm}
+ 注意事項
+ 
+ \begin{description}
+\item[1]  この冊子の解答欄に解答を作成しなさい。
+\item[2] 計算式だけでなく途中過程や考え方を丁寧に記述しなさい。
+\end{description}
+
+
+
+\vspace{\stretch{2}}
+
+ \underline{\hspace{1cm}組\hspace{1cm}番\hspace{5mm}氏名\hspace{7cm}} \hspace{5mm}\underline{\hspace{2cm}点}
+\newpage
+\setcounter{nombre}{0} 
+\vspace{5mm}
+\toi%1
+
+次の方程式を解け．
+\begin{description}
+\item[(1)] $x^3-21x^2+128x-180=0$
+\item[(2)] $(x^2-2x)(x^2-2x-4)+4=0$
+\end{description}
+
+【解答欄】
+
+\newpage
+
+
+　
+
+
+\newpage
+\toi%2
+
+実数を係数とする3次方程式$x^3+ax^2+bx+3=0$が$1+\sqrt2 i$を解にもつ．
+\begin{description}
+\item[(1)] $a,b$の値を求めよ．
+\item[(2)]  他の2つの解を求めよ．
+\item[(3)] 3つの解を$\alpha ,\beta ,\gamma$とするとき，$\alpha^5+\beta^5+\gamma^5$の値を求めよ．
+\end{description}
+
+【解答欄】
+
+\newpage
+
+　
+
+
+\newpage
+\toi%3
+
+
+2次方程式$x^2+kx+k^2-2=0$の2解を$\alpha ,\beta$とする．
+\begin{description}
+\item[(1)] $\alpha^2+\beta^2=1$であるとき，$k$の値を求めよ．
+\item[(2)] $\alpha ,\beta$がともに正になるような$k$の範囲を求めよ．
+\item[(3)] $\alpha ,\beta$の少なくとも一つが正であるような$k$の範囲を求めよ．
+\end{description}
+
+【解答欄】
+
+\newpage
+
+
+　
+
+
+
+\newpage
+
+\end{document}

@@ -1,0 +1,228 @@
+--- physics_new18.tex (before)
++++ physics_new18.tex (after)
+@@ -1,4 +1,15 @@
+ \section{光の屈折と光波の干渉}
++% ロイドの鏡：光源Pに添字0を組み重ね，観測点Pと区別する（2026-09-14）．
++% 図の寸法を変えないため，添字はoverlayとして描く．
++\newsavebox{\nEighteenLloydBox}
++\newcommand{\nEighteenLloydFig}[4]{%
++\sbox{\nEighteenLloydBox}{\includegraphics[keepaspectratio,width=#1]{#2}}%
++\leavevmode\rlap{\usebox{\nEighteenLloydBox}}%
++\rlap{\raisebox{#4\ht\nEighteenLloydBox}[0pt][0pt]{%
++\hspace*{#3\wd\nEighteenLloydBox}{\tiny$0$}}}%
++\phantom{\usebox{\nEighteenLloydBox}}%
++}
++
+ 
+ % ===========================================================================
+ %  再編（2026-09-03）：第2章 波動 の第18回．
+@@ -216,11 +227,12 @@
+ \end{chuu}
+ \end{reidaiunit}
+ 
++\bsNeed{52mm} % 見出し14mm＋図に必要な38mmをまとめて確保（2026-09-14）
+ \subsection{屈折の法則の導出}
+ % 移設（2026-09-10）：この節の前半にあった「波面／平面波・球面波／ホイヘンスの原理／回折」は，
+ %   波動一般の性質なので第14回 14.7 へ図3枚（text_p118_fig1〜3）ごと移した。ここには
+ %   ホイヘンスの原理を光に適用して屈折の法則を導く部分だけを残してある（ChatGPT指摘・裏取り済み）。
+-\bsNeed{38mm}   % 図の実高 54mm（下余白16mmまでの食い込みは許容）
++% 必要高さの指定は見出しの前へ移した．
+ \begin{wrapfigure}[10]{r}[5mm]{90mm}
+   \centering
+   \vspace{-5mm}
+@@ -238,10 +250,7 @@
+ である．
+ これらの式より，
+ \[\dfrac{\overline{{\rm A}^\prime {\rm B}^\prime}}{\overline{{\rm AB} }} =\dfrac{\overline{{\rm AB}^\prime}\sin i }{ \overline{ {\rm AB}^\prime}\sin r} =\dfrac{c_1T}{c_2T}\]
+-となるので，
+-\[\dfrac{\sin i}{\sin r}=\dfrac{c_1}{c_2}\]
+-なる屈折の法則が成立する．
+-また，屈折の前後で波の振動数$f$は不変であるから，
++となる．屈折の前後で振動数$f$は不変なので，次の屈折の法則が得られる．
+ \[ \dfrac{\sin i}{\sin r}=\dfrac{c_1}{c_2}=\dfrac{c_1/f}{c_2/f}=\dfrac{\lambda_1}{\lambda_2}\]
+ となる．
+ 
+@@ -294,7 +303,7 @@
+ このとき，O点から距離が$x$[m]のP点について考えると，$d \ll l$であるなら${\rm S_1P}\mathbin{/\!/}{\rm MP}\mathbin{/\!/}{\rm S_2P}$であるとみなせるから，${\rm S_1}$から直線${\rm S_2P}$に下ろした垂線の足をHとすると$\overline{{\rm S_1P}}=\overline{{\rm HP}}$とみなせ，図の$\angle {\rm PMO}=\theta$とおくと，
+ \[ \overline{{\rm S_2P}} -\overline{{\rm S_1P}}\fallingdotseq \overline{{\rm S_2H}} \fallingdotseq d\sin \theta \]
+ と近似できる．
+-さらに$d\ll l$であるなら$|\theta | \ll 1$であるから，
++さらに中央付近の$|x|\ll l$では，$\tan\theta=x/l$より$|\theta|\ll 1$であるから，
+ \[ \overline{{\rm S_2P}} -\overline{{\rm S_1P}}\fallingdotseq \overline{{\rm S_2H}} \fallingdotseq d\sin \theta \fallingdotseq d\tan \theta =d\dfrac{x}{l}\]
+ と近似できる．
+ これと強め合い・弱め合いの条件式を組み合わせると，
+@@ -321,7 +330,7 @@
+ \hrulefill
+ 
+ 
+- \begin{matome}{ヤングの実験}
++ \begin{matome}{ヤングの実験（$d,|x|\ll l$）}
+  \hspace{3mm} 経路差$\overline{{\rm S_2P}} -\overline{{\rm S_1P}}\fallingdotseq \overline{{\rm S_2H}} \fallingdotseq d\sin \theta \fallingdotseq d\tan \theta =d\dfrac{x}{l}$\\
+  強め合い・弱め合いは${\rm S_1,S_2}$点の位相を考慮して決める．\\
+  スクリーン上には間隔$\Delta x=\dfrac{l\lambda}{d}$[m]で明線が並ぶ．
+@@ -386,7 +395,7 @@
+   \includegraphics[keepaspectratio,width=110mm]
+   {text2_p6_fig1.png}
+ \end{wrapfigure}
+- 2つの別の経路A,Bからやってきた光について考えよう．
++ 同じ振動数・振動方向をもつ，別の経路A,Bからの光を考える．図は等振幅の場合である．
+  このA,Bが右図(a)のように全く同一の波形でやってきて，いかなる瞬間でも同一変位で重なるとき，2つの波は完全に強め合う．
+  このように全く同一の波形がやってくる場合を，やってくる2つの波に{\bf 位相差がない}と表現する．
+  
+@@ -397,9 +406,9 @@
+  
+   \begin{matome}{強め合い・弱め合いの位相差による表現}
+ ・やってくる2つの波の位相差が$2m\pi$（ただし$m$は整数）のとき\\
+- \hspace{3mm} 2つの波は常に同一の変位をもつため，重なると強め合う．\\
++ \hspace{3mm} 2つの波は同位相で重なり，強め合う．\\
+ ・やってくる2つの波の位相差が$(2m-1)\pi$（ただし$m$は整数）のとき\\
+- \hspace{3mm} 2つの波は常に正負逆の変位をもつため，重なると打ち消し合い，弱め合う． 
++ \hspace{3mm} 2つの波は逆位相で重なり，弱め合う．等振幅なら完全に打ち消し合う． 
+  \end{matome}
+  
+  つまり，異なる経路をたどってやってくる波が強め合うか否かは2つの波の位相差によって決まる．
+@@ -417,10 +426,10 @@
+ 言い換えると，{\bf 経路差の部分が整数波長分のときは位相のずれがなく，整数波長分+半波長分のとき位相は} \mbox{\boldmath$\pi$} {\bf ずれる．}
+ 
+ \hspace{2mm}$\MARU{2}$\hspace{2mm} {\bf 反射による位相のずれ}\\
+- \hspace{3mm} 光波が屈折率の異なる媒質との境界面で反射するとき，
++ \hspace{3mm} 透明媒質へのほぼ垂直な入射では，次の基本則を用いる（全反射の位相変化は扱わない）．
+  \[{\bf 屈折率がより大きな媒質との境界面で反射するとき}\hspace{2mm} \Rightarrow \hspace{2mm} {\bf 反射により位相が}  \mbox{\boldmath$\pi$} {\bf ずれる}\]
+  \[{\bf 屈折率がより小さな媒質との境界面で反射するとき}\hspace{2mm} \Rightarrow \hspace{2mm} {\bf 反射しても位相はずれない}\]
+-ただし，屈折光はいかなる場合でも位相はずれない．
++この条件では，屈折の際に境界面で位相の飛びは生じない．
+  \end{matome}
+  
+  そして，この2つの原因に基づく位相差を全て足し合わせたときに，
+@@ -476,11 +485,11 @@
+   \includegraphics[keepaspectratio,width=60mm]
+   {text2_p8_fig2.png}
+ \end{wrapfigure}
+-ヤングの実験ではスクリーン上に明暗の縞模様ができると述べたが，実際にスクリーン上に作られる明暗縞は非常にぼやけたものになる．
+-これは，隣り合う明線と暗線との間は連続的に変化していくためで，明るさも連続的に変化していき，明瞭な明線は観測されない．
++ヤングの実験では明暗がなめらかに変化する干渉縞が得られ，明線と暗線を観測できる．
++多数のスリットをもつ回折格子では，強め合う方向の近くに光が集中し，より細く鋭い明線が得られる．
+ 
+ % 誤植訂正（2026-09-02）：「島」→「縞」．
+-一方，回折格子はヤングの実験と干渉の条件は非常に似ているものの，明暗がはっきりした縞を得ることができる．
++回折格子で明線が鋭くなる理由を考えよう．
+ ヤングの実験ではスリットは2つしかなかったが，回折格子はスリットを等間隔に並べたものである．
+ 図のように，間隔$d$[m]で多数の極めて狭い幅のスリット${\rm A_1,A_2,A_3} \cdots$が並んでおり，これに波長$\lambda$[m]の平行光線を当てる．
+ 各スリットを抜けた光は回折を起こして広がっていくが，回折格子から角度$\varphi$方向へ回折していく光について考える．
+@@ -688,9 +697,9 @@
+ \Mon{ロイドの鏡}
+ 
+ \begin{zuright}{66mm}
+-\hspace{1zw}波長$\lambda\U{m}$の単色光源$\mathrm{P}$，単スリット$\mathrm{S}$，鏡$\mathrm{M}$の三つを右図のように配置し，光源$\mathrm{P}$を点灯させてスリットから十分遠方の距離$L\U{m}$の位置にスクリーンを置くと，スクリーン上にはヤングの実験とほとんど同様な干渉縞が観測される．この実験に関して，$L\gg x$, $d$として以下の設問に答えよ．
+-\zusep
+-\includegraphics[keepaspectratio,width=66mm]{fig/ch25_p4_lloyd.png}
++\hspace{1zw}波長$\lambda\U{m}$の単色光源$\mathrm{P_0}$，単スリット$\mathrm{S}$，鏡$\mathrm{M}$の三つを右図のように配置し，光源$\mathrm{P_0}$を点灯させてスリットから十分遠方の距離$L\U{m}$の位置にスクリーンを置くと，スクリーン上にはヤングの実験とほとんど同様な干渉縞が観測される．この実験に関して，$L\gg x$, $d$として以下の設問に答えよ．
++\zusep
++\nEighteenLloydFig{66mm}{fig/ch25_p4_lloyd.png}{0.052}{0.478}
+ \end{zuright}
+ \begin{komon}
+ \ko{1} スクリーン上に干渉縞が観察されるのは，二つの経路でやってくる光が互いに強め合い・弱め合いを起こすためである．この二つの経路とはどのような経路か．
+@@ -751,8 +760,8 @@
+        \[\frac{2.0}{1.5}=1.33\cdots\fallingdotseq 1.3\Ans\]
+ \ko{4} 入射角を$\theta$，屈折角を$\varphi$とする．屈折の法則より，
+        \[\sin\varphi=2.0\sin\theta\]
+-       である．屈折光が存在せず全反射するためには，この値が1以上であればよいので，
+-       \[\sin\varphi=2.0\sin\theta\geqq 1\]
++       である．屈折角が存在せず全反射するためには，右辺が1より大きければよいので，
++       \[2.0\sin\theta>1\]
+        を満たす入射角$\theta$では全反射が起きる．よって，臨界角は
+        \[2.0\sin\theta=1\]
+        を満たす角であり，
+@@ -788,7 +797,7 @@
+ 
+ \MonN{45}{屈折の法則}\par\nopagebreak
+ \begin{sisin}
+-本問の場合は二つの境界面があるので，それぞれに対して屈折の法則を立てる必要がある．真空と媒質$\mathrm{B}$の間に対して直接，屈折の法則を立てることはできないことに注意．また，(2)については媒質$\mathrm{B}$の絶対屈折率を元に計算しよう．
++各境界面で屈折の法則を立てる．二つの境界面は平行なので，中間の角度を消去して媒質$\mathrm{B}$中と真空中の角度を直接関係づけられる．ただし，途中で全反射しない条件は別に必要である．(2)は媒質$\mathrm{B}$の絶対屈折率から求める．
+ 
+ (3)については，媒質$\mathrm{B}$と$\mathrm{A}$の境界面に対する入射角および媒質$\mathrm{A}$中への屈折角を適当な文字で置き，(1)と同様に二つの屈折の法則の式を立てて考える．真空中へ出ていかないための条件式はもちろんだが，媒質$\mathrm{B}$よりも媒質$\mathrm{A}$の屈折率の方が小さいから，入射角によっては媒質$\mathrm{A}$, $\mathrm{B}$の境界面で全反射が起こりうる．よって，媒質$\mathrm{A}$の中に屈折光が存在するための条件も考える必要があることに注意．
+ \end{sisin}
+@@ -808,13 +817,13 @@
+        であり，
+        \[\sin\alpha=n_\mathrm{B}\sin\theta\]
+        となる．光が媒質$\mathrm{A}$と真空との境界面ですべて反射されて全反射になるためには，この式を満たす角度$\alpha$が存在しなければよいので，
+-       \[n_\mathrm{B}\sin\theta\geqq 1\]
++       \[n_\mathrm{B}\sin\theta>1\]
+        であればよい．また，少なくとも媒質$\mathrm{A}$の中に進まなければ媒質$\mathrm{A}$と真空との間の全反射を考えることができないので，媒質$\mathrm{A}$中へ光が進むために角度$\varphi$が存在することが必要である．ゆえに，
+        \[\sin\varphi=\frac{n_\mathrm{B}}{n_\mathrm{A}}\sin\theta<1\]
+        が必要である．以上2式を整理して，
+-       \[\frac{1}{n_\mathrm{B}}\leqq\sin\theta<\frac{n_\mathrm{A}}{n_\mathrm{B}}\]
++       \[\frac{1}{n_\mathrm{B}}<\sin\theta<\frac{n_\mathrm{A}}{n_\mathrm{B}}\]
+        であるから，(1)の値を代入して，
+-       \[\frac{\sqrt{3}}{3}\leqq\sin\theta<\frac{\sqrt{2}}{2}\Ans\]
++       \[\frac{\sqrt{3}}{3}<\sin\theta<\frac{\sqrt{2}}{2}\Ans\]
+ \end{komon}
+ 
+ \MonN{46}{水中の光源を隠す円板の半径}\par\nopagebreak
+@@ -826,9 +835,9 @@
+ \ko{1} 角度$\varphi$方向に光源から出た光は水面に対して入射角$\varphi$で入射する．これが空気中へ屈折角$\theta$で出ていったとすると，空気と水との境界面において屈折の法則より，
+        \[\sin\theta=n\sin\varphi\]
+        が成り立つ．屈折角$\theta$が存在しなければ全反射が起こるので，
+-       \[\sin\theta=n\sin\varphi\geqq 1\]
++       \[n\sin\varphi>1\]
+        であればよい．よって，
+-       \[\sin\varphi\geqq\frac{1}{n}\Ans\]
++       \[\sin\varphi>\frac{1}{n}\Ans\]
+ \ko{2} 逆に，$\sin\varphi_0=\dfrac{1}{n}$を満たす角度$\varphi_0$よりも小さい角度$\varphi$の範囲では屈折光が空気中へと出てしまうので，この部分を円板で覆い隠せばよい．
+        \begin{center}\includegraphics[keepaspectratio,width=62mm]{fig/ch18_p45_disk_ans.png}\end{center}
+        ゆえに，
+@@ -858,16 +867,15 @@
+        である．これを整理して，
+        \[\sin^2\theta_1+n_2^2\sin^2\theta_4=n_1^2\Ans\]
+ \ko{4} $\mathrm{O_2}$点で全反射を起こせば反射角$\theta_3$で円柱\MARU{1}内に跳ね返り，その後，角度$\theta_3$での全反射を繰り返していく．$\mathrm{O_2}$点で全反射を起こすためには$\theta_4$が存在しなければよいので，(3)式を変形して
+-       \[\sin^2\theta_4=\frac{1}{n_2^2}\left(n_1^2-\sin^2\theta_1\right)\geqq 1\]
++       \[\frac{1}{n_2^2}\left(n_1^2-\sin^2\theta_1\right)>1\]
+        であればよい．これより，
+-       \[n_2\leqq\sqrt{n_1^2-\sin^2\theta_1}\]
+-       \[\Leftrightarrow\ n_1\geqq\sqrt{n_2^2+\sin^2\theta_1}\Ans\]
+-\ko{5} 円柱\MARU{1}の端面から入射したすべての光が反射を繰り返して伝わっていくには，(4)で求めた不等号がすべての入射角$\theta_1$に対して成立すればよい．
+-
+-       $0\leqq\sin\theta_1\leqq 1$であることに注意すると，(4)の条件式が必ず満たされるためには$\sin\theta_1=1$のときに(4)の不等号が成立すればよいので
+-       \[n_2\leqq\sqrt{n_1^2-1}\]
+-       であればよい．これを整理して，
++       \[n_2<\sqrt{n_1^2-\sin^2\theta_1}\]
++       \[\Leftrightarrow\ n_1>\sqrt{n_2^2+\sin^2\theta_1}\Ans\]
++\ko{5} 端面から内部へ入る光は$0\leqq\theta_1<90^\circ$なので，$0\leqq\sin^2\theta_1<1$である．(4)を変形した
++       \[n_1^2-n_2^2>\sin^2\theta_1\]
++       がすべての入射光で成立するための条件は，
+        \[n_1^2-n_2^2\geqq 1\Ans\]
++       である．左辺が1でも右辺は必ず1未満なので成立する．左辺が1未満なら，$\theta_1$を$90^\circ$に近づけたとき成立しなくなる．
+ \end{komon}
+ \begin{chuu}
+ $\mathrm{O_1}$点での屈折では屈折率の大きいものへ波が進行するため，必ず屈折光が存在し，全反射はしない．
+@@ -929,7 +937,7 @@
+ 
+ \MonN{49}{光学的距離}\par\nopagebreak
+ \begin{sisin}
+-ヤングの実験と，前問のタイプの光路差とを組み合わせた問題である．それぞれの原因によって生じる光路差を別々に求めておき，それらを足し合わせることによって全経路の光路差を求め，それが真空中での1波長の整数倍となるか否かで，強め合い・弱め合いを判定する．(2)では$\mathrm{G}$内部の光路長$nD\U{m}$を光路差としないように注意せよ．
++ヤングの実験の経路差と，ガラスによる追加の光路差を組み合わせた問題である．それぞれの原因によって生じる光路差を別々に求めておき，それらを足し合わせることによって全経路の光路差を求め，それが真空中での1波長の整数倍となるか否かで，強め合い・弱め合いを判定する．(2)では$\mathrm{G}$内部の光路長$nD\U{m}$を光路差としないように注意せよ．
+ \end{sisin}
+ \KaiHead
+ \begin{komon}
+@@ -985,10 +993,10 @@
+ \KaiHead
+ \begin{komon}
+ \ko{1} 点$\mathrm{P}$には，スリット$\mathrm{S}$から直接やってくる光と，いったん鏡$\mathrm{M}$によって反射してから$\mathrm{P}$にやってくる光の二つが重なり合って，干渉を起こす．
+-       \begin{center}\includegraphics[keepaspectratio,width=68mm]{fig/ch25_a49_1.png}\end{center}
++       \begin{center}\nEighteenLloydFig{68mm}{fig/ch25_a49_1.png}{0.104}{0.499}\end{center}
+        \hspace*{\fill}\Ans
+ \ko{2} (1)の図において，$\mathrm{S}$から$\mathrm{M}$へ向かう光の経路を$\mathrm{M}$に対して折り返す．反射の法則より$\mathrm{S\to M}$の経路と$\mathrm{M\to P}$の経路は同じ傾きになっているので，$\mathrm{M}$に対して$\mathrm{S\to M}$の経路を折り返すとまっすぐな直線$\mathrm{S'P}$になる．
+-       \begin{center}\includegraphics[keepaspectratio,width=68mm]{fig/ch25_a49_2.png}\end{center}
++       \begin{center}\nEighteenLloydFig{68mm}{fig/ch25_a49_2.png}{0.054}{0.568}\end{center}
+        \hspace{1zw}二つの光の経路差は，
+        \[\begin{aligned}
+          &(\overline{\mathrm{SA}}+\overline{\mathrm{AP}})-\overline{\mathrm{SP}}\\
+@@ -997,7 +1005,7 @@
+        \end{aligned}\]
+        であり，$\overline{\mathrm{S'P}}-\overline{\mathrm{SP}}$はスリット間隔が$2d\U{m}$のヤングの実験と同様にして求めることができるので，経路差は一次近似を用いて
+        \[\overline{\mathrm{S'P}}-\overline{\mathrm{SP}}\fallingdotseq 2d\frac{x}{L}\U{m}\Ans\]
+-\ko{3} この光の二つの経路について，反射は$\mathrm{A}$点のみで起こっており，この反射は空気から鏡にぶつかっての反射であるから位相が$\pi$ずれる．よって，経路差によってさらに$\pi$のずれが生じるとき，すなわち経路差が1波長の整数倍＋半波長になっているときに$\mathrm{P}$点で二つの光が強め合う．よって強め合うのは，
++\ko{3} この光の二つの経路について，反射は$\mathrm{A}$点のみで起こっており，本問では鏡での反射により位相が$\pi$ずれるものとして扱う．よって，経路差によってさらに$\pi$のずれが生じるとき，すなわち経路差が1波長の整数倍＋半波長になっているときに$\mathrm{P}$点で二つの光が強め合う．よって強め合うのは，
+        \[2d\frac{x}{L}=i\lambda+\frac{\lambda}{2}\quad(i\,は整数値)\]
+        の条件が満たされるときである．これより，強め合う座標は，
+        \[x=\frac{L\lambda}{4d}(2i+1)\quad(i\,は整数値)\]

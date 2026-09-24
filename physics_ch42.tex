@@ -1,0 +1,151 @@
+\begin{center}
+{\Huge \bf 第5章　原子物理}
+\end{center}
+
+\section{光電効果(1)}
+
+\subsection{ミリカンの実験}
+%トムソンの実験により，原子の比電荷$\dfrac{e}{m}$が実験的に得られたが，このうち$e$，$m$のいずれか一方が他の実験から分かれば両方の値を知ることができる．
+ミリカンは，帯電させた油滴を電場をかけた空気中で上下運動させることによって，電気素量$e$の値を決定することに成功した．
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=120mm]{text2_p94_fig1.png}
+\end{center}
+\end{figure}
+
+上図はその実験装置である．
+油を霧吹きで拡散して霧状にすると，その一部が小さい穴Pを通して下の部屋へと落ちてくる．
+下の部屋には軽くX線が照射されて空気が少し電離しており，このイオンに触れた油滴は帯電する．
+この油滴には重力，空気の粘性抵抗が作用するため，これらの力がつり合って一定の速度で落下する．
+油滴の半径を$r$[m]，密度を$\rho [{\rm kg/m^3}]$，一定となったときの速度を$v_1$[m/s]，空気の粘性係数$\eta [{\rm kg/m\cdot s}]$とすると，油滴の質量は$\dfrac{4}{3}\pi \rho r^3$[kg]，粘性係数は$6\pi \eta rv_1$[N]で与えられることが知られているので，つり合いの式は，
+\[\dfrac{4}{3}\pi \rho r^3 g=6\pi \eta rv_1\]
+となる．
+
+次に，下の部屋に下向きに強さ$E$[N/C]の電場をかけると油滴は電場から力を受け，今度は上向きに運動させることができる．
+上向きに運動するようになると粘性抵抗は下向きに作用するようになり，力がつり合って一定の速度で上昇するようになる．
+油滴の帯電量を$-q$[C]，一定となったときの上昇速度を$v_2$[m/s]とすると，力のつり合いの式は，
+\[\dfrac{4}{3}\pi \rho r^3 g+6\pi \eta rv_2=qE\]
+となる．
+これら2つの式から測定が難しい$r$を消去して$q$を求めれば，
+\[q=\dfrac{9\pi (v_1+v_2)}{E}\sqrt{\dfrac{2\eta^3 v_1}{\rho g}} \hspace{2mm} [{\rm C}]\]
+となり，この式から油滴の電荷が計算される．
+こうして油滴の電荷を実際に測定したところ，電荷は必ずある一定値の整数倍になっていることがわかった．
+このことから，電気素量が，
+\[e\fallingdotseq 1.60\times 10^{-19} \hspace{2mm} [{\rm C}]\]
+であることが実験的に得られた．
+
+\subsection{光電効果}
+\begin{wrapfigure}[4]{r}[5mm]{60mm}
+  \centering
+  \vspace{-10mm}
+  \includegraphics[keepaspectratio,width=40mm]
+  {text2_p95_fig1.png}
+\end{wrapfigure}
+
+金属に比較的波長の短い電磁波（光や紫外線など）を照射すると，金属表面から電子が飛び出す．
+この現象を{\bf 光電効果}といい，飛び出した電子のことを{\bf 光電子}と呼ぶ．
+この現象を調べるうちに，以下のような特徴があることがわかった．
+
+
+\begin{matome}{光電効果の特徴}
+\begin{description}
+\item[\MARU{1}] 当てる光の振動数$\nu$[Hz]（ニュー）が，金属の種類に固有な値（{\bf 光電子限界振動数}\mbox{\boldmath$\nu_0$}{\bf Hz}）より小さい場合には，どんなに光量が多くても（光が強くても）電子は出ない．
+\item[\MARU{2}] 逆に，$\nu >\nu_0$のときには光量が少なくても，ただちに電子が放出される．
+\item[\MARU{3}] 飛び出す電子の運動エネルギーの大きさは様々な値をとるが，その{\bf 最大値}\mbox{\boldmath$K_{\rm max}$}{\bf [J]は振動数}\mbox{\boldmath$\nu$}{\bf [Hz]に対して一意的に決まる．}
+\item[\MARU{4}] 当てる光の振動数$\nu$を大きくしていくと，$K_{\rm max}$は大きくなる．
+\item[\MARU{5}] $\nu$が一定のときは，光量を多くしても$K_{\rm max}$は変化しない．
+\end{description}
+\end{matome}
+
+\begin{wrapfigure}[10]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text2_p95_fig2.png}
+\end{wrapfigure}
+
+金属内にある自由電子は金属イオンから引力を受けて束縛されている．
+そのため，金属内から自由電子を飛び出させるためには，この引力を振り切るだけの仕事（エネルギー）を与えてやる必要がある．
+このエネルギーの最小値をその金属の{\bf 仕事関数}\mbox{\boldmath$W$}という．
+（ただし，金属表面から電子を取り出す場合と，金属内部から電子を取り出す場合とでは明らかに必要なエネルギーが異なるので，{\bf 金属表面から電子を飛び出させるのに必要なエネルギーを仕事関数}\mbox{\boldmath$W$}{\bf とする．}）
+
+さて，$\MARU{1}〜\MARU{5}$の現象は，光を波動だと考えるとうまく説明することはできない．
+波動のエネルギーはその振幅$A$の2乗，振動数$\nu$の2乗に比例するので，$\nu <\nu_0$であっても光の強さ，すなわち振幅$A$を大きくすれば電子は仕事関数$W$分のエネルギーをもらって飛び出すことができるはずである．
+
+そこでアインシュタインは，{\bf 光を振動数に比例するエネルギーを持つ粒のようなもの（これを光子（光量子）と呼ぶ）だと考える}ことにより，この光電効果を説明することに成功した．
+
+\begin{matome}{光量子説}
+ \hspace{3mm} 振動数$\nu$[Hz]，波長$\lambda$[m]，光速$c$[m/s]の光は，一つあたり
+ \[\mbox{\boldmath$E=h\nu=\dfrac{hc}{\lambda}$} \hspace{2mm}{\bf  [{\rm J}]のエネルギー}\hspace{10mm}\mbox{\boldmath$p=\dfrac{h\nu}{c}=\dfrac{h}{\lambda}$}\hspace{2mm}{\bf [kg\cdot m/s] の運動量}\]
+ \hspace{3mm} を持つ光子の流れである．
+ ただし，$h$は{\bf プランク定数}と呼ばれる比例定数で，
+ \[\mbox{\boldmath$h\fallingdotseq 6.626\times 10^{-34} $}  {\bf [J\cdot s] } \]
+ \end{matome}
+ 
+ このように考えると，光電効果の特徴$\MARU{1}〜\MARU{5}$は，次のように説明できる．
+ 
+ \begin{description}
+\item[\MARU{1}] エネルギーは，{\bf 光子1個と電子1個との間でやりとりされる}．$h\nu <W$となる振動数$\nu$ではどんなにたくさん光子があっても，一つ一つの光子の持つエネルギーは仕事関数$W$より小さいため，電子は金属の外に飛び出ることはできない．$W=h\nu_0$のようにおけば，$\nu <\nu_0$のときは電子は決して出ない．
+\item[\MARU{2}] 逆に，$h\nu >W$，すなわち$\nu >\nu_0$であれば，光量$（=光子の数）$が少なくてもただちに電子が放出される．（ただし，光子が少なければ飛び散る電子も少なくなる．）
+\item[\MARU{3}] エネルギー保存則を考えると，光電子の持つ運動エネルギーを$K$，電子を飛び出させるのに必要なエネルギーを$\Delta U$とすれば，
+\[ h\nu =\Delta U+K\]
+となるが，電子を金属のどこから叩き出すかによって$K$は変わるため，出てくる運動エネルギーは様々な値をとる．$K$が最大値をとるのは$\Delta U$が最小のときで，それは電子を表面から叩き出すときである．このときの$\Delta U$が仕事関数$W$である．このときのエネルギー保存則は，
+\[ h\nu =K_{\rm max} +W\]
+であるから，$K_{\rm max}$は光の振動数$\nu$に対して一意的に決まり，光量に依らない．
+\item[\MARU{4}] $h\nu=K_{\rm max}+W$の式から，$\nu$が大きくなれば明らかに$K_{\rm max}$も大きくなる．
+\item[\MARU{5}] 光量を多くしてもエネルギーのやり取りは光子1個と電子1個の間で行われるから，光子がたくさんあっても$K_{\rm max}$は変わらない．
+\end{description}
+特に，$\MARU{3}$で述べた，光電子の最大運動エネルギー$K_{\rm max}$を決めるエネルギー保存則の式は重要である．
+
+\begin{matome}{光電効果におけるエネルギー保存則}
+ \hspace{3mm} 金属表面から電子が飛び出すときが最大運動エネルギーを持つときであり，このとき，
+ \[ h\nu =K_{\rm max} +W\]
+ \hspace{3mm} が成立する．
+ \end{matome}
+ 
+ 
+ \newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p56.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p57.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p175_2.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p176.png}
+\vspace{150mm}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob2_p177_1.png}
+\vspace{150mm}
+\end{center}
+\end{figure}

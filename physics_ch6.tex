@@ -1,0 +1,248 @@
+\section{運動量と力積}
+
+\subsection{運動量と力積}
+
+\begin{wrapfigure}[7]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=60mm]
+  {text_p29_fig1.png}
+\end{wrapfigure}
+
+物体間の衝突を扱うのには{\bf 運動量}と{\bf 力積}を用いて考える．
+
+物体に一定の力$F$\hspace{1mm}[N]が作用し，時間$\Delta t$\hspace{1mm}[s]の間に速度が$v_0$\hspace{1mm}[m/s]から$v$\hspace{1mm}[m/s]に変化するときについて考える．
+このとき，加速度は$a=\dfrac{v-v_0}{\Delta t}$であるから，運動方程式$ma=F$にこれを代入して変形すると，
+\[ mv-mv_0=F\Delta t \]
+が成立する．
+ここで，左辺に出てくる\mbox{\boldmath $（質量）\times （速度）$}を\mbox{\boldmath $運動量p$}と定義し，右辺に出てくる\mbox{\boldmath $（力）\times （時間）$}を\mbox{\boldmath $力積I$}と定義する．
+このとき，上の式は
+\[ p-p_0=I\]
+と書き換えられるので，{\bf 運動量の変化はその間に物体が受けた力積に等しい}ということが言える．
+
+運動量$p$は物体の勢いを表す物理量である．
+
+また，運動量の定義式を時間微分すると，
+\[ \dfrac{dp}{dt}=m\dfrac{dv}{dt}=ma\]
+となるが，運動の第二法則より$ma=F$が成立するので，結局，運動量の時間微分はその物体が受ける力に等しいということが言える．
+
+また，速度はベクトル量であるから{\bf 運動量もベクトル量}であり，これを$\overrightarrow{p}$で表す．
+また，力はベクトル量であるから{\bf 力積もベクトル量}であり，これを$\overrightarrow{I}$で表す．
+
+なお，力積$I=F\Delta t\hspace{1mm} [N・s]$の単位[N・s]は運動量の単位[kg・m/s]と一致している．
+
+\begin{wrapfigure}[7]{r}[5mm]{50mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=50mm]
+  {text_p29_fig2.png}
+\end{wrapfigure}
+また多くの場合，物体に作用する力$F$\hspace{1mm}[N]は時々刻々と変化する．
+このような場合は，力が作用する時間を微小時間$\Delta t$\hspace{1mm}[s]ごとに分割して，その間に作用する力積を求め，それらを足し合わせることにより全力積を計算すれば良い．すなわち，
+\[ I=\int^{t_2}_{t_1}Fdt\]
+により力積が求められる．
+
+\begin{matome}{運動量と力積}
+ \hspace{5mm} 運動量\hspace {10mm}$p=mv$\hspace{1mm}[kg・m/s]\\
+ \hspace{5mm} 力積\hspace {13mm}$I=F\Delta t$\hspace{1mm}[N・s]（ただし力$F$が一定の場合）\\
+ \hspace{5mm} 運動量と力積の関係\hspace {5mm}$\Delta p=p-p_0=I$
+ \end{matome}
+
+ \ 
+ \newpage
+%\begin{breakbox}
+%\ex＜運動量と力積＞\\
+%\begin{wrapfigure}[5]{r}[5mm]{60mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=50mm]
+%  {text_p30_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}質量$m$[kg] のボールが速さ$v_0$[m/s]で飛んできたときについて以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] このボールを図のようにバットで逆向きに速さ$v_1$[m/s]で打ち返すためにはどの向きにどれだけの大きさの力積を加えればよいか．
+%\item[(2)] このボールを図のように$90^\circ$方向を変えて速さ$v_1$[m/s]で飛ばすためにはどの向きにどれだけの大きさの力積を加えればよいか．
+%\item[(3)] (1)において，ボールとバットの接触時間が$\Delta t$[s]であった．接触時間内にバットがボールに作用した平均の力の大きさ$\overline{F}$[N]を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+ \ 
+ 
+\subsection{直線上での運動量保存則}
+
+\begin{wrapfigure}[15]{r}[5mm]{60mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=58mm]
+  {text_p30_fig2.png}
+\end{wrapfigure}
+
+摩擦のない床面の上を一直線上で運動する$m_1$[kg]の物体と質量$m_2$[kg]の物体とが，速度$v_1$[m/s]，$v_2$[m/s]で衝突し，その結果，速度が$v_1'$[m/s]および$v_2'$[m/s]になったとする．
+
+
+衝突中，2つの物体は互いに力を及ぼし合うが，作用・反作用の法則から同じ大きさで逆向きの力が各物体に作用する．
+そこで衝突中に各物体に作用する力の大きさを$F$[N]，衝突時間を$\Delta t$とし，運動量変化と力積の関係式を，右向きを正として立てると，
+\begin{eqnarray*}
+m_1v_1'-m_1v_1&=&(-F)\Delta t\\
+m_2v_2'-m_2v_2&=&F\Delta t
+\end{eqnarray*}
+
+これらより$m_1v_1'-m_1v_1+m_2v_2'-m_2v_2=0$となるが，これを変形して
+\[ m_1v_1+m_2v_2=m_1v_1'+m_2v_2' \]
+
+この式は{\bf 衝突前後で全運動量が保存される}ことを意味する．
+これを{\bf 運動量保存則}という．
+
+全運動量が保存されるのは，着目する2つの物体に作用する力が，互いに及ぼし合う力のみであり，これ以外に別の力が外から作用していないためである．
+存在する物体のうち，着目している物体の範囲を「系」という．
+その系の内部で互いにやり取りされ，系の内部に作用・反作用の対が存在する力を内力といい，系の外部から作用し，系の内部には作用・反作用の片方しか存在しない力を外力という．
+これらの言葉を用いて言い換えると，{\bf ある系に外力が作用しないとき，その系の全運動量が保存される}．
+
+ \ 
+ 
+\begin{matome}{運動量保存則}
+
+\hspace{5mm}物体系のある方向について，外力が作用せず，内力のみしか作用していない場合はその方向の全運動量が保存される．
+特に2物体の場合は，
+\[m_1v_1+m_2v_2=m_1v_1'+m_2v_2'\]
+ \end{matome}
+
+
+% \ 
+ 
+ {\bf 衝突，分裂，合体}などは内力のみしか作用しない典型である．
+
+%\begin{breakbox}
+%\ex＜運動量保存則＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{50mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=40mm]
+%  {text_p31_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}質量$m_1,m_2$[kg]のおもりA,Bをそれぞれ長さ$l$[m]の糸に取り付け，これを図のように天井からつるした．
+%質量$m_1$[kg]のおもりを角度$\theta _0$の位置まで持ち上げてそっと手を離したところ，2つの物体は衝突し，一体となってある高さまで上昇したとする．
+%これについて以下の問いに答えよ．
+%ただし重力加速度の大きさを$g {\rm [m/s^2]}$とする．
+%\begin{description}
+%\item[(1)] 2つのおもりが衝突する直前のAの速さ$v_1$[m/s]を求めよ．
+%\item[(2)] 2つのおもりが衝突した直後の一体となったおもりのもつ速さ$V$[m/s]を求めよ．
+%\item[(3)] 衝突前後で力学的エネルギーは保存するか．もし保存しないのならその変化量$\Delta E$[J]を求めよ．
+%\end{description}
+%
+%\end{breakbox}
+
+\newpage
+\subsection{平面上での運動量保存則}
+
+\begin{wrapfigure}[7]{r}[5mm]{80mm}
+  \centering
+  \vspace{-5mm}
+  \includegraphics[keepaspectratio,width=80mm]
+  {text_p31_fig2.png}
+\end{wrapfigure}
+
+前節で考えた運動量保存則は一直線上についてのものだが，二次元平面内において斜めに物体が衝突する場合についても同様の運動量保存則を考える．
+
+図のように，摩擦のない床面の上を質量$m_1,m_2$[kg]の物体が，それぞれ速度ベクトル$\overrightarrow{v_1 \mathstrut},\overrightarrow{v_2 \mathstrut}$[m/s]で衝突し，その結果，速度ベクトルが$\overrightarrow{v_1' \mathstrut},\overrightarrow{v_2' \mathstrut}$[m/s]になったとする．
+
+この2つのの物体に外力が作用しなければ，やはりこの系についても運動量が保存されるが，運動量はベクトルであるから，{\bf 衝突前後で運動量ベクトルの総和が保存される}．すなわち，
+\[ m_1\overrightarrow{v_1 \mathstrut}+m_2\overrightarrow{v_2 \mathstrut}=m_1\overrightarrow{v_1' \mathstrut}+m_2\overrightarrow{v_2' \mathstrut} \]
+が成立する．
+また，図のように$x,y$軸をとって成分分解して考えると，\mbox{\boldmath $x軸方向，y軸方向それぞれの運動量が保存される$}から，
+\begin{eqnarray*}
+m_1v_{1x}+m_2v_{2x}=m_1v_{1x}'+m_2v_{2x}'\\
+m_1v_{1y}+m_2v_{2y}=m_1v_{1y}'+m_2v_{2y}'
+\end{eqnarray*}
+が同時に成立する．
+
+ \ 
+ 
+\begin{matome}{平面内での運動量保存則}
+
+外力が作用しない場合は平面内での斜衝突・分裂などにおいて運動量ベクトルの総和が保存
+\[ m_1\overrightarrow{v_1 \mathstrut}+m_2\overrightarrow{v_2 \mathstrut}=m_1\overrightarrow{v_1' \mathstrut}+m_2\overrightarrow{v_2' \mathstrut} \]
+ \end{matome}
+ 
+% \newpage
+% \begin{breakbox}
+%\ex＜斜衝突問題の成分分解による解法とベクトル作図による解法＞\\
+%\begin{wrapfigure}[7]{r}[5mm]{80mm}
+%  \centering
+%  \vspace{-5mm}
+%  \includegraphics[keepaspectratio,width=70mm]
+%  {text_p32_fig1.png}
+%\end{wrapfigure}
+%\hspace{5mm}摩擦のない床面に質量$M$[kg]の物体Bが静止しておかれている．
+%図のように$x,y$軸を設定し，Bの位置を原点にとる．
+%$-x$方向から質量$m$[kg]の物体Aを速さ$v_0$[m/s]で転がして物体Bにぶつけたところ，物体Aは物体Bを弾き飛ばして図の角度$\theta$の方向に速さ$v$[m/s]で転がっていったという．
+%これについて以下の問いに答えよ．
+%\begin{description}
+%\item[(1)] 弾き飛ばされた物体Bの速さを$V$[m/s]，その方向について図のように角度$\varphi$をとる．このとき，$x,y$各軸方向の運動量保存則の式をかけ．
+%\item[(2)] (1)より，物体Bの持つ速さ$V$を表せ．
+%\item[(3)] 衝突前の物体Aの運動量ベクトル$\overrightarrow{p_A \mathstrut}$[kg・m/s]，衝突後の物体A,Bの運動量ベクトル\\$\overrightarrow{p_A' \mathstrut},\overrightarrow{p_B' \mathstrut}$[kg・m/s]をそれぞれ作図し，これらのベクトルの間に成り立つ関係を図示せよ．
+%\item[(4)] (3)を元に，物体Bの持つ速さ$V$を表せ．
+%\end{description}
+%
+%\end{breakbox}
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p17.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p18.png}
+\vspace{5cm}
+\end{center}
+\end{figure}
+
+
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p85.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p86.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p87.png}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=170mm]{prob_p88_1.png}
+\end{center}
+\end{figure}
+
+
+\newpage
+　
+
+
+
+

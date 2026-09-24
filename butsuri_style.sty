@@ -1,0 +1,546 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% butsuri_style.sty  ---  入試物理基礎演習 紙面デザイン（墨1色＋グレー濃淡）
+%%   2026-08-30 v1／v2 作成，2026-08-31 v3（視覚階層の是正・穴埋め版）
+%%   2026-08-31 v4（問題文を独立した枠へ／タブの密着／練習N表記／解答の帯）
+%%
+%% ■ 設計原則（46章に展開するための3条）
+%%   1. 黒100%のべた面は「探すためのアンカー」＝番号バッジにだけ配給する．
+%%      語のラベル（KEY／解答／指針／A問題／まとめタイトル）は探す対象では
+%%      ないので，べたを使わない．
+%%      （v2では黒ベタを6つの役割に使い回しており，まとめ枠の黒タブは実測
+%%        198mm²＝小節見出しの実インク量 約35mm² の5〜6倍で階層が逆転していた）
+%%   2. 黒ベタチップは，必ず同じ行に自分より大きい文字を伴わせる．単独で置くと
+%%      その行が紙面の最強点になる．
+%%   3. 白抜き文字は黒ベタ地の上でだけ使う．中間調（0.85／0.92）の地に白抜きは
+%%      置かない（コピー2世代で潰れる）．
+%%
+%% ■ 罫の太さは4種類に固定する（これ以上増やさない）
+%%     2.5pt … 解答編の回タイトル下（章に1回・文書中の最太罫）
+%%     1.2pt … \section 下（左20mmだけ3.0ptの段差付き）／例題ユニットの上下／
+%%             A・B・C問題の下
+%%     0.5pt … \subsection 下／KEY の上下／指針・まとめタブの枠
+%%     0.4pt … 練習Nの下／別解・注の右罫
+%%   新しい役割が出たら太さを増やさず，罫・枠・地・字下げのどれかを変える．
+%%
+%% ■ 役割と表現
+%%   まとめ・公式  … グレー0.92の塗り箱（文書で唯一の「塗り」）＋白地・0.5pt枠の
+%%                   タブを箱の上辺に密着させる
+%%   例題ユニット  … 上下を1.2pt全幅罫で挟み，中身を丸ごと1zw字下げ
+%%                   （罫は改ページで消えるが字下げは消えないので内外が判る）
+%%   例題の問題文  … 0.5ptの枠だけの箱（塗りなし）．指針以降はこの枠の外に置く
+%%                   ＝「どこまでが問題文か」を枠で示す
+%%   KEY           … 0.5ptの罫で上下を挟んだ1行．ラベルは地も枠も無し
+%%   指針          … 白抜き枠タイル（罫なし）＋本文をさらに1zw字下げ
+%%   解答          … グレー0.85地タイル＋右へ伸びる0.5pt罫の「帯」
+%%   別解・注・参考… ▶見出し＋右へ伸びる0.4pt罫＋\small
+%%   練習問題      … 黒ベタの「練習 N」バッジ＋\largeのテーマ名＋下に0.4pt全幅罫
+%%   A/B/C問題     … \largeゴシック黒文字（黒ベタ廃止）＋下に1.2pt全幅罫
+%%
+%%   囲みは2種類だけ：まとめ＝塗りあり／例題の問題文＝塗りなし．
+%%   指針・KEY・解答・注は囲まない（囲みが3種類以上になると v1 の
+%%   「角丸 itembox が4つ並んで区別できない」状態に逆戻りする）．
+%%
+%% ■ 使い方（2行必要）
+%%    プリアンブル              : \usepackage{butsuri_style}
+%%                                （必ず \usepackage[dvipdfmx]{color} の後）
+%%    \begin{document} 後の
+%%    既存マクロ定義の直後      : \ButsuriApply
+%%
+%%    既存マクロ（\Rank \Mon \MonN reidai sisin key kaitou …）は本体の
+%%    \begin{document} の“後”で定義されているため，\renewcommand を
+%%    パッケージ読み込み時に実行できない．そこで再定義は \ButsuriApply に
+%%    まとめ，呼び出す位置を本体側に委ねている．
+%%
+%% ■ 穴埋め版（生徒用）
+%%    \bsAnaumetrue を \ButsuriApply より前に置くと，例題の解答が
+%%    「生徒が書き込む形」になる．完全版と組版の寸法が一致するのでページ送りが
+%%    揃い，「p.3の上から2つ目の式」と指示できる（授業では完全版を投影する）．
+%%      \Ana{式}            … 別行立ての式 → 同じ幅・高さの空欄（下線）
+%%      \AnaU{答え}         … 行内の答え・選択肢 → 同じ幅の下線だけ
+%%      \AnaFig{幅}{完全}{補助} … 解答図 → 答えを描き込む前の補助図
+%%    2026-09-14 追加（第18回から）：罫ではなく「記入できる四角枠」にする方式．
+%%      \AnaB{答え}  … 行内の語句／\AnaBD{答え} … 別行立ての式
+%%      枠は完全版・穴埋め版の両方に同じ大きさで出し，完全版は枠の中が赤字になる．
+%%      寸法を \ifbsAnaume の外で計算するので，両版の版面は構造的に一致する．
+%%    図は fig/○○_blank.png の名前で，完全版と同じ縦横比で作ること
+%%    （TikZ 側で答えの \draw を \path に替えると bbox が変わらない）．
+%%
+%% ■ 縦罫（左のバー）を使わない理由
+%%    左に縦罫を引く枠は framed の \MakeFramed で作れるが，framed は
+%%    multicols の中で残り高さの計算を誤り，段の途中で改段して大きな空白を
+%%    作る（実測：解答編が16→21ページに膨張した）．解答編は2段組なので，
+%%    縦罫に頼らない設計にしてある．framed を使うのは matome（1段組でしか
+%%    現れないまとめ枠）だけ．
+%%
+%% ■ tcolorbox は使っていない
+%%    framed + color だけで同じ意匠を組めたため，566ページの本体に新しい
+%%    依存を持ち込まずに済ませている．
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NeedsTeXFormat{pLaTeX2e}
+\ProvidesPackage{butsuri_style}[2026/08/31 v4 入試物理基礎演習 紙面デザイン]
+
+\RequirePackage{framed}
+% color は本体が \usepackage[dvipdfmx]{color} で読み込み済み．
+% ここで無指定の \RequirePackage{color} を書くとドライバが dvips.def に
+% 戻り，文書中の全画像が消える（既知の事故）ので絶対に書かない．
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  色（墨とグレーだけ）  %%%%%%%%%%%%%%%%%%%%%%%%
+% 塗りは2種類だけに固定する．0.92 より薄いとコピー機で飛び，0.5〜0.7 の広い面は
+% コピーでムラが出て上に載せた本文が読みにくくなる．
+\definecolor{bsAmi}{gray}{0.92}   % まとめ枠の地
+\definecolor{bsWaku}{gray}{0.25}  % まとめ枠の罫
+\definecolor{bsTile}{gray}{0.85}  % 解答の帯・指定問題のタイル
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  部品  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 黒ベタ・白抜きのチップ（番号バッジ専用．必ず隣に \large の文字を伴わせる）
+\newcommand{\bsChip}[1]{{\fboxsep=1.4pt\colorbox{black}{%
+  \textcolor{white}{\gtfamily\small\strut\,#1\,}}}}
+% 白抜き（枠だけ）のタイル … 指針
+\newcommand{\bsTileO}[1]{{\fboxsep=1.4pt\fboxrule=0.5pt\fbox{\gtfamily\small\strut\,#1\,}}}
+% グレー0.85地のタイル … 解答
+\newcommand{\bsTileG}[1]{{\fboxsep=1.4pt\colorbox{bsTile}{\gtfamily\small\strut\,#1\,}}}
+
+% 見出しの右へ伸びる罫（ベースラインより上に浮かせる）
+% height と depth の差が罫の太さになる．v2 の \bsFill は実測 1.14pt あり，
+% 「細罫」のつもりが例題の下罫(0.4pt)の3倍だった（\section より A問題 が
+% 強く見えた直接の原因）．太細を分けて明示する．
+\newcommand{\bsFillThin}{\nobreak\hspace{1.5mm}%
+  \leaders\hrule height 1.50mm depth -1.36mm\hfill\kern0pt}   % 0.14mm = 0.40pt
+\newcommand{\bsFillMid}{\nobreak\hspace{1.5mm}%
+  \leaders\hrule height 1.52mm depth -1.34mm\hfill\kern0pt}   % 0.18mm = 0.51pt
+\newcommand{\bsFillThick}{\nobreak\hspace{1.5mm}%
+  \leaders\hrule height 1.62mm depth -1.20mm\hfill\kern0pt}   % 0.42mm = 1.20pt
+
+% 全幅の罫（縦モードで呼ぶ）．\hrule と違い \linewidth に従うので，
+% 例題ユニットのように字下げされた文脈の中でもはみ出さない．
+\newcommand{\bsHR}[1]{%
+  \par\nobreak\nointerlineskip
+  \noindent\rule{\linewidth}{#1}%
+  \par\nobreak\nointerlineskip}
+
+% 見出しの直後で改ページ・改段させない（1回だけ効く）
+% list（komon など）の \@item は \if@nobreak が真なら \@nbitem を呼び，
+% ペナルティも \topsep も入れない（latex.ltx）．つまり \nobreak ではなく
+% \@nobreaktrue が効く．最初の段落／リストが始まった時点で元へ戻す．
+% （LaTeX の \@afterheading と同じ仕組みの簡易版）
+\newcommand{\bsKeepNext}{%
+  \@nobreaktrue
+  \everypar{\@nobreakfalse\clubpenalty=\@M\everypar{}}}
+
+% \subsection の番号の前に出す黒縦バー
+% \@seccntformat は \@sect の中で \protected@edef\@svsec{...} により“展開”される．
+% そのため \def や未定義マクロとの \ifx をこの中に書くと Undefined control
+% sequence になる（実際に踏んだ）．展開しても安全なように，レベル名ごとの
+% マクロを \csname で引く形にしておく．
+\DeclareRobustCommand{\bsCntBar}{\raisebox{-0.55mm}{\rule{3.5pt}{3.6mm}}\hspace{1.8mm}}
+\@namedef{bs@cnt@section}{}
+\@namedef{bs@cnt@subsection}{\bsCntBar}
+
+% 幅を正しく縮める字下げ（\leftskip と違い \linewidth が追随するので
+% 中に minipage（zuright）や tabular を置いても はみ出さない）
+\newenvironment{bsIndent}[1]{%
+  \list{}{\setlength{\leftmargin}{#1}\setlength{\rightmargin}{0pt}%
+    \setlength{\labelwidth}{0pt}\setlength{\labelsep}{0pt}%
+    \setlength{\topsep}{0pt}\setlength{\partopsep}{0pt}%
+    \setlength{\parsep}{\parskip}\setlength{\itemsep}{0pt}%
+    \setlength{\listparindent}{1zw}}%
+  \item\relax}{\endlist}
+
+%%%%%%%%%%%%%%%%%%%%%%%%  1. 囲み箱（framed）  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{bsBox}{枠の太さ}{枠色}{地色} … \end{bsBox}
+%
+% 【重要】\MakeFramed は箱の前後に \addvspace{\OuterFrameSep} を入れる．
+%   \OuterFrameSep の既定は \topsep（jsarticle 10pt で約3mm）で，これが
+%   「タイトルタブと箱が離れて見える」原因だった．0pt にして自前で制御する．
+% 【重要】\FrameCommand は \fboxrule/\fboxsep を自分で設定しないと，
+%   \FrameRule/\FrameSep ではなく文書既定（0.4pt/3pt）が使われる．
+% リストの中でも幅が正しくなるよう framed.sty の snugshade と同じ
+% \@totalleftmargin 補正を入れてある（例題ユニットは1zw字下げの list の中）．
+% 【重要】箱が改ページを跨ぐときは，切れた側の罫を描かない（＝箱を閉じない）．
+%   framed.sty は \FirstFrameCommand / \MidFrameCommand / \LastFrameCommand を
+%   用意しているが，既定はどれも \FrameCommand（＝四方を閉じた箱）なので，
+%   そのままだとページの切れ目で箱が閉じてしまい「そこで例題が終わった」ように見える．
+%   上罫・下罫の太さを引数にした \bs@frame を作り，4つを描き分ける．
+\newcommand{\bs@frame}[3]{% #1=上罫の太さ #2=下罫の太さ #3=中身
+  \hskip\@totalleftmargin
+  {\fboxsep\z@ \fboxrule\z@
+   \vbox{%
+     \ifdim#1>\z@ {\color{\bs@fc}\hrule\@height#1}\fi
+     \hbox{%
+       {\color{\bs@fc}\vrule\@width\FrameRule}%
+       \colorbox{\bs@bg}{%
+         \vbox{\ifdim#1>\z@\vskip\FrameSep\fi
+               \hbox{\hskip\FrameSep#3\hskip\FrameSep}%
+               \ifdim#2>\z@\vskip\FrameSep\fi}}%
+       {\color{\bs@fc}\vrule\@width\FrameRule}}%
+     \ifdim#2>\z@ {\color{\bs@fc}\hrule\@height#2}\fi}}%
+  \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}
+\newenvironment{bsBox}[3]{%
+  \setlength{\FrameRule}{#1}\setlength{\FrameSep}{2.2mm}%
+  \setlength{\OuterFrameSep}{0pt}%
+  \def\bs@fc{#2}\def\bs@bg{#3}%
+  \def\FrameCommand##1{\bs@frame{\FrameRule}{\FrameRule}{##1}}%      % 分割なし＝四方閉じ
+  \def\FirstFrameCommand##1{\bs@frame{\FrameRule}{\z@}{##1}}%        % 先頭＝下を開ける
+  \def\MidFrameCommand##1{\bs@frame{\z@}{\z@}{##1}}%                 % 中間＝上下とも開ける
+  \def\LastFrameCommand##1{\bs@frame{\z@}{\FrameRule}{##1}}%         % 末尾＝上を開ける
+  \MakeFramed{\advance\hsize-\width
+    \@totalleftmargin\z@ \linewidth\hsize \@setminipage}%
+  \noindent\ignorespaces
+}{\par\unskip\@minipagefalse\endMakeFramed}
+
+%%%%%%%%%%%%%%%%%%%%  残り高さが足りなければ改ページする  %%%%%%%%%%%%%%%%%%%
+% \bsNeed{寸法} … 「見出し＋その直後の中身」が同じページに収まらないときに
+% 先に改ページする．\nobreak や \bsKeepNext は，直後に \filbreak や
+% \MakeFramed が入ると効かないので，高さを実測して判断する必要がある．
+% \pagetotal は材料がページ本体へ渡るまで更新されないので，先に
+% \par\penalty0 でページビルダを一度動かす（\AnswerBoxFill と同じ手）．
+% multicols の中では \pagegoal が \maxdimen なので，何もしない（＝安全）．
+\newcommand{\bsNeed}[1]{%
+  \par\penalty\z@
+  \begingroup
+    \dimen@=\pagegoal \advance\dimen@-\pagetotal
+    \ifdim\pagegoal=\maxdimen\else
+      \ifdim\dimen@<#1\relax \newpage \fi
+    \fi
+  \endgroup}
+
+%%%%%%%%%%%%%%%%%%%%%%%%  2. まとめ・公式（唯一の塗り箱）  %%%%%%%%%%%%%%%%%%%
+% \begin{matome}{圧力・物質量・温度・分子量} … \end{matome}
+% 角のない塗り箱．タブは白地＋0.5pt枠（黒ベタを使わない＝原則1）で，
+% 箱の上辺に密着させる（枠線1本分だけ重ねる）．
+% 0.92 の地に白いタブが抜けるので，黒を使わずにコントラストが立つ．
+% ※ 1段組でのみ使うこと（multicols の中では framed が段送りを壊す）
+\newenvironment{matome}[1]{%
+  \par\vspace{2.8mm}%
+  \bsNeed{24mm}%            % タブだけがページ末に取り残されるのを防ぐ
+  \noindent{\fboxsep=1.4pt\fboxrule=0.5pt\fbox{\gtfamily\small\strut\,#1\,}}%
+  \par\nointerlineskip\vskip-0.5pt\nobreak
+  \begin{bsBox}{0.5pt}{bsWaku}{bsAmi}\ignorespaces}%
+ {\end{bsBox}\vspace{2.8mm}}
+
+%%%%%%%%%%%%%%%%%%%%%%  3. 例題の問題文（枠だけの箱）  %%%%%%%%%%%%%%%%%%%%%%%
+% \begin{mondaibun} … \end{mondaibun}
+% 「どこまでが問題文か」を枠で示す．指針・KEY・解答はこの枠の外に置く．
+% まとめ枠との違いは「塗りが無い」こと（塗りはまとめ枠だけ＝原則）．
+\newenvironment{mondaibun}{%
+  \par\nobreak
+  \begin{bsBox}{0.5pt}{black}{white}\ignorespaces}%
+ {\end{bsBox}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%  4. KEY（上罫＋1行）  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \Key{$F=PS$\quad $N=nN_A$ …}
+% 知識の本体はまとめ枠に一本化し，KEY は「この例題で使う項目」だけを示す．
+% 罫は 0.5pt（0.3pt だと dvipdfmx でヘアラインに丸められコピー1世代で飛ぶ）．
+%
+% 【v4.1】当初は上下2本の罫で挟んでいたが，直後に来る解答の帯（0.5pt）と
+%   合わせて **0.5ptの罫が3本連続** し，しかも下罫と帯罫の間は4mmで
+%   何も入らないので目障りだった（ユーザー指摘）．下罫を落として
+%   「上罫＋1行」にすると，罫と罫の間に必ずKEYの文字が入る．
+%   ラベルは \scriptsize では埋もれるので \small に上げてある．
+\newcommand{\Key}[1]{%
+  \par\vspace{1.8mm}\bsHR{0.5pt}\vspace{1.0mm}\nobreak
+  \noindent{\gtfamily\small KEY}\hspace{0.7zw}{\small #1}%
+  \par\vspace{1.2mm}}
+
+%%%%%%%%%%  5. 指針／解答／補足（multicols 安全：縦罫を使わない）  %%%%%%%%%%%
+% 指針 … 白抜き枠タイル＋本文をさらに1zw字下げ
+\newenvironment{bsSisin}{%
+  \par\vspace{1.8mm}\nobreak
+  \noindent\bsTileO{指針}\par\nobreak\vspace{0.6mm}\nobreak\bsKeepNext
+  \begin{bsIndent}{1zw}\noindent\ignorespaces}%
+ {\end{bsIndent}\vspace{1.5mm}}
+
+% 解答 … グレー0.85地タイル＋右へ伸びる0.5pt罫の「帯」．字下げは追加しない．
+% タイルだけだと2段組（1段76mm）でどこから解答か分かりにくかったので，
+% 罫を段の右端まで伸ばして帯にした．指針（タイルのみ・罫なし）と対比がつく．
+\newenvironment{bsKaitou}{%
+  \par\vspace{1.8mm}\nobreak
+  \noindent\hbox to \linewidth{\bsTileG{解答}\bsFillMid}%
+  \par\nobreak\vspace{0.8mm}\nobreak\bsKeepNext
+  \ignorespaces}%
+ {\par\vspace{1.4mm}}
+
+% 別解・注・参考 … ▶見出し＋右へ伸びる0.4pt罫，本文は \small で1zw字下げ
+\newenvironment{bsHosoku}[1]{%
+  \par\vspace{1.8mm}\nobreak
+  \noindent\hbox to \linewidth{$\blacktriangleright$\hspace{0.3zw}%
+    {\gtfamily\small #1}\bsFillThin}%
+  \par\nobreak\vspace{0.4mm}\nobreak\bsKeepNext
+  \begingroup\small
+  \begin{bsIndent}{1zw}\noindent\ignorespaces}%
+ {\end{bsIndent}\endgroup\vspace{1.5mm}}
+
+%%%%%%%%%%%%%%%  3b. 解答の見出しだけが欲しいとき  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \KaiHead … bsKaitou と同じ「タイル＋右へ伸びる0.5pt罫」の帯だけを出す．
+% 解答編（練習問題の解答）は kaitou 環境で囲まず地の文で続けて書いてある章が
+% あるので，見出しだけ差し替えられるようにしてある．
+\newcommand{\KaiHead}{%
+  \par\vspace{1.8mm}\nobreak
+  \noindent\hbox to \linewidth{\bsTileG{解答}\bsFillMid}%
+  \par\nobreak\vspace{0.8mm}\nobreak\bsKeepNext}
+
+%%%%%%%%%%%%%%%  4. 解答編の「問題文の再掲」（1問＝1ユニット用）  %%%%%%%%%%%%
+% \begin{saikei} 何を求める問題かを1〜2行で \end{saikei}
+% ラベルは付けない．\small で左右から各1zw縮む＝文書中で唯一のブロック形状．
+\newenvironment{saikei}{%
+  \par\nobreak\vspace{0.5mm}\nobreak
+  \begingroup\small
+  \list{}{\setlength{\leftmargin}{1zw}\setlength{\rightmargin}{1zw}%
+    \setlength{\labelwidth}{0pt}\setlength{\labelsep}{0pt}%
+    \setlength{\topsep}{0pt}\setlength{\partopsep}{0pt}%
+    \setlength{\parsep}{0pt}\setlength{\itemsep}{0pt}%
+    \setlength{\listparindent}{1zw}}%
+  \item\relax\ignorespaces}%
+ {\endlist\endgroup\vspace{1.2mm}}
+
+%%%%%%%%%%%%%%%%%%%%%%  5. 講義部の項目見出し ①②③  %%%%%%%%%%%%%%%%%%%%%%%%%
+% \Kou{1}{圧力}   （従来の \fbox{1} \hspace{2mm}{\bf 圧力} を置き換える）
+% 白抜き角枠＋黒番号．黒ベタは使わない（原則1）．タイトルは10ptのまま
+% （\large に上げると \subsection と同格になる）．
+\newcommand{\Kou}[2]{%
+  \par\vspace{2.8mm}\noindent
+  {\fboxsep=1.4pt\fboxrule=0.6pt\fbox{\makebox[1.2zw][c]{\gtfamily\small\strut #1}}}%
+  \hspace{0.7zw}{\gtfamily #2}\par\nobreak\vspace{1.0mm}\nobreak\bsKeepNext}
+
+%%%%%%%%%%%%%%%%%%%%%%  6. 解答編の回タイトル  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \KaiTitle{第14回　気体の状態方程式・熱力学第一法則}
+% 章に1回しか出ないので，文書中で最も太い 2.5pt の罫を使う．
+% multicols の“外”（段組を始める前）で呼ぶこと．段の中に入れると罫が段幅
+% （76mm）になってしまい，直下の「A問題」の 1.2pt 全幅罫より弱く見える．
+\newcommand{\KaiTitle}[1]{%
+  \par\noindent{\gtfamily\LARGE\baselineskip=1.15\baselineskip #1}%
+  \par\nobreak\vspace{2.5mm}\bsHR{2.5pt}\vspace{4.0mm}\nobreak\bsKeepNext}
+
+%%%%%%%%%%%%%%%%%%%  7. 穴埋め版のための数式スイッチ  %%%%%%%%%%%%%%%%%%%%%%%%
+% \Ana{式}  … 完全版では \[ 式 \]，穴埋め版では同じ寸法の空欄
+% 元の数式を一度組んで幅と高さを実測してから置き換えるので，完全版と
+% 穴埋め版で組版の寸法が完全に一致し，ページ送りが揃う．
+% 分数を含む式は高い空欄，短い式は短い罫になるので式の長さ自体がヒントになる．
+\newif\ifbsAnaume \bsAnaumefalse
+\newsavebox{\bsAnaBox}
+% 空欄も「本物のディスプレイ数式」の中に入れる．段落＋\vspace で代用すると
+% \parskip と \baselineskip の分だけ背が高くなり，完全版より1ページ増えた．
+% 元の式と同じ幅・高さ・深さの箱を \[ \] に入れれば，前後の \abovedisplayskip・
+% \belowdisplayskip まで含めて寸法が完全に一致する．
+\newcommand{\Ana}[1]{%
+  \ifbsAnaume
+    \sbox{\bsAnaBox}{$\displaystyle #1$}%
+    \[\raisebox{0pt}[\ht\bsAnaBox][\dp\bsAnaBox]{%
+        \rule[-0.8mm]{\wd\bsAnaBox}{0.4pt}}\]%
+  \else
+    \[#1\]%
+  \fi}
+
+% \AnaU{答え}  … 行内の答え・選択肢用．完全版はそのまま，穴埋め版では
+% 同じ幅・高さの下線だけになる（「上向き」「狭くなる」などの語句や，
+% 文中に埋め込まれた $A=2\U{m}$ のような値に使う）．
+\newcommand{\AnaU}[1]{%
+  \ifbsAnaume
+    \sbox{\bsAnaBox}{#1}%
+    \raisebox{0pt}[\ht\bsAnaBox][\dp\bsAnaBox]{%
+      \rule[-0.8mm]{\wd\bsAnaBox}{0.4pt}}%
+  \else #1\fi}
+
+% \AnaFig{幅}{完全版の図}{穴埋め版の図}
+%   … 例題の解答図を，穴埋め版では「答えを描き込む前の補助図」に差し替える．
+%   作図が答えになる問題（波形を描け・腹線を描け）で，完成版の図をそのまま
+%   生徒用に載せると答えを配ってしまうため．
+%   ★2枚は必ず同じ縦横比にすること（TikZ 側で \path による見えない矩形を
+%     両方に入れてバウンディングボックスを揃えてある）．違うとページ送りがずれる．
+\newcommand{\AnaFig}[3]{%
+  \ifbsAnaume
+    \includegraphics[keepaspectratio,width=#1]{#3}%
+  \else
+    \includegraphics[keepaspectratio,width=#1]{#2}%
+  \fi}
+
+\newif\ifbs@justRanked \bs@justRankedfalse
+
+%%%%%%%%%%%%%%%  7b. 記入枠つきの穴埋め（2026-09-14 追加）  %%%%%%%%%%%%%%%%%%%
+% \Ana / \AnaU は「答えと同じ幅・高さの罫」なので，完全版とページ送りは揃うが
+% 手書きの余地がゼロだった（実測：行内語句の幅3.4mm/字・行間2.25mm。
+% この教材自身の手書き基準＝確認テストの氏名欄 約10mm/字・解答欄1行8〜10mm の
+% 1/4〜1/3 しかない）。そこでユーザー指示により方式を変える：
+%
+%   完全版・穴埋め版の「両方」に同じ大きさの四角枠を置き，
+%   穴埋め版は空の枠／完全版は同じ枠の中に答えを赤字で入れる。
+%
+% 枠の寸法は \ifbsAnaume の「外」で計算するので，両版で寸法が1mmも違わない。
+% ＝ ページ数・改行・枠の位置は構造的に一致する（罫の幅を答えに合わせる必要が
+% なくなったので，枠を手書きに十分な大きさにできる）。
+%
+%   \AnaB{答え}   … 行内の語句用
+%   \AnaBD{答え}  … 別行立ての式用（\[ \] の位置に枠を置く）
+%
+% 使うときの注意（\AnaU と同じ）：
+%   ・太字・\gtfamily・数式の範囲を変えない。元と同じ書体命令を \AnaB の中に入れる
+%   ・数式の中で使うときは $...$ を割らず，数式の内側で呼ぶ
+%
+% 色：color は本体が \usepackage[dvipdfmx]{color} で読み込み済み。
+%     ここで \RequirePackage{color} を書くとドライバが dvips になるので書かない。
+\definecolor{bsAka}{rgb}{0.80,0,0}   % 完全版で答えを書き込んである色
+
+\newlength{\bsAnaW}\newlength{\bsAnaHt}\newlength{\bsAnaDp}
+% 調整用のパラメータ（PDFを見て詰める）
+% 行内枠の幅は max(答えの幅×\bsAnaBfac, 答えの幅＋\bsAnaBadd)．
+% 一律の最小幅（20.5mm）にすると $2\theta$ のような短い答えで枠が大きくなりすぎ，
+% その行が1行増えて zuright のブロックがページに収まらなくなった（第18回 p.1）。
+\newcommand{\bsAnaBfac}{1.8}          % 行内枠：答えの幅の何倍にするか
+\newlength{\bsAnaBadd}\setlength{\bsAnaBadd}{10mm}    % 行内枠：答えの幅に必ず足す余裕
+\newlength{\bsAnaBht}\setlength{\bsAnaBht}{5mm}       % 行内枠：ベースラインより上
+\newlength{\bsAnaBdp}\setlength{\bsAnaBdp}{3.5mm}     % 行内枠：ベースラインより下
+% 上を6mmにすると節見出しの直後の行で枠の上辺が見出しの罫に食い込む．
+% 内寸は 5+3.5＝8.5mm を確保しつつ，上への張り出しを抑えてある．
+\newcommand{\bsAnaDfac}{1.3}          % 別行立て枠：答えの幅の何倍にするか
+\newlength{\bsAnaDmin}                % 別行立て枠の最小幅（\linewidth から算出）
+\newlength{\bsAnaDht}\setlength{\bsAnaDht}{9mm}       % 別行立て枠：上
+\newlength{\bsAnaDdp}\setlength{\bsAnaDdp}{3mm}       % 別行立て枠：下
+
+% 枠を描く共通部品．指定の高さ・深さを宣言し，中身は枠の中で上下中央に置く．
+% 中身をベースラインに置いたままだと，枠は上に9mm・下に3mm取っているのに
+% 中身（1行の式なら高さ2.6mm・深さ0.9mm）はベースライン付近にあるので，
+% 式が枠の下寄りに見える（2026-09-14 ユーザー指摘）。
+% 上げ量 s は「中身の上の空き ＝ 下の空き」となるように
+%   s = (宣言高 − 宣言深 − 中身の高 + 中身の深) / 2
+% で決める。枠の外形寸法は変えないので，両版のページ送りには影響しない。
+\newlength{\bsAnaSh}
+\newcommand{\bs@anactr}[2]{%  #1=宣言高 #2=宣言深（中身は \bsAnaBox で実測済み）
+  \setlength{\bsAnaSh}{\dimexpr(#1-#2-\ht\bsAnaBox+\dp\bsAnaBox)/2\relax}}
+\newcommand{\bs@anabox}[4]{%  #1=幅 #2=上 #3=下 #4=中身
+  {\fboxsep=0pt\fboxrule=0.4pt
+   \fcolorbox{black}{white}{%
+     \makebox[\dimexpr#1-0.8pt\relax][c]{%
+       \raisebox{\bsAnaSh}[\dimexpr#2-0.4pt\relax][\dimexpr#3-0.4pt\relax]{#4}}}}}
+
+\newcommand{\AnaB}[1]{%
+  \sbox{\bsAnaBox}{#1}%
+  \setlength{\bsAnaW}{\bsAnaBfac\wd\bsAnaBox}%
+  \ifdim\bsAnaW<\dimexpr\wd\bsAnaBox+\bsAnaBadd\relax
+    \setlength{\bsAnaW}{\dimexpr\wd\bsAnaBox+\bsAnaBadd\relax}\fi
+  \ifdim\bsAnaW>0.9\linewidth \setlength{\bsAnaW}{0.9\linewidth}\fi
+  \ifdim\bsAnaW<\wd\bsAnaBox \setlength{\bsAnaW}{\wd\bsAnaBox}\fi
+  \bs@anactr{\bsAnaBht}{\bsAnaBdp}%
+  \bs@anabox{\bsAnaW}{\bsAnaBht}{\bsAnaBdp}{%
+    \ifbsAnaume\else\textcolor{bsAka}{#1}\fi}}
+
+\newcommand{\AnaBD}[1]{%
+  \sbox{\bsAnaBox}{$\displaystyle #1$}%
+  \setlength{\bsAnaW}{\bsAnaDfac\wd\bsAnaBox}%
+  \setlength{\bsAnaDmin}{0.6\linewidth}%
+  \ifdim\bsAnaW<\bsAnaDmin \setlength{\bsAnaW}{\bsAnaDmin}\fi
+  \ifdim\bsAnaW>\linewidth \setlength{\bsAnaW}{\linewidth}\fi
+  \ifdim\bsAnaW<\wd\bsAnaBox \setlength{\bsAnaW}{\wd\bsAnaBox}\fi
+  \setlength{\bsAnaHt}{\bsAnaDht}%
+  \ifdim\bsAnaHt<\dimexpr\ht\bsAnaBox+2mm\relax
+    \setlength{\bsAnaHt}{\dimexpr\ht\bsAnaBox+2mm\relax}\fi
+  \setlength{\bsAnaDp}{\bsAnaDdp}%
+  \ifdim\bsAnaDp<\dimexpr\dp\bsAnaBox+1mm\relax
+    \setlength{\bsAnaDp}{\dimexpr\dp\bsAnaBox+1mm\relax}\fi
+  \bs@anactr{\bsAnaHt}{\bsAnaDp}%
+  \[\bs@anabox{\bsAnaW}{\bsAnaHt}{\bsAnaDp}{%
+      \ifbsAnaume\else\textcolor{bsAka}{$\displaystyle #1$}\fi}\]}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  再定義の適用  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 本体の \begin{document} 後にあるマクロ定義より“後”で呼ぶこと．
+\newcommand{\ButsuriApply}{%
+  %% ------------------------------------------------------------------
+  %% 節見出し：級数は上げない（行送りが変わってページ数が増えるため）．
+  %% 強度は「罫」と「左マージンを破ること」で稼ぐ．
+  %% ------------------------------------------------------------------
+  %% \section … 下に段差付きの全幅罫（左20mmだけ3.0pt）．文書中でここだけ．
+  %% 【重要】\renewcommand{\section}[1]{...} と1引数マクロにしてはいけない．
+  %%   \tableofcontents は内部で \section*{目次} を呼ぶので，`*` が第1引数として
+  %%   食われ，「*」という題の“番号付き”節が1つ増えてしまう（＝以降の節番号が
+  %%   すべて1ずれ，第15回が「16」と表示される）。\@ifstar で star 形を通すこと．
+  \let\bs@sectionOrig\section
+  \def\bs@secRule{%
+    \par\nobreak\vspace{0.5mm}\nointerlineskip
+    \noindent\rule{20mm}{3.0pt}\rule{\dimexpr\linewidth-20mm\relax}{1.2pt}%
+    \par\nobreak\vspace{2.4mm}\nobreak\bsKeepNext}%
+  \def\bs@sec@star##1{\bs@sectionOrig*{##1}}%          % 目次など無番号見出しは罫なし
+  \def\bs@sec@plain##1{\bs@sectionOrig{##1}\bs@secRule}%
+  \def\bs@sec@opt[##1]##2{\bs@sectionOrig[##1]{##2}\bs@secRule}%
+  \renewcommand{\section}{%
+    \@ifstar{\bs@sec@star}{\@ifnextchar[{\bs@sec@opt}{\bs@sec@plain}}}%
+  %% \subsection … 左に黒縦バーを本文左端の4mm外へ張り出させる．
+  %%   面積は約5mm²と極小だが，文書中で唯一「本文の左端より外に出る要素」に
+  %%   なるため，ページを縦に走査する視線が必ず引っかかる．
+  \renewcommand{\subsection}{\@startsection{subsection}{2}{-4mm}%
+    {5.5mm}{1.5mm}{\normalfont\large\gtfamily}}%
+  \let\bs@subsectionOrig\subsection
+  \def\bs@subsecRule{%
+    \par\nobreak\vspace{0.3mm}\nointerlineskip
+    \noindent\rule{\linewidth}{0.5pt}%
+    \par\nobreak\vspace{1.4mm}\nobreak\bsKeepNext}%
+  \def\bs@sub@star##1{\bs@subsectionOrig*{##1}}%
+  \def\bs@sub@plain##1{\bs@subsectionOrig{##1}\bs@subsecRule}%
+  \def\bs@sub@opt[##1]##2{\bs@subsectionOrig[##1]{##2}\bs@subsecRule}%
+  \renewcommand{\subsection}{%
+    \@ifstar{\bs@sub@star}{\@ifnextchar[{\bs@sub@opt}{\bs@sub@plain}}}%
+  %% 番号の前に縦バーを差し込む（\subsection だけ．TOC には出ない）
+  \renewcommand{\@seccntformat}[1]{%
+    \csname bs@cnt@##1\endcsname\csname the##1\endcsname\hspace{1zw}}%
+  %% ------------------------------------------------------------------
+  %% 例題ユニット：1.2pt の太罫で開いて閉じ，中身を丸ごと1zw字下げする．
+  %%   罫は改ページで消えるが字下げは消えないので，跨いだ先でも
+  %%   左端が1zwずれていればユニットの中，0zwに戻れば外，と判る．
+  %%   開始側は罫の上6.0mm・下1.5mm（下に続く），終了側は上2.5mm・下6.0mm
+  %%   （上で終わる）と白を偏らせ，同じ罫でも向きが読めるようにする．
+  %% ------------------------------------------------------------------
+  \newenvironment{reidaiunit}{%
+    %% v7（2026-09-02）：ユニットの開始（1.2pt罫＋例題見出し）だけがページ末に
+    %%   取り残されることがある（第17章の例題12で発生）．reidai の中の
+    %%   \bsKeepNext は直後の \MakeFramed（mondaibun）に負けるので効かない
+    %%   ＝まとめ枠と同じ事情．残り高さを実測して足りなければ改ページする．
+    %%   罫の“前”で判定しないと，罫だけがページ末に残ってしまう．
+    \par\bsNeed{30mm}%
+    \vspace{4.0mm}\nointerlineskip
+    \noindent\rule{\linewidth}{1.2pt}\par\nobreak\vspace{1.5mm}\nobreak
+    \begin{bsIndent}{1zw}}%
+   {\end{bsIndent}%
+    \vspace{2.5mm}\nointerlineskip
+    \noindent\rule{\linewidth}{1.2pt}\par\vspace{4.0mm}}%
+  %% 例題の見出しと問題文（ユニットの中で使う．v2 の下の細罫は廃止した）
+  \renewenvironment{reidai}[1]{%
+    \par\refstepcounter{nombre}%
+    \noindent\bsChip{例題 \thenombre}\hspace{0.8zw}{\gtfamily\large 〈##1〉}%
+    \par\nobreak\vspace{1.2mm}\nobreak\bsKeepNext
+    \begin{mondaibun}\ignorespaces}%
+   {\end{mondaibun}\vspace{1.5mm}}%
+  %% --- 指針（例題側／解答編側とも同じ見え方に揃える）------------------
+  \renewenvironment{sisinE}{\begin{bsSisin}}{\end{bsSisin}}%
+  \renewenvironment{sisin}{\begin{bsSisin}}{\end{bsSisin}}%
+  %% --- 解答 -----------------------------------------------------------
+  \renewenvironment{kaitou}{\begin{bsKaitou}}{\end{bsKaitou}}%
+  %% --- 別解・注 -------------------------------------------------------
+  \renewenvironment{bekkai}{\begin{bsHosoku}{別解}}{\end{bsHosoku}}%
+  \renewenvironment{chuu}{\begin{bsHosoku}{注}}{\end{bsHosoku}}%
+  %% --- KEY 環境は使わない方針だが，残置コードのために形だけ揃える -----
+  \renewenvironment{key}{\begin{bsHosoku}{KEY}}{\end{bsHosoku}}%
+  %% --- A問題／B問題／C問題：黒ベタを廃止し，\large＋1.2pt全幅罫 -------
+  %% A問題／B問題／C問題．見出しだけがページ末に取り残されるのを防ぐため，
+  %% 直後の \Mon が出す \filbreak を1回だけ止める（\bs@justRanked フラグ）．
+  %% こうすると「見出し＋最初の練習問題」がひとまとまりの filbreak グループに
+  %% なり，収まらないときは見出しごと次ページへ送られる．
+  %% （\nobreak や \bsKeepNext は直後の \filbreak に負けるので効かない）
+  %% multicols の中（解答編）では \filbreak を出さない：段の中で \filbreak を使うと
+  %% 「次の \filbreak まで」＝そこから解答編の最後まで，を1段に収めようとして
+  %% 段まるごと空いてしまう（実際に解答編の1ページ目の右段が空になった）。
+  \renewcommand{\Rank}[1]{%
+    \par\vspace{3.5mm}%
+    \ifnum\col@number>\@ne\else\filbreak\fi
+    \noindent{\gtfamily\large ##1}%
+    \par\nobreak\vspace{1.0mm}\bsHR{1.2pt}\vspace{1.8mm}\nobreak\bsKeepNext
+    \ifnum\col@number>\@ne\else\global\bs@justRankedtrue\fi}%
+  %% --- 練習問題の見出し：黒ベタの番号バッジ＋\largeのテーマ名＋0.4pt罫 -
+  %%     指定問題バッジは optional 引数で渡す： \Mon[\Sitei]{状態方程式}
+  \renewcommand{\Mon}[2][]{%
+    \ifbs@justRanked \global\bs@justRankedfalse \else \filbreak \fi
+    \refstepcounter{qno}\MonN[##1]{\theqno}{##2}}%
+  \renewcommand{\MonN}[3][]{%
+    \par\vspace{2.0mm}\noindent
+    \bsChip{練習 ##2}\hspace{0.7zw}{\gtfamily\large ##3}##1%
+    \par\nobreak\vspace{0.6mm}\bsHR{0.4pt}\vspace{1.0mm}\nobreak\bsKeepNext}%
+}
+\endinput
