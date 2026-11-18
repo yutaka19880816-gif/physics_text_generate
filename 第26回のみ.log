@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.euc) (TeX Live 2023/Debian) (preloaded format=platex 2026.9.24)  24 SEP 2026 17:53
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.euc) (TeX Live 2023/Debian) (preloaded format=platex 2026.11.18)  18 NOV 2026 01:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -423,10 +423,10 @@ File: fig/n26_ex12_zu.png Graphic file (type bmp)
  [4]
 File: img/text/text2_p47_fig1.png Graphic file (type bmp)
 <img/text/text2_p47_fig1.png>
-
-[5]
 File: img/text/text2_p47_fig2.png Graphic file (type bmp)
 <img/text/text2_p47_fig2.png>
+
+[5]
 File: img/text/text2_p48_fig1.png Graphic file (type bmp)
 <img/text/text2_p48_fig1.png>
 File: img/text/text2_p48_fig2.png Graphic file (type bmp)
@@ -537,12 +537,12 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3587 strings out of 475989
- 55923 string characters out of 5789699
+ 3591 strings out of 475916
+ 55957 string characters out of 5788116
  1938820 words of memory out of 5000000
- 25643 multiletter control sequences out of 15000+600000
+ 25654 multiletter control sequences out of 15000+600000
  572637 words of font info for 110 fonts, out of 8000000 for 9000
- 269 hyphenation exceptions out of 8191
+ 314 hyphenation exceptions out of 8191
  61i,11n,68p,1370b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 第26回のみ.dvi (25 pages, 138736 bytes).
+Output written on 第26回のみ.dvi (25 pages, 138968 bytes).

@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.euc) (TeX Live 2023/Debian) (preloaded format=platex 2026.9.24)  24 SEP 2026 18:40
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.euc) (TeX Live 2023/Debian) (preloaded format=platex 2026.11.18)  18 NOV 2026 01:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -487,8 +487,11 @@ File: fig/n29_a98_zu1.png Graphic file (type bmp)
 <fig/n29_a98_zu1.png>
 File: fig/n29_a98_zu2.png Graphic file (type bmp)
 <fig/n29_a98_zu2.png>
- [17]) [18]
-(./第29回のみ_穴埋め.aux (./physics_new29.aux))
+
+Overfull \vbox (49.72218pt too high) has occurred while \output is active []
+
+
+[17]) [18] (./第29回のみ_穴埋め.aux (./physics_new29.aux))
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-11-01> patch level 1
@@ -496,12 +499,12 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3450 strings out of 475989
- 52202 string characters out of 5789699
- 1940820 words of memory out of 5000000
- 25523 multiletter control sequences out of 15000+600000
+ 3454 strings out of 475916
+ 52236 string characters out of 5788116
+ 1941820 words of memory out of 5000000
+ 25534 multiletter control sequences out of 15000+600000
  572637 words of font info for 110 fonts, out of 8000000 for 9000
- 269 hyphenation exceptions out of 8191
- 61i,11n,68p,1190b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 314 hyphenation exceptions out of 8191
+ 61i,11n,68p,1190b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 第29回のみ_穴埋め.dvi (18 pages, 110192 bytes).
+Output written on 第29回のみ_穴埋め.dvi (18 pages, 110332 bytes).

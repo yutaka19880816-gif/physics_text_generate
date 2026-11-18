@@ -260,11 +260,33 @@
   \ignorespaces}%
  {\par\vspace{1.4mm}}
 
-% 別解・注・参考 … ▶見出し＋右へ伸びる0.4pt罫，本文は \small で1zw字下げ
+% 別解・注・参考 … 「※見出し」＋右へ伸びる0.4pt罫，本文は \small で1zw字下げ，
+% 終わりにも0.4pt罫を引いて閉じる（2026-11-18）．
+%   模範解答と補足の境が分かりにくいという指摘を受け，▶ を ※ に替えて
+%   「ここからは補足」と明示し，閉じ罫で「ここまでが補足」を示すようにした．
+%   閉じ罫は見出しの罫と同じく段の全幅に引き，次の解答本文との区切りにする．
 \newenvironment{bsHosoku}[1]{%
   \par\vspace{1.8mm}\nobreak
-  \noindent\hbox to \linewidth{$\blacktriangleright$\hspace{0.3zw}%
-    {\gtfamily\small #1}\bsFillThin}%
+  \noindent\hbox to \linewidth{{\gtfamily\small ※\hspace{0.2zw}#1}\bsFillThin}%
+  \par\nobreak\vspace{0.4mm}\nobreak\bsKeepNext
+  \begingroup\small
+  \begin{bsIndent}{1zw}\noindent\ignorespaces}%
+ {\end{bsIndent}\endgroup\bsHosokuClose}
+\newcommand{\bsHosokuClose}{\par\vspace{0.6mm}%
+  \nointerlineskip\moveright\@totalleftmargin\vbox{\hrule width\linewidth height 0.4pt}\nointerlineskip
+  \vspace{0.9mm}}
+
+% 一言だけの補足（検算・言い換え・注意など）… 行頭に ※ を付けた \small の段落．
+%   \Hosoku{…}．2行目以降は ※ の後ろにそろえて折り返す．
+%   見出し付きの bsHosoku（※注 など）にするほどでもない1〜2行の補足に使う．
+\newcommand{\Hosoku}[1]{%
+  \par{\small\noindent\hangindent=1.2zw\hangafter=1
+   ※\hspace{0.2zw}#1\par}}
+
+% 補足ではないが同じ見た目の枠を使う箇所（問題文の選択肢など）… ※を付けない
+\newenvironment{bsWaku}[1]{%
+  \par\vspace{1.8mm}\nobreak
+  \noindent\hbox to \linewidth{{\gtfamily\small #1}\bsFillThin}%
   \par\nobreak\vspace{0.4mm}\nobreak\bsKeepNext
   \begingroup\small
   \begin{bsIndent}{1zw}\noindent\ignorespaces}%
